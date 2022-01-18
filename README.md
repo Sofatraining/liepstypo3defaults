@@ -1,2 +1,4 @@
-# TYPO3-10.4-Sitepackage
-Sitepackage for TYPO3 10.4 LTS
+Sitepackage for the project "LIEPS TYPO3 Defaults"
+==============================================================
+
+Add some explanation here.
