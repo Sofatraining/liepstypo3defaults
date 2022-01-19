@@ -38,5 +38,4 @@ editor:
 
         removeButtons:
             - Anchor
-            - Underline
             - Strike
