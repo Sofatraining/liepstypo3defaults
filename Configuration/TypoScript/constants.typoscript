@@ -51,6 +51,6 @@ config {
     removeDefaultJS = 0
     admPanel = 1
     prefixLocalAnchors = all
-    headerComment = build by sitepackagebuilder.com
+    headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
     sendCacheHeaders = 1
 }
