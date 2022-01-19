@@ -70,3 +70,21 @@ config {
     index_metatags = 1
     headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
+
+##############
+### STYLES ###
+##############
+styles {
+    content {
+        textmedia {
+            maxW = 1440
+            maxWInText = 1000
+            linkWrap {
+                width = 1440m
+                height = 1000m
+            }
+            lightboxEnabled = 1
+            lightboxCssClass = image-link
+        }
+    }
+}
