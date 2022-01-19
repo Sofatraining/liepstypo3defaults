@@ -13,6 +13,18 @@ styles {
         partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/ContentElements/
         templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/ContentElements/
     }
+    content {
+        textmedia {
+            maxW = 1440
+            maxWInText = 1000
+            linkWrap {
+                width = 1440m
+                height = 1000m
+            }
+            lightboxEnabled = 1
+            lightboxCssClass = image-link
+        }
+    }
 }
 
 
@@ -70,22 +82,4 @@ config {
     index_metatags = 1
     frontend_editing = 0
     headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
-}
-
-##############
-### STYLES ###
-##############
-styles {
-    content {
-        textmedia {
-            maxW = 1440
-            maxWInText = 1000
-            linkWrap {
-                width = 1440m
-                height = 1000m
-            }
-            lightboxEnabled = 1
-            lightboxCssClass = image-link
-        }
-    }
 }
