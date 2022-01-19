@@ -169,27 +169,27 @@ page {
 #### CONFIG ####
 ################
 config {
-    absRefPrefix = auto
+    absRefPrefix = {$config.absRefPrefix}
     no_cache = {$config.no_cache}
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    linkVars = L
+    uniqueLinkVars = {$config.uniqueLinkVars}
+    pageTitleFirst = {$config.pageTitleFirst}
+    linkVars = {$config.linkVars}
     prefixLocalAnchors = {$config.prefixLocalAnchors}
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
+    renderCharset = {$config.renderCharset}
+    metaCharset = {$config.metaCharset}
+    doctype = {$config.doctype}
     removeDefaultJS = {$config.removeDefaultJS}
-    inlineStyle2TempFile = 1
+    inlineStyle2TempFile = {$config.inlineStyle2TempFile}
     admPanel = {$config.admPanel}
-    debug = 0
-    cache_period = 86400
+    debug = {$config.debug}
+    cache_period = {$config.cache_period}
     sendCacheHeaders = {$config.sendCacheHeaders}
-    intTarget =
-    extTarget =
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
+    intTarget = {$config.intTarget}
+    extTarget = {$config.extTarget}
+    disablePrefixComment = {$config.disablePrefixComment}
+    index_enable = {$config.index_enable}
+    index_externals = {$config.index_externals}
+    index_metatags = {$config.index_metatags}
     headerComment = {$config.headerComment}
 
     // Disable Image Upscaling
