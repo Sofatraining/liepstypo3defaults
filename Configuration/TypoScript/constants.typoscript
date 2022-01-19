@@ -68,6 +68,7 @@ config {
     index_enable = 1
     index_externals = 1
     index_metatags = 1
+    frontend_editing = 0
     headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
 

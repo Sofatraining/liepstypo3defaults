@@ -190,6 +190,7 @@ config {
     index_enable = {$config.index_enable}
     index_externals = {$config.index_externals}
     index_metatags = {$config.index_metatags}
+    frontend_editing = {$config.frontend_editing}
     headerComment = {$config.headerComment}
 
     // Disable Image Upscaling
