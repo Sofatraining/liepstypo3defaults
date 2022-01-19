@@ -3,4 +3,4 @@
 
 ### CHANGELOG
 
-v1.0.0 Intial Release - original Plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
+v1.0.0 Intial Release - Original Plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
