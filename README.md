@@ -1,5 +1,4 @@
 # Sitepackage for the project "LIEPS TYPO3 Defaults"
-==============================================================
 
 ## CHANGELOG
 
