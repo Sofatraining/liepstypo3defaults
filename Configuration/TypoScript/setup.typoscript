@@ -1,19 +1,6 @@
-######################
-#### DEPENDENCIES ####
-######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-
-
-################
-#### HELPER ####
-################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:lieps_typo3_defaults/Configuration/TypoScript/Helper/DynamicContent.typoscript">
 
-
-##############
-#### PAGE ####
-##############
-page = PAGE
 page {
     typeNum = 0
     shortcutIcon = EXT:lieps_typo3_defaults/Resources/Public/Icons/favicon.ico
@@ -139,26 +126,11 @@ page {
         }
     }
 
-    includeCSSLibs {
-
-    }
-
     includeCSS {
         lieps_typo3_defaults_layout = EXT:lieps_typo3_defaults/Resources/Public/Css/layout.min.css
     }
-
-    includeJSLibs {
-
-    }
-
     includeJS {
-
     }
-
-    includeJSFooterlibs {
-
-    }
-
     includeJSFooter {
         lieps_typo3_defaults_scripts = EXT:lieps_typo3_defaults/Resources/Public/JavaScript/Dist/scripts.js
     }
