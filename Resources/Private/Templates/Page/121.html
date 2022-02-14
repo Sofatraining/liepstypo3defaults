@@ -3,10 +3,29 @@
 
 	<f:render partial="Header" arguments="{_all}" />
 
-	<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />
-	<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-	<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
-	<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '4'}" />
+	<section class="header">
+		<div class="container-fluid">
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+
+			<div class="row">
+				<div class="col-7">
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+				</div>
+				<aside>
+					<div class="col-4 offset-1">
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '4'}" />
+					</div>
+				</aside>
+			</div>
+			
+		</div>
+	</section>
 	
 	<f:render partial="Footer" arguments="{_all}" />
 
