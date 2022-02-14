@@ -20,9 +20,9 @@ styles {
             linkWrap {
                 width = 1440m
                 height = 1000m
+                lightboxEnabled = 1
+                lightboxCssClass = image-link
             }
-            lightboxEnabled = 1
-            lightboxCssClass = image-link
         }
     }
 }
