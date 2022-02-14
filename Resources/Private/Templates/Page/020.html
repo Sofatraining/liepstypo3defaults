@@ -9,11 +9,13 @@
 		</div>
 	</section>
 	
+	<f:if condition="<f:cObject typoscriptObjectPath='lib.dynamicContent' data='{colPos: \'1\'}' />">
 	<section>
 		<div class="container">
 			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
 		</div>
 	</section>
+	</f:if>
 	
 	<f:render partial="Footer" arguments="{_all}" />
 
