@@ -119,15 +119,15 @@ page {
     }
 
     includeCSSLibs {
-
+        file1 = EXT:lieps_typo3_defaults/Resources/Public/Css/bootstrap.min.css
     }
 
     includeCSS {
-        lieps_typo3_defaults_layout = EXT:lieps_typo3_defaults/Resources/Public/Css/layout.min.css
+        file9 = EXT:lieps_typo3_defaults/Resources/Public/Css/custom.css
     }
 
     includeJSLibs {
-
+        file1 = EXT:lieps_typo3_defaults/Resources/Public/Js/jquery.min.js
     }
 
     includeJS {
@@ -135,11 +135,11 @@ page {
     }
 
     includeJSFooterlibs {
-
+        file1 = EXT:lieps_typo3_defaults/Resources/Public/Js/bootstrap.min.js
     }
 
     includeJSFooter {
-        lieps_typo3_defaults_scripts = EXT:lieps_typo3_defaults/Resources/Public/JavaScript/Dist/scripts.js
+        file9 = EXT:lieps_typo3_defaults/Resources/Public/Js/custom.js
     }
 }
 
