@@ -14,7 +14,7 @@ mod {
                                 1 {
                                     columns {
                                         1 {
-                                            name = C1
+                                            name = Inhalt
                                             colPos = 0
                                         }
                                     }
@@ -34,7 +34,7 @@ mod {
                                 1 {
                                     columns {
                                         1 {
-                                            name = C1
+                                            name = Inhalt
                                             colPos = 0
                                         }
                                     }
@@ -42,7 +42,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -62,7 +62,7 @@ mod {
                                 1 {
                                     columns {
                                         1 {
-                                            name = C1
+                                            name = Inhalt
                                             colPos = 0
                                         }
                                     }
@@ -70,7 +70,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -78,7 +78,7 @@ mod {
 								3 {
 									columns {
 										1 {
-											name = C3
+											name = Inhalt (3)
 											colPos = 2
 										}
 									}
@@ -106,7 +106,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 									}
@@ -134,7 +134,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 									}
@@ -142,7 +142,7 @@ mod {
 								3 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -170,7 +170,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 									}
@@ -178,7 +178,7 @@ mod {
 								3 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -186,7 +186,7 @@ mod {
 								4 {
 									columns {
 										1 {
-											name = C3
+											name = Inhalt (3)
 											colPos = 2
 										}
 									}
@@ -215,7 +215,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 										2 {
@@ -248,7 +248,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 										2 {
@@ -261,7 +261,7 @@ mod {
 								3 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -290,7 +290,7 @@ mod {
 								2 {
 									columns {
 										1 {
-											name = C1
+											name = Inhalt
 											colPos = 0
 										}
 										2 {
@@ -303,7 +303,7 @@ mod {
 								3 {
 									columns {
 										1 {
-											name = C2
+											name = Inhalt (2)
 											colPos = 1
 										}
 									}
@@ -311,7 +311,7 @@ mod {
 								4 {
 									columns {
 										1 {
-											name = C3
+											name = Inhalt (3)
 											colPos = 2
 										}
 									}
