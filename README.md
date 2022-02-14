@@ -8,4 +8,4 @@ v1.0.0 Intial Release - Original Plugin from [https://www.sitepackagebuilder.com
 v1.0.1 Changes in constants.typoscript and setup.typoscript to our LIEPS-Defaults
 
 
-SEE https://github.com/RonLeh/base_sitepack/
+https://github.com/RonLeh/base_sitepack/
