@@ -25,6 +25,11 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 * Siteconfig (config.yaml) für sprechende URL anpassen
 ***
   
+### EXT:Powermail
+* Anpassungen für "Add classes and CSS based on bootstrap (powermail)"  
+* Template -> Enthält -> "Add classes and CSS based on bootstrap (powermail)" unter "Main Template (powermail)" hinzufügen!!
+***
+  
 ### EXT:Mask
 * Pfade eingeben in Einstellungen -> Extension Configuration -> mask  
 > general.json
