@@ -136,5 +136,15 @@ plugin.tx_powermail {
         main.optin = 0
         main.moresteps = 0
         misc.ajaxSubmit = 1
+        styles {
+            framework.rowClasses = 
+            bootstrap.rowClasses = 
+            bootstrap.fieldAndLabelWrappingClasses = form-group
+            bootstrap.fieldWrappingClasses = 
+            bootstrap.labelClasses = control-label
+            bootstrap.offsetClasses = 
+            bootstrap.submitClasses = btn btn-primary
+            bootstrap.numberOfColumns = 1
+        }
     }
 }
