@@ -15,9 +15,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ***   
 ### Manual  
 #### Settings  
-```diff
 - Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss letztes ausgewähltes Objekt sein!!  
-```
   
 #### EXT:Mask
 > **Pfade für Mask**  -> Einstellungen -> Extension Configuration -> mask  
