@@ -83,3 +83,39 @@ config {
     frontend_editing = 0
     headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
+
+############
+### NEWS ###
+############
+plugin.tx_news {
+    rss.channel {
+        title = RSS News
+        description =
+        link = http://example.com
+        language = de
+        copyright = Company GmbH
+        category =
+        generator = TYPO3 EXT:news
+        typeNum = 9818
+    }
+
+    opengraph {
+        site_name =
+
+        twitter {
+            card = summary
+            site =
+            creator =
+        }
+    }
+
+    view {
+        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/News/
+        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/News/
+        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/News/
+    }
+
+    settings {
+        cssFile = EXT:lieps_typo3_defaults/Resources/Public/Css/news-basic.css
+    }
+}
