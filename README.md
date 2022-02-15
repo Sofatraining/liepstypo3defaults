@@ -29,5 +29,5 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 > backend.partials_backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/  
 
 ```diff
--Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss ```ini **letztes ausgewähltes Objekt** ``` sein!! 
+-Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss **letztes ausgewähltes Objekt** sein!! 
 ```
