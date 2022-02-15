@@ -16,7 +16,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ## MANUAL  
 ### Settings
 ```ini
-[Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss letztes ausgewähltes Objekt sein!!]
+[Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ``` 
 ***
   
@@ -64,5 +64,3 @@ EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/
 ```diff
 EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 ```  
-
-
