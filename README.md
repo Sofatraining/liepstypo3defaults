@@ -12,7 +12,8 @@ v1.0.2 Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresi
 v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Powermail  
   
       
-***       
+***   
+### Manual  
 > **Pfade für Mask**  -> Einstellungen -> Extension Configuration -> mask  
 > general.json -> EXT:lieps_typo3_defaults/Configuration/Mask/mask.json  
 > general.backendlayout_pids -> 0,1  
