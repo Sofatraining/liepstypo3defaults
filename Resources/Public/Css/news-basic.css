@@ -76,9 +76,9 @@
 
 .news .footer {
 	clear: both;
-	padding: 10px 0 0 0;
-	border-top: 1px solid #eee;
-	margin-top: 15px;
+	padding: 1px 0 0 0;
+	border-bottom: 1px solid #eee;
+	margin-top: 0;
 	color: #888;
 }
 
