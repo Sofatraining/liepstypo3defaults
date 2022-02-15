@@ -33,10 +33,25 @@ EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
 ```diff
 EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Frontend/
 ```  
-> frontend.layouts (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Frontend/  
-> frontend.partials (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Frontend/  
-> backend.backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Backend/  
-> backend.layouts_backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/  
-> backend.partials_backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/  
+> frontend.layouts (folder)
+```diff
+EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Frontend/
+```  
+> frontend.partials (folder)
+```diff
+EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Frontend/
+```  
+> backend.backend (folder)
+```diff
+EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Backend/
+```  
+> backend.layouts_backend (folder)
+```diff
+EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/
+```  
+> backend.partials_backend (folder)
+```diff
+EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
+```  
 
 
