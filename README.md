@@ -21,7 +21,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ***
   
 ### EXT:News
-> Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben.
+> Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben.  
 > Siteconfig (config.yaml) für sprechende URL anpassen
 ***
   
