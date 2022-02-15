@@ -14,6 +14,7 @@ $EM_CONF[$_EXTKEY] = [
             'rte_ckeditor' => '10.4.0-10.4.99',
             'mask' => '7.1.18-7.99.99',
             'image_autoresize' => '2.1.1-2.99.99',
+            'powermail' => '8.4.1-8.99.99',
         ],
         'conflicts' => [
         ],
