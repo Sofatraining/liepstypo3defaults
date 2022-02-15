@@ -15,7 +15,6 @@ $EM_CONF[$_EXTKEY] = [
             'mask' => '7.1.18-7.99.99',
             'image_autoresize' => '2.1.1-2.99.99',
             'powermail' => '8.4.1-8.99.99',
-            'news' => '9.2.0-9.99.99',
         ],
         'conflicts' => [
         ],
