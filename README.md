@@ -6,6 +6,5 @@
 v1.0.0 Intial Release - Original Plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
 ***
 v1.0.1 Changes in constants.typoscript and setup.typoscript to our LIEPS-Defaults
-
-
-https://github.com/RonLeh/base_sitepack/
+***
+v1.0.2 Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mask, powermail) + Error Fixes
