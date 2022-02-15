@@ -14,12 +14,13 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
       
 ***   
 ## MANUAL  
-### Settings
+### Installation / Settings 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
-``` 
+```  
+* Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all
 ***
-  
+    
 ### EXT:News
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben.  
 * Siteconfig (config.yaml) für sprechende URL's anpassen
