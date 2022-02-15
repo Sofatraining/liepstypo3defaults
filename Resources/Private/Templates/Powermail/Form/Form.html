@@ -14,8 +14,8 @@ Render Powermail Form
 
 	<f:if condition="{form}">
 		<f:then>
-			<div class="container-fluid">
-				<div class="row">
+			<div class="row">
+				<div class="container-fluid">
 					<f:form
 							action="{action}"
 							section="c{ttContentData.uid}"
@@ -23,7 +23,7 @@ Render Powermail Form
 							enctype="multipart/form-data"
 							additionalAttributes="{vh:validation.enableParsleyAndAjax(form:form)}"
 							addQueryString="{settings.misc.addQueryString}"
-							class="powermail_form powermail_form_{form.uid} {form.css} {settings.styles.framework.formClasses} {vh:misc.morestepClass(activate:settings.main.moresteps)}">
+							class="powermail_form powermail_form_{form.uid} {form.css} {settings.styles.framework.formClasses} {vh:misc.morestepClass(activate:settings.main.moresteps)} mb-4">
 
 						<f:comment><f:if condition="{form.css} != 'nolabel'">
 							<h3>{form.title}</h3>
