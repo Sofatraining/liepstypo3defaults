@@ -201,8 +201,8 @@ plugin.tx_news {
 			0 = EXT:news/Resources/Private/Layouts/
 			1 = {$plugin.tx_news.view.layoutRootPath}
 		}
+		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/News/
 	}
-
 
 	# ====================================
 	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
