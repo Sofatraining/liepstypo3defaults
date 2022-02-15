@@ -26,7 +26,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ***
   
 ### EXT:Mask
-**Pfade eingeben in Einstellungen -> Extension Configuration -> mask**  
+* Pfade eingeben in Einstellungen -> Extension Configuration -> mask  
 > general.json
 ```diff
 EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
