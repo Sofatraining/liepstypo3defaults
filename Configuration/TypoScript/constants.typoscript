@@ -129,4 +129,12 @@ plugin.tx_powermail {
         partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Powermail/
         layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Powermail/
     }
+    settings {
+        db.enable = 0
+        main.pid = 0
+        main.confirmation = 0
+        main.optin = 0
+        main.moresteps = 0
+        misc.ajaxSubmit = 1
+    }
 }
