@@ -13,6 +13,7 @@ $EM_CONF[$_EXTKEY] = [
             'fluid_styled_content' => '10.4.0-10.4.99',
             'rte_ckeditor' => '10.4.0-10.4.99',
             'mask' => '7.1.18-7.99.99',
+            'image_autoresize' => '2.1.1-2.99.99',
         ],
         'conflicts' => [
         ],
