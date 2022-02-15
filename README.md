@@ -24,6 +24,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ### EXT:News
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben.  
 * Siteconfig (config.yaml) für sprechende URL's anpassen
+* News-CSS liegt unter lieps_typo3_defaults/Resources/Public/Css/news-basic.css
 ***
   
 ### EXT:Powermail
