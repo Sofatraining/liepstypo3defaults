@@ -1,0 +1,30 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+<f:if condition="{vh:be.t3Version()}">
+	<f:then>
+		<div class="alert alert-success">
+			<div class="header-container">
+				<h4 class="message-header">
+					<f:translate key="BackendCheckT3VersionTitle" />
+				</h4>
+			</div>
+			<div class="message-body">
+				<p>
+					<f:translate key="BackendCheckT3VersionCorrect" />
+				</p>
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="alert alert-danger">
+			<h4 class="message-header">
+				<f:translate key="BackendCheckT3VersionTitle" />
+			</h4>
+			<div class="message-body">
+				<p>
+					<f:translate key="BackendCheckT3VersionFailed" />
+				</p>
+			</div>
+		</div>
+	</f:else>
+</f:if>
