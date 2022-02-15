@@ -8,6 +8,10 @@ v1.0.0 Intial Release - Original Plugin from [https://www.sitepackagebuilder.com
 v1.0.1 Changes in constants.typoscript and setup.typoscript to our LIEPS-Defaults
 ***
 v1.0.2 Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mask, powermail, news + Error Fixes)
+***
+v1.0.3 Setup + Constants + Templatepfade für News und Powermail  
+    
+      
 > **Pfade für Mask**  -> Einstellungen -> Extension Configuration -> mask  
 > general.json -> EXT:lieps_typo3_defaults/Configuration/Mask/mask.json  
 > general.backendlayout_pids -> 0,1  
