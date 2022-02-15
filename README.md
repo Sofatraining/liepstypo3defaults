@@ -1,5 +1,5 @@
 # Sitepackage for "TYPO3 Defaults"
-## TYPO3 10.4 LTS with branch 11.5 LTS
+## TYPO3 10.4 LTS
 
 ### CHANGELOG
 
