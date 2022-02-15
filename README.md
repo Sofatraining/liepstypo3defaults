@@ -9,7 +9,7 @@ v1.0.1 Changes in constants.typoscript and setup.typoscript to our LIEPS-Default
 ***
 v1.0.2 Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mask, powermail, news + Bugfixes)
 ***
-v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Powermail # Anpassungen  
+v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Powermail  + diverse Anpassungen  
   
       
 ***   
