@@ -27,3 +27,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 > backend.backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Backend/  
 > backend.layouts_backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/  
 > backend.partials_backend (folder) -> EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/  
+
+```diff
+-this is going to be in red 
+```
