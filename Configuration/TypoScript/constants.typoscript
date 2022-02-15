@@ -119,3 +119,14 @@ plugin.tx_news {
         cssFile = EXT:lieps_typo3_defaults/Resources/Public/Css/news-basic.css
     }
 }
+
+#################
+### POWERMAIL ###
+#################
+plugin.tx_powermail {
+    view {
+        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Powermail/
+        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Powermail/
+        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Powermail/
+    }
+}
