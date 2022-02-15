@@ -18,6 +18,8 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss letztes ausgewähltes Objekt sein!!]
 ``` 
+#### EXT:News
+**Site-Config sollte auf Deutsch eingestellt sein damit Datumsformat und Links korrekt ausgegeben werden.**
   
 #### EXT:Mask
 **Pfade für Mask -> Einstellungen -> Extension Configuration -> mask**  
