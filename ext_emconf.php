@@ -11,12 +11,15 @@ $EM_CONF[$_EXTKEY] = [
         'depends' => [
             'typo3' => '10.4.0-10.4.99',
             'fluid_styled_content' => '10.4.0-10.4.99',
-            'rte_ckeditor' => '10.4.0-10.4.99',
+            'rte_ckeditor' => '10.4.0-10.4.99',            
+        ],
+        'conflicts' => [
+        ],
+        'suggests' => [
             'mask' => '7.1.18-7.99.99',
             'image_autoresize' => '2.1.1-2.99.99',
             'powermail' => '8.4.1-8.99.99',
-        ],
-        'conflicts' => [
+            'news' => '9.2.0-9.99.99'
         ],
     ],
     'autoload' => [
