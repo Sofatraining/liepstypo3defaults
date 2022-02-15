@@ -13,7 +13,7 @@ v1.0.3 Setup + Constants + Templatepfade für News und Powermail
   
     
       
-        
+***       
 > **Pfade für Mask**  -> Einstellungen -> Extension Configuration -> mask  
 > general.json -> EXT:lieps_typo3_defaults/Configuration/Mask/mask.json  
 > general.backendlayout_pids -> 0,1  
