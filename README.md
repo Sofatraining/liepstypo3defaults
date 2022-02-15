@@ -21,9 +21,12 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
   
 #### EXT:Mask
 > **Pfade für Mask**  -> Einstellungen -> Extension Configuration -> mask  
-> general.json -> EXT:lieps_typo3_defaults/Configuration/Mask/mask.json  
+> general.json -> 
+```diff
+EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
+```  
 > general.backendlayout_pids -> 0,1  
-frontend.content (folder):  
+> frontend.content (folder):  
 ```diff
 EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Frontend/
 ```  
