@@ -181,3 +181,65 @@ config {
     concatenateJs = 0
     concatenateCss = 0
 }
+
+############
+### NEWS ###
+############
+plugin.tx_news {
+	view {
+		templateRootPaths {
+			0 = EXT:news/Resources/Private/Templates/
+			1 = {$plugin.tx_news.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = EXT:news/Resources/Private/Partials/
+			1 = {$plugin.tx_news.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = EXT:news/Resources/Private/Layouts/
+			1 = {$plugin.tx_news.view.layoutRootPath}
+		}
+	}
+
+
+	# ====================================
+	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+	# ====================================
+	settings {
+		cssFile = {$plugin.tx_news.settings.cssFile}
+
+		#Displays a dummy image if the news have no media items
+		displayDummyIfNoMedia = 1
+
+		# --------------
+		#  Detail
+		# --------------
+		detail {
+			# media configuration
+			media {
+				image {
+					lazyLoading = {$styles.content.image.lazyLoading}
+					maxWidth = 282
+					maxHeight =
+				}
+			}
+		}
+
+		# --------------
+		#  List
+		# --------------
+		list {
+			# media configuration
+			media {
+				image {
+					lazyLoading = {$styles.content.image.lazyLoading}
+					maxWidth = 100
+					maxHeight = 100
+				}
+				dummyImage = typo3conf/ext/lieps_typo3_defaults/Resources/Public/Images/News/dummy-preview-image.png
+			}
+		}
+	}
+}
