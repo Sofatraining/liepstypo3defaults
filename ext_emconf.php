@@ -34,5 +34,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Jürgen Ohnesorge',
     'author_email' => 'it-service@lieps.de',
     'author_company' => 'LIEPS GmbH',
-    'version' => '1.0.0',
+    'version' => '1.0.3',
 ];
