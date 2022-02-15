@@ -21,7 +21,7 @@ v1.0.3 setup.typoscript + constants.typoscript + Templatepfade für News und Pow
 ***
   
 #### EXT:News
-**Site-Config sollte auf Deutsch eingestellt sein damit Datumsformat und Links korrekt ausgegeben werden.**
+**Datumsformat und Links werden abhängig der Spracheneinstellung in der Site-Config ausgegeben.**
 ***
   
 #### EXT:Mask
