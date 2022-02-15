@@ -6,16 +6,8 @@
 #  ---------------
 #  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<div class=\"hero\">|</div>'}" />
 #
-#
-#  COLUMN NUMBERS
-#  ---------------
-#
-#  0  = main
-#  1  = left
-#  2  = right
-#  3  = border
-#
 #################
+
 lib.dynamicContent = COA
 lib.dynamicContent {
     5 = LOAD_REGISTER
