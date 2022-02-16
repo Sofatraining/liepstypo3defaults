@@ -87,3 +87,4 @@ EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 * cs_seo hinzufügen
 * Image sourceset
 * Webp
+* image_autoresize Settings
