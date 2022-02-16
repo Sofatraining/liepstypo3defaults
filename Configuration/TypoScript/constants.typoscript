@@ -138,6 +138,7 @@ plugin.tx_powermail {
         misc.ajaxSubmit = 1
         styles {
             framework.rowClasses = 
+            framework.numberOfColumns = 1
             bootstrap.rowClasses = 
             bootstrap.fieldAndLabelWrappingClasses = form-group
             bootstrap.fieldWrappingClasses = 
