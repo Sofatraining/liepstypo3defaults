@@ -114,3 +114,4 @@ EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 * image_autoresize Settings
 * Menüprocessor für Breadcrumb
 * ContentElemente über gridelements
+* Flux und VHS integrieren
