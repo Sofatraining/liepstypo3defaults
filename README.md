@@ -14,6 +14,9 @@ Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mas
 ***
 #### v1.0.3  
 setup.typoscript + constants.typoscript + Templatepfade für News und Powermail  + diverse Anpassungen  
+***
+#### v1.0.4  
+Add Jquery Magnific Popup + Bugfixes  
   
       
 ***   
