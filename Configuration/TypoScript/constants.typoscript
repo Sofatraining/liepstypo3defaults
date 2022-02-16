@@ -116,7 +116,7 @@ plugin.tx_news {
     }
 
     settings {
-        cssFile = EXT:lieps_typo3_defaults/Resources/Public/Css/news-basic.css
+        cssFile = 
     }
 }
 
