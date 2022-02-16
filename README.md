@@ -80,3 +80,10 @@ EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/
 ```diff
 EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 ```  
+  
+      
+***   
+## Dodo
+* cs_seo hinzufügen
+* Image sourceset
+* Webp
