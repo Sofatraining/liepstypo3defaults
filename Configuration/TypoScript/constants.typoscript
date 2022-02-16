@@ -139,13 +139,14 @@ plugin.tx_powermail {
         styles {
             framework.rowClasses = 
             framework.numberOfColumns = 1
-            bootstrap.rowClasses = 
+            bootstrap.rowClasses = row
             bootstrap.fieldAndLabelWrappingClasses = form-group
             bootstrap.fieldWrappingClasses = 
             bootstrap.labelClasses = control-label
             bootstrap.offsetClasses = 
             bootstrap.submitClasses = btn btn-primary
             bootstrap.numberOfColumns = 1
+            bootstrap.important = 1
         }
     }
 }
