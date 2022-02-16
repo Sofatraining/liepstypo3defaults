@@ -148,13 +148,3 @@ plugin.tx_powermail {
         }
     }
 }
-
-############################
-### FLUID STYLED CONTENT ###
-############################
-lib {
-	contentElement {
-		templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Fluid-Styles-Content/
-		partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Fluid-Styles-Content/
-	}
-}
