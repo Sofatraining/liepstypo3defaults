@@ -123,6 +123,7 @@ page {
     }
 
     includeCSS {
+    	file8 = EXT:lieps_typo3_defaults/Resources/Public/Css/magnific-popup.css
         file9 = EXT:lieps_typo3_defaults/Resources/Public/Css/custom.css
     }
 
@@ -139,6 +140,7 @@ page {
     }
 
     includeJSFooter {
+    	file8 = EXT:lieps_typo3_defaults/Resources/Public/Js/magnific-popup.min.js
         file9 = EXT:lieps_typo3_defaults/Resources/Public/Js/custom.js
     }
 }
