@@ -138,12 +138,16 @@ plugin.tx_powermail {
         misc.ajaxSubmit = 1
         styles {
             bootstrap.rowClasses = row
+            # eine Spalte
+            bootstrap.numberOfColumns = 1
             bootstrap.fieldAndLabelWrappingClasses = form-group
+            # zwei Spalten
+            # bootstrap.numberOfColumns = 2
+            # bootstrap.fieldAndLabelWrappingClasses = form-group col-md-6
             bootstrap.fieldWrappingClasses = 
             bootstrap.labelClasses = control-label
             bootstrap.offsetClasses = 
             bootstrap.submitClasses = btn btn-primary
-            bootstrap.numberOfColumns = 1
             bootstrap.important = 1
         }
     }
