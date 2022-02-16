@@ -123,7 +123,8 @@ page {
     }
 
     includeCSS {
-    	file8 = EXT:lieps_typo3_defaults/Resources/Public/Css/magnific-popup.css
+    	file7 = EXT:lieps_typo3_defaults/Resources/Public/Css/news-basic.css
+	file8 = EXT:lieps_typo3_defaults/Resources/Public/Css/magnific-popup.css
         file9 = EXT:lieps_typo3_defaults/Resources/Public/Css/custom.css
     }
 
