@@ -92,3 +92,4 @@ EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 * Image sourceset
 * Webp
 * image_autoresize Settings
+* Menüprocessor für Breadcrumb
