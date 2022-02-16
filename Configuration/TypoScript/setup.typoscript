@@ -240,7 +240,7 @@ plugin.tx_news {
 					maxWidth = 100
 					maxHeight = 100
 				}
-				dummyImage = typo3conf/ext/lieps_typo3_defaults/Resources/Public/Images/News/dummy-preview-image.png
+				dummyImage = EXT:lieps_typo3_defaults/Resources/Public/Images/News/dummy-preview-image.png
 			}
 		}
 	}
