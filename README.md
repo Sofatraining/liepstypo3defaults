@@ -16,7 +16,7 @@ Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mas
 setup.typoscript + constants.typoscript + Templatepfade für News und Powermail  + diverse Anpassungen  
 ***
 #### v1.0.4  
-Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + Bugfixes  
+Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + Bereinigungen + Bugfixes  
   
 ***    
 ***   
