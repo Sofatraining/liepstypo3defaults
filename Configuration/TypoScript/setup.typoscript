@@ -272,10 +272,12 @@ plugin.tx_powermail {
 lib {
 	contentElement {
 		partialRootPaths {
-			200 = {$lib.contentElement.templateRootPath}
+			0 = EXT:fluid_styled_content/Resources/Private/Templates/
+			1 = {$lib.contentElement.templateRootPath}
 		}
 		templateRootPaths {
-			200 = {$lib.contentElement.partialRootPath}
+			0 = EXT:fluid_styled_content/Resources/Private/Partials/
+			1 = {$lib.contentElement.partialRootPath}
 		}
 	}
 }
