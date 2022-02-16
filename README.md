@@ -26,6 +26,9 @@ setup.typoscript + constants.typoscript + Templatepfade für News und Powermail 
 ***
     
 ### EXT:News
+```ini
+[Template -> Enthält -> "News (news)" hinzufügen]
+``` 
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
 * News-CSS liegt unter lieps_typo3_defaults/Resources/Public/Css/news-basic.css
@@ -34,11 +37,15 @@ setup.typoscript + constants.typoscript + Templatepfade für News und Powermail 
 ### EXT:Powermail
 * Anpassungen für "Add classes and CSS based on bootstrap (powermail)" vorgenommen 
 ```ini
-[Template -> Enthält -> "Add classes and CSS based on bootstrap (powermail)" unter "Main Template (powermail)" hinzufügen!!]
+[Template -> Enthält -> "Main Template (powermail)" hinzufügen]
+[Template -> Enthält -> "Add classes and CSS based on bootstrap (powermail)" unter "Main Template (powermail)" hinzufügen]  
 ```  
 ***
   
 ### EXT:Mask
+```ini
+[Template -> Enthält -> "Mask (mask)" hinzufügen]
+``` 
 * Pfade eingeben in Einstellungen -> Extension Configuration -> mask 
 * Nicht angegebene Felder leer lassen   
 > general.json
