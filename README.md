@@ -17,6 +17,9 @@ setup.typoscript + constants.typoscript + Templatepfade für News und Powermail 
 ***
 #### v1.0.4  
 Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + Bereinigungen + Bugfixes  
+***
+#### v1.0.5  
+Neue File-Struktur im den Setup-Dateien  
   
 ***    
 ***   
