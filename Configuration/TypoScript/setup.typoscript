@@ -265,19 +265,3 @@ plugin.tx_powermail {
 		}
 	}
 }
-
-############################
-### FLUID STYLED CONTENT ###
-############################
-lib {
-	contentElement {
-		partialRootPaths {
-			0 = EXT:fluid_styled_content/Resources/Private/Templates/
-			1 = {$lib.contentElement.templateRootPath}
-		}
-		templateRootPaths {
-			0 = EXT:fluid_styled_content/Resources/Private/Partials/
-			1 = {$lib.contentElement.partialRootPath}
-		}
-	}
-}
