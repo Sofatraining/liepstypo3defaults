@@ -28,7 +28,15 @@ Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + B
 ```  
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all
 ***
-    
+
+### EXT:Fluid Styled Content
+```ini
+[Template -> Enthält -> "Fluid Content Elements (fluid_styled_content)" als erstes statische Template hinzufügen]  
+[Template -> Enthält -> "Fluid Content Elements CSS (optional) (fluid_styled_content)" als zweites statische Template hinzufügen]
+``` 
+* Überschreibungen werden in den Ordnern für ContentElements in Resources/Privat abgelegt 
+***
+
 ### EXT:News
 ```ini
 [Template -> Enthält -> "News (news)" hinzufügen]
