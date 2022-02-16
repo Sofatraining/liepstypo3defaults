@@ -27,7 +27,7 @@ Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + B
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```  
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all
-* Während der Emtwicklung JS und CSS Compression deaktiviern -> Setup  
+* Während der Entwicklung JS und CSS Compression deaktiviern -> Setup  
 ```diff
 config {  
 	compressJs = 0  
