@@ -5,7 +5,8 @@ page = PAGE
 page {
     typeNum = 0
     shortcutIcon = EXT:liepstypo3defaults/Resources/Public/Icons/favicon.ico
-
+	### 5 Important for FLUX!!! Do not Delete!! ###
+	5 >
     10 = FLUIDTEMPLATE
     10 {
         templateName = TEXT
