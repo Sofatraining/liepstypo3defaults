@@ -17,4 +17,4 @@ call_user_func(function()
     );
 });
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('liepstypo3defaults', 'Configuration/TypoScript', 'Provider Extension');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('liepstypo3defaults', 'Configuration/TypoScript', 'LIEPS TYPO3 Defaults');
