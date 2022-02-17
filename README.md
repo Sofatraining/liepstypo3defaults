@@ -55,6 +55,7 @@ config {
 ### Flux-Templates
 * Templates werden in den Ordnern 'Content' in Resources/Privat abgelegt
 * Provider-Extension wurde integriert
+* Dokumentation unter https://fluidtypo3.org/documentation/templating-manual/introduction.html
 ***
 
 ### EXT:News
