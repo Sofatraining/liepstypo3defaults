@@ -5,7 +5,7 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'lieps_typo3_defaults';
+    $extensionKey = 'liepstypo3defaults';
 
     /**
      * Default PageTS for LiepsTypo3Defaults
