@@ -87,7 +87,7 @@ config {
 ############
 ### FLUX ###
 ############
-plugin.tx_news {
+plugin.tx_flux {
     view {
         templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Flux/
         partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Flux/
