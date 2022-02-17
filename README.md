@@ -49,7 +49,7 @@ config {
 * Überschreibungen werden in den Ordnern 'ContentElements' in Resources/Privat abgelegt 
 ***
 
-### Fluxtemplates
+### Flux-Templates
 * Überschreibungen werden in den Ordnern 'Content' in Resources/Privat abgelegt
 * Provider-Extension wurde integriert
 ***
