@@ -122,4 +122,3 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Webp
 * image_autoresize Settings
 * Menüprocessor für Breadcrumb
-* ContentElemente über gridelements
