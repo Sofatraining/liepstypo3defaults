@@ -5,4 +5,4 @@ if (!defined('TYPO3_MODE')) {
 
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('liepstypo3defaults', 'Configuration/TypoScript', 'LIEPS TYPO3 Defaults');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('liepstypo3defaults', 'Configuration/TsConfig/Page/All.tsconfig', 'LIEPS TYPO3 Defaults');
