@@ -46,7 +46,12 @@ config {
 [Template -> Enthält -> "Fluid Content Elements (fluid_styled_content)" als erstes statische Template hinzufügen]  
 [Template -> Enthält -> "Fluid Content Elements CSS (optional) (fluid_styled_content)" als zweites statische Template hinzufügen]
 ``` 
-* Überschreibungen werden in den Ordnern für ContentElements in Resources/Privat abgelegt 
+* Überschreibungen werden in den Ordnern 'ContentElements' in Resources/Privat abgelegt 
+***
+
+### Fluxtemplates
+* Überschreibungen werden in den Ordnern 'Content' in Resources/Privat abgelegt
+* Provider-Extension wurde integriert
 ***
 
 ### EXT:News
