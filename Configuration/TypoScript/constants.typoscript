@@ -85,6 +85,17 @@ config {
 }
 
 ############
+### FLUX ###
+############
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Flux/
+        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Flux/
+        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Flux/
+    }
+}
+
+############
 ### NEWS ###
 ############
 plugin.tx_news {
