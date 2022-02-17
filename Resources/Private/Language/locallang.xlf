@@ -5,11 +5,6 @@
             <authorName>LIEPS GmbH</authorName>
             <authorEmail>it-service@lieps.de</authorEmail>
         </header>
-        <body>
-        </body>
-    </file>
-	<file source-language="en" datatype="plaintext" original="messages" product-name="liepstypo3defaults" date="2022-02-17T20:17:34+01:00">
-		<header/>
 		<body>
 			<trans-unit id="flux.standard">
 				<source>Example page</source>
@@ -27,5 +22,5 @@
 				<source>Example input</source>
 			</trans-unit>
 		</body>
-	</file>
+    </file>
 </xliff>
