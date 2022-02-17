@@ -4,7 +4,7 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = EXT:lieps_typo3_defaults/Resources/Public/Icons/favicon.ico
+    shortcutIcon = EXT:liepstypo3defaults/Resources/Public/Icons/favicon.ico
 
     10 = FLUIDTEMPLATE
     10 {
@@ -24,15 +24,15 @@ page {
             ifEmpty = Default
         }
         templateRootPaths {
-            0 = EXT:lieps_typo3_defaults/Resources/Private/Templates/Page/
+            0 = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
             1 = {$page.fluidtemplate.templateRootPath}
         }
         partialRootPaths {
-            0 = EXT:lieps_typo3_defaults/Resources/Private/Partials/Page/
+            0 = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
             1 = {$page.fluidtemplate.partialRootPath}
         }
         layoutRootPaths {
-            0 = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Page/
+            0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
             1 = {$page.fluidtemplate.layoutRootPath}
         }
         dataProcessing {
@@ -50,17 +50,17 @@ page {
     }
 
     includeCSSLibs {
-        file1 = EXT:lieps_typo3_defaults/Resources/Public/Css/bootstrap.min.css
+        file1 = EXT:liepstypo3defaults/Resources/Public/Css/bootstrap.min.css
     }
 
     includeCSS {
-    	file7 = EXT:lieps_typo3_defaults/Resources/Public/Css/news-basic.css
-	file8 = EXT:lieps_typo3_defaults/Resources/Public/Css/magnific-popup.css
-        file9 = EXT:lieps_typo3_defaults/Resources/Public/Css/custom.css
+    	file7 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
+	file8 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css
+        file9 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
     }
 
     includeJSLibs {
-        file1 = EXT:lieps_typo3_defaults/Resources/Public/Js/jquery.min.js
+        file1 = EXT:liepstypo3defaults/Resources/Public/Js/jquery.min.js
     }
 
     includeJS {
@@ -68,11 +68,11 @@ page {
     }
 
     includeJSFooterlibs {
-        file1 = EXT:lieps_typo3_defaults/Resources/Public/Js/bootstrap.min.js
+        file1 = EXT:liepstypo3defaults/Resources/Public/Js/bootstrap.min.js
     }
 
     includeJSFooter {
-    	file8 = EXT:lieps_typo3_defaults/Resources/Public/Js/magnific-popup.min.js
-        file9 = EXT:lieps_typo3_defaults/Resources/Public/Js/custom.js
+    	file8 = EXT:liepstypo3defaults/Resources/Public/Js/magnific-popup.min.js
+        file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
     }
 }
