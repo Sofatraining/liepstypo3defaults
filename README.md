@@ -74,7 +74,7 @@ config {
 * Nicht angegebene Felder leer lassen   
 > general.json
 ```diff
-EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
+EXT:liepstypo3defaults/Configuration/Mask/mask.json
 ```  
 > general.backendlayout_pids
 ```diff
@@ -82,27 +82,27 @@ EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
 ``` 
 > frontend.content (folder):  
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Templates/Mask/Frontend/
 ```  
 > frontend.layouts (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Frontend/
 ```  
 > frontend.partials (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Frontend/
 ```  
 > backend.backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Templates/Mask/Backend/
 ```  
 > backend.layouts_backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 ```  
 > backend.partials_backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
   
       
@@ -114,4 +114,3 @@ EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 * image_autoresize Settings
 * Menüprocessor für Breadcrumb
 * ContentElemente über gridelements
-* Flux und VHS integrieren
