@@ -5,7 +5,7 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'lieps_typo3_defaults';
+    $extensionKey = 'liepstypo3defaults';
 
     /**
      * Default TypoScript for LiepsTypo3Defaults
@@ -16,3 +16,5 @@ call_user_func(function()
         'LIEPS TYPO3 Defaults'
     );
 });
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('liepstypo3defaults', 'Configuration/TypoScript', 'Provider Extension');
