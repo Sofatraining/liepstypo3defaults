@@ -1,0 +1,22 @@
+#################
+### FLUX ###
+#################
+plugin.tx_flux {
+	view {
+		templateRootPaths {
+      0 = 
+			1 = EXT:flux/Resources/Private/Templates/
+			2 = {$plugin.tx_flux.view.templateRootPath}
+		}
+		partialRootPaths {
+      0 = 
+			1 = EXT:flux/Resources/Private/Partials/
+			2 = {$plugin.tx_flux.view.partialRootPath}
+		}
+		layoutRootPaths {
+      0 =
+			1 = EXT:flux/Resources/Private/Layouts/
+			2 = {$plugin.tx_flux.view.layoutRootPath}
+		}
+	}
+}
