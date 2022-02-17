@@ -4,19 +4,19 @@
 plugin.tx_flux {
 	view {
 		templateRootPaths {
-      0 = 
-			1 = EXT:flux/Resources/Private/Templates/
-			2 = {$plugin.tx_flux.view.templateRootPath}
+			0 = design/Templates/
+			10 = EXT:flux/Resources/Private/Templates/
+			20 = {$plugin.tx_flux.view.templateRootPath}
 		}
 		partialRootPaths {
-      0 = 
-			1 = EXT:flux/Resources/Private/Partials/
-			2 = {$plugin.tx_flux.view.partialRootPath}
+			0 = design/Partials/
+			10 = EXT:flux/Resources/Private/Partials/
+			20 = {$plugin.tx_flux.view.partialRootPath}
 		}
 		layoutRootPaths {
-      0 =
-			1 = EXT:flux/Resources/Private/Layouts/
-			2 = {$plugin.tx_flux.view.layoutRootPath}
+			0 = design/Layouts/
+			10 = EXT:flux/Resources/Private/Layouts/
+			20 = {$plugin.tx_flux.view.layoutRootPath}
 		}
 	}
 }
