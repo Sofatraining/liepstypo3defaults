@@ -95,6 +95,15 @@ plugin.tx_flux {
     }
 }
 
+##########################
+### LIEPSTYPO3DEFAULTS ###
+##########################
+plugin.tx_liepstypo3defaults.view {
+	templateRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Templates/Content/
+	partialRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Partials/Content/
+	layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
+}
+
 ############
 ### NEWS ###
 ############
