@@ -50,7 +50,7 @@ config {
 ***
 
 ### Flux-Templates
-* Überschreibungen werden in den Ordnern 'Content' in Resources/Privat abgelegt
+* Templates werden in den Ordnern 'Content' in Resources/Privat abgelegt
 * Provider-Extension wurde integriert
 ***
 
