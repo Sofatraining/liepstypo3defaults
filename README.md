@@ -29,6 +29,9 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```  
+* Folgende Reihenfolge verwenden
+![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/154571555-9781d984-eb9a-41e9-b4a5-0e7db48bf1cf.png)
+
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all
 * Während der Entwicklung JS und CSS Compression deaktiviern -> Setup  
 ```diff
