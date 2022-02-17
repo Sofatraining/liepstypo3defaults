@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "lieps_typo3_defaults".
+ * Extension Manager/Repository config file for ext "liepstypo3defaults".
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'LIEPS TYPO3 Defaults',
@@ -36,5 +36,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Jürgen Ohnesorge',
     'author_email' => 'it-service@lieps.de',
     'author_company' => 'LIEPS GmbH',
-    'version' => '1.0.3',
+    'version' => '1.0.5',
 ];
