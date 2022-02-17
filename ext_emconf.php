@@ -15,6 +15,8 @@ $EM_CONF[$_EXTKEY] = [
             'image_autoresize' => '2.1.1-2.99.99',
             'powermail' => '8.4.1-8.99.99',
             'news' => '9.2.0-9.99.99',
+            'vhs' => '6.0.5-6.0.99',
+            'flux' => '9.5.0-9.99.99',
             'rte_ckeditor' => '10.4.0-10.4.99',
         ],
         'conflicts' => [
