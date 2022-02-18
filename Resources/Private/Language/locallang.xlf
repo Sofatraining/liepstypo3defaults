@@ -33,6 +33,18 @@
 			<trans-unit id="flux.columns-66-33.description">
 				<source>Container mit 2 Spalten - 66% / 33% für Inhaltselemente - optional Offset 1</source>
 			</trans-unit>
+			<trans-unit id="flux.columns-33-33-33">
+				<source>Container 33% / 33% / 33%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-33-33.description">
+				<source>Container mit 3 Spalten - 33% / 33% / 33% für Inhaltselemente</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-25-25-25-25">
+				<source>Container 25% / 25% / 25% / 25%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-25-25-25-25.description">
+				<source>Container mit 4 Spalten - 25% / 25% / 25% / 25% für Inhaltselemente</source>
+			</trans-unit>
 		</body>
     </file>
 </xliff>
