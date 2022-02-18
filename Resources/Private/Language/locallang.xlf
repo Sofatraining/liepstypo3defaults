@@ -21,6 +21,18 @@
 			<trans-unit id="flux.example.fields.settings.helloWorld">
 				<source>Example input</source>
 			</trans-unit>
+			<trans-unit id="flux.columns-50-50">
+				<source>Container 50% / 50%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-50-50.description">
+				<source>Container mit 2 Spalten - 50% / 50% für Inhaltselemente</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-66-33">
+				<source>Container 66% / 33%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-66-33.description">
+				<source>Container mit 2 Spalten - 66% / 33% für Inhaltselemente - optional Offset 1</source>
+			</trans-unit>
 		</body>
     </file>
 </xliff>
