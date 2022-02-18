@@ -7,7 +7,7 @@
         </header>
 		<body>
 			<trans-unit id="flux.standard">
-				<source>Example page</source>
+				<source>Default Page</source>
 			</trans-unit>
 			<trans-unit id="flux.standard.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
@@ -32,6 +32,12 @@
 			</trans-unit>
 			<trans-unit id="flux.columns-66-33.description">
 				<source>Container mit 2 Spalten - 66% / 33% für Inhaltselemente - optional Offset 1</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-66">
+				<source>Container 33% / 66%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-66.description">
+				<source>Container mit 2 Spalten - 33% / 66% für Inhaltselemente - optional Offset 1</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-33-33-33">
 				<source>Container 33% / 33% / 33%</source>
