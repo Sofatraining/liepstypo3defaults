@@ -9,6 +9,13 @@ page {
 	5 >
     10 = FLUIDTEMPLATE
     10 {
+    	file.stdWrap.cObject = CASE
+	file.stdWrap.cObject {
+		default = TEXT
+		default {
+			value = EXT:extension_name/Resources/Private/Templates/Default.html
+		}
+	}
         templateName = TEXT
         templateName {
             cObject = TEXT
