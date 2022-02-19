@@ -9,13 +9,6 @@ page {
 	5 >
     10 = FLUIDTEMPLATE
     10 {
-    	file.stdWrap.cObject = CASE
-	file.stdWrap.cObject {
-		default = TEXT
-		default {
-			value = EXT:liepstypo3defaults/Resources/Private/Templates/Page/Default.html
-		}
-	}
         templateName = TEXT
         templateName {
             cObject = TEXT
