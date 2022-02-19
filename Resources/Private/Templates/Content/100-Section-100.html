@@ -8,9 +8,9 @@
                description="Section-Container mit Klasse für Farbe und Abstand">
 
       <flux:field.select name="classColor" label="Farbe" default="none"
-                         items="{none: '-', bg_white: 'Weiß', bg_grey: 'Grau'}"/>
-      <flux:field.select name="classPadding" label="Abstand" default="none"
-                         items="{none: '-', padding10: '10', padding30: '30', padding50: '50'}"/>
+                         items="{bg-transparent: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-success: 'Grün', bg-danger: 'Rot', bg-warning: 'Gelb', bg-info: 'Hellblau', bg-light: 'Hellgrau', bg-dark: 'Schwarz'}"/>
+      <flux:field.select name="classPadding" label="Abstand (Padding)" default="none"
+                         items="{none: 'Standard', py-1: 'Extraklein', py-2: 'Klein', py-3: 'Medium', py-4: 'Groß', py-5: 'Extragroß'}"/>
       <flux:grid>
         <flux:grid.row>
           <flux:grid.column name="column1" label="Spalte 1" colPos="1"/>
@@ -21,9 +21,9 @@
 
   <f:section name="Main">
     <div class="section {classColor} {classPadding}">
-      <div class="container">
-        <flux:content.render area="column1"/>
-      </div>
+		<div class="container">
+			<flux:content.render area="column1"/>
+		</div>	
     </div>
   </f:section>
 
