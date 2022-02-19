@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2022-01-18UTC14:05:160">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-01-18UTC14:05:160" product-name="liepstypo3defaults">
         <header>
             <authorName>LIEPS GmbH</authorName>
             <authorEmail>it-service@lieps.de</authorEmail>
         </header>
-        <body>
-        </body>
+		<body>
+			<trans-unit id="flux.standard">
+				<source>Default Page</source>
+			</trans-unit>
+			<trans-unit id="flux.standard.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
+			</trans-unit>
+			<trans-unit id="flux.example">
+				<source>Example element</source>
+			</trans-unit>
+			<trans-unit id="flux.example.description">
+				<source>Small example element</source>
+			</trans-unit>
+			<trans-unit id="flux.example.fields.settings.helloWorld">
+				<source>Example input</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-50-50">
+				<source>Container 50% / 50%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-50-50.description">
+				<source>Container mit 2 Spalten - 50% / 50% für Inhaltselemente</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-66-33">
+				<source>Container 66% / 33%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-66-33.description">
+				<source>Container mit 2 Spalten - 66% / 33% für Inhaltselemente - optional Offset 1</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-66">
+				<source>Container 33% / 66%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-66.description">
+				<source>Container mit 2 Spalten - 33% / 66% für Inhaltselemente - optional Offset 1</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-33-33">
+				<source>Container 33% / 33% / 33%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-33-33-33.description">
+				<source>Container mit 3 Spalten - 33% / 33% / 33% für Inhaltselemente</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-25-25-25-25">
+				<source>Container 25% / 25% / 25% / 25%</source>
+			</trans-unit>
+			<trans-unit id="flux.columns-25-25-25-25.description">
+				<source>Container mit 4 Spalten - 25% / 25% / 25% / 25% für Inhaltselemente</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100">
+				<source>Section</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.description">
+				<source>Section-Container mit Klassen für Farben, Opacity und Padding</source>
+			</trans-unit>
+		</body>
     </file>
 </xliff>

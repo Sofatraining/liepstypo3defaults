@@ -9,9 +9,9 @@
 ##############################
 styles {
     templates {
-        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/ContentElements/
+        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/ContentElements/
     }
     content {
         textmedia {
@@ -33,9 +33,9 @@ styles {
 ############
 page {
      fluidtemplate {
-        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Page/
-        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Page/
+        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
+        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
     }
     meta {
         description =
@@ -89,10 +89,19 @@ config {
 ############
 plugin.tx_flux {
     view {
-        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Flux/
-        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Flux/
-        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Flux/
+        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Flux/
+        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Flux/
+        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Flux/
     }
+}
+
+##########################
+### LIEPSTYPO3DEFAULTS ###
+##########################
+plugin.tx_liepstypo3defaults.view {
+	templateRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Templates/Content/
+	partialRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Partials/Content/
+	layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
 }
 
 ############
@@ -121,9 +130,9 @@ plugin.tx_news {
     }
 
     view {
-        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/News/
-        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/News/
-        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/News/
+        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
+        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/News/
+        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/News/
     }
 
     settings {
@@ -136,9 +145,9 @@ plugin.tx_news {
 #################
 plugin.tx_powermail {
     view {
-        templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/Powermail/
-        partialRootPath = EXT:lieps_typo3_defaults/Resources/Private/Partials/Powermail/
-        layoutRootPath = EXT:lieps_typo3_defaults/Resources/Private/Layouts/Powermail/
+        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Powermail/
+        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Powermail/
+        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Powermail/
     }
     settings {
         db.enable = 0

@@ -1,0 +1,10 @@
+##########################
+### LIEPSTYPO3DEFAULTS ###
+##########################
+plugin.tx_liepstypo3defaults {
+	view {
+		templateRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.templateRootPaths.0}
+		partialRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.partialRootPaths.0}
+		layoutRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
+	}
+}

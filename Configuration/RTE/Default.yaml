@@ -1,6 +1,6 @@
 imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:lieps_typo3_defaults/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:liepstypo3defaults/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
 editor:

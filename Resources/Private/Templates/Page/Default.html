@@ -3,11 +3,7 @@
 
 	<f:render partial="Header" arguments="{_all}" />
 	
-	<section>
-		<div class="container">
-			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-		</div>
-	</section>
+	<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 	
 	<f:render partial="Footer" arguments="{_all}" />
 

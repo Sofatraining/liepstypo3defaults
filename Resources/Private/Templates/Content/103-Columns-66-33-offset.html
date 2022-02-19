@@ -1,0 +1,48 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+  <f:layout name="Content"/>
+  <f:section name="Configuration">
+    <flux:form id="columns-66-33">
+	  <flux:field.checkbox name="offset" label="Offset 1" default="0"/>
+      <flux:grid>
+        <flux:grid.row>
+          <flux:grid.column name="column1" label="Spalte 1" colPos="66" style="width: 66%">
+          </flux:grid.column>
+          <flux:grid.column name="column2" label="Spalte 2" colPos="67" style="width: 33%">
+          </flux:grid.column>
+        </flux:grid.row>
+      </flux:grid>
+    </flux:form>
+  </f:section>
+
+  <f:section name="Main">
+	<f:if condition="{offset}">
+		<f:then>
+			<div class="row">
+				<div class="col-xl-7 col-lg-8 col-md-6">
+					<flux:content.render area="column1"/>
+				</div>
+				<div class="col-xl-4 col-lg-4 col-md-6 offset-xl-1">
+					<flux:content.render area="column2"/>
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="row">
+				<div class="col-lg-8 col-md-6">
+					<flux:content.render area="column1"/>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<flux:content.render area="column2"/>
+				</div>
+			</div>
+		</f:else>
+	</f:if>
+  </f:section>
+
+  <f:section name="Preview">
+    <f:translate key="LLL:EXT:liepstypo3defaults/Resources/Private/Language/locallang.xlf:flux.columns-66-33"/>
+  </f:section>
+</div>

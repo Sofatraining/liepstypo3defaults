@@ -17,7 +17,7 @@ plugin.tx_news {
 			0 = EXT:news/Resources/Private/Layouts/
 			1 = {$plugin.tx_news.view.layoutRootPath}
 		}
-		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:lieps_typo3_defaults/Resources/Private/Templates/News/
+		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
 	}
 
 	# ====================================
@@ -54,7 +54,7 @@ plugin.tx_news {
 					maxWidth = 100
 					maxHeight = 100
 				}
-				dummyImage = EXT:lieps_typo3_defaults/Resources/Public/Images/News/dummy-preview-image.png
+				dummyImage = EXT:liepstypo3defaults/Resources/Public/Images/News/dummy-preview-image.png
 			}
 		}
 	}

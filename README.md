@@ -19,7 +19,7 @@ setup.typoscript + constants.typoscript + Templatepfade für News und Powermail 
 Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + Bereinigungen + Bugfixes  
 ***
 #### v1.0.5  
-Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration
+Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding Flux-Templates 
   
 ***    
 ***   
@@ -28,8 +28,11 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration
 ### Installation / Settings 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
-```  
-* Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all
+```   
+![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/154571555-9781d984-eb9a-41e9-b4a5-0e7db48bf1cf.png)
+  
+* Statische Templates wie im Screenshot hinzufügen
+* Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
 * Während der Entwicklung JS und CSS Compression deaktiviern -> Setup  
 ```diff
 config {  
@@ -46,7 +49,13 @@ config {
 [Template -> Enthält -> "Fluid Content Elements (fluid_styled_content)" als erstes statische Template hinzufügen]  
 [Template -> Enthält -> "Fluid Content Elements CSS (optional) (fluid_styled_content)" als zweites statische Template hinzufügen]
 ``` 
-* Überschreibungen werden in den Ordnern für ContentElements in Resources/Privat abgelegt 
+* Überschreibungen werden in den Ordnern 'ContentElements' in Resources/Privat abgelegt 
+***
+
+### Flux-Templates
+* Templates werden in den Ordnern 'Content' in Resources/Privat abgelegt
+* Provider-Extension wurde vollständig integriert
+* Dokumentation unter https://fluidtypo3.org/documentation/templating-manual/introduction.html
 ***
 
 ### EXT:News
@@ -55,7 +64,7 @@ config {
 ``` 
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
-* News-CSS liegt unter lieps_typo3_defaults/Resources/Public/Css/news-basic.css
+* News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 ***
   
 ### EXT:Powermail
@@ -74,7 +83,7 @@ config {
 * Nicht angegebene Felder leer lassen   
 > general.json
 ```diff
-EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
+EXT:liepstypo3defaults/Configuration/Mask/mask.json
 ```  
 > general.backendlayout_pids
 ```diff
@@ -82,27 +91,27 @@ EXT:lieps_typo3_defaults/Configuration/Mask/mask.json
 ``` 
 > frontend.content (folder):  
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Templates/Mask/Frontend/
 ```  
 > frontend.layouts (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Frontend/
 ```  
 > frontend.partials (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Frontend/
+EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Frontend/
 ```  
 > backend.backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Templates/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Templates/Mask/Backend/
 ```  
 > backend.layouts_backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Layouts/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 ```  
 > backend.partials_backend (folder)
 ```diff
-EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
+EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
   
       
@@ -113,5 +122,3 @@ EXT:lieps_typo3_defaults/Resources/Private/Partials/Mask/Backend/
 * Webp
 * image_autoresize Settings
 * Menüprocessor für Breadcrumb
-* ContentElemente über gridelements
-* Flux und VHS integrieren
