@@ -1,6 +1,6 @@
 /* Overwrite Fluid-Styled-Content CSS */
 
-/* Bootstrap5 konforme Ausgabe von Videos (Content-Element -> Text und Medien) */
+/* Bootstrap 5 konforme Ausgabe von Videos (Content-Element -> 'Text & Medien') */
 .ce-center .ce-gallery .ce-outer {float:none;}
 .ce-center .ce-gallery .ce-inner {float:none;}
 .ce-center .ce-gallery .ce-column {float:none;}
