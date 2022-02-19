@@ -51,6 +51,12 @@
 			<trans-unit id="flux.columns-25-25-25-25.description">
 				<source>Container mit 4 Spalten - 25% / 25% / 25% / 25% für Inhaltselemente</source>
 			</trans-unit>
+			<trans-unit id="flux.section-100">
+				<source>Section</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.description">
+				<source>Section-Container mit Klassen für Farben, Gradient und Abstand</source>
+			</trans-unit>
 		</body>
     </file>
 </xliff>
