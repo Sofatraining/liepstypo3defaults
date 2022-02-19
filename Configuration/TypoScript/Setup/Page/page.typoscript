@@ -13,7 +13,7 @@ page {
 	file.stdWrap.cObject {
 		default = TEXT
 		default {
-			value = EXT:extension_name/Resources/Private/Templates/Default.html
+			value = EXT:liepstypo3defaults/Resources/Private/Templates/Page/Default.html
 		}
 	}
         templateName = TEXT
