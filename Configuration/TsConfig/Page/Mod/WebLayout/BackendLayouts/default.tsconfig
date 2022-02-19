@@ -2,9 +2,29 @@
 # BACKENDLAYOUT: DEFAULT
 #
 mod {
-    web_layout {
-        BackendLayouts {
-            0_1_0 {
+	web_layout {
+		BackendLayouts {
+			Default {
+				title = Inhalt(1)(volle Breite)
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Inhalt
+										colPos = 0
+									}
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:liepstypo3defaults/Resources/Public/Images/BackendLayouts/0-1-0.png
+			}
+			0_1_0 {
                 title = Inhalt(1)
                 config {
                     backend_layout {
