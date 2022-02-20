@@ -8,6 +8,7 @@
 			<flux:field.select name="classColor" label="Hintergrundfarbe" default="none" items="{none: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-light: 'Hellgrau', bg-success: 'Grün', bg-info: 'Cyan', bg-warning: 'Gelb', bg-danger: 'Rot', bg-dark: 'Schwarz'}"/>
 			<flux:field.select name="classColorfont" label="Textfarbe" default="none" items="{none: 'Standard', text-white: 'Weiß', text-black: 'Schwarz', text-light: 'Hellgrau'}"/>
 			<flux:field.select name="classOpacity" label="Opacity" default="none" items="{none: 'Ohne', bg-opacity-10: 'Opacity 10', bg-opacity-25: 'Opacity 25', bg-opacity-50: 'Opacity 50', bg-opacity-75: 'Opacity 75'}"/>
+			<flux:field.select name="classGradient" label="Gradient" default="none" items="{none: 'Nein', bg-gradient: 'Ja'}"/>
 			<flux:field.select name="classPadding" label="Abstand (Padding)" default="none" items="{none: 'Standard', py-1: 'Extraklein', py-2: 'Klein', py-3: 'Medium', py-4: 'Groß', py-5: 'Extragroß'}"/>
 			<flux:grid>
 				<flux:grid.row>
@@ -18,7 +19,7 @@
 	</f:section>
 
 	<f:section name="Main">
-		<div class="section {classColor} {classColorfont} {classOpacity} {classPadding}">
+		<div class="section {classColor} {classColorfont} {classOpacity} {classGradient} {classPadding}">
 			<div class="container">
 				<flux:content.render area="column1"/>
 			</div>	
@@ -26,6 +27,6 @@
 	</f:section>
 
 	<f:section name="Preview">
-		<strong>Section<br>Hintergrundfarbe: </strong>{classColor}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Textfarbe: </strong>{classColorfont}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Opacity: </strong>{classOpacity}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Abstand: </strong>{classPadding}
+		<strong>Section<br>Hintergrundfarbe: </strong>{classColor}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Textfarbe: </strong>{classColorfont}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Opacity: </strong>{classOpacity}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Gradient: </strong>{classGradient}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Abstand: </strong>{classPadding}
 	</f:section>
 </div>
