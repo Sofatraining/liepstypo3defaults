@@ -123,3 +123,4 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * image_autoresize Settings
 * Menüprocessor für Breadcrumb
 * colPos-Angaben in Flux-Containern anpassen
+* Button im RTE (vermutlich fehlendes CSS für RTE)
