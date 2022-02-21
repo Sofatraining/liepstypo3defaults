@@ -1,23 +1,23 @@
 {
-    "name": "lieps-gmbh/lieps-typo3-defaults",
-    "type": "typo3-cms-extension",
-    "description": "",
-    "homepage": "https://www.lieps.de",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
-    "require": {
-        "typo3/cms-core": "^10.4",
-        "typo3/cms-rte-ckeditor": "^10.4",
-        "typo3/cms-fluid-styled-content": "^10.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "LiepsGmbh\\LiepsTypo3Defaults\\": "Classes/"
-        }
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "lieps_typo3_defaults"
-        }
-    }
+	"name": "lieps-gmbh/lieps-typo3-defaults",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"homepage": "https://www.lieps.de",
+	"license": ["GPL-2.0-or-later"],
+	"keywords": ["TYPO3 CMS"],
+	"require": {
+		"typo3/cms-core": "^10.4",
+		"typo3/cms-rte-ckeditor": "^10.4",
+		"typo3/cms-fluid-styled-content": "^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"LiepsGmbh\\LiepsTypo3Defaults\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "lieps_typo3_defaults"
+		}
+	}
 }
