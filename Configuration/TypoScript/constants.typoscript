@@ -74,7 +74,7 @@ config {
 	debug = 0
 	cache_period = 86400
 	sendCacheHeaders = 1
-	intTarget =
+	intTarget = _self
 	extTarget = _blank
 	disablePrefixComment = 1
 	index_enable = 1
