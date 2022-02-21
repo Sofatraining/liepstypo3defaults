@@ -32,7 +32,7 @@ styles {
 ### PAGE ###
 ############
 page {
-     fluidtemplate {
+    fluidtemplate {
         layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
         partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
         templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
@@ -84,6 +84,7 @@ config {
     headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
 
+
 ############
 ### FLUX ###
 ############
@@ -95,14 +96,16 @@ plugin.tx_flux {
     }
 }
 
+
 ##########################
 ### LIEPSTYPO3DEFAULTS ###
 ##########################
 plugin.tx_liepstypo3defaults.view {
-	templateRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Templates/Content/
-	partialRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Partials/Content/
-	layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
+    templateRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Templates/Content/
+    partialRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Partials/Content/
+    layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
 }
+
 
 ############
 ### NEWS ###
@@ -139,6 +142,7 @@ plugin.tx_news {
         cssFile = 
     }
 }
+
 
 #################
 ### POWERMAIL ###
