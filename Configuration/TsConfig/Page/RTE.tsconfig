@@ -4,5 +4,6 @@
 RTE {
     default {
         preset = liepstypo3defaults
+        contentCSS = EXT:liepstypo3defaults/Resources/Public/Css/rte.css
     }
 }
