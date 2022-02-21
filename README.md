@@ -33,7 +33,7 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding F
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
-* Während der Entwicklung JS und CSS Compression deaktiviern -> Setup  (liepstypo3defaults\Configuration\TypoScript\Setup\Config\config.typoscript)
+* Während der Entwicklung JS und CSS Compression deaktiviern -> Setup 
 ```diff
 config {  
 	compressJs = 0  
