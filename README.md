@@ -24,7 +24,7 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding F
 #### v1.0.6  
 Adding Flux-Templates for Elements + Code-Cleaning + Bugfixes 
   
-***    
+    
 ***   
   
 ## MANUAL  
