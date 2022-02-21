@@ -20,9 +20,6 @@ Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + B
 ***
 #### v1.0.5  
 Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding Flux-Templates  
-***
-#### v1.0.5  
-Adding Flux-Templates for Elements + Bugfixes 
   
 ***    
 ***   
