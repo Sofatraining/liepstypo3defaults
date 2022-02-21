@@ -2,7 +2,7 @@
 #### RTE ####
 #############
 RTE {
-    default {
-        preset = liepstypo3defaults
-    }
+	default {
+		preset = liepstypo3defaults
+	}
 }

@@ -1,38 +1,38 @@
 <div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+		 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+		 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
-  <f:layout name="Content"/>
-  <f:section name="Configuration">
-    <flux:form id="columns-33-33-33">
-      <flux:grid>
-        <flux:grid.row>
-          <flux:grid.column name="column1" label="Spalte 1" colPos="33" style="width: 33%">
-          </flux:grid.column>
-          <flux:grid.column name="column2" label="Spalte 2" colPos="34" style="width: 34%">
-          </flux:grid.column>
-          <flux:grid.column name="column3" label="Spalte 3" colPos="35" style="width: 33%">
-          </flux:grid.column>
-        </flux:grid.row>
-      </flux:grid>
-    </flux:form>
-  </f:section>
+	<f:layout name="Content"/>
+	<f:section name="Configuration">
+		<flux:form id="columns-33-33-33">
+			<flux:grid>
+				<flux:grid.row>
+					<flux:grid.column name="column1" label="Spalte 1" colPos="33" style="width: 33%">
+					</flux:grid.column>
+					<flux:grid.column name="column2" label="Spalte 2" colPos="34" style="width: 34%">
+					</flux:grid.column>
+					<flux:grid.column name="column3" label="Spalte 3" colPos="35" style="width: 33%">
+					</flux:grid.column>
+				</flux:grid.row>
+			</flux:grid>
+		</flux:form>
+	</f:section>
 
-  <f:section name="Main">
-    <div class="row">
-      <div class="col-md-12 col-lg-4">
-        <flux:content.render area="column1"/>
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <flux:content.render area="column2"/>
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <flux:content.render area="column3"/>
-      </div>
-    </div>
-  </f:section>
+	<f:section name="Main">
+		<div class="row">
+			<div class="col-md-12 col-lg-4">
+				<flux:content.render area="column1"/>
+			</div>
+			<div class="col-md-12 col-lg-4">
+				<flux:content.render area="column2"/>
+			</div>
+			<div class="col-md-12 col-lg-4">
+				<flux:content.render area="column3"/>
+			</div>
+		</div>
+	</f:section>
 
-  <f:section name="Preview">
-    <f:translate key="LLL:EXT:liepstypo3defaults/Resources/Private/Language/locallang.xlf:flux.columns-33-33-33"/>
-  </f:section>
+	<f:section name="Preview">
+		<f:translate key="LLL:EXT:liepstypo3defaults/Resources/Private/Language/locallang.xlf:flux.columns-33-33-33"/>
+	</f:section>
 </div>

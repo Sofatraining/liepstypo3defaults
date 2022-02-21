@@ -8,23 +8,23 @@
 #### FLUID STYLED CONTENT ####
 ##############################
 styles {
-    templates {
-        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/ContentElements/
-    }
-    content {
-        textmedia {
-            maxW = 1440
-            maxWInText = 1000
-            linkWrap {
-                width = 1440m
-                height = 1000m
-                lightboxEnabled = 1
-                lightboxCssClass = image-link
-            }
-        }
-    }
+	templates {
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/ContentElements/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/ContentElements/
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/ContentElements/
+	}
+	content {
+		textmedia {
+			maxW = 1440
+			maxWInText = 1000
+			linkWrap {
+				width = 1440m
+				height = 1000m
+				lightboxEnabled = 1
+				lightboxCssClass = image-link
+			}
+		}
+	}
 }
 
 
@@ -32,26 +32,26 @@ styles {
 ### PAGE ###
 ############
 page {
-     fluidtemplate {
-        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
-        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
-    }
-    meta {
-        description =
-        author =
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
-    }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
-    }
+	fluidtemplate {
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
+	}
+	meta {
+		description =
+		author =
+		keywords =
+		viewport = width=device-width, initial-scale=1
+		robots = index,follow
+		apple-mobile-web-app-capable = no
+		compatible = IE=edge
+	}
+	tracking {
+		google {
+			trackingID =
+			anonymizeIp = 1
+		}
+	}
 }
 
 
@@ -59,41 +59,43 @@ page {
 ### CONFIG ###
 ##############
 config {
-    absRefPrefix = auto
-    no_cache = 0
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    linkVars = L
-    prefixLocalAnchors = all
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-    removeDefaultJS = 0
-    inlineStyle2TempFile = 1
-    admPanel = 1
-    debug = 0
-    cache_period = 86400
-    sendCacheHeaders = 1
-    intTarget =
-    extTarget = _blank
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    frontend_editing = 0
-    headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
+	absRefPrefix = auto
+	no_cache = 0
+	uniqueLinkVars = 1
+	pageTitleFirst = 1
+	linkVars = L
+	prefixLocalAnchors = all
+	renderCharset = utf-8
+	metaCharset = utf-8
+	doctype = html5
+	removeDefaultJS = 0
+	inlineStyle2TempFile = 1
+	admPanel = 1
+	debug = 0
+	cache_period = 86400
+	sendCacheHeaders = 1
+	intTarget =
+	extTarget = _blank
+	disablePrefixComment = 1
+	index_enable = 1
+	index_externals = 1
+	index_metatags = 1
+	frontend_editing = 0
+	headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
+
 
 ############
 ### FLUX ###
 ############
 plugin.tx_flux {
-    view {
-        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Flux/
-        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Flux/
-        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Flux/
-    }
+	view {
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Flux/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Flux/
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Flux/
+	}
 }
+
 
 ##########################
 ### LIEPSTYPO3DEFAULTS ###
@@ -104,71 +106,73 @@ plugin.tx_liepstypo3defaults.view {
 	layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
 }
 
+
 ############
 ### NEWS ###
 ############
 plugin.tx_news {
-    rss.channel {
-        title = RSS News
-        description =
-        link = http://example.com
-        language = de
-        copyright = Company GmbH
-        category =
-        generator = TYPO3 EXT:news
-        typeNum = 9818
-    }
+	rss.channel {
+		title = RSS News
+		description =
+		link = http://example.com
+		language = de
+		copyright = Company GmbH
+		category =
+		generator = TYPO3 EXT:news
+		typeNum = 9818
+	}
 
-    opengraph {
-        site_name =
+	opengraph {
+		site_name =
 
-        twitter {
-            card = summary
-            site =
-            creator =
-        }
-    }
+		twitter {
+			card = summary
+			site =
+			creator =
+		}
+	}
 
-    view {
-        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
-        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/News/
-        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/News/
-    }
+	view {
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/News/
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/News/
+	}
 
-    settings {
-        cssFile = 
-    }
+	settings {
+		cssFile = 
+	}
 }
+
 
 #################
 ### POWERMAIL ###
 #################
 plugin.tx_powermail {
-    view {
-        templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Powermail/
-        partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Powermail/
-        layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Powermail/
-    }
-    settings {
-        db.enable = 0
-        main.pid = 0
-        main.confirmation = 0
-        main.optin = 0
-        main.moresteps = 0
-        misc.ajaxSubmit = 1
-        styles {
-            bootstrap.rowClasses = row
-            # eine Spalte
-            bootstrap.numberOfColumns = 1
-            bootstrap.fieldAndLabelWrappingClasses = form-group
-            # zwei Spalten
-            # bootstrap.numberOfColumns = 2
-            # bootstrap.fieldAndLabelWrappingClasses = form-group col-md-6
-            bootstrap.fieldWrappingClasses = 
-            bootstrap.labelClasses = control-label
-            bootstrap.offsetClasses = 
-            bootstrap.submitClasses = btn btn-primary
-            bootstrap.important = 1
-        }
-    }
+	view {
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Powermail/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/Powermail/
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/Powermail/
+	}
+	settings {
+		db.enable = 0
+		main.pid = 0
+		main.confirmation = 0
+		main.optin = 0
+		main.moresteps = 0
+		misc.ajaxSubmit = 1
+		styles {
+			bootstrap.rowClasses = row
+			# eine Spalte
+			bootstrap.numberOfColumns = 1
+			bootstrap.fieldAndLabelWrappingClasses = form-group
+			# zwei Spalten
+			# bootstrap.numberOfColumns = 2
+			# bootstrap.fieldAndLabelWrappingClasses = form-group col-md-6
+			bootstrap.fieldWrappingClasses = 
+			bootstrap.labelClasses = control-label
+			bootstrap.offsetClasses = 
+			bootstrap.submitClasses = btn btn-primary
+			bootstrap.important = 1
+		}
+	}
 }

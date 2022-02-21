@@ -24,56 +24,56 @@ page {
 			}
 			ifEmpty = Default
 		}
-        templateRootPaths {
-            0 = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
-            }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 2
-                includeSpacer = 1
-                as = mainnavigation
-            }
-        }
-    }
+		templateRootPaths {
+			0 = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
+			1 = {$page.fluidtemplate.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
+			1 = {$page.fluidtemplate.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
+			1 = {$page.fluidtemplate.layoutRootPath}
+		}
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = media
+			}
+			20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			20 {
+				levels = 2
+				includeSpacer = 1
+				as = mainnavigation
+			}
+		}
+	}
 
-    includeCSSLibs {
-        file1 = EXT:liepstypo3defaults/Resources/Public/Css/bootstrap.min.css
-    }
+	includeCSSLibs {
+		file1 = EXT:liepstypo3defaults/Resources/Public/Css/bootstrap.min.css
+	}
 
-    includeCSS {
-    	file7 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
+	includeCSS {
+		file7 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 	file8 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css
-        file9 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
-    }
+		file9 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
+	}
 
-    includeJSLibs {
-        file1 = EXT:liepstypo3defaults/Resources/Public/Js/jquery.min.js
-    }
+	includeJSLibs {
+		file1 = EXT:liepstypo3defaults/Resources/Public/Js/jquery.min.js
+	}
 
-    includeJS {
+	includeJS {
 
-    }
+	}
 
-    includeJSFooterlibs {
-        file1 = EXT:liepstypo3defaults/Resources/Public/Js/bootstrap.min.js
-    }
+	includeJSFooterlibs {
+		file1 = EXT:liepstypo3defaults/Resources/Public/Js/bootstrap.min.js
+	}
 
-    includeJSFooter {
-    	file8 = EXT:liepstypo3defaults/Resources/Public/Js/magnific-popup.min.js
-        file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
-    }
+	includeJSFooter {
+		file8 = EXT:liepstypo3defaults/Resources/Public/Js/magnific-popup.min.js
+		file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
+	}
 }
