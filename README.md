@@ -36,7 +36,7 @@ Adding Flux-Templates for Elements + Bugfixes
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
-* Während der Entwicklung JS und CSS Compression deaktiviern -> Setup 
+* Während der Entwicklung JS und CSS Compression deaktivieren -> Setup 
 ```diff
 config {  
 	compressJs = 0  
@@ -124,5 +124,6 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Image sourceset
 * Webp
 * image_autoresize Settings
+* font-awesome integrieren
 * Menüprocessor für Breadcrumb
 * colPos-Angaben in Flux-Containern anpassen
