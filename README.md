@@ -126,5 +126,4 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Webp
 * image_autoresize Settings
 * font-awesome integrieren
-* Menüprocessor für Breadcrumb
 * colPos-Angaben in Flux-Containern anpassen
