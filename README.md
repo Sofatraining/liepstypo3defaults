@@ -22,7 +22,7 @@ Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + B
 Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding Flux-Templates  
 ***
 #### v1.0.6  
-Adding Breadcrumb-Menu over Menuprocessor + Adding Flux-Templates for Elements + Code-Cleaning + Bugfixes 
+Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code-Cleaning + Bugfixes 
   
     
 ***   
@@ -63,8 +63,10 @@ config {
 
 ### EXT:News
 ```ini
-[Template -> Enthält -> "News (news)" hinzufügen]
+[Template -> Enthält -> "News (news)" hinzufügen]  
+[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" hinzufügen]  
 ``` 
+* "News Styles Twitter Bootstrap V5 (news)" in den Statischen Templates hinzufügen !!
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
 * News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
