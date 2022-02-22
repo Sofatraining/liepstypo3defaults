@@ -133,9 +133,14 @@ plugin.tx_news {
 	}
 
 	view {
-		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Templates/
-		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Partials/
-		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Layouts/
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/
+		twb5 {
+			templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Styles/Twb5/Templates/
+			partialRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Styles/Twb5/Partials/
+			layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Styles/Twb5/Layouts/
+		}
 	}
 
 	settings {
