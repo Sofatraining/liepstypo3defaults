@@ -32,7 +32,7 @@ Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
-![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/154571555-9781d984-eb9a-41e9-b4a5-0e7db48bf1cf.png)
+![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155200011-cc7808ca-4857-44e2-a0d2-6f5660baae69.png)
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
