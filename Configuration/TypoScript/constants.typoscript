@@ -133,9 +133,9 @@ plugin.tx_news {
 	}
 
 	view {
-		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
-		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Partials/News/
-		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Layouts/News/
+		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Templates/
+		partialRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Partials/
+		layoutRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Layouts/
 	}
 
 	settings {
