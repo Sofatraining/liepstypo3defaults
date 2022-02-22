@@ -2,10 +2,10 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
+	pages {
 
-    }
-    tt_content {
+	}
+	tt_content {
 
-    }
+	}
 }

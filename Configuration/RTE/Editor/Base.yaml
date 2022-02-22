@@ -9,7 +9,7 @@ editor:
     defaultLanguage: "en"
     # Allow any class or any data attribute in any tag
     extraAllowedContent: "*(*)[data-*]"
-    height: 600
+    height: 450
     width: "auto"
     toolbar: "Basic"
     uiColor: "#F8F8F8"

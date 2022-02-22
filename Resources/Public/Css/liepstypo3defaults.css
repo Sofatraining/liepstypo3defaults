@@ -1,0 +1,14 @@
+body {word-break: break-word;}
+
+/* Overwrite Fluid-Styled-Content CSS */
+
+/* Bootstrap 5 konforme Ausgabe von Videos (Content-Element -> 'Text & Medien') */
+.ce-center .ce-gallery .ce-outer {float:none;}
+.ce-center .ce-gallery .ce-inner {float:none;}
+.ce-center .ce-gallery .ce-column {float:none;}
+.ce-gallery figure {display:block;}
+
+/* Overwrite Bootstrap 5 CSS */
+.breadcrumb {
+	margin-bottom: 0rem;
+}

@@ -22,9 +22,9 @@ Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + B
 Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding Flux-Templates  
 ***
 #### v1.0.6  
-Adding Flux-Templates for Elements + Bugfixes 
+Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code-Cleaning + Bugfixes 
   
-***    
+    
 ***   
   
 ## MANUAL  
@@ -32,7 +32,7 @@ Adding Flux-Templates for Elements + Bugfixes
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
-![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/154571555-9781d984-eb9a-41e9-b4a5-0e7db48bf1cf.png)
+![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155200011-cc7808ca-4857-44e2-a0d2-6f5660baae69.png)
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
@@ -63,7 +63,8 @@ config {
 
 ### EXT:News
 ```ini
-[Template -> Enthält -> "News (news)" hinzufügen]
+[Template -> Enthält -> "News (news)" hinzufügen]  
+[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" unter "News (news)" hinzufügen]  
 ``` 
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden

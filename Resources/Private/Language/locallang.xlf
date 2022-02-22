@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2022-01-18UTC14:05:160" product-name="liepstypo3defaults">
-        <header>
-            <authorName>LIEPS GmbH</authorName>
-            <authorEmail>it-service@lieps.de</authorEmail>
-        </header>
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-01-18UTC14:05:160" product-name="liepstypo3defaults">
+		<header>
+			<authorName>LIEPS GmbH</authorName>
+			<authorEmail>it-service@lieps.de</authorEmail>
+		</header>
 		<body>
 			<trans-unit id="flux.standard">
 				<source>Default Page</source>
@@ -58,5 +58,5 @@
 				<source>Section-Container mit Klassen für Farben, Opacity und Padding</source>
 			</trans-unit>
 		</body>
-    </file>
+	</file>
 </xliff>
