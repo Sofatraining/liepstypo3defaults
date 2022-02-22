@@ -51,10 +51,10 @@ plugin.tx_news {
 		list {
 			# media configuration
 			media {
+				image >
 				image {
 					lazyLoading = {$styles.content.image.lazyLoading}
-					maxWidth = 100
-					maxHeight = 100
+					width = 300
 				}
 				dummyImage = EXT:liepstypo3defaults/Resources/Public/Images/News/dummy-preview-image.png
 			}
