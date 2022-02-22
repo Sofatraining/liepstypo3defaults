@@ -1,18 +1,18 @@
 <f:if condition="{data.uid} != '1'">
-    <f:if condition="{menubreadcrumb}">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="border-top mt-2 pt-2">
-            <ol class="breadcrumb">
-                <f:for each="{menubreadcrumb}" as="breadcrumbItem" iteration="iteration">
-                    <f:if condition="{breadcrumbItem.current}">
-                        <f:then>
-                            <li class="breadcrumb-item active" aria-current="page">{breadcrumbItem.title}</li>
-                        </f:then>
-                        <f:else>
-                            <li class="breadcrumb-item"><a href="{breadcrumbItem.link}" target="{breadcrumbItem.target}" title="{breadcrumbItem.title}">{breadcrumbItem.title}</a></li>
-                        </f:else>
-                    </f:if>
-                </f:for>
-            </ol>
-        </nav>
-    </f:if>
+	<f:if condition="{menubreadcrumb}">
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="border-top mt-2 pt-2">
+			<ol class="breadcrumb">
+				<f:for each="{menubreadcrumb}" as="breadcrumbItem" iteration="iteration">
+					<f:if condition="{breadcrumbItem.current}">
+						<f:then>
+							<li class="breadcrumb-item active" aria-current="page">{breadcrumbItem.title}</li>
+						</f:then>
+						<f:else>
+							<li class="breadcrumb-item"><a href="{breadcrumbItem.link}" target="{breadcrumbItem.target}" title="{breadcrumbItem.title}">{breadcrumbItem.title}</a></li>
+						</f:else>
+					</f:if>
+				</f:for>
+			</ol>
+		</nav>
+	</f:if>
 </f:if>
