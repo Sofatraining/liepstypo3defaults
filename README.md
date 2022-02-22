@@ -64,7 +64,7 @@ config {
 ### EXT:News
 ```ini
 [Template -> Enthält -> "News (news)" hinzufügen]  
-[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" hinzufügen]  
+[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" unter "News (news)" hinzufügen]  
 ``` 
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
