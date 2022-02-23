@@ -66,9 +66,9 @@ config {
 
 ### EXT:News
 ```ini
-[Template -> Enthält -> "News (news)" hinzufügen]  
-[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" unter "News (news)" hinzufügen]  
+[Template -> Enthält -> "News (news)" hinzufügen]   
 ``` 
+* "News Styles Twitter Bootstrap V5 (news)" muss nicht mehr in die statischen Templates hinzugefügt werden
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
 * News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
