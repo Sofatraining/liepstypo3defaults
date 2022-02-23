@@ -11,7 +11,7 @@
     </f:if>
 
     <f:comment>Date</f:comment>
-    <i class="fas fa-calendar-alt me-1"> </i>
+    <i class="fa-regular fa-bell me-1"> </i>
     <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" itemprop="datePublished">
         <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
     </time>
