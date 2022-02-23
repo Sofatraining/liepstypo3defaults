@@ -1,5 +1,5 @@
 <?php
-namespace Cust\Customer\ViewHelpers;
+namespace LiepsGmbH\Liepstypo3defaults\ViewHelpers;
 
 use TYPO3\CMS\Core\Utility\DebugUtility;
 

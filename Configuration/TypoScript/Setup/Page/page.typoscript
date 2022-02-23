@@ -62,6 +62,7 @@ page {
 	}
 
 	includeCSS {
+		file5 = EXT:liepstypo3defaults/Resources/Public/Css/fa-all.min.css
 		file6 = EXT:liepstypo3defaults/Resources/Public/Css/liepstypo3defaults.css
 		file7 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 		file8 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css

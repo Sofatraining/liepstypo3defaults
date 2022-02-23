@@ -23,6 +23,9 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding F
 ***
 #### v1.0.6  
 Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code-Cleaning + Bugfixes 
+***
+#### v1.0.7  
+Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
   
     
 ***   
@@ -63,9 +66,9 @@ config {
 
 ### EXT:News
 ```ini
-[Template -> Enthält -> "News (news)" hinzufügen]  
-[Template -> Enthält -> "News Styles Twitter Bootstrap V5 (news)" unter "News (news)" hinzufügen]  
+[Template -> Enthält -> "News (news)" hinzufügen]   
 ``` 
+* "News Styles Twitter Bootstrap V5 (news)" muss nicht mehr in die statischen Templates hinzugefügt werden
 * Datumsformate und Linkbezeichnungen werden abhängig von der Spracheneinstellung in der Site-Config ausgegeben  
 * Siteconfig (config.yaml) für sprechende URL's muss nach Konfiguration anpasst werden
 * News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
@@ -126,5 +129,4 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Webp
 * image_autoresize Settings
 * font-awesome integrieren
-* Menüprocessor für Breadcrumb
 * colPos-Angaben in Flux-Containern anpassen
