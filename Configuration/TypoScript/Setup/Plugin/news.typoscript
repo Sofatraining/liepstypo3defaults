@@ -46,6 +46,7 @@ plugin.tx_news {
 		#  List
 		# --------------
 		list {
+			paginate.insertAbove = 0
 			# media configuration
 			media {
 				image >
