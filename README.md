@@ -23,6 +23,9 @@ Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding F
 ***
 #### v1.0.6  
 Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code-Cleaning + Bugfixes 
+***
+#### v1.0.7  
+Fix for BS5-Styles to EXT:News + Font Awesome Integration
   
     
 ***   
