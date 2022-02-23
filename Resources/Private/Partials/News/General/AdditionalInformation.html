@@ -17,9 +17,17 @@
     </time>
 
     <f:comment>Category</f:comment>
-    <f:if condition="{newsItem.firstCategory}">
+    <f:comment><f:if condition="{newsItem.firstCategory}">
         | <i class="fas fa-folder-open me-1"></i>
         <span class="label label-info">{newsItem.firstCategory.title}</span>
+    </f:if></f:comment>
+    <f:if condition="{newsItem.Categories}">
+        <div class="mt-1">
+            <span class="glyphicon glyphicon-tags"> </span>
+            <f:for each="{newsItem.Categories}" as="category" iteration="iterator">
+            <span class="label label-info">{category.title}</span>
+            </f:for>
+        </div>
     </f:if>
 
     <f:comment>Tags</f:comment>
