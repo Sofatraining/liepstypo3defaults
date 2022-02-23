@@ -35,7 +35,7 @@ Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
-![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155200011-cc7808ca-4857-44e2-a0d2-6f5660baae69.png)
+![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155408223-9910a40c-0790-4871-a944-ac08f29c6adb.png)
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
@@ -120,13 +120,10 @@ EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 ```diff
 EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
-  
-      
+       
 ***   
 ## ToDo
-* cs_seo hinzufügen
 * Image sourceset
 * Webp
 * image_autoresize Settings
-* font-awesome integrieren
 * colPos-Angaben in Flux-Containern anpassen
