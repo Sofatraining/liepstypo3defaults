@@ -16,7 +16,6 @@ plugin.tx_news {
 			1 = {$plugin.tx_news.view.layoutRootPath}
 		}
 		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/
-		#widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/News/Styles/Twb5/Templates/
 	}
 
 	# ====================================
