@@ -120,13 +120,10 @@ EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 ```diff
 EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
-  
-      
+       
 ***   
 ## ToDo
-* cs_seo hinzufügen
 * Image sourceset
 * Webp
 * image_autoresize Settings
-* font-awesome integrieren
 * colPos-Angaben in Flux-Containern anpassen
