@@ -90,11 +90,11 @@ config {
 * Nicht angegebene Felder leer lassen   
 > general.loader_identifier
 ```diff
-EXT:liepstypo3defaults/Configuration/Mask/mask.json
+json
 ``` 
 > general.json
 ```diff
-json
+EXT:liepstypo3defaults/Configuration/Mask/mask.json
 ```  
 > general.backendlayout_pids
 ```diff
