@@ -57,6 +57,39 @@
 			<trans-unit id="flux.section-100.description">
 				<source>Section-Container mit Klassen für Farben, Opacity und Padding</source>
 			</trans-unit>
+			<trans-unit id="flux.section-100.fields.classColor">
+				<source>Hintergrundfarbe</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.classColorfont">
+				<source>Textfarbe</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.classOpacity">
+				<source>Opacity</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.classGradient">
+				<source>Gradient</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.classPadding">
+				<source>Abstand (Padding)</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser.description">
+				<source>Eine Teaser-Box mit Bild</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser.fields.settings.files">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser.fields.headline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser.fields.teasertext">
+				<source>Kurztext</source>
+			</trans-unit>
+			<trans-unit id="flux.teaser.fields.link">
+				<source>Link</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
