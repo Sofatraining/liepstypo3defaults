@@ -12,6 +12,15 @@
 			<trans-unit id="flux.standard.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
+			<trans-unit id="flux.newContentWizard.container">
+				<source>Container</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.content">
+				<source>Elemente</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.test">
+				<source>Test</source>
+			</trans-unit>
 			<trans-unit id="flux.example">
 				<source>Example element</source>
 			</trans-unit>
