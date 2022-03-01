@@ -1,0 +1,60 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="teaser">        
+		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="1" required="1" />
+		<flux:field.input name="headline" maxCharacters="50" required="1" />
+		<flux:field.text name="teasertext" rows="5" cols="30" required="1" />
+		<flux:field.input name="link" config="{renderType: 'inputLink'}" required="1" />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table width="100%">
+        <tr>
+            <td>
+				<strong>Teaser "<f:format.crop maxCharacters="20">{headline}</f:format.crop>"</strong><br>
+                <f:format.crop maxCharacters="80">{teasertext}</f:format.crop><br>
+				<v:content.resources.fal field="settings.files" as="images" record="{record}">
+					<f:for each="{images}" as="image">
+						<f:if condition="{image}">
+							<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" />
+						</f:if>
+					</f:for>
+				</v:content.resources.fal><br>
+            </td>
+        </tr>
+    </table>
+</f:section>
+
+<f:section name="Main">	
+	<div class="card shadow-sm mb-4">
+		<v:content.resources.fal field="settings.files" as="images" record="{record}">
+			<f:for each="{images}" as="image">
+				<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" crop="{image.crop}" />
+			</f:for>
+		</v:content.resources.fal>
+		<f:link.typolink parameter="{link}">
+		<div class="card-img-overlay">
+			<h4 class="text-white">{headline}</h4>
+		</div>
+		</f:link.typolink>
+		<div class="card-body">
+			<p class="card-text">{teasertext}...</p>
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="btn-group">
+					<f:if condition="{link}">
+						<f:link.typolink parameter="{link}" class="btn btn-sm btn-outline-secondary">Mehr lesen</f:link.typolink>
+					</f:if>
+				</div>
+				<small class="text-muted"><f:format.date format="d.m.Y">{record.tstamp}</f:format.date></small>
+			</div>
+		</div>
+	</div>	
+</f:section>
+
+</div>
