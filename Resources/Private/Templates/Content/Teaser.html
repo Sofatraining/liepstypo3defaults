@@ -5,7 +5,8 @@
 <f:layout name="Content"/>
 
 <f:section name="Configuration">
-    <flux:form id="teaser">        
+    <flux:form id="teaser">  
+		<flux:form.option.group value="content" />
 		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="1" required="1" />
 		<flux:field.input name="headline" maxCharacters="50" required="1" />
 		<flux:field.text name="teasertext" rows="5" cols="30" required="1" />
