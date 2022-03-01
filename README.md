@@ -88,6 +88,10 @@ config {
 ``` 
 * Pfade eingeben in Einstellungen -> Extension Configuration -> mask 
 * Nicht angegebene Felder leer lassen   
+> general.loader_identifier
+```diff
+json
+``` 
 > general.json
 ```diff
 EXT:liepstypo3defaults/Configuration/Mask/mask.json

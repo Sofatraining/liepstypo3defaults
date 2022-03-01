@@ -5,11 +5,11 @@
 	<f:layout name="Content"/>
 	<f:section name="Configuration">
 		<flux:form id="section-100">
-			<flux:field.select name="classColor" label="Hintergrundfarbe" default="none" items="{none: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-light: 'Hellgrau', bg-success: 'Grün', bg-info: 'Cyan', bg-warning: 'Gelb', bg-danger: 'Rot', bg-black: 'Schwarz'}"/>
-			<flux:field.select name="classColorfont" label="Textfarbe" default="none" items="{none: 'Standard', text-white: 'Weiß', text-black: 'Schwarz', text-light: 'Hellgrau'}"/>
-			<flux:field.select name="classOpacity" label="Opacity" default="none" items="{none: 'Ohne', bg-opacity-10: 'Opacity 10', bg-opacity-25: 'Opacity 25', bg-opacity-50: 'Opacity 50', bg-opacity-75: 'Opacity 75'}"/>
-			<flux:field.select name="classGradient" label="Gradient" default="none" items="{none: 'Nein', bg-gradient: 'Ja'}"/>
-			<flux:field.select name="classPadding" label="Abstand (Padding)" default="none" items="{none: 'Standard', py-1: 'Extraklein', py-2: 'Klein', py-3: 'Medium', py-4: 'Groß', py-5: 'Extragroß'}"/>
+			<flux:field.select name="classColor" default="none" items="{none: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-light: 'Hellgrau', bg-success: 'Grün', bg-info: 'Cyan', bg-warning: 'Gelb', bg-danger: 'Rot', bg-black: 'Schwarz'}"/>
+			<flux:field.select name="classColorfont" default="none" items="{none: 'Standard', text-white: 'Weiß', text-black: 'Schwarz', text-light: 'Hellgrau'}"/>
+			<flux:field.select name="classOpacity" default="none" items="{none: 'Ohne', bg-opacity-10: 'Opacity 10', bg-opacity-25: 'Opacity 25', bg-opacity-50: 'Opacity 50', bg-opacity-75: 'Opacity 75'}"/>
+			<flux:field.select name="classGradient" default="none" items="{none: 'Nein', bg-gradient: 'Ja'}"/>
+			<flux:field.select name="classPadding" default="none" items="{none: 'Standard', py-1: 'Extraklein', py-2: 'Klein', py-3: 'Medium', py-4: 'Groß', py-5: 'Extragroß'}"/>
 			<flux:grid>
 				<flux:grid.row>
 					<flux:grid.column name="column1" label="Spalte 1" colPos="1"/>
