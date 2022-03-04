@@ -51,7 +51,7 @@
 		</f:if>
 		
 		<f:if condition="{style} == 'button'">
-		<ul class="nav nav-pills mb-1" id="Tab-{record.uid}" role="tablist">
+		<ul class="nav nav-pills mb-2" id="Tab-{record.uid}" role="tablist">
 			<f:for each="{panels}" as="panel" iteration="iteration">
 				<li class="nav-item" role="presentation">
 					<button class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}" id="tab-{record.uid}-{iteration.index}" data-bs-toggle="tab" data-bs-target="#item-{record.uid}-{iteration.index}" type="button" role="tab" aria-controls="item-{record.uid}-{iteration.index}" aria-selected="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}">{panel.panel.title}</button>
