@@ -85,7 +85,7 @@
 				<source>Teaser</source>
 			</trans-unit>
 			<trans-unit id="flux.teaser.description">
-				<source>Eine Teaser-Box mit Bild</source>
+				<source>Das Bootstrap5 Card-Element</source>
 			</trans-unit>
 			<trans-unit id="flux.teaser.fields.settings.files">
 				<source>Bild</source>
@@ -98,6 +98,27 @@
 			</trans-unit>
 			<trans-unit id="flux.teaser.fields.link">
 				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.description">
+				<source>Das Bootstrap5 Accordion-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.fields.title">
+				<source>Titel des Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.panels.panels.panel.fields.active">
+				<source>Aufgeklappt anzeigen</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.description">
+				<source>Das Bootstrap5 Nav-Tab-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.style">
+				<source>Art der Darstellung</source>
 			</trans-unit>
 		</body>
 	</file>
