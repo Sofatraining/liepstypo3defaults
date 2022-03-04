@@ -1,0 +1,85 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+	<f:section name="Configuration">
+		<flux:form id="tabs">
+			<flux:form.option.group value="content" />
+			<flux:form.sheet name="panels">
+				<flux:field.select name="style" default="border" items="{border: 'Border Style', button: 'Button Style', vbutton: 'Vertikal Button Style'}"/>
+				<flux:form.section name="panels">
+					<flux:form.object name="panel">
+						<flux:field.input name="title" label="Titel" />
+						<flux:field.checkbox name="active" label="Aktiver Tab" />
+					</flux:form.object>
+				</flux:form.section>	
+			</flux:form.sheet>
+			<flux:grid>
+				<f:if condition="{panels -> f:count()} > 0">
+					<f:for each="{panels}" as="panel" iteration="iteration">
+						<flux:grid.row>
+                            <flux:grid.column colPos="{iteration.index}" name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel #{iteration.cycle} ({panel.panel.id})')}" />
+						</flux:grid.row>
+					 </f:for>
+				</f:if>
+			</flux:grid>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Main">
+		<v:variable.set name="activeTabIndex" value="-1" />
+		<f:for each="{panels}" as="panel" iteration="iteration">
+			<f:if condition="{panel.panel.active}">
+				<v:variable.set name="activeTabIndex" value="{iteration.index}" />
+			</f:if>
+		</f:for>
+		
+		<f:if condition="{style} == 'border'">
+		<ul class="nav nav-tabs" id="Tab-{record.uid}" role="tablist">
+			<f:for each="{panels}" as="panel" iteration="iteration">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}" id="tab-{record.uid}-{iteration.index}" data-bs-toggle="tab" data-bs-target="#item-{record.uid}-{iteration.index}" type="button" role="tab" aria-controls="item-{record.uid}-{iteration.index}" aria-selected="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}">{panel.panel.title}</button>
+				</li>
+			</f:for>
+		</ul>
+		<div class="tab-content" id="TabContent-{record.uid}">
+			<f:for each="{panels}" as="panel" iteration="iteration">
+				<div class="tab-pane pt-4 fade {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show active')}" id="item-{record.uid}-{iteration.index}" role="tabpanel" aria-labelledby="tab-{record.uid}-{iteration.index}"><flux:content.render area="content.{iteration.index}" /></div>
+			</f:for>
+		</div>
+		</f:if>
+		
+		<f:if condition="{style} == 'button'">
+		<ul class="nav nav-pills mb-1" id="Tab-{record.uid}" role="tablist">
+			<f:for each="{panels}" as="panel" iteration="iteration">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}" id="tab-{record.uid}-{iteration.index}" data-bs-toggle="tab" data-bs-target="#item-{record.uid}-{iteration.index}" type="button" role="tab" aria-controls="item-{record.uid}-{iteration.index}" aria-selected="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}">{panel.panel.title}</button>
+				</li>
+			</f:for>
+		</ul>
+		<div class="tab-content" id="TabContent-{record.uid}">
+			<f:for each="{panels}" as="panel" iteration="iteration">
+				<div class="tab-pane pt-3 fade {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show active')}" id="item-{record.uid}-{iteration.index}" role="tabpanel" aria-labelledby="tab-{record.uid}-{iteration.index}"><flux:content.render area="content.{iteration.index}" /></div>
+			</f:for>
+		</div>
+		</f:if>
+		
+		<f:if condition="{style} == 'vbutton'">
+		<div class="d-flex align-items-start">
+			<div class="nav nav-pills flex-column me-3 w-50" id="Tab-{record.uid}" role="tablist" aria-orientation="vertical">
+				<f:for each="{panels}" as="panel" iteration="iteration">
+					<button class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}" id="tab-{record.uid}-{iteration.index}" data-bs-toggle="pill" data-bs-target="#item-{record.uid}-{iteration.index}" type="button" role="tab" aria-controls="item-{record.uid}-{iteration.index}" aria-selected="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}">{panel.panel.title}</button>
+				</f:for>
+			</div>
+			<div class="tab-content flex-grow-1 w-100" id="TabContent-{record.uid}">
+				<f:for each="{panels}" as="panel" iteration="iteration">
+					<div class="tab-pane fade {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show active')}" id="item-{record.uid}-{iteration.index}" role="tabpanel" aria-labelledby="tab-{record.uid}-{iteration.index}"><flux:content.render area="content.{iteration.index}" /></div>
+				</f:for>
+			</div>
+		</div>
+		</f:if>
+		
+	</f:section>
+
+</div>
