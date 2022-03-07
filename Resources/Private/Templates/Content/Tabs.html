@@ -27,6 +27,11 @@
 		</flux:form>
 	</f:section>
 
+	<f:section name="Preview">
+		<b>Tab-Element</b><br />
+		Option: <f:if condition="{style} == 'border'">Border Style</f:if><f:if condition="{style} == 'button'">Button Style</f:if><f:if condition="{style} == 'vbutton'">Vertikal Button Style</f:if>
+	</f:section>
+
 	<f:section name="Main">
 		<v:variable.set name="activeTabIndex" value="-1" />
 		<f:for each="{panels}" as="panel" iteration="iteration">
