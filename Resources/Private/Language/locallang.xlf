@@ -120,6 +120,24 @@
 			<trans-unit id="flux.tabs.fields.style">
 				<source>Art der Darstellung</source>
 			</trans-unit>
+			<trans-unit id="flux.modal">
+				<source>Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.description">
+				<source>Eine Bootstrap5 Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.buttonText">
+				<source>Text im Button</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.title">
+				<source>Titel der Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.additionalClassesButton">
+				<source>zusätzliche CSS-Klassen des Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.settings.additionalClassesModal">
+				<source>zusätzliche CSS-Klassen der Modalbox</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
