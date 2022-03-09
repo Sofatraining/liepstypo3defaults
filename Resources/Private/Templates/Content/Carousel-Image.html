@@ -7,17 +7,17 @@
 <f:layout name="Content"/>
 
 <f:section name="Configuration">
-    <flux:form id="carousel-image">
+	<flux:form id="carousel-image">
 		<flux:form.option.group value="content" />
 		<flux:form.option.sorting value="110" />
 		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="1" required="1" />
-    </flux:form>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">
-    <table width="100%">
-        <tr>
-            <td>
+	<table width="100%">
+		<tr>
+			<td>
 				<strong>Carousel-Image</strong><br />
 				<v:content.resources.fal field="settings.files" as="images" record="{record}">
 					<f:for each="{images}" as="image">
@@ -26,9 +26,9 @@
 						</f:if>
 					</f:for>
 				</v:content.resources.fal>
-            </td>
-        </tr>
-    </table>
+			</td>
+		</tr>
+	</table>
 </f:section>
 
 <f:section name="Main">
