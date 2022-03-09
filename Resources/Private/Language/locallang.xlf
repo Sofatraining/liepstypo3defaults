@@ -196,7 +196,7 @@
 				<source>Carousel-Bild</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel-image.description">
-				<source>Für die Verwendung innhalb eines Carousels (Bild-Slider)</source>
+				<source>Für die Verwendung innhalb eines Carousels</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel-image.fields.settings.files">
 				<source>Bild</source>
