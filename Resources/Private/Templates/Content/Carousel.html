@@ -10,12 +10,9 @@
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
 			<flux:field.select name="settings.carousel.quickselectType" items="{dots: 'Striche', images: 'Bild', numbers: 'Nummer'}" />
 			<flux:field.checkbox name="settings.carousel.arrows" default="1" />
-			<flux:field.input name="settings.carousel.interval" default="6500" eval="int,trim" />
 			<flux:field.checkbox name="settings.carousel.autostart" />
 			<flux:field.input name="settings.carousel.labelNext" default="" />
 			<flux:field.input name="settings.carousel.labelPrev" default="" />
-			<flux:field.input name="settings.carousel.width" default="1920c" />
-			<flux:field.input name="settings.carousel.id" default="carousel-{v:random.number(minimum: 11, maximum: 99)}" />
 			<flux:grid>
 				<f:if condition="{elements}">
 					<f:for each="{elements}" as="element" iteration="iteration">
@@ -42,7 +39,7 @@
 					<h3>Adding CSS-Classes</h3>
 					<p>
 						Below you can enter a few classes to be used for this specific carousel instance.
-						See examples and options under <a href="https://getbootstrap.com/docs/5.1/components/carousel/" target="_blank">https://getbootstrap.com/docs/5.1/components/carousel/</a><br>https://github.com/FluidTYPO3/flux/issues/1889.
+						See examples and options under <a href="https://getbootstrap.com/docs/5.1/components/carousel/" target="_blank">https://getbootstrap.com/docs/5.1/components/carousel/</a>.
 					</p>
 				</flux:field.custom>
 				<flux:field.input name="settings.carousel.carouselClasses" default="" />
@@ -57,11 +54,11 @@
 	</f:section>
 
 	<f:section name="Preview">
-		<p><strong>Carousel</strong><br>ID: {settings.carousel.id}</p>
+		<p><strong>Carousel</strong><br><strong>ID:</strong> #carousel-{record.uid}</p>
 	</f:section>
 
 	<f:section name="SharedObjectFields">
-		<flux:field.input name="interval" default="6500" eval="int,trim" label="Zeit in Millisekunden" />
+		<flux:field.input name="interval" default="5000" eval="int,trim" label="Zeit in Millisekunden" />
 		<flux:field.input name="header" required="1" label="Name des Carousel-Elementes" />
 		<flux:field.text name="caption" enableRichText="TRUE" label="Caption des Carousel-Elementes" />
 		<flux:field.checkbox name="hide" label="Name und Caption nicht anzeigen" />
@@ -70,12 +67,12 @@
 	</f:section>
 
 	<f:section name="Main">
-		<div id="{settings.carousel.id}" class="carousel slide{f:if(condition: settings.carousel.carouselClasses, then: ' {settings.carousel.carouselClasses}')}" data-bs-interval="{settings.carousel.interval}" {f:if(condition: settings.carousel.autostart, then: ' data-bs-ride="carousel"')}>
+		<div id="carousel-{record.uid}" class="carousel slide{f:if(condition: settings.carousel.carouselClasses, then: ' {settings.carousel.carouselClasses}')}" {f:if(condition: settings.carousel.autostart, then: ' data-bs-ride="carousel"')}>
 			<f:if condition="{settings.carousel.quickselect}">
 				<div class="carousel-indicators{f:if(condition: settings.carousel.carouselIndicatorClasses, then: ' {settings.carousel.carouselIndicatorClasses}')}">
 					<f:for each="{elements}" as="image" iteration="iteration">
 						<f:if condition="{settings.carousel.quickselectType} == 'dots'">
-							<button type="button" data-bs-target="#{settings.carousel.id}" data-bs-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')} {f:if(condition: settings.carousel.carouselIndicatorButtonClasses, then: '{settings.carousel.carouselIndicatorButtonClasses}')}" aria-label="{image.content.header}{image.image.header}" {f:if(condition: iteration.isFirst, then: 'aria-current="true"')}></button>
+							<button type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')} {f:if(condition: settings.carousel.carouselIndicatorButtonClasses, then: '{settings.carousel.carouselIndicatorButtonClasses}')}" aria-label="{image.content.header}{image.image.header}" {f:if(condition: iteration.isFirst, then: 'aria-current="true"')}></button>
 						</f:if>
 						<f:if condition="{settings.carousel.quickselectType} == 'images'">
 							<f:comment><f:if condition="{image.content.iconImage}">
@@ -90,7 +87,7 @@
 			</f:if>
 			<div class="carousel-inner{f:if(condition: settings.carousel.carouselInnerClasses, then: ' {settings.carousel.carouselInnerClasses}')}">
 				<f:for each="{elements}" as="element" iteration="iteration">
-					<div id="{f:if(condition: element.content.id, then: '{element.content.id}', else: '{element.image.id}')}" class="carousel-item{f:if(condition: element.content.id, then: ' {element.content.id}', else: ' {element.image.id}')}{f:if(condition: iteration.isFirst, then: ' active')}{f:if(condition: settings.carousel.carouselInnerItemClasses, then: ' {settings.carousel.carouselInnerItemClasses}')}">	
+					<div id="{element.content.id}" class="carousel-item {element.content.id}{f:if(condition: iteration.isFirst, then: ' active')}{f:if(condition: settings.carousel.carouselInnerItemClasses, then: ' {settings.carousel.carouselInnerItemClasses}')}" data-bs-interval="{element.content.interval}">	
 						<f:for each="{element}" key="elementType" as="elementData" >
 							<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
 							<f:if condition="{elementData.hide} == 0">
@@ -112,18 +109,18 @@
 			<f:if condition="{settings.carousel.arrows} == 1">
 				<f:if condition="{settings.carousel.labelPrev}">
 					<f:then>
-						<button class="carousel-control-prev" type="button" data-bs-target="#{settings.carousel.id}" data-bs-slide="prev">{settings.carousel.labelPrev-> f:format.raw()}<span class="visually-hidden">Previous</span></button>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev">{settings.carousel.labelPrev-> f:format.raw()}<span class="visually-hidden">Previous</span></button>
 					</f:then>
 					<f:else>
-						<button class="carousel-control-prev" type="button" data-bs-target="#{settings.carousel.id}" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 					</f:else>
 				</f:if>
 				<f:if condition="{settings.carousel.labelNext}">
 					<f:then>
-						<button class="carousel-control-next" type="button" data-bs-target="#{settings.carousel.id}" data-bs-slide="next">{settings.carousel.labelNext-> f:format.raw()}<span class="visually-hidden">Next</span></button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next">{settings.carousel.labelNext-> f:format.raw()}<span class="visually-hidden">Next</span></button>
 					</f:then>
 					<f:else>
-						<button class="carousel-control-next" type="button" data-bs-target="#{settings.carousel.id}" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 					</f:else>
 				</f:if>
 			</f:if>

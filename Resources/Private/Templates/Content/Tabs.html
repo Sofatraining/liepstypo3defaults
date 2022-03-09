@@ -72,7 +72,7 @@
 		
 		<f:if condition="{style} == 'vbutton'">
 		<div class="d-flex align-items-start">
-			<div class="nav nav-pills flex-column me-3 w-50" id="Tab-{record.uid}" role="tablist" aria-orientation="vertical">
+			<div class="nav nav-pills flex-column me-4 w-50" id="Tab-{record.uid}" role="tablist" aria-orientation="vertical">
 				<f:for each="{panels}" as="panel" iteration="iteration">
 					<button class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}" id="tab-{record.uid}-{iteration.index}" data-bs-toggle="pill" data-bs-target="#item-{record.uid}-{iteration.index}" type="button" role="tab" aria-controls="item-{record.uid}-{iteration.index}" aria-selected="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}">{panel.panel.title}</button>
 				</f:for>
