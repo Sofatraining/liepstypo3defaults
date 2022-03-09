@@ -135,7 +135,7 @@
 			<trans-unit id="flux.modal.fields.settings.additionalClassesButton">
 				<source>zusätzliche CSS-Klassen des Buttons</source>
 			</trans-unit>
-			<trans-unit id="flux.modal.fields.settings.settings.additionalClassesModal">
+			<trans-unit id="flux.modal.fields.settings.additionalClassesModal">
 				<source>zusätzliche CSS-Klassen der Modalbox</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel">
