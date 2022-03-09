@@ -30,7 +30,7 @@ Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code
 Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
 ***
 #### v1.0.8  
-Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel) + Fix Error for autoloading classes
+Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + Carousel-Image) + Fix Error for autoloading classes
   
     
 ***   
