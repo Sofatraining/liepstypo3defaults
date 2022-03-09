@@ -1,0 +1,54 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="modal">
+			<flux:form.option.group value="content" />
+			<flux:form.sheet name="openbutton" label="Main-Settings">
+				<flux:field.input name="settings.buttonText" />
+				<flux:field.input name="settings.title" />
+			</flux:form.sheet>
+			<flux:form.sheet name="advanced" label="CSS-Settings">
+				<flux:field.input name="settings.additionalClassesButton" />
+				<flux:field.input name="settings.additionalClassesModal" />
+			</flux:form.sheet>
+
+			<flux:form.content name="content" />
+
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<b>Modalbox</b><br />
+		Title: "{settings.title}" / Button: "{settings.buttonText}"
+	</f:section>
+
+	<f:section name="Main">
+		<v:variable.set name="id" value="modal-{record.uid}" />
+		<button class="btn {settings.additionalClassesButton}" data-bs-toggle="modal" data-bs-target="#{id}">
+			{settings.buttonText}
+		</button>
+		<div class="modal fade" id="{id}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-{id}" aria-hidden="true">
+			<div class="modal-dialog {settings.additionalClassesModal}">
+				<div class="modal-content">
+					<div class="modal-header">
+						<f:if condition="{settings.title}">
+							<h4 class="modal-title" id="ModalLabel-{id}">{settings.title}</h4>
+						</f:if>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<flux:content.render area="content" />
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:section>
+
+</div>

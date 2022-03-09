@@ -12,6 +12,15 @@
 			<trans-unit id="flux.standard.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
+			<trans-unit id="flux.newContentWizard.container">
+				<source>Container</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.content">
+				<source>Elemente</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.test">
+				<source>Test</source>
+			</trans-unit>
 			<trans-unit id="flux.example">
 				<source>Example element</source>
 			</trans-unit>
@@ -76,7 +85,7 @@
 				<source>Teaser</source>
 			</trans-unit>
 			<trans-unit id="flux.teaser.description">
-				<source>Eine Teaser-Box mit Bild</source>
+				<source>Das Bootstrap5 Card-Element</source>
 			</trans-unit>
 			<trans-unit id="flux.teaser.fields.settings.files">
 				<source>Bild</source>
@@ -89,6 +98,108 @@
 			</trans-unit>
 			<trans-unit id="flux.teaser.fields.link">
 				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.description">
+				<source>Das Bootstrap5 Accordion-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.fields.title">
+				<source>Titel des Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.panels.panels.panel.fields.active">
+				<source>Aufgeklappt anzeigen</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.description">
+				<source>Das Bootstrap5 Nav-Tab-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.style">
+				<source>Art der Darstellung</source>
+			</trans-unit>
+			<trans-unit id="flux.modal">
+				<source>Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.description">
+				<source>Eine Bootstrap5 Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.buttonText">
+				<source>Text im Button</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.title">
+				<source>Titel der Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.additionalClassesButton">
+				<source>zusätzliche CSS-Klassen des Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.modal.fields.settings.additionalClassesModal">
+				<source>zusätzliche CSS-Klassen der Modalbox</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel">
+				<source>Carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.description">
+				<source>Ein Bootstrap5 Carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselect">
+				<source>Paginator anzeigen</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselectType">
+				<source>Art des Paginators</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.arrows">
+				<source>Pfeilsymbole anzeigen (Prev + Next)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.autostart">
+				<source>Autostart Slider</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.labelNext">
+				<source>Next (Pfeilsymbol mit Text überschreiben)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.labelPrev">
+				<source>Prev (Pfeilsymbol mit Text überschreiben)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.width">
+				<source>Breite der Bilder (nur Bild-Slider)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.id">
+				<source>ID des Carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselClasses">
+				<source>CSS-Classes: Carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselIndicatorClasses">
+				<source>CSS-Classes: Carousel > Indicator</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselIndicatorButtonClasses">
+				<source>CSS-Classes: Carousel > Indicator > Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselInnerClasses">
+				<source>CSS-Classes: Carousel > Inner</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselInnerItemClasses">
+				<source>CSS-Classes: Carousel > Inner > Item</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselInnerItemCaptionHClasses">
+				<source>CSS-Classes: Carousel > Inner > Item > Caption > Überschrift</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.carouselInnerItemCaptionClasses">
+				<source>CSS-Classes: Carousel > Inner > Item > Caption</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.label.grid.column.prefix">
+				<source>Carousel-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel-image">
+				<source>Carousel-Bild</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel-image.description">
+				<source>Für die Verwendung innhalb eines Carousels</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel-image.fields.settings.files">
+				<source>Bild</source>
 			</trans-unit>
 		</body>
 	</file>

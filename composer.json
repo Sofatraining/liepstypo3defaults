@@ -1,5 +1,5 @@
 {
-	"name": "lieps-gmbh/lieps-typo3-defaults",
+	"name": "liepsgmbh/liepstypo3defaults",
 	"type": "typo3-cms-extension",
 	"description": "",
 	"homepage": "https://www.lieps.de",
@@ -12,12 +12,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"LiepsGmbh\\LiepsTypo3Defaults\\": "Classes/"
+			"LiepsGmbH\\Liepstypo3defaults\\": "Classes/"
 		}
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "lieps_typo3_defaults"
+			"extension-key": "liepstypo3defaults"
 		}
 	}
 }

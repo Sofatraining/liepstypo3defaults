@@ -2,9 +2,12 @@
 	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
+	{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
 	<f:layout name="Content"/>
 	<f:section name="Configuration">
 		<flux:form id="section-100">
+			<flux:form.option.group value="container" />
 			<flux:field.select name="classColor" default="none" items="{none: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-light: 'Hellgrau', bg-success: 'Grün', bg-info: 'Cyan', bg-warning: 'Gelb', bg-danger: 'Rot', bg-black: 'Schwarz'}"/>
 			<flux:field.select name="classColorfont" default="none" items="{none: 'Standard', text-white: 'Weiß', text-black: 'Schwarz', text-light: 'Hellgrau'}"/>
 			<flux:field.select name="classOpacity" default="none" items="{none: 'Ohne', bg-opacity-10: 'Opacity 10', bg-opacity-25: 'Opacity 25', bg-opacity-50: 'Opacity 50', bg-opacity-75: 'Opacity 75'}"/>

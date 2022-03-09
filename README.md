@@ -1,6 +1,8 @@
 # Sitepackage for "TYPO3 Defaults"
 ## TYPO3 10.4 LTS
 
+See all features on -> https://typo.ohnesorge.site/
+
 ### CHANGELOG
 
 #### v1.0.0  
@@ -26,6 +28,9 @@ Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code
 ***
 #### v1.0.7  
 Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
+***
+#### v1.0.8  
+Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + Carousel-Image) + Fix Error for autoloading classes
   
     
 ***   
