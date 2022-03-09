@@ -26,7 +26,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'LiepsGmbh\\LiepsTypo3Defaults\\' => 'Classes',
+			'LiepsGmbH\\Liepstypo3defaults\\' => 'Classes',
 		],
 	],
 	'state' => 'stable',
