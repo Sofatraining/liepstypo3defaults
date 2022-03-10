@@ -85,4 +85,7 @@ page {
 		file8 = EXT:liepstypo3defaults/Resources/Public/Js/magnific-popup.min.js
 		file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
 	}
+
+	bodyTagCObject = TEXT
+	bodyTagCObject.dataWrap = <body class="page{field:uid} parent{levelfield:-2,uid}">	
 }
