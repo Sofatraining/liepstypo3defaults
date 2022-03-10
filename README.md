@@ -138,3 +138,4 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Image sourceset
 * Webp
 * image_autoresize Settings
+* image-bg section
