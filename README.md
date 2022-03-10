@@ -1,7 +1,7 @@
 # Sitepackage for "TYPO3 Defaults"
 ## TYPO3 10.4 LTS
 
-See all features on -> https://typo.ohnesorge.site/
+See all features on -> https://v10.lieps.de/
 
 ### CHANGELOG
 
