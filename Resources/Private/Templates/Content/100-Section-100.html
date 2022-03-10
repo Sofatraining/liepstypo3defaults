@@ -23,7 +23,7 @@
 	</f:section>
 
 	<f:section name="Main">
-		<div class="section {classColor} {classColorfont} {classOpacity} {classGradient} {classPadding}">
+		<div class="section {classColor}{f:if(condition: '{classColorfont} != ""', then: ' {classColorfont}')}{f:if(condition: '{classOpacity} != ""', then: ' {classOpacity}')}{f:if(condition: '{classGradient} != ""', then: ' {classGradient}')}{f:if(condition: '{classPadding} != ""', then: ' {classPadding}')}">
 			<f:if condition="{containerfluid} == 0">
 			<f:then>
 			<div class="container">
