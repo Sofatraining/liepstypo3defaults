@@ -9,8 +9,8 @@
 		<flux:form id="section-100">
 			<flux:form.option.group value="container" />
 			<flux:field.checkbox name="containerfluid" default="0" />
-			<flux:field.select name="classColor" default="bg-transparent" items="{0:{0:'Transparent',1:'bg-transparent'},1:{0:'Weiß',1:'bg-white'},2:{0:'Blau',1:'bg-primary'},3:{0:'Grau',1:'bg-secondary'},4:{0:'Hellgrau',1:'bg-light'},5:{0:'Grün',1:'bg-success'},6:{0:'Cyan',1:'bg-info'},7:{0:'Gelb',1:'bg-warning'},8:{0:'Rot',1:'bg-danger'},9:{0:'Schwarz',1:'bg-black'}}"/>
-			<flux:field.select name="classColorfont" default="" items="{0:{0:'Standard',1:''},1:{0:'Weiß',1:'text-white'},2:{0:'Schwarz',1:'text-black'},3:{0:'Hellgrau',1:'text-light'}}"/>
+			<flux:field.select name="classColor" default="bg-transparent" items="{0:{0:'Transparent',1:'bg-transparent'},1:{0:'Weiß',1:'bg-white'},2:{0:'Primär',1:'bg-primary'},3:{0:'Sekundär',1:'bg-secondary'},4:{0:'Hell',1:'bg-light'},5:{0:'Erfolg',1:'bg-success'},6:{0:'Info',1:'bg-info'},7:{0:'Warnung',1:'bg-warning'},8:{0:'Gefahr',1:'bg-danger'},9:{0:'Schwarz',1:'bg-black'}}"/>
+			<flux:field.select name="classColorfont" default="" items="{0:{0:'Standard',1:''},1:{0:'Weiß',1:'text-white'},2:{0:'Schwarz',1:'text-black'},3:{0:'Hell',1:'text-light'}}"/>
 			<flux:field.select name="classOpacity" default="" items="{0:{0:'Ohne',1:''},1:{0:'Opacity 10',1:'bg-opacity-10'},2:{0:'Opacity 25',1:'bg-opacity-25'},3:{0:'Opacity 50',1:'bg-opacity-50'},4:{0:'Opacity 75',1:'bg-opacity-75'}}"/>
 			<flux:field.select name="classGradient" default="" items="{0:{0:'Nein',1:''},1:{0:'Ja',1:'bg-gradient'}}"/>
 			<flux:field.select name="classPadding" default="" items="{0:{0:'Standard',1:''},1:{0:'Extraklein',1:'py-1'},2:{0:'Klein',1:'py-2'},3:{0:'Mittel',1:'py-3'},4:{0:'Groß',1:'py-4'},5:{0:'Extragroß',1:'py-5'}}"/>
@@ -38,6 +38,11 @@
 	</f:section>
 
 	<f:section name="Preview">
-		<strong>Section<br>Hintergrundfarbe: </strong>{classColor}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Textfarbe: </strong>{classColorfont}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Opacity: </strong>{classOpacity}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Gradient: </strong>{classGradient}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Abstand: </strong>{classPadding}
+		<strong>Section<br>
+		Hintergrundfarbe: </strong><f:if condition="{classColor} == 'bg-transparent'">Transparent</f:if><f:if condition="{classColor} == 'bg-white'">Weiß</f:if><f:if condition="{classColor} == 'bg-primary'">Primär</f:if><f:if condition="{classColor} == 'bg-secondary'">Sekundär</f:if><f:if condition="{classColor} == 'bg-light'">Hell</f:if><f:if condition="{classColor} == 'bg-success'">Erfolg</f:if><f:if condition="{classColor} == 'bg-warning'">Warnung</f:if><f:if condition="{classColor} == 'bg-info'">Info</f:if><f:if condition="{classColor} == 'bg-danger'">Gefahr</f:if><f:if condition="{classColor} == 'bg-black'">Schwarz</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Textfarbe: </strong><f:if condition="{classColorfont} == ''">Standard</f:if><f:if condition="{classColorfont} == 'text-white'">Weiß</f:if><f:if condition="{classColorfont} == 'text-black'">Schwarz</f:if><f:if condition="{classColorfont} == 'text-light'">Hell</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Opacity: </strong><f:if condition="{classOpacity} == ''">Ohne</f:if><f:if condition="{classOpacity} == 'bg-opacity-10'">10</f:if><f:if condition="{classOpacity} == 'bg-opacity-25'">25</f:if><f:if condition="{classOpacity} == 'bg-opacity-50'">50</f:if><f:if condition="{classOpacity} == 'bg-opacity-75'">75</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Gradient: </strong><f:if condition="{classGradient} == ''">Nein</f:if><f:if condition="{classGradient} == 'bg-gradient'">Ja</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Abstand: </strong><f:if condition="{classPadding} == ''">Standard</f:if><f:if condition="{classPadding} == 'py-1'">Extraklein</f:if><f:if condition="{classPadding} == 'py-2'">Klein</f:if><f:if condition="{classPadding} == 'py-3'">Mittel</f:if><f:if condition="{classPadding} == 'py-4'">Groß</f:if><f:if condition="{classPadding} == 'py-5'">Extragroß</f:if>
 	</f:section>
 </div>
