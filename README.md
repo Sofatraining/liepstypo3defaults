@@ -139,3 +139,4 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Webp
 * image_autoresize Settings
 * image-bg section
+* Page-Layoutselect "Keins" erzeugt Fehler
