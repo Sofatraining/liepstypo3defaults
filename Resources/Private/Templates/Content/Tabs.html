@@ -7,7 +7,7 @@
 		<flux:form id="tabs">
 			<flux:form.option.group value="content" />
 			<flux:form.sheet name="panels">
-				<flux:field.select name="style" default="border" items="{border: 'Border Style', button: 'Button Style', vbutton: 'Vertikal Button Style'}"/>
+				<flux:field.select name="style" default="border" items="{0:{0:'Border Style',1:'border'},1:{0:'Button Style',1:'button'},2:{0:'Vertikal Button Style',1:'vbutton'}}"/>
 				<flux:form.section name="panels">
 					<flux:form.object name="panel">
 						<flux:field.input name="title" label="Titel" />
