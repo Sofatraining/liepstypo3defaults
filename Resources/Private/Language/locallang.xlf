@@ -66,6 +66,9 @@
 			<trans-unit id="flux.section-100.description">
 				<source>Section-Container mit Klassen für Farben, Opacity und Padding</source>
 			</trans-unit>
+			<trans-unit id="flux.section-100.fields.containerfluid">
+				<source>Fluid-Container aktivieren</source>
+			</trans-unit>
 			<trans-unit id="flux.section-100.fields.classColor">
 				<source>Hintergrundfarbe</source>
 			</trans-unit>

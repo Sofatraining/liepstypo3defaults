@@ -8,6 +8,7 @@
 	<f:section name="Configuration">
 		<flux:form id="section-100">
 			<flux:form.option.group value="container" />
+			<flux:field.checkbox name="containerfluid" default="0" />
 			<flux:field.select name="classColor" default="none" items="{none: 'Transparent', bg-white: 'Weiß', bg-primary: 'Blau', bg-secondary: 'Grau', bg-light: 'Hellgrau', bg-success: 'Grün', bg-info: 'Cyan', bg-warning: 'Gelb', bg-danger: 'Rot', bg-black: 'Schwarz'}"/>
 			<flux:field.select name="classColorfont" default="none" items="{none: 'Standard', text-white: 'Weiß', text-black: 'Schwarz', text-light: 'Hellgrau'}"/>
 			<flux:field.select name="classOpacity" default="none" items="{none: 'Ohne', bg-opacity-10: 'Opacity 10', bg-opacity-25: 'Opacity 25', bg-opacity-50: 'Opacity 50', bg-opacity-75: 'Opacity 75'}"/>
@@ -23,7 +24,14 @@
 
 	<f:section name="Main">
 		<div class="section {classColor} {classColorfont} {classOpacity} {classGradient} {classPadding}">
+			<f:if condition="{containerfluid} == 0">
+			<f:then>
 			<div class="container">
+			</f:then>
+			<f:else>
+			<div class="container-fluid">
+			</f:else>
+			</f:if>
 				<flux:content.render area="column1"/>
 			</div>	
 		</div>
