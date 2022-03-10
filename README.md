@@ -138,4 +138,3 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Image sourceset
 * Webp
 * image_autoresize Settings
-* colPos-Angaben in Flux-Containern anpassen
