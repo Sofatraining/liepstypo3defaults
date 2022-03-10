@@ -31,6 +31,9 @@ Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
 ***
 #### v1.0.8  
 Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + Carousel-Image) + Fix Error for autoloading classes
+***
+#### v1.0.9  
+Add lib.dynamicContentSlide + Add option container-fluid to section template
   
     
 ***   
