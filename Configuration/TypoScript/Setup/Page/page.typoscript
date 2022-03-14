@@ -87,5 +87,5 @@ page {
 	}
 
 	bodyTagCObject = TEXT
-	bodyTagCObject.dataWrap = <body class="page{field:uid} parent{levelfield:-2,uid}">	
+	bodyTagCObject.dataWrap = <body id="page{field:uid}" class="parent{levelfield:-2,uid}">
 }
