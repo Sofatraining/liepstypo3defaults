@@ -6,7 +6,9 @@ $(document).ready(function() {
 			enabled: true
 		},
 		image: {
-			titleSrc: 'title'
+			titleSrc: function(item) {
+				return item.el.find('img').attr('title');
+			}
 		}
 	});
 });
