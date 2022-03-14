@@ -84,6 +84,39 @@
 			<trans-unit id="flux.section-100.fields.classPadding">
 				<source>Abstand (Padding)</source>
 			</trans-unit>
+			<trans-unit id="flux.section-100.fields.bgImage">
+				<source>Image Background</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.bgFixed">
+				<source>Image Background fixieren</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.size">
+				<source>Image Background-Size</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.positionX">
+				<source>Image Background-Position (X)</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.positionY">
+				<source>Image Background-Position (Y)</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.repeat">
+				<source>Image Background-Repeat</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.repeatX">
+				<source>Image Background-Repeat (X)</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.repeatY">
+				<source>Image Background-Repeat (Y)</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.settings.section.sectionClasses">
+				<source>zusätzliche CSS-Klassen für div.section</source>
+			</trans-unit>
+			<trans-unit id="flux.section-100.fields.settings.section.overlayClasses">
+				<source>zusätzliche CSS-Klassen für div.section -> overlay (Nur bei Bildhintergrund!)</source>
+			</trans-unit>			
+			<trans-unit id="flux.section-100.fields.settings.section.containerClasses">
+				<source>zusätzliche CSS-Klassen für div.section -> overlay -> container/container-fluid</source>
+			</trans-unit>
 			<trans-unit id="flux.teaser">
 				<source>Teaser</source>
 			</trans-unit>
