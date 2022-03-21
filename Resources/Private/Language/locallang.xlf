@@ -237,6 +237,27 @@
 			<trans-unit id="flux.carousel-image.fields.settings.files">
 				<source>Bild</source>
 			</trans-unit>
+			<trans-unit id="flux.offcanvas">
+				<source>OffCanvas</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.description">
+				<source>Ein Bootstrap5 OffCanvas-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.fields.settings.buttonText">
+				<source>Text im Button</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.fields.settings.title">
+				<source>Titel in der Canvas-Box</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.fields.position">
+				<source>Position der Canvas-Box</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.fields.settings.additionalClassesButton">
+				<source>zusätzliche CSS-Klassen des Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.offcanvas.fields.settings.additionalClassesCanvas">
+				<source>zusätzliche CSS-Klassen der Canvas-Box</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
