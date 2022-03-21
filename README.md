@@ -1,7 +1,7 @@
 # Sitepackage for "TYPO3 Defaults"
 ## TYPO3 10.4 LTS
 
-See all features on -> https://typo.ohnesorge.site/
+See all features on -> https://v10.lieps.de/
 
 ### CHANGELOG
 
@@ -31,6 +31,9 @@ Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
 ***
 #### v1.0.8  
 Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + Carousel-Image) + Fix Error for autoloading classes
+***
+#### v1.0.9  
+Add lib.dynamicContentSlide + Add Flux-Template for OffCanvas + Add option container-fluid to section template + Add BgImage to section template + Fix Error Page-Template None.html + Finetuning
   
     
 ***   
@@ -135,4 +138,3 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 * Image sourceset
 * Webp
 * image_autoresize Settings
-* colPos-Angaben in Flux-Containern anpassen
