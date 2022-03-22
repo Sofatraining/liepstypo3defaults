@@ -60,7 +60,7 @@ body {word-wrap: break-word;}
 /* BS5 Navbar */
 .navbar-nav .dropdown-menu .dropend .dropdown-toggle::after {
     position: absolute!important;
-    right: 10px!important;
+    right: 11px!important;
     top: 50%!important;
     transform: translate(-50%,-50%)!important;
 }
