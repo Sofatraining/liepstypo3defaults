@@ -70,7 +70,7 @@ config {
 	doctype = html5
 	removeDefaultJS = 0
 	inlineStyle2TempFile = 1
-	admPanel = 1
+	admPanel = 0
 	debug = 0
 	cache_period = 86400
 	sendCacheHeaders = 1
