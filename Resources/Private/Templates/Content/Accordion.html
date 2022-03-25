@@ -19,7 +19,7 @@
 				<f:if condition="{panels -> f:count()} > 0">
 					<f:for each="{panels}" as="panel" iteration="iteration">
 						<flux:grid.row>
-                            <flux:grid.column colPos="{iteration.index}" name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel #{iteration.cycle} ({panel.panel.id})')}" />
+							<flux:grid.column colPos="{iteration.index}" name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel #{iteration.cycle} ({panel.panel.id})')}" />
 						</flux:grid.row>
 					 </f:for>
 				</f:if>
