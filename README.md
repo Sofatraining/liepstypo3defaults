@@ -36,7 +36,7 @@ Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + 
 Add lib.dynamicContentSlide + Add Flux-Template for OffCanvas + Add option container-fluid to section template + Add BgImage to section template + Fix Error Page-Template None.html + Finetuning
 ***
 #### v1.0.10  
-Add New Bootstrap Menu + Fix Error Section (BG-Image-Path) + PageTitleProvider
+Add New Bootstrap Menu + Fix Error Section (BG-Image-Path) + Add new PageTitleProvider
   
     
 ***   
