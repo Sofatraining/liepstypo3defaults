@@ -258,6 +258,12 @@
 			<trans-unit id="flux.offcanvas.fields.settings.additionalClassesCanvas">
 				<source>zusätzliche CSS-Klassen der Canvas-Box</source>
 			</trans-unit>
+			<trans-unit id="flux.button">
+				<source>Button</source>
+			</trans-unit>
+			<trans-unit id="flux.button.description">
+				<source>Ein Bootstrap5 Button-Element</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
