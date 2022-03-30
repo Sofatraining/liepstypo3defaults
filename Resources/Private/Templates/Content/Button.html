@@ -1,0 +1,102 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content"/>
+
+	<f:section name="Configuration">
+		<flux:form id="button">
+			<flux:form.sheet name="ButtonSheetOne" label="Einstellugnen">
+				<flux:field.select items="{0:{0:'Standard',1:'default'},1:{0:'Klein',1:'sm'},2:{0:'Groß',1:'lg'}}" name="settings.ButtonSize" default="" label="Button-Größe"/>
+				<flux:field.checkbox name="settings.ButtonBlock" default="0" label="Button Block"/>
+				<flux:field.checkbox name="settings.ButtonGroup" default="0" label="Group (Button Block wird deaktiviert)"/>
+				<flux:field.checkbox name="settings.ButtonGroupVertical" default="0" label="Group-Vertical (Group muss aktiviert werden)"/>
+			</flux:form.sheet>
+			<flux:form.sheet name="ButtonSheetTwo" label="Buttons">
+				<flux:form.section name="ButtonSection">
+					<flux:form.object name="ButtonObject">
+						<flux:field.input name="ButtonText" label="Button-Text"/>
+						<flux:field.input name="target" config="{renderType: 'inputLink'}" label="Link"/>
+						<flux:field.select items="primary,secondary,success,info,warning,danger,light,dark,link,outline-primary,outline-secondary,outline-success,outline-info,outline-warning,outline-danger,outline-light,outline-dark" name="ButtonOptions" default="primary" label="Farbe des Buttons"/>
+						<flux:field.checkbox name="ButtonActive" default="0" label="Disabled"/>
+					</flux:form.object>
+				</flux:form.section>
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<f:if condition="{ButtonSection} != 0">
+			<f:then>
+				<f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
+					<div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
+						<b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
+						{ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Disabled:</b>
+						{ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> 
+						[{ButtonObjectItem.ButtonObject.target}]
+					</div>
+				</f:for>
+			</f:then>
+			<f:else>
+				Bitte mindestens einen Button anlegen!
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Main">
+		<f:if condition="{settings.ButtonBlock}">
+			<f:then>
+				<v:variable.set name="settings.ButtonBlockVar" value="d-grid gap-2"/>
+			</f:then>
+			<f:else>
+				<v:variable.set name="settings.ButtonBlockVar" value=""/>
+			</f:else>
+		</f:if>
+		<f:if condition="{settings.ButtonGroupVertical}">
+			<f:then>
+				<v:variable.set name="settings.ButtonGroupVertical" value="btn-group-vertical"/>
+			</f:then>
+			<f:else>
+				<v:variable.set name="settings.ButtonGroupVertical" value="btn-group"/>
+			</f:else>
+		</f:if>
+		<f:if condition="{settings.ButtonGroup}">
+			<f:then>
+				<div class="{settings.ButtonGroupVertical}" role="group">
+					<f:render section="Button" arguments="{_all}"/>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="buttonwrap{f:if(condition: settings.ButtonBlockVar, then: ' {settings.ButtonBlockVar}')}">
+					<f:render section="Button" arguments="{_all}"/>
+				</div>
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Button">
+		<f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
+			<f:if condition="{ButtonObjectItem.ButtonObject.target} == ''">
+				<f:then>
+					<f:render section="BottonWithOutLink" arguments="{_all}"/>
+				</f:then>
+				<f:else>
+					<f:render section="BottonWithLink" arguments="{_all}"/>
+				</f:else>
+			</f:if>
+		</f:for>
+	</f:section>
+
+	<f:section name="BottonWithOutLink">
+		<button type="button"
+				class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}">
+			{ButtonObjectItem.ButtonObject.ButtonText}
+		</button>
+	</f:section>
+	<f:section name="BottonWithLink">
+		<f:link.typolink parameter="{ButtonObjectItem.ButtonObject.target}" class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {ButtonDisable} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}" additionalAttributes="{role: 'button'}">
+			{ButtonObjectItem.ButtonObject.ButtonText}
+		</f:link.typolink>
+	</f:section>
+</div>
