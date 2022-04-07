@@ -1,3 +1,5 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
  <header>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
@@ -38,3 +40,12 @@
 		<f:render partial="Breadcrumb" arguments="{_all}" />
 	</div>
 </header>
+<v:asset.script name="navbar-toggler" movable="1">
+// Toggle Hamburger Menu
+document.addEventListener('click',function(e){
+	// Hamburger menu
+	if(e.target.classList.contains('hamburger-toggle')){
+		e.target.children[0].classList.toggle('active');
+	}
+}) 
+</v:asset.script>
