@@ -1,49 +1,49 @@
 # Sitepackage for "TYPO3 Defaults"
 ## TYPO3 10.4 LTS
-Description: This Typo3-LTSv10-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
+Description: This TYPO3-LTSv10-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
 
 See all features on -> https://v10.lieps.de/
 
 ### CHANGELOG
 
 #### v1.0.0  
-Intial Release - Original Plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
+Intial Release - Original plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
 ***
 #### v1.0.1  
 Changes in constants.typoscript and setup.typoscript to LIEPS-Defaults
 ***
 #### v1.0.2  
-Multiple Changes (BE-Layout + Templates, RTE, Install Ext: image_autoresize, mask, powermail, news + Bugfixes)
+Multiple changes (BE-layout + templates, RTE, install ext: image_autoresize, mask, powermail, news + bugfixes)
 ***
 #### v1.0.3  
-setup.typoscript + constants.typoscript + Templatepfade für News und Powermail  + diverse Anpassungen  
+setup.typoscript + constants.typoscript + templatepath for news and powermail  
 ***
 #### v1.0.4  
-Add Jquery Magnific Popup + Add Template und Partials (Fluid-Styles-Content) + Bereinigungen + Bugfixes  
+Add jquery magnific popup + add template and partials (fluid-styled-content) + code-cleaning + bugfixes  
 ***
 #### v1.0.5  
-Neue Datei-Struktur für die Setup-Dateien + VHS und Flux-Integration + Adding Flux-Templates  
+new file-structure for TS-files + VHS and flux-integration + adding flux-templates  
 ***
 #### v1.0.6  
-Adding Breadcrumb-Menu over Menuprocessor + Adding BS5-Styles to EXT:News + Code-Cleaning + Bugfixes 
+Adding breadcrumb-menu with menuprocessor + adding BS5-styles to EXT:news + code-cleaning + bugfixes 
 ***
 #### v1.0.7  
-Fix for BS5-Styles to EXT:News + Font Awesome 6 Integration
+Fix for BS5-styles to EXT:news + font awesome 6 integration
 ***
 #### v1.0.8  
-Adding Flux-Templates for Content-Elements (Teaser, Accordion, Tabs, Carousel + Carousel-Image) + Fix Error for autoloading classes
+Adding flux-templates for content-elements (teaser, accordion, tabs, carousel + carousel-image) + fix error for autoloading classes
 ***
 #### v1.0.9  
-Add lib.dynamicContentSlide + Add Flux-Template for OffCanvas + Add option container-fluid to section template + Add BgImage to section template + Fix Error Page-Template None.html + Finetuning
+Add lib.dynamicContentSlide + add flux-template for OffCanvas element + add option container-fluid to section template + add background-image to section template + fix error page-template None.html + finetuning
 ***
 #### v1.0.10  
-Add New Bootstrap Menu + Fix Error Section (BG-Image-Path) + Add new PageTitleProvider + Add Flux-Template for Buttons
+Add new bootstrap menu + fix error section (BG-Image-Path) + add new PageTitleProvider + add flux-template for buttons
   
     
 ***   
   
-## MANUAL  
-### Installation / Settings 
+## MANUAL
+### Installation / Settings (will translate later in english)
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
