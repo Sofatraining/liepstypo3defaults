@@ -34,4 +34,16 @@ config {
 	compressCss = 1
 	concatenateJs = 1
 	concatenateCss = 1
+
+	// PageTitleProvider
+	pageTitleProviders {
+		pages {
+			provider = LiepsGmbH\Liepstypo3defaults\PageTitle\LiepsPageTitleProvider
+			before = seo
+		}
+		seo {
+			provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
+			before = record
+		}
+	}
 }

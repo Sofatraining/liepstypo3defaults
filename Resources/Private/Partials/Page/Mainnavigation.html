@@ -1,16 +1,38 @@
-<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
 	<f:for each="{mainnavigation}" as="mainnavigationItem">
-		<li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
-			<a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="nav-link px-2 link-dark">
+		<li class="nav-item{f:if(condition: mainnavigationItem.children, then:' dropdown')}{f:if(condition: mainnavigationItem.active, then:' active')}">
+			<a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="position-relative nav-link{f:if(condition: mainnavigationItem.children, then:' dropdown-toggle')}"{f:if(condition: mainnavigationItem.children, then:' data-bs-toggle="dropdown" data-bs-auto-close="outside"')}>
 				{mainnavigationItem.title}
 			</a>
 			<f:if condition="{mainnavigationItem.children}">
-				<ul>
+				<ul class="dropdown-menu shadow">
 					<f:for each="{mainnavigationItem.children}" as="child">
-						<li class="{f:if(condition: child.active, then:'active')}">
-							<a href="{child.link}" target="{child.target}" title="{child.title}">
+						<li class="{f:if(condition: child.active, then:'active')}{f:if(condition: child.children, then:' dropend')}">
+							<a href="{child.link}" target="{child.target}" title="{child.title}" class="position-relative dropdown-item{f:if(condition: child.children, then:' dropdown-toggle')}" {f:if(condition: child.children, then:'data-bs-toggle="dropdown" data-bs-auto-close="outside"')}>
 								{child.title}
 							</a>
+							<f:if condition="{child.children}">
+								<ul class="dropdown-menu dropdown-submenu shadow">
+									<f:for each="{child.children}" as="subchild">
+										<li class="{f:if(condition: subchild.active, then:'active')}{f:if(condition: subchild.children, then:' dropend')}">
+											<a href="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item{f:if(condition: subchild.children, then:' dropdown-toggle')}"{f:if(condition: subchild.children, then:' data-bs-toggle="dropdown" data-bs-auto-close="outside"')}>
+												{subchild.title}
+											</a>
+											<f:if condition="{subchild.children}">
+												<ul class="dropdown-menu dropdown-submenu shadow">
+													<f:for each="{subchild.children}" as="subsubchild">
+														<li class="{f:if(condition: subsubchild.active, then:'active')}">
+															<a href="{subsubchild.link}" target="{subsubchild.target}" title="{subsubchild.title}" class="position-relative dropdown-item">
+																{subsubchild.title}
+															</a>
+														</li>
+													</f:for>
+												</ul>
+											</f:if>
+										</li>
+									</f:for>
+								</ul>
+							</f:if>
 						</li>
 					</f:for>
 				</ul>

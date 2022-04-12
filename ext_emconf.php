@@ -17,6 +17,7 @@ $EM_CONF[$_EXTKEY] = [
 			'image_autoresize' => '2.1.1-2.99.99',
 			'powermail' => '8.4.1-8.99.99',
 			'news' => '9.2.0-9.99.99',
+			'seo' => '10.4.0-10.4.99',
 			'rte_ckeditor' => '10.4.0-10.4.99',
 		],
 		'conflicts' => [
@@ -36,7 +37,7 @@ $EM_CONF[$_EXTKEY] = [
 	'author' => 'Jürgen Ohnesorge',
 	'author_email' => 'it-service@lieps.de',
 	'author_company' => 'LIEPS GmbH',
-	'version' => '1.0.9',
+	'version' => '1.0.10',
 	'_md5_values_when_last_written' => 'a:0:{}',
 	'suggests' => array(
 	),

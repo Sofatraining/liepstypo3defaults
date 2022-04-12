@@ -7,21 +7,21 @@
 <f:layout name="Content"/>
 
 <f:section name="Configuration">
-    <flux:form id="teaser">  
+	<flux:form id="teaser">  
 		<flux:form.option.group value="content" />
 		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="1" required="1" />
 		<flux:field.input name="headline" maxCharacters="50" required="1" />
 		<flux:field.text name="teasertext" rows="5" cols="30" required="1" />
 		<flux:field.input name="link" config="{renderType: 'inputLink'}" required="1" />
-    </flux:form>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">
-    <table width="100%">
-        <tr>
-            <td>
+	<table width="100%">
+		<tr>
+			<td>
 				<strong>Teaser "<f:format.crop maxCharacters="20">{headline}</f:format.crop>"</strong><br>
-                <f:format.crop maxCharacters="80">{teasertext}</f:format.crop><br>
+				<f:format.crop maxCharacters="80">{teasertext}</f:format.crop><br>
 				<v:content.resources.fal field="settings.files" as="images" record="{record}">
 					<f:for each="{images}" as="image">
 						<f:if condition="{image}">
@@ -29,9 +29,9 @@
 						</f:if>
 					</f:for>
 				</v:content.resources.fal><br>
-            </td>
-        </tr>
-    </table>
+			</td>
+		</tr>
+	</table>
 </f:section>
 
 <f:section name="Main">	
