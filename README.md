@@ -1,4 +1,4 @@
-# Sitepackage for "TYPO3 Defaults"
+# Sitepackage for CMS TYPO3
 ## TYPO3 10.4 LTS
 Description: This TYPO3-LTSv10-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
 
