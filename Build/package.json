@@ -3,11 +3,11 @@
 	"description": "",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Sofatraining/TYPO3-11.5-Sitepackage"
+		"url": "https://github.com/Sofatraining/TYPO3-10.4-Sitepackage"
 	},
 	"homepage": "https://www.lieps.de",
 	"author": "LIEPS GmbH",
-	"version": "1.0.0",
+	"version": "1.0.10",
 	"license": "GPL-2.0-or-later",
 	"devDependencies": {
 		"grunt": "^1.0.4",
