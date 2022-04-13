@@ -34,10 +34,13 @@ Fix for BS5-styles to EXT:news + font awesome 6 integration
 Adding flux-templates for content-elements (teaser, accordion, tabs, carousel + carousel-image) + fix error for autoloading classes
 ***
 #### v1.0.9  
-Add lib.dynamicContentSlide + add flux-template for OffCanvas element + add option container-fluid to section template + add background-image to section template + fix error page-template None.html + finetuning
+Add lib.dynamicContentSlide + add flux-template for OffCanvas element + add option container-fluid to section template + add background-image to section template + fix error page-template None.html + finetuning 
 ***
 #### v1.0.10  
-Add new bootstrap menu + fix error section (BG-Image-Path) + add new PageTitleProvider + add flux-template for buttons
+Add new bootstrap menu + fix error section (BG-Image-Path) + add new PageTitleProvider + add flux-template for buttons 
+***
+#### v1.0.11  
+Add fields for css-classes für row + col in container-elements
   
     
 ***   
