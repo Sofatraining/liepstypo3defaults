@@ -19,15 +19,24 @@
 					</flux:grid.column>
 				</flux:grid.row>
 			</flux:grid>
+			<flux:form.sheet name="styles" label="CSS Classes">
+				<flux:field.custom name="void">
+					<h3>Adding CSS-Classes</h3>
+					<p>Below you can enter a few classes to be used for this specific columns instance.</p>
+				</flux:field.custom>
+				<flux:field.input name="settings.section.rowClasses" default="" />
+				<flux:field.input name="settings.section.col1Classes" default="" />
+				<flux:field.input name="settings.section.col2Classes" default="" />
+			</flux:form.sheet>
 		</flux:form>
 	</f:section>
 
 	<f:section name="Main">
-		<div class="row">
-			<div class="col-md-6">
+		<div class="row{f:if(condition: settings.section.rowClasses, then: ' {settings.section.rowClasses}')}">
+			<div class="col-md-6{f:if(condition: settings.section.col1Classes, then: ' {settings.section.col1Classes}')}">
 				<flux:content.render area="column1"/>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6{f:if(condition: settings.section.col2Classes, then: ' {settings.section.col2Classes}')}">
 				<flux:content.render area="column2"/>
 			</div>
 		</div>
