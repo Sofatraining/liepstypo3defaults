@@ -46,7 +46,7 @@
 		<v:content.resources.fal field="bgImage" as="images" record="{record}">
 		<f:for each="{images}" as="image">
 		<div class="section {classColor}{f:if(condition: '{classColorfont} != ""', then: ' {classColorfont}')}{f:if(condition: '{classOpacity} != ""', then: ' {classOpacity}')}{f:if(condition: '{classGradient} != ""', then: ' {classGradient}')}{f:if(condition: '{classPadding} != "" && {bgImage} == ""', then: ' {classPadding}')}{f:if(condition: settings.section.sectionClasses, then: ' {settings.section.sectionClasses}')}" >
-		<div class="bgimage{f:if(condition: size, then: ' {size}')}{f:if(condition: positionX, then: ' {positionX}')}{f:if(condition: positionY, then: ' {positionY}')}{f:if(condition: repeat, then: ' {repeat}')}{f:if(condition: repeatX, then: ' {repeatX}')}{f:if(condition: repeatY, then: ' {repeatY}')}{f:if(condition: '{bgFixed} == 1', then: ' bg-fixed')}" style="background-image: url('/{image.url}');" >
+		<div class="bgimage{f:if(condition: size, then: ' {size}')}{f:if(condition: positionX, then: ' {positionX}')}{f:if(condition: positionY, then: ' {positionY}')}{f:if(condition: repeat, then: ' {repeat}')}{f:if(condition: repeatX, then: ' {repeatX}')}{f:if(condition: repeatY, then: ' {repeatY}')}{f:if(condition: '{bgFixed} == 1', then: ' bg-fixed')}" style="background-image: url('{image.url}');" >
 		<div class="overlay{f:if(condition: overlay, then: ' {overlay}')}{f:if(condition: settings.section.overlayClasses, then: ' {settings.section.overlayClasses}')}{f:if(condition: '{classPadding} != "" && {bgImage} != ""', then: ' {classPadding}')}">
 		</f:for>
 		</v:content.resources.fal>
