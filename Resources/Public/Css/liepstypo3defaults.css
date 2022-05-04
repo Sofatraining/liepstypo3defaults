@@ -66,6 +66,9 @@ body {word-wrap: break-word;}
 
 .bg-fixed {background-attachment: fixed;}
 
+/* Powermail */
+.tx-powermail fieldset label {margin-top:10px;}
+
 /* BS5 Navbar */
 .navbar-nav .dropdown-menu .dropend .dropdown-toggle::after {
 		position: absolute!important;
