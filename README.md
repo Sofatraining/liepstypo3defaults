@@ -48,6 +48,9 @@ Add Support for TYPO3 V11.5 LTS
 ***
 #### v2.0.2  
 Fix Powermail-Templates
+***
+#### v2.0.3
+Add sourceset and webp for fluid -> rendering -> Image.html
     
 ***   
   
@@ -60,6 +63,10 @@ Fix Powermail-Templates
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
+* webp generell als Bild-Format in LocalConfiguration zulassen
+```diff
+$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp'; 
+``` 
 * Während der Entwicklung JS und CSS Compression deaktivieren -> Setup 
 ```diff
 config {  
