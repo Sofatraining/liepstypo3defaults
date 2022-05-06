@@ -155,6 +155,5 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
        
 ***   
 ## ToDo
-* Image sourceset
-* Webp
+* Image sourceset and webp for Fluxtemplates
 * image_autoresize Settings
