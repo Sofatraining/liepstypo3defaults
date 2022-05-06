@@ -63,7 +63,7 @@ Add sourceset and webp for fluid -> rendering -> Image.html
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
-* webp generell als Bild-Format in LocalConfiguration zulassen
+* !!WICHTIG!! webp generell als Bild-Format in LocalConfiguration zulassen
 ```diff
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp'; 
 ``` 
