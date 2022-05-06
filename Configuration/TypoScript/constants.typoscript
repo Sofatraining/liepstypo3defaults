@@ -15,11 +15,11 @@ styles {
 	}
 	content {
 		textmedia {
-			maxW = 1440
-			maxWInText = 1000
+			maxW = 1920
+			maxWInText = 1200
 			linkWrap {
-				width = 1440m
-				height = 1000m
+				width = 1920m
+				height = 1200m
 				lightboxEnabled = 1
 				lightboxCssClass = image-link
 			}
