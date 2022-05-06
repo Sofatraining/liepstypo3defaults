@@ -5,14 +5,22 @@
 	width="{dimensions.width}" 
 	height="{dimensions.height}" 
 	alt="{file.alternative}" 
-	title="{file.title}" 
+	title="{file.title}"
 	loading="{settings.media.lazyLoading}" 
-	decoding="{settings.media.imageDecoding}"
-	additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,
-	{f:uri.image(image: file, maxWidth: 990)} 990w,
-	{f:uri.image(image: file, maxWidth: 1200)} 1200w,
-	{f:uri.image(image: file, maxWidth: 1600)} 1600w,
-	{f:uri.image(image: file, maxWidth: 1900)} 1900w',
-	sizes: '(min-width: 1600px) 1200px,(min-width: 1400px) 1100px,(min-width:1000px) 900px,50vw, 100vw'}"
+	decoding="{settings.media.imageDecoding}" 
+	additionalAttributes="{srcset: '{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 576, cropVariant: mobile)} 576w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 768, cropVariant: tablet)} 768w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 990, cropVariant: tablet)} 990w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1200, cropVariant: default)} 1200w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1500, cropVariant: default)} 1500w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1900, cropVariant: default)} 1900w',
+	data-srcset: '{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 576, cropVariant: mobile)} 576w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 768, cropVariant: tablet)} 768w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 990, cropVariant: tablet)} 990w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1200, cropVariant: default)} 1200w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1500, cropVariant: default)} 1500w,
+	{f:uri.image(image: file, treatIdAsReference: 1, maxWidth: 1900, cropVariant: default)} 1900w',
+	sizes: '(min-width: 1600px) 1200px,(min-width: 1400px) 1100px,(min-width:1000px) 900px,(min-width:800px) 700px,50vw, 100vw',
+	data-sizes: '(min-width: 1600px) 1200px,(min-width: 1400px) 1100px,(min-width:1000px) 900px,(min-width:800px) 700px,50vw, 100vw'}"
 />
 </html>
