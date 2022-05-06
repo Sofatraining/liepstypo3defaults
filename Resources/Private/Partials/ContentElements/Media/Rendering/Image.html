@@ -8,5 +8,11 @@
     title="{file.title}" 
     loading="{settings.media.lazyLoading}" 
     decoding="{settings.media.imageDecoding}"
+    additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,
+	{f:uri.image(image: file, maxWidth: 990)} 990w,
+	{f:uri.image(image: file, maxWidth: 1200)} 1200w,
+	{f:uri.image(image: file, maxWidth: 1600)} 1600w,
+	{f:uri.image(image: file, maxWidth: 1900)} 1900w',
+	sizes: '(min-width: 1200px) 50vw, 100vw'}"
 />
 </html>
