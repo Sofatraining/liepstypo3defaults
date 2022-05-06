@@ -1,18 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:media 
-    class="image-embed-item img-fluid" 
-    file="{file}" 
-    width="{dimensions.width}" 
-    height="{dimensions.height}" 
-    alt="{file.alternative}" 
-    title="{file.title}" 
-    loading="{settings.media.lazyLoading}" 
-    decoding="{settings.media.imageDecoding}"
-    additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,
+	class="image-embed-item img-fluid" 
+	file="{file}" 
+	width="{dimensions.width}" 
+	height="{dimensions.height}" 
+	alt="{file.alternative}" 
+	title="{file.title}" 
+	loading="{settings.media.lazyLoading}" 
+	decoding="{settings.media.imageDecoding}"
+	additionalAttributes="{srcset: '{f:uri.image(image: file, maxWidth: 768)} 768w,
 	{f:uri.image(image: file, maxWidth: 990)} 990w,
 	{f:uri.image(image: file, maxWidth: 1200)} 1200w,
 	{f:uri.image(image: file, maxWidth: 1600)} 1600w,
 	{f:uri.image(image: file, maxWidth: 1900)} 1900w',
-	sizes: '(min-width: 1200px) 50vw, 100vw'}"
+	sizes: '(min-width: 1600px) 1200px,(min-width: 1400px) 1100px,(min-width:1000px) 900px,50vw, 100vw'}"
 />
 </html>
