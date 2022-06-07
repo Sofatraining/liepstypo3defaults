@@ -51,6 +51,9 @@ Fix Powermail-Templates
 ***
 #### v2.0.3
 Add sourceset and webp for fluid -> rendering -> Image.html
+***
+#### v2.0.4
+Small fixes
     
 ***   
   
