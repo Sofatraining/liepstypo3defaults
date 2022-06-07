@@ -41,6 +41,9 @@ Add new bootstrap menu + fix error section (BG-Image-Path) + add new PageTitlePr
 ***
 #### v1.0.11  
 Add fields for css-classes für row + col in container-elements
+***
+#### v1.0.12  
+Last small fixes for LTS 10
   
     
 ***   
