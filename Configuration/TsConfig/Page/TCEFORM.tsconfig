@@ -23,6 +23,14 @@ TCEFORM {
 		header_layout.types.liepstypo3defaults_102-columns-50-50.disabled = 1
 		date.types.liepstypo3defaults_102-columns-50-50.disabled = 1
 		subheader.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		# Ansprechpartnerbox
+		header.types.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_link.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_position.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_layout.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		date.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		subheader.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header.types.liepstypo3defaults_ansprechpartner.label = Name
 	}
 	sys_file_reference {
 		crop.config.cropVariants {
