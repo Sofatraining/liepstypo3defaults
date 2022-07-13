@@ -6,13 +6,23 @@ TCEFORM {
 
 	}
 	tt_content {
-		header.types.liepstypo3defaults_button.disabled = 1
-		header.types.types.liepstypo3defaults_button.disabled = 1
-		header_link.types.liepstypo3defaults_button.disabled = 1
-		header_position.types.liepstypo3defaults_button.disabled = 1
-		header_layout.types.liepstypo3defaults_button.disabled = 1
-		date.types.liepstypo3defaults_button.disabled = 1
-		subheader.types.liepstypo3defaults_button.disabled = 1
+		# Disable TCA Header-Section for custom elements
+		# SECTION
+		header.types.liepstypo3defaults_100-section-100.disabled = 1
+		header.types.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_link.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_position.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_layout.types.liepstypo3defaults_100-section-100.disabled = 1
+		date.types.liepstypo3defaults_100-section-100.disabled = 1
+		subheader.types.liepstypo3defaults_100-section-100.disabled = 1
+		# COLUMNS 50/50
+		header.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header.types.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_link.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_position.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_layout.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		date.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		subheader.types.liepstypo3defaults_102-columns-50-50.disabled = 1
 	}
 	sys_file_reference {
 		crop.config.cropVariants {
