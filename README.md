@@ -53,7 +53,7 @@ Fix Powermail-Templates
 Add sourceset and webp for fluid -> rendering -> Image.html
 ***
 #### v2.0.4
-Small fixes
+Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-Styled-Content > Partial > Header > All.html 
     
 ***   
   
