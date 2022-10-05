@@ -339,6 +339,21 @@
 			<trans-unit id="flux.ap.fields.phone">
 				<source>Telefon</source>
 			</trans-unit>
+			<trans-unit id="flux.gallery">
+				<source>Bilder-Galerie</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.description">
+				<source>Bildergalerie in Spalten mit/ohne Bildvergrößerung</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.selectCol">
+				<source>Anzahl der Spalten</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.lightbox">
+				<source>Bildvergrößerung</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.settings.files">
+				<source>Bilder</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
