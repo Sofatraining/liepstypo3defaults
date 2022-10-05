@@ -48,6 +48,12 @@ Add Support for TYPO3 V11.5 LTS
 ***
 #### v2.0.2  
 Fix Powermail-Templates
+***
+#### v2.0.3
+Add sourceset and webp for fluid -> rendering -> Image.html
+***
+#### v2.0.4
+Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-Styled-Content > Partial > Header > All.html 
     
 ***   
   
@@ -60,6 +66,10 @@ Fix Powermail-Templates
   
 * Statische Templates wie im Screenshot hinzufügen
 * Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
+* !! WICHTIG !! webp generell als Bild-Format in LocalConfiguration zulassen
+```diff
+$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp'; 
+``` 
 * Während der Entwicklung JS und CSS Compression deaktivieren -> Setup 
 ```diff
 config {  
@@ -148,6 +158,6 @@ EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
        
 ***   
 ## ToDo
-* Image sourceset
-* Webp
+* TCEFORM Overwrite for Header-Section
+* Image sourceset and webp for Fluxtemplates
 * image_autoresize Settings

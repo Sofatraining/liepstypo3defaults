@@ -318,6 +318,27 @@
 			<trans-unit id="flux.button.description">
 				<source>Ein Bootstrap5 Button-Element</source>
 			</trans-unit>
+			<trans-unit id="flux.ap">
+				<source>Ansprechpartner</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.description">
+				<source>Box für Ansprechpartner erstellen</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.fields.type">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.fields.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.fields.address">
+				<source>Funktion / Adresse</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.fields.mail">
+				<source>E-Mail</source>
+			</trans-unit>
+			<trans-unit id="flux.ap.fields.phone">
+				<source>Telefon</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

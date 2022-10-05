@@ -1,0 +1,62 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="ap">  
+		<flux:form.option.group value="content" />
+		<flux:field.inline.fal name="settings.files" minItems="0" maxItems="1" required="0" />
+		<flux:field.input name="type" maxCharacters="50" required="1" />
+		<flux:field.text name="address" required="0" enableRichText="1" />
+        <flux:field.input name="mail" maxCharacters="50" required="0" />
+        <flux:field.input name="phone" maxCharacters="50" required="0" />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table width="100%">
+        <tr>
+            <td>
+				{type}<br>
+				<v:content.resources.fal field="settings.files" as="images" record="{record}">
+					<f:if condition="{images}">
+                        <f:for each="{images}" as="image">
+							<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" />
+					    </f:for>
+                    </f:if>
+				</v:content.resources.fal><br>
+            </td>
+        </tr>
+    </table>
+</f:section>
+
+<f:section name="Main">	
+
+	<div class="authorBox mb-4">
+        <f:if condition="{settings.files}">
+		    <v:content.resources.fal field="settings.files" as="images" record="{record}">
+                <f:for each="{images}" as="image">
+                    <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" crop="{image.crop}" />
+                </f:for>
+		    </v:content.resources.fal>
+        </f:if>
+		<div class="authorBoxHead">{type}</div>
+		<div class="authorBoxContent">
+			<p class="authorName">{record.header}</p><hr>
+			<div class="authorBody">
+                <f:if condition="{address}"><f:format.html>{address}</f:format.html></f:if>
+                <p><f:if condition="{mail}"><i class="fa-solid fa-envelope"></i>
+                    <f:link.email email="{mail}" title="E-Mail an {name} schreiben">E-Mail an {record.header} schreiben</f:link.email><br>
+                    <f:comment><a href="mailto:{mail}" title="E-Mail an {name} schreiben">{mail}</a></f:comment>
+                </f:if>
+                <f:if condition="{phone}"><i class="fa-solid fa-phone"></i>{phone}</f:if></p>
+            </div>
+		</div>
+	</div>	
+</f:section>
+
+</div>
