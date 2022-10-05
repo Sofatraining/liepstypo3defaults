@@ -54,6 +54,9 @@ Add sourceset and webp for fluid -> rendering -> Image.html
 ***
 #### v2.0.4
 Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-Styled-Content > Partial > Header > All.html 
+***
+#### v2.0.5
+Fixed Error in ext_emconf.php
     
 ***   
   
