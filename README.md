@@ -57,6 +57,9 @@ Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-
 ***
 #### v2.0.5
 Fixed Error in ext_emconf.php
+***
+#### v2.0.6
+Adding Image-Gallery (rows)
     
 ***   
   
