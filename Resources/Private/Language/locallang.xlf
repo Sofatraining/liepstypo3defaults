@@ -118,7 +118,7 @@
 				<source>Section</source>
 			</trans-unit>
 			<trans-unit id="flux.section-100.description">
-				<source>Section-Container mit diversen Optionen</source>
+				<source>Section-Container mit diversen Optionen - Farben, Hintergrundbild, Abstände</source>
 			</trans-unit>
 			<trans-unit id="flux.section-100.fields.containerfluid">
 				<source>Fluid-Container aktivieren</source>
