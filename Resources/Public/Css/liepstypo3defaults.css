@@ -118,7 +118,7 @@ header{
 	-webkit-transition: all .3s ease-in;
 }
 .head .tile.socialmedia{
-	color: var(--bs-weinnrot);
+	color: var(--bs-primary);
 	font-size: 50px;
 	text-align: center;
 	line-height: 50px !important;
@@ -148,7 +148,7 @@ header.clicked .head .ham .hicon{
 .hicon .line{
 	height: 4px;
 	width: 40px;
-	background-color: var(--bs-weinnrot);
+	background-color: var(--bs-primary);
 	border-radius: 3px;
 	position: absolute;
 	transition: all .3s ease-in;
@@ -204,7 +204,7 @@ header.clicked .nav-modal{
 	height: 10px;
 	border-radius: 100%;
 	margin: 0 auto;
-	background-color: var(--bs-weinnrot);
+	background-color: var(--bs-primary);
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -226,7 +226,7 @@ nav{
 nav a{
 	color: white;
 	text-decoration: none;
-	font-family: var(--bs-font-teaser);
+	font-family: var(--bs-body-font-family);
 	font-size: 40px;
 }
 nav ul li{
