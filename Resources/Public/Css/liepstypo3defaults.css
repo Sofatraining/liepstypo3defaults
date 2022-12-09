@@ -283,7 +283,7 @@ nav ul li.selected ul li a{
 
 
 @media screen and (max-width:1600px){
-	nav{left: 7%;top: 20%;}
+    nav{left: 7%;top: 20%;}
 }
 @media screen and (max-width:1300px){
     nav a{font-size: 30px;}
@@ -294,7 +294,7 @@ nav ul li.selected ul li a{
     nav ul li ul {position: relative;right: 0;padding-top: 15px;}
 }
 @media screen and (max-width:767px){
-	nav a {font-size: 22px;}
+    nav a {font-size: 22px;}
     nav ul li ul {padding-top: 7px;}
     nav ul li ul li {height: 42px;} 
     nav ul li ul li a {font-size: 18px;padding: 15px 10px 10px 20px;}
@@ -303,7 +303,7 @@ nav ul li.selected ul li a{
     .logo{display: none;}
 }
 @media screen and (max-width:320px){
-	header .head .tile.socialmedia{display: none;}
+    header .head .tile.socialmedia{display: none;}
 }
 
 /* CONTENT */
