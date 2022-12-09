@@ -82,11 +82,9 @@ body {word-wrap: break-word;}
 
 .bg-fixed {background-attachment: fixed;}
 
-/* Powermail */
-.tx-powermail fieldset label {margin-top:10px;}
 
 
-/* Header */
+/* HEADER */
 header *{
 	box-sizing: border-box;
 	margin: 0;
@@ -103,7 +101,7 @@ header{
 .logo{
 	width: 200px;
 	display: block;
-	margin: 0 auto;
+	margin: 0 0 0 50px;
 	padding-top: 15px;
 }
 .head{
@@ -120,7 +118,7 @@ header{
 	-webkit-transition: all .3s ease-in;
 }
 .head .tile.socialmedia{
-	color: var(--bs-primary);
+	color: var(--bs-weinnrot);
 	font-size: 50px;
 	text-align: center;
 	line-height: 50px !important;
@@ -150,7 +148,7 @@ header.clicked .head .ham .hicon{
 .hicon .line{
 	height: 4px;
 	width: 40px;
-	background-color: var(--bs-primary);
+	background-color: var(--bs-weinnrot);
 	border-radius: 3px;
 	position: absolute;
 	transition: all .3s ease-in;
@@ -181,7 +179,7 @@ header.clicked .ham:hover .hicon{
 	-webkit-transform: rotate(270deg);
 }
 
-/* Menu */
+/* NAVIGATION */
 .nav-modal{
 	position: fixed;
 	top: 0px;
@@ -206,7 +204,7 @@ header.clicked .nav-modal{
 	height: 10px;
 	border-radius: 100%;
 	margin: 0 auto;
-	background-color: var(--bs-primary);
+	background-color: var(--bs-weinnrot);
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -228,16 +226,15 @@ nav{
 nav a{
 	color: white;
 	text-decoration: none;
-	font-family: sans-serif;
-	font-family: 'Oswald', sans-serif;
-	font-size: 30px;
+	font-family: var(--bs-font-teaser);
+	font-size: 40px;
 }
 nav ul li{
 	list-style: none;
 	text-align: right;
 	border-right: 6px solid white;
 	padding-bottom: 10px;
-	padding-right: 10px;
+	padding-right: 20px;
 	position: relative;
 }
 nav{
@@ -255,23 +252,23 @@ header.clicked nav{
 
 nav ul li ul{
 	position: absolute;
-	right: -300px;
+	right: -600px;
 	top: -4px;
 	display: none;
 }
 nav ul li ul li{
 	border: none;
-	padding-bottom: 10;
+	padding-bottom: 10px;
 	padding-left: 10px;
-	height: 50px;
-	width: 300px;
+	height: 55px;
+	width: 600px;
 }
 nav ul li ul li a{
 	display: block;
 	height: 50px;
-	font-size: 20px;
+	font-size: 30px;
 	text-align: left;
-	padding: 10px;
+	padding: 10px 10px 10px 20px;
 }
 nav ul li.selected ul{
 	display: block;
@@ -284,35 +281,32 @@ nav ul li.selected ul li a{
 	opacity: 1;
 }
 
-@media screen and (max-width:820px){
-	.logo{margin-left: 50px;}
+
+@media screen and (max-width:1600px){
+	nav{left: 7%;top: 20%;}
 }
-@media screen and (max-width:580px){
-	.logo{width: 130px; padding-top: 30px;}
-	nav ul li a{
-		font-size: 16px;
-	}
-	nav ul li ul{
-		top: -9px;
-	}
-	nav ul li ul li{
-		height: 40px;
-	}
-	nav ul li ul li a{
-		font-size: 16px;
-		height: 40px;
-	}
+@media screen and (max-width:1300px){
+    nav a{font-size: 30px;}
+    nav ul li ul li a{font-size: 20px;}
 }
-@media screen and (max-width:500px){
-	.logo{display: none;}
+@media screen and (max-width:910px){
+    nav ul li {text-align: left;border-right: 0px solid white;}
+    nav ul li ul {position: relative;right: 0;padding-top: 15px;}
+}
+@media screen and (max-width:767px){
+	nav a {font-size: 22px;}
+    nav ul li ul {padding-top: 7px;}
+    nav ul li ul li {height: 42px;} 
+    nav ul li ul li a {font-size: 18px;padding: 15px 10px 10px 20px;}
+}
+@media screen and (max-width:568px){
+    .logo{display: none;}
 }
 @media screen and (max-width:320px){
-	header .head .tile.socialmedia{
-		display: none;
-	}
+	header .head .tile.socialmedia{display: none;}
 }
 
-/* Content */
+/* CONTENT */
 /* Ansprechpartnerbox */
 .authorBox {border: 1px solid var(--bs-primary);}
 .authorBoxHead {background: var(--bs-primary);color: var(--bs-white);padding:10px 20px 10px 20px;}
@@ -325,4 +319,7 @@ p.authorBody {margin-bottom:0;}
 .authorMore {color: var(--bs-primary);padding-left: 3px;padding-right: 3px;text-decoration: underline !important;transition: all 0.3s ease-out;}
 .authorMore:hover {color: var(--bs-white);background-color: var(--bs-primary);text-decoration: none !important;}
 
-/* Footer */
+/* Powermail */
+.tx-powermail fieldset label {margin-top:10px;}
+
+/* FOOTER */
