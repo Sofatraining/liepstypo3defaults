@@ -118,7 +118,7 @@
 				<source>Section</source>
 			</trans-unit>
 			<trans-unit id="flux.section-100.description">
-				<source>Section-Container mit diversen Optionen</source>
+				<source>Section-Container mit diversen Optionen - Farben, Hintergrundbild, Abstände, Containerbreite</source>
 			</trans-unit>
 			<trans-unit id="flux.section-100.fields.containerfluid">
 				<source>Fluid-Container aktivieren</source>
@@ -338,6 +338,21 @@
 			</trans-unit>
 			<trans-unit id="flux.ap.fields.phone">
 				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery">
+				<source>Bilder-Galerie</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.description">
+				<source>Bildergalerie in Spalten mit/ohne Bildvergrößerung</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.selectCol">
+				<source>Anzahl der Spalten</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.lightbox">
+				<source>Bildvergrößerung</source>
+			</trans-unit>
+			<trans-unit id="flux.gallery.fields.settings.files">
+				<source>Bilder</source>
 			</trans-unit>
 		</body>
 	</file>

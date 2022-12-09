@@ -1,6 +1,6 @@
 # Sitepackage for CMS TYPO3
 ## TYPO3 11.5 LTS
-Description: This TYPO3-LTSv10-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
+Description: This TYPO3-LTSv11-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
 
 See all features on -> https://v10.lieps.de/
 
@@ -54,11 +54,25 @@ Add sourceset and webp for fluid -> rendering -> Image.html
 ***
 #### v2.0.4
 Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-Styled-Content > Partial > Header > All.html 
-    
+***
+#### v2.0.5
+Fixed Error in ext_emconf.php
+***
+#### v2.0.6
+Adding Image-Gallery (rows) + New Menu (Fullscreen) + Update Bootstrap to 5.2.3 + Update Font Awesome to 6.2.1
+  
 ***   
   
 ## MANUAL
-### Installation / Settings (will translate later in english)
+### Installation / Settings (translate later in english)
+Um Timeouts bei der Extension-Installation zu vermeiden, sollten die abhängigen Extension vorher installiert werden. Das sind:
+* mask
+* news
+* powermail
+* vhs
+* flux
+* image_autoresize
+
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
