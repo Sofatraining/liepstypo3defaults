@@ -2,6 +2,7 @@
 	<div class="blob"></div>
 	<nav>
 		<ul>
+			<li><a href="/" target="_self" title="Zur Startseite">Home</a></li>
 			<f:for each="{mainnavigation}" as="mainnavigationItem">
 				<li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
 					<f:if condition="{mainnavigationItem.children}"><f:then><a href="#" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}"></f:then><f:else><a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}"></f:else></f:if>
