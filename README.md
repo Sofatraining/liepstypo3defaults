@@ -60,6 +60,10 @@ Fixed Error in ext_emconf.php
 ***
 #### v2.0.6
 Adding Image-Gallery (rows)
+New Menu (Fullscreen)
+Update Bootstrap to 5.2.3
+Update Font Awesome to 6.2.1
+
     
 ***   
   
