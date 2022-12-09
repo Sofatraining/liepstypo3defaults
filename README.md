@@ -1,6 +1,6 @@
 # Sitepackage for CMS TYPO3
 ## TYPO3 11.5 LTS
-Description: This TYPO3-LTSv10-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
+Description: This TYPO3-LTSv11-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
 
 See all features on -> https://v10.lieps.de/
 
