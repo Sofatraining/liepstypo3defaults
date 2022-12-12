@@ -54,8 +54,8 @@ body {word-wrap: break-word;}
     .h5, h5 {font-size: 1.575rem;}
 }
 
-a {color: var(--bs-primary);text-decoration: none;padding:0 2px;}
-a:hover {color: var(--bs-body-bg);background-color: var(--bs-secondary);}
+.frame-default a {color: var(--bs-primary);text-decoration: none;padding:0 2px;}
+.frame-default a:hover {color: var(--bs-body-bg);background-color: var(--bs-secondary);}
 
 .btn-primary {
     --bs-btn-color: #fff;
