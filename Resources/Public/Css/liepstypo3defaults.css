@@ -128,6 +128,7 @@ header{
 	position: absolute;
 	top: 35px;
 	right: 50px;
+	z-index: 1001;
 }
 .head .tile{
 	display: inline-block;
@@ -216,6 +217,7 @@ header.clicked .nav-modal{
 	visibility: visible;
 	opacity: 1;
 	pointer-events: initial;
+	z-index: 1000;
 }
 
 .nav-modal .blob{
