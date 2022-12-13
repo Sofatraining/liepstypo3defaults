@@ -62,7 +62,7 @@ Fixed Error in ext_emconf.php
 Adding Image-Gallery (rows) + New Menu (Fullscreen) + Update Bootstrap to 5.2.3 + Update Font Awesome to 6.2.1
 ***
 #### v2.0.7
-Element Buttons now with Positioning + Small Fixes
+Element Buttons now with Positioning + Small Fixes + Disable TCA Header-Section for custom elements
   
 ***   
   
