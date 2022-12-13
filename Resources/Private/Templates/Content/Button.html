@@ -66,12 +66,12 @@
 		</f:if>
 		<f:if condition="{settings.ButtonGroup}">
 			<f:then>
-				<div class="{settings.ButtonGroupVertical}" role="group">
+				<div class="{settings.ButtonGroupVertical} {settings.ButtonPosition}" role="group">
 					<f:render section="Button" arguments="{_all}"/>
 				</div>
 			</f:then>
 			<f:else>
-				<div class="buttonwrap{f:if(condition: settings.ButtonBlockVar, then: ' {settings.ButtonBlockVar}')}">
+				<div class="buttonwrap{f:if(condition: settings.ButtonBlockVar, then: ' {settings.ButtonBlockVar}')} {settings.ButtonPosition}">
 					<f:render section="Button" arguments="{_all}"/>
 				</div>
 			</f:else>
