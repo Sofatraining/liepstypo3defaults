@@ -23,6 +23,38 @@ TCEFORM {
 		header_layout.types.liepstypo3defaults_102-columns-50-50.disabled = 1
 		date.types.liepstypo3defaults_102-columns-50-50.disabled = 1
 		subheader.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		# COLUMNS 66/33
+		header.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header.types.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_link.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_position.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_layout.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		date.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		subheader.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		# COLUMNS 33/66
+		header.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header.types.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_link.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_position.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_layout.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		date.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		subheader.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		# COLUMNS 33/33/33
+		header.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header.types.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_link.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_position.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_layout.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		date.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		subheader.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		# COLUMNS 25/25/25
+		header.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header.types.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_link.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_position.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_layout.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		date.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		subheader.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
 		# Ansprechpartnerbox
 		header.types.types.liepstypo3defaults_ansprechpartner.disabled = 1
 		header_link.types.liepstypo3defaults_ansprechpartner.disabled = 1
