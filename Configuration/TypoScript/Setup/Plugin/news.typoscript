@@ -23,6 +23,8 @@ plugin.tx_news {
 	# ====================================
 	settings {
 		cssFile = {$plugin.tx_news.settings.cssFile}
+		#Max Characters
+		cropMaxCharacters = 200
 
 		#Displays a dummy image if the news have no media items
 		displayDummyIfNoMedia = 1
