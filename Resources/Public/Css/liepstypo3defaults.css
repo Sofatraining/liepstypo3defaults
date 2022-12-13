@@ -102,7 +102,10 @@ body {word-wrap: break-word;}
 
 .bg-fixed {background-attachment: fixed;}
 
-
+/* Button Position */
+.start {text-align:start;}
+.center {text-align:center;}
+.end {text-align:end;}
 
 /* HEADER */
 header *{
