@@ -65,10 +65,12 @@ TCEFORM {
 		subheader.types.liepstypo3defaults_header.disabled = 1
 		# Teaser
 		header.types.liepstypo3defaults_teaser.disabled = 0
+		header.types.liepstypo3defaults_teaser.label = Name des Teasers (nur für interne Datensatz-Verwendung)
 		header.types.types.liepstypo3defaults_teaser.disabled = 1
 		header_link.types.liepstypo3defaults_teaser.disabled = 1
 		header_position.types.liepstypo3defaults_teaser.disabled = 1
 		header_layout.types.liepstypo3defaults_teaser.removeItems = 0,1,2,3,4,5
+		header_layout.types.liepstypo3defaults_teaser.label = Nur Verborgen möglich (interne Verwendung)
 		date.types.liepstypo3defaults_teaser.disabled = 1
 		subheader.types.liepstypo3defaults_teaser.disabled = 1
 		# Ansprechpartnerbox
