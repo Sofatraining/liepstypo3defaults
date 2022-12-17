@@ -55,6 +55,22 @@ TCEFORM {
 		header_layout.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
 		date.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
 		subheader.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		# Header
+		header.types.liepstypo3defaults_header.disabled = 1
+		header.types.types.liepstypo3defaults_header.disabled = 1
+		header_link.types.liepstypo3defaults_header.disabled = 1
+		header_position.types.liepstypo3defaults_header.disabled = 1
+		header_layout.types.liepstypo3defaults_header.disabled = 1
+		date.types.liepstypo3defaults_header.disabled = 1
+		subheader.types.liepstypo3defaults_header.disabled = 1
+		# Teaser
+		header.types.liepstypo3defaults_teaser.disabled = 0
+		header.types.types.liepstypo3defaults_teaser.disabled = 1
+		header_link.types.liepstypo3defaults_teaser.disabled = 1
+		header_position.types.liepstypo3defaults_teaser.disabled = 1
+		header_layout.types.liepstypo3defaults_teaser.removeItems = 0,1,2,3,4,5
+		date.types.liepstypo3defaults_teaser.disabled = 1
+		subheader.types.liepstypo3defaults_teaser.disabled = 1
 		# Ansprechpartnerbox
 		header.types.types.liepstypo3defaults_ansprechpartner.disabled = 1
 		header_link.types.liepstypo3defaults_ansprechpartner.disabled = 1
