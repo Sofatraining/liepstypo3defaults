@@ -54,6 +54,28 @@ body {word-wrap: break-word;}
     .h5, h5 {font-size: 1.575rem;}
 }
 
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5 {word-wrap: break-word;hyphens: auto;}
+
+.frame-default a {color: var(--bs-primary);text-decoration: none;}
+.frame-default a:hover {color: var(--bs-body-bg);background-color: var(--bs-secondary);}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-secondary);
+    --bs-btn-hover-border-color: var(--bs-secondary);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-light);
+    --bs-btn-disabled-border-color: var(--bs-light);
+}
+
 .breadcrumb {margin-bottom: 0rem;}
 
 /* BG-Color rgba (White and Black) */
@@ -82,7 +104,10 @@ body {word-wrap: break-word;}
 
 .bg-fixed {background-attachment: fixed;}
 
-
+/* Button Position */
+.start {text-align:start;}
+.center {text-align:center;}
+.end {text-align:end;}
 
 /* HEADER */
 header *{
@@ -108,6 +133,7 @@ header{
 	position: absolute;
 	top: 35px;
 	right: 50px;
+	z-index: 1001;
 }
 .head .tile{
 	display: inline-block;
@@ -196,6 +222,7 @@ header.clicked .nav-modal{
 	visibility: visible;
 	opacity: 1;
 	pointer-events: initial;
+	z-index: 1000;
 }
 
 .nav-modal .blob{

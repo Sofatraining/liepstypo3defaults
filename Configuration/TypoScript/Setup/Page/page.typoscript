@@ -78,7 +78,7 @@ page {
 	}
 
 	includeJSFooterlibs {
-		file1 = EXT:liepstypo3defaults/Resources/Public/Js/bootstrap.min.js
+		file1 = EXT:liepstypo3defaults/Resources/Public/Js/bootstrap.bundle.min.js
 	}
 
 	includeJSFooter {
