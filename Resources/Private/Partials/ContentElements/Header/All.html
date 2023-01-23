@@ -6,22 +6,20 @@
                 <f:comment>Dont output a header</f:comment> 
             </f:then>
             <f:else>
-                <header>
-                    <f:render partial="Header/Header" arguments="{
-                        header: data.header,
-                        layout: data.header_layout,
-                        positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
-                        link: data.header_link,
-                        default: settings.defaultHeaderType}" />
-                    <f:render partial="Header/SubHeader" arguments="{
-                        subheader: data.subheader,
-                        layout: data.header_layout,
-                        positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
-                        default: settings.defaultHeaderType}" />
-                    <f:render partial="Header/Date" arguments="{
-                        date: data.date,
-                        positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
-                </header>
+                <f:render partial="Header/Header" arguments="{
+                    header: data.header,
+                    layout: data.header_layout,
+                    positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                    link: data.header_link,
+                    default: settings.defaultHeaderType}" />
+                <f:render partial="Header/SubHeader" arguments="{
+                    subheader: data.subheader,
+                    layout: data.header_layout,
+                    positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                    default: settings.defaultHeaderType}" />
+                <f:render partial="Header/Date" arguments="{
+                    date: data.date,
+                    positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
             </f:else>
         </f:if>
     </f:if>
