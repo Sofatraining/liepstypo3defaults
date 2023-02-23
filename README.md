@@ -64,6 +64,9 @@ Adding Image-Gallery (rows) + New Menu (Fullscreen) + Update Bootstrap to 5.2.3 
 #### v2.0.7
 Element Buttons now with Positioning + Small Fixes + Disable TCA Header-Section for custom elements
 Change from bootstrap.min.js to bootstrap.bundel.min.js
+***
+#### v2.0.8
+Adding Timeline-Element
   
 ***   
   
