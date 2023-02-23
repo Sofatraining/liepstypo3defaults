@@ -354,6 +354,12 @@
 			<trans-unit id="flux.gallery.fields.settings.files">
 				<source>Bilder</source>
 			</trans-unit>
+			<trans-unit id="flux.timeline">
+				<source>Timeline</source>
+			</trans-unit>
+			<trans-unit id="flux.timeline.description">
+				<source>Ein Timeline-Element</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
