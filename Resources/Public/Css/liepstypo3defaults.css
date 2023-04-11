@@ -349,9 +349,9 @@ p.authorBody {margin-bottom:0;}
 
 /* Timeline */
 .main-timeline {position: relative;}
-.main-timeline::after {content: "";position: absolute;width: 6px;background-color: var(--bs-rot);top: 0;bottom: 0;left: 50%;margin-left: -3px;}
+.main-timeline::after {content: "";position: absolute;width: 6px;background-color: var(--bs-secondary);top: 0;bottom: 0;left: 50%;margin-left: -3px;}
 .timeline {position: relative;background-color: inherit;width: 50%;}
-.timeline::after {content: "";position: absolute;width: 25px;height: 25px;right: -13px;background-color: var(--bs-rot);border: 5px solid var(--bs-tuerkis);top: -1px;border-radius: 50%;z-index: 1;}
+.timeline::after {content: "";position: absolute;width: 25px;height: 25px;right: -13px;background-color: var(--bs-secondary);border: 5px solid var(--bs-primary);top: -1px;border-radius: 50%;z-index: 1;}
 .timeline:nth-child(odd) {padding: 0px 40px 20px 0px;left: 0;}
 .timeline:nth-child(even) {padding: 0px 0px 20px 40px;left: 50%;}
 .timeline:last-child {padding-bottom: 0 !important;}
