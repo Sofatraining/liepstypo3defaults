@@ -13,6 +13,7 @@ $EM_CONF[$_EXTKEY] = [
 	'constraints' => [
 		'depends' => [
 			'typo3' => '11.5.0-11.5.99',
+			'php' => '7.4.0-8.0.99',
 			'fluid_styled_content' => '11.5.0-11.5.99',
 			'flux' => '9.6.0-9.99.99',
 			'vhs' => '6.1.0-6.99.99',
