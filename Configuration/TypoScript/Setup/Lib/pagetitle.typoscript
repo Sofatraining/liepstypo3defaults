@@ -1,3 +1,4 @@
-# LIB für die Ausgabe des Pagetitles
+# LIB für die Ausgabe des Pagetitles z.B. in Powermailformularen
+
 lib.pagetitle = TEXT
 lib.pagetitle.data = page : title
