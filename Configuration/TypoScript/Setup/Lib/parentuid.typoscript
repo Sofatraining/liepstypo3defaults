@@ -1,0 +1,5 @@
+# LIB für die Ausgabe der UID der übergeordneten Seite z.B.
+# <f:link.page pageUid="<f:cObject typoscriptObjectPath='lib.parentUid' />" class="btn btn-sm btn-primary mb-3">Zurück zur Übersicht</f:link.page>
+
+lib.parentUid = TEXT
+lib.parentUid.data = leveluid: -2
