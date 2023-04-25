@@ -30,7 +30,7 @@ body {word-wrap: break-word;}
 
 /* Overwrite Bootstrap 5 CSS */
 /* Container Fix */
-@media (min-width: 1400px) AND (max-width: 1599px) {
+@media (min-width: 1400px) AND (max-width: 1649px) {
 	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 			max-width: 1320px !important;}
 }
