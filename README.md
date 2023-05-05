@@ -177,10 +177,10 @@ EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
 
+***
 ### Flux-Kesearch-Indexer
 * die Indexer-Extension findest Du hier -> https://extensions.typo3.org/extension/flux_kesearch_indexer
 * Dokumentation unter https://github.com/MamounAlsmaiel/flux_kesearch_indexer
-***
 
 ***   
 ## ToDo
