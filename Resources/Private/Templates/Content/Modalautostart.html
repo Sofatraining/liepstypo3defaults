@@ -40,19 +40,19 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<if condition="{settings.files}">
+						<f:if condition="{settings.files}">
 							<v:content.resources.fal field="settings.files" as="images" record="{record}">
 								<f:for each="{images}" as="image">
 									<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="img-fluid mb-3" cropVariant="default" crop="{image.crop}" />
 								</f:for>
 							</v:content.resources.fal>
-						</if>
+						</f:if>
 						<f:format.raw>{settings.text}</f:format.raw>
 					</div>
 					<div class="modal-footer pt-3">
-                        <if condition="{link}">
-                            <f:link.typolink class="btn btn-sm btn-primary" parameter="{settings.link}">{settings.buttonText}</a></f:link.typolink>
-                        </if>
+                        			<f:if condition="{link}">
+                            				<f:link.typolink class="btn btn-sm btn-primary" parameter="{settings.link}">{settings.buttonText}</a></f:link.typolink>
+						</f:if>
 						<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Schließen</button>
 					</div>
 				</div>
