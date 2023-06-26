@@ -9,11 +9,12 @@
 			<flux:form.option.group value="content" />
 			<flux:form.sheet name="openbutton" label="Main-Settings">
 				<flux:field.input name="settings.title" required="1" />
-                		<flux:field.text name="settings.text" required="1" enableRichText="1" />
-                		<flux:field.inline.fal name="settings.files" minItems="0" maxItems="1" required="0" />
-                		<flux:field.input name="settings.link" config="{renderType: 'inputLink'}" required="0" />
-                		<flux:field.input name="settings.buttonText" />
+                <flux:field.text name="settings.text" required="1" enableRichText="1" />
+                <flux:field.inline.fal name="settings.files" minItems="0" maxItems="1" required="0" />
+                <flux:field.input name="settings.link" config="{renderType: 'inputLink'}" required="0" />
+                <flux:field.input name="settings.buttonText" />
 			</flux:form.sheet>
+
 		</flux:form>
 	</f:section>
 
@@ -24,11 +25,26 @@
 
 	<f:section name="Main">
 		<v:variable.set name="id" value="modal-{record.uid}" />
-        <script type="text/javascript">
-            $(window).on('load', function() {
-                $('#ms{id}').modal('show');
-            });
-        </script>
+		<script src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Js/js.cookie.min.js"></script>
+		<v:asset.script name="modalstart{id}" movable="1">
+$(window).on('load', function() {
+	//Modal anzeigen
+	//$('#ms{id}').modal('show');
+	// Überprüfen Sie, ob das Cookie existiert
+	var lastClosed = Cookies.get('modalClosed');
+        
+	// Wenn das Cookie nicht existiert oder es mehr als 5 Minuten her ist, dass es gesetzt wurde, dann zeigen Sie das Modal
+	if (!lastClosed || ((new Date().getTime()) - lastClosed > 5 * 60 * 1000)) {
+		$('#ms{id}').modal('show');
+	};
+});
+
+// Wenn das Modal geschlossen wird, setzen Sie das Cookie mit dem aktuellen Zeitstempel
+$('#ms{id}').on('hidden.bs.modal', function () {
+	Cookies.set('modalClosed', new Date().getTime());
+});
+		</v:asset.script>
+
 		<div class="modal home fade" id="ms{id}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-{id}" aria-hidden="true">
 			<div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered {settings.additionalClassesModal}">
 				<div class="modal-content">
@@ -49,9 +65,9 @@
 						<f:format.raw>{settings.text}</f:format.raw>
 					</div>
 					<div class="modal-footer pt-3">
-                        			<f:if condition="{link}">
-                            				<f:link.typolink class="btn btn-sm btn-primary" parameter="{settings.link}">{settings.buttonText}</a></f:link.typolink>
-						</f:if>
+                        <f:if condition="{settings.link}">
+                            <f:link.typolink class="btn btn-sm btn-primary" parameter="{settings.link}">{settings.buttonText}</a></f:link.typolink>
+                        </f:if>
 						<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Schließen</button>
 					</div>
 				</div>
