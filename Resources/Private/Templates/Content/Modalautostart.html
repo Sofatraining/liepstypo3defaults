@@ -1,0 +1,63 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="modalautostart">
+			<flux:form.option.group value="content" />
+			<flux:form.sheet name="openbutton" label="Main-Settings">
+				<flux:field.input name="settings.title" required="1" />
+                <flux:field.text name="settings.text" required="1" enableRichText="1" />
+                <flux:field.inline.fal name="settings.files" minItems="0" maxItems="1" required="0" />
+                <flux:field.input name="settings.link" config="{renderType: 'inputLink'}" required="0" />
+                <flux:field.input name="settings.buttonText" />
+			</flux:form.sheet>
+
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<b>Autostart Modalbox (Aktion)</b><br />
+		Title: "{settings.title}"
+	</f:section>
+
+	<f:section name="Main">
+		<v:variable.set name="id" value="modal-{record.uid}" />
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                $('#ms{id}').modal('show');
+            });
+        </script>
+		<div class="modal home fade" id="ms{id}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-{id}" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered {settings.additionalClassesModal}">
+				<div class="modal-content">
+					<div class="modal-header">
+						<f:if condition="{settings.title}">
+							<h4 class="modal-title" id="ModalLabel-{id}">{settings.title}</h4>
+						</f:if>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<if condition="{settings.files}">
+							<v:content.resources.fal field="settings.files" as="images" record="{record}">
+								<f:for each="{images}" as="image">
+									<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="img-fluid mb-3" cropVariant="default" crop="{image.crop}" />
+								</f:for>
+							</v:content.resources.fal>
+						</if>
+						<f:format.raw>{settings.text}</f:format.raw>
+					</div>
+					<div class="modal-footer pt-3">
+                        <if condition="{link}">
+                            <f:link.typolink class="btn btn-sm btn-primary" parameter="{settings.link}">{settings.buttonText}</a></f:link.typolink>
+                        </if>
+						<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Schließen</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:section>
+
+</div>
