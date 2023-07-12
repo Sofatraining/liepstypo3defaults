@@ -62,10 +62,12 @@ page {
 	}
 
 	includeCSS {
-		file5 = EXT:liepstypo3defaults/Resources/Public/Css/fa-all.min.css
-		file6 = EXT:liepstypo3defaults/Resources/Public/Css/liepstypo3defaults.css
-		file7 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
-		file8 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css
+		file1 = EXT:liepstypo3defaults/Resources/Public/Css/fa-all.min.css
+		file2 = EXT:liepstypo3defaults/Resources/Public/Css/liepstypo3defaults.css
+		file3 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
+		file4 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css
+		# Wenn Header-modal-full-01.html und Mainnavigation-modal-full-01.html verwendet wird
+		#file5 = EXT:liepstypo3defaults/Resources/Public/Css/mainnavigation-modal-full-01.css
 		file9 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
 	}
 
