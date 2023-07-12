@@ -1,0 +1,223 @@
+/* HEADER */
+header *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	height: 120px;
+	width: 100%;
+	position: relative;
+	background-color: white;
+	box-shadow: 0px 2px 5px rgba(0,0,0,.4);
+}
+.logo{
+	width: 200px;
+	display: block;
+	margin: 0 0 0 50px;
+	padding-top: 15px;
+}
+.head{
+	position: absolute;
+	top: 35px;
+	right: 50px;
+	z-index: 1001;
+}
+.head .tile{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin-left: 5px;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+}
+.head .tile.socialmedia{
+	color: var(--bs-primary);
+	font-size: 50px;
+	text-align: center;
+	line-height: 50px !important;
+	position: relative;
+	top: -6px;
+}
+header.clicked .head .tile.socialmedia{
+	color: white;
+}
+.head .ham{
+	margin-left: 25px;
+	padding: 5px;
+	cursor: pointer;
+	background-color: transparent;
+}
+.hicon{
+	height: 40px;
+	width: 40px;
+	position: relative;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+}
+header.clicked .head .ham .hicon{
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+.hicon .line{
+	height: 4px;
+	width: 40px;
+	background-color: var(--bs-primary);
+	border-radius: 3px;
+	position: absolute;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+}
+.hicon .line.one{top: 5px; left: 0px;}
+.hicon .line.two{top: 18px; left: 0px;}
+.hicon .line.three{top: 31px; left: 0px;}
+
+header.clicked .ham .line{
+	background-color: white;
+}
+header.clicked .ham .line.one{
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 18px;
+}
+header.clicked .ham .line.two{
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	top: 18px;
+}
+header.clicked .ham .line.three{
+	opacity: 0;
+}
+header.clicked .ham:hover .hicon{
+	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+}
+
+/* NAVIGATION */
+.nav-modal{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	pointer-events: none;
+}
+header.clicked .nav-modal{
+	visibility: visible;
+	opacity: 1;
+	pointer-events: initial;
+	z-index: 1000;
+}
+
+.nav-modal .blob{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin: 0 auto;
+	background-color: var(--bs-primary);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transition: all .3s ease-in;
+}
+header.clicked .nav-modal .blob{
+	width: 100vw;
+	height: 100vh;
+	border-radius: 0px;
+}
+
+nav{
+	position: fixed;
+	left: 20%;
+	top: 30%;
+	color: white;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+	font-family: var(--bs-body-font-family);
+	font-size: 40px;
+}
+nav ul li{
+	list-style: none;
+	text-align: right;
+	border-right: 6px solid white;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	position: relative;
+}
+nav{
+	opacity: 0;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	transition-delay: .3s;
+}
+header.clicked nav{
+	opacity: 1;
+}
+
+nav ul li ul{
+	position: absolute;
+	right: -600px;
+	top: -4px;
+	display: none;
+}
+nav ul li ul li{
+	border: none;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	height: 55px;
+	width: 600px;
+}
+nav ul li ul li a{
+	display: block;
+	height: 50px;
+	font-size: 30px;
+	text-align: left;
+	padding: 10px 10px 10px 20px;
+}
+nav ul li.selected ul{
+	display: block;
+}
+
+nav ul li.notselected a{
+	opacity: .5;
+}
+nav ul li.selected ul li a{
+	opacity: 1;
+}
+
+
+@media screen and (max-width:1600px){
+    nav{left: 7%;top: 20%;}
+}
+@media screen and (max-width:1300px){
+    nav a{font-size: 30px;}
+    nav ul li ul li a{font-size: 20px;}
+}
+@media screen and (max-width:910px){
+    nav ul li {text-align: left;border-right: 0px solid white;}
+    nav ul li ul {position: relative;right: 0;padding-top: 15px;}
+}
+@media screen and (max-width:767px){
+    nav a {font-size: 22px;}
+    nav ul li ul {padding-top: 7px;}
+    nav ul li ul li {height: 42px;} 
+    nav ul li ul li a {font-size: 18px;padding: 15px 10px 10px 20px;}
+}
+@media screen and (max-width:568px){
+    .logo{display: none;}
+}
+@media screen and (max-width:320px){
+    header .head .tile.socialmedia{display: none;}
+}
