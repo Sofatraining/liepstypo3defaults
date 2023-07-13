@@ -83,7 +83,7 @@ TCEFORM {
 		header.types.liepstypo3defaults_ansprechpartner.label = Name
 		# Timeline
 		header.types.liepstypo3defaults_timeline.disabled = 0
-		header.types.liepstypo3defaults_timeline.label = Name des Teasers (nur für interne Datensatz-Verwendung)
+		header.types.liepstypo3defaults_timeline.label = Name der Timeline (nur für interne Datensatz-Verwendung)
 		header.types.types.liepstypo3defaults_timeline.disabled = 1
 		header_link.types.liepstypo3defaults_timeline.disabled = 1
 		header_position.types.liepstypo3defaults_timeline.disabled = 1
