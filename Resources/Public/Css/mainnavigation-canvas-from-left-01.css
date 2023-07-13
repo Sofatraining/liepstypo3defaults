@@ -490,7 +490,16 @@ button.search i {
   }
   .navbar .sitelogo,
   .offcanvas-header .sitelogo {
-    width: 200px;
+    width: 190px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar .sitelogo,
+  .offcanvas-header .sitelogo {
+    width: 160px;
     height: auto;
     margin-top: 10px;
   }
@@ -499,7 +508,7 @@ button.search i {
 @media screen and (min-width: 992px) {
   .navbar .sitelogo,
   .offcanvas-header .sitelogo {
-    width: 180px;
+    width: 210px;
     height: auto;
     margin-top: 10px;
   }
