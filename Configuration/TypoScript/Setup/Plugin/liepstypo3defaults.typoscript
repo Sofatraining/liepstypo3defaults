@@ -8,3 +8,4 @@ plugin.tx_liepstypo3defaults {
 		layoutRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
 	}
 }
+plugin.tx_liepstypo3defaults.settings.headerOption = {$plugin.tx_liepstypo3defaults.settings.headerOption}
