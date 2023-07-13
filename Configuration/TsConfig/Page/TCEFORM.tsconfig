@@ -91,6 +91,14 @@ TCEFORM {
 		header_layout.types.liepstypo3defaults_timeline.label = Nur Verborgen möglich (interne Verwendung)
 		date.types.liepstypo3defaults_timeline.disabled = 1
 		subheader.types.liepstypo3defaults_timeline.disabled = 1
+		# Modal mit Autostart und Cookie
+		header.types.liepstypo3defaults_modalautostart.disabled = 1
+		header.types.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_link.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_position.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_layout.types.liepstypo3defaults_modalautostart.disabled = 1
+		date.types.liepstypo3defaults_modalautostart.disabled = 1
+		subheader.types.liepstypo3defaults_modalautostart.disabled = 1
 	}
 	sys_file_reference {
 		crop.config.cropVariants {
