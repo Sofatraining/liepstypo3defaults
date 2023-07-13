@@ -1,0 +1,81 @@
+<div class="navigation offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none" title="Zur Startseite">
+            <img src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Logos/lieps-logo.png" class="sitelogo" alt="Firmenlogo">
+        </a>
+        <button type="button" class="btn-offcanvas-close btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="grid-1">
+            <ul class="mainmenu">
+                <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="mainiter">
+                    <li class="nav-item{f:if(condition: mainnavigationItem.active, then:' active')}">
+                        <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" data-target="{mainnavigationItem.data.uid}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" {f:if(condition: mainnavigationItem.children, then:' data-bs-toggle="dropdown"')}>
+                            {mainnavigationItem.title}
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="grid-2">
+            <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="mainiter">
+                <f:if condition="{mainnavigationItem.children}">
+                    <ul class="childmenu" id="child{mainiter.index}" data-target="{mainnavigationItem.data.uid}">
+                        <button class="childmenucloser d-block d-lg-none"><i class="fa-solid fa-arrow-left"></i></button>
+                        <h3 class="mainhead" data-target="{mainnavigationItem.data.uid}"></h3>
+                        <f:for each="{mainnavigationItem.children}" as="child" iteration="childiter">
+                            <li class="nav-item{f:if(condition: child.active, then:' active')}{f:if(condition: child.children, then:' sub')}">
+                                <a href="{child.link}" data-target="{child.data.uid}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" {f:if(condition: child.children, then:' data-bs-toggle="dropdown"')}>
+                                    {child.title}
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </f:for>
+        </div>
+        <div class="grid-3">
+            <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="mainiter">
+                <f:if condition="{mainnavigationItem.children}">
+                    <f:for each="{mainnavigationItem.children}" as="child" iteration="childiter">
+                        <f:if condition="{child.children}">
+                            <ul class="childchildmenu" data-target="{child.data.uid}" id="subchild{childiter.index}">
+                                <button class="childchildmenucloser d-block d-lg-none"><i class="fa-solid fa-arrow-left"></i></button>
+                                <h3 class="childhead" data-target="{child.data.uid}"></h3>
+                                <f:for each="{child.children}" as="subchild" iteration="subchilditer">
+                                    <li class="nav-item{f:if(condition: subchild.active, then:' active')}{f:if(condition: subchild.children, then:' sub')}">
+                                        <a href="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item{f:if(condition: subchild.children, then:' third-dropdown-toggle')}" {f:if(condition: subchild.children, then:' data-bs-toggle="dropdown"')}>
+                                            {subchild.title}
+                                        </a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </f:if>
+                    </f:for>
+                </f:if>
+            </f:for>
+        </div>           
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-top searchmonitor shadow-sm" data-bs-scroll="true" data-bs-backdrop="false"
+    tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+    <div class="container mt-4 offcanvas-header">
+        <h4 class="offcanvas-title text-white" id="offcanvasLabel">Webseitensuche</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fa-solid fa-xmark text-white"></i></button>
+    </div>
+    <div class="container">
+        <div class="search-section">
+            <form class="" method="get" id="form_kesearch_pi1" name="form_kesearch_pi1" action="/suchergebnisse">
+                <div class="input-group mb-5">
+                    <input type="search" id="ke_search_sword" name="tx_kesearch_pi1[sword]"
+                        class="form-control border-radius" placeholder="Suchbegriff eingeben..." minlength="3"
+                        aria-label="Search" aria-describedby="button-addon2">
+                    <button class="btn btn-icon" type="submit" id="button-addon2"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
