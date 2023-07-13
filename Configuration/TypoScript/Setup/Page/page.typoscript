@@ -67,8 +67,10 @@ page {
 		file3 = EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 		file4 = EXT:liepstypo3defaults/Resources/Public/Css/magnific-popup.css
 		# Wenn Header-modal-full-01.html und Mainnavigation-modal-full-01.html verwendet wird
-		#file5 = EXT:liepstypo3defaults/Resources/Public/Css/mainnavigation-modal-full-01.css
-		file9 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
+		# file5 = EXT:liepstypo3defaults/Resources/Public/Css/mainnavigation-modal-full-01.css
+		# Wenn Header-canvas-from-left-01.html und Mainnavigation-canvas-from-left-01.html verwendet wird
+		# file6 = EXT:liepstypo3defaults/Resources/Public/Css/mainnavigation-canvas-from-left-01.css
+		file99 = EXT:liepstypo3defaults/Resources/Public/Css/custom.css
 	}
 
 	includeJSLibs {
