@@ -105,6 +105,8 @@ plugin.tx_liepstypo3defaults.view {
 	partialRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Partials/Content/
 	layoutRootPaths.0 = EXT:liepstypo3defaults/Resources/Private/Layouts/Content/
 }
+# cat=Liepstypo3defaults; type=options[1,2,3]; label= Menü (1 = Classic , 2 = Modal Fullscreen , 3 = OffCanvas von Links)
+plugin.tx_liepstypo3defaults.settings.headerOption = 1
 
 
 ############
