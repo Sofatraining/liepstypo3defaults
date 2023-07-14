@@ -66,7 +66,7 @@ Element Buttons now with Positioning + Small Fixes + Disable TCA Header-Section 
 Change from bootstrap.min.js to bootstrap.bundel.min.js
 ***
 #### v2.0.8
-Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes
+Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes and Chancing via Constants
   
 ***   
   
