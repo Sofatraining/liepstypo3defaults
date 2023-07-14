@@ -4,7 +4,8 @@ plugin.tx_liepstypo3defaults {
 		partialRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.partialRootPaths.0}
 		layoutRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
 	}
-	settings {
-		headerOption = {$plugin.tx_liepstypo3defaults.settings.headerOption}
-	}
 }
+
+### Menü-Switch (Konstanten)
+menu.type = TEXT
+menu.type.value = {$plugin.tx_liepstypo3defaults.settings.headerOption}
