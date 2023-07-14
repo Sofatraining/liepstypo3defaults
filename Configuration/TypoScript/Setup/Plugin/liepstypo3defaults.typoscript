@@ -1,6 +1,3 @@
-##########################
-### LIEPSTYPO3DEFAULTS ###
-##########################
 plugin.tx_liepstypo3defaults {
 	view {
 		templateRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.templateRootPaths.0}
@@ -8,3 +5,7 @@ plugin.tx_liepstypo3defaults {
 		layoutRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
 	}
 }
+
+### Menü-Switch (Über Konstanten -> LIEPSTYPO3DEFAULTS)
+menu.type = TEXT
+menu.type.value = {$plugin.tx_liepstypo3defaults.settings.headerOption}

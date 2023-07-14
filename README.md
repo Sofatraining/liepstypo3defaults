@@ -64,6 +64,9 @@ Adding Image-Gallery (rows) + New Menu (Fullscreen) + Update Bootstrap to 5.2.3 
 #### v2.0.7
 Element Buttons now with Positioning + Small Fixes + Disable TCA Header-Section for custom elements
 Change from bootstrap.min.js to bootstrap.bundel.min.js
+***
+#### v2.0.8
+Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes and Chancing via Constants
   
 ***   
   
@@ -173,7 +176,13 @@ EXT:liepstypo3defaults/Resources/Private/Layouts/Mask/Backend/
 ```diff
 EXT:liepstypo3defaults/Resources/Private/Partials/Mask/Backend/
 ```  
-       
+
+***
+### Flux-Kesearch-Indexer
+Falls KESEARCH im Einsatz ist:
+* die Flux-Indexer-Extension findest Du hier -> https://extensions.typo3.org/extension/flux_kesearch_indexer
+* Dokumentation unter https://github.com/MamounAlsmaiel/flux_kesearch_indexer
+
 ***   
 ## ToDo
 * TCEFORM Overwrite for Header-Section

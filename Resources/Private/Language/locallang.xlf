@@ -354,6 +354,33 @@
 			<trans-unit id="flux.gallery.fields.settings.files">
 				<source>Bilder</source>
 			</trans-unit>
+			<trans-unit id="flux.timeline">
+				<source>Timeline</source>
+			</trans-unit>
+			<trans-unit id="flux.timeline.description">
+				<source>Ein Timeline-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart">
+				<source>Modalbox mit Autostart</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.description">
+				<source>Automatisch eingeblendete Modalbox für z.B. Aktionen oder Hinweise</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.fields.settings.title">
+				<source>Überschrift</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.fields.settings.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.fields.settings.files">
+				<source>Bild (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.fields.settings.link">
+				<source>Link (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.modalautostart.fields.settings.buttonText">
+				<source>Beschriftung des Buttons (Erforderlich wenn ein Link gesetzt wurde!)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

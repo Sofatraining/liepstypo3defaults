@@ -81,6 +81,24 @@ TCEFORM {
 		date.types.liepstypo3defaults_ansprechpartner.disabled = 1
 		subheader.types.liepstypo3defaults_ansprechpartner.disabled = 1
 		header.types.liepstypo3defaults_ansprechpartner.label = Name
+		# Timeline
+		header.types.liepstypo3defaults_timeline.disabled = 0
+		header.types.liepstypo3defaults_timeline.label = Name der Timeline (nur für interne Datensatz-Verwendung)
+		header.types.types.liepstypo3defaults_timeline.disabled = 1
+		header_link.types.liepstypo3defaults_timeline.disabled = 1
+		header_position.types.liepstypo3defaults_timeline.disabled = 1
+		header_layout.types.liepstypo3defaults_timeline.removeItems = 0,1,2,3,4,5
+		header_layout.types.liepstypo3defaults_timeline.label = Nur Verborgen möglich (interne Verwendung)
+		date.types.liepstypo3defaults_timeline.disabled = 1
+		subheader.types.liepstypo3defaults_timeline.disabled = 1
+		# Modal mit Autostart und Cookie
+		header.types.liepstypo3defaults_modalautostart.disabled = 1
+		header.types.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_link.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_position.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_layout.types.liepstypo3defaults_modalautostart.disabled = 1
+		date.types.liepstypo3defaults_modalautostart.disabled = 1
+		subheader.types.liepstypo3defaults_modalautostart.disabled = 1
 	}
 	sys_file_reference {
 		crop.config.cropVariants {

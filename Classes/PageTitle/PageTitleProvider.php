@@ -11,8 +11,6 @@ class LiepsPageTitleProvider extends AbstractPageTitleProvider
 		$page = $GLOBALS['TSFE']->page;
 		$separator = ' :';
 		$this->title .= $page['title'];
-		if ($key !== 0) {
-			$this->title .= $separator;
-		}
+		$this->title .= $separator;
 	}
 }
