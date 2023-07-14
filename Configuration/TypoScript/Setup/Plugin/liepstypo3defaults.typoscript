@@ -6,6 +6,6 @@ plugin.tx_liepstypo3defaults {
 	}
 }
 
-### Menü-Switch (Konstanten)
+### Menü-Switch (Über Konstanten -> LIEPSTYPO3DEFAULTS)
 menu.type = TEXT
 menu.type.value = {$plugin.tx_liepstypo3defaults.settings.headerOption}
