@@ -100,6 +100,9 @@ config {
 	concatenateCss = 0  
 }  
 ``` 
+
+Im Template kann über den Konstanteneditor der Typ des Menü gewählt werden. Notwendige JS- und CSS-Dateien werden automatisch über v:assets integriert.
+
 ***
 
 ### EXT:Fluid Styled Content
