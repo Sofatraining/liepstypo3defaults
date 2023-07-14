@@ -105,6 +105,7 @@ config {
 ```   
 ![Template - Konstanteneditor](https://user-images.githubusercontent.com/47626641/253544264-d22e4b3c-a7d0-4996-b61d-698984f7b2f5.jpg)
 
+Weitere Menütypen werden demnächst integriert
 ***
 
 ### EXT:Fluid Styled Content
