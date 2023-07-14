@@ -102,9 +102,8 @@ config {
 ```
 
 #### Typ des Menüs ändern
-```ini
-[Im Template kann über den Konstanteneditor der Typ des Menü gewählt werden. Notwendige JS- und CSS-Dateien werden automatisch über v:assets integriert.]
-```   
+Im Template kann über den Konstanteneditor der Typ des Menü gewählt werden. Notwendige JS- und CSS-Dateien werden automatisch über v:assets integriert.
+
 ![Template - Konstanteneditor](https://user-images.githubusercontent.com/47626641/253544264-d22e4b3c-a7d0-4996-b61d-698984f7b2f5.jpg)
 
 Weitere Menütypen werden demnächst integriert
