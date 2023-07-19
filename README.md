@@ -69,7 +69,7 @@ Change from bootstrap.min.js to bootstrap.bundel.min.js
 Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes and Chancing via Constants
 ***
 #### v2.0.9
-...
+Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.)
   
 ***   
   
