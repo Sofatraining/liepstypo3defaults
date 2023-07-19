@@ -70,6 +70,7 @@ Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalb
 ***
 #### v2.0.9
 Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.)
+Update to BS 5.3.0 and JQuery 3.7.0
   
 ***   
   
