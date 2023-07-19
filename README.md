@@ -1,6 +1,6 @@
 # Sitepackage for CMS TYPO3
 ## TYPO3 11.5 LTS
-Description: This TYPO3-LTSv11-Sitepackage will install flux, vhs, mask, image_autoresize, powermail and news. It contains section-, container- and flux-templates for a bootstrap5 site. 
+Description: This TYPO3-LTSv11-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more.
 
 See all features on -> https://v10.lieps.de/
 
@@ -67,6 +67,9 @@ Change from bootstrap.min.js to bootstrap.bundel.min.js
 ***
 #### v2.0.8
 Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes and Chancing via Constants
+***
+#### v2.0.9
+Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.)
   
 ***   
   
@@ -99,7 +102,14 @@ config {
 	concatenateJs = 0  
 	concatenateCss = 0  
 }  
-``` 
+```
+
+#### Typ des Menüs ändern
+Im Template kann über den Konstanteneditor der Typ des Menü gewählt werden. Notwendige JS- und CSS-Dateien werden automatisch über v:assets integriert.
+
+![Template - Konstanteneditor](https://user-images.githubusercontent.com/47626641/253544264-d22e4b3c-a7d0-4996-b61d-698984f7b2f5.jpg)
+
+Weitere Menütypen werden demnächst integriert
 ***
 
 ### EXT:Fluid Styled Content
