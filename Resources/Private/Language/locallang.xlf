@@ -31,10 +31,10 @@
 				<source>Example input</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-50-50">
-				<source>Container 50% / 50%</source>
+				<source>2 Spalten Element</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-50-50.description">
-				<source>Container mit 2 Spalten - 50% / 50% für Inhaltselemente</source>
+				<source>Container mit 2 Spalten - frei definierbare Breiten</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-50-50.fields.settings.section.rowClasses">
 				<source>CSS-Klassen für die row</source>
@@ -45,41 +45,11 @@
 			<trans-unit id="flux.columns-50-50.fields.settings.section.col2Classes">
 				<source>CSS-Klassen für die 2. Spalte</source>
 			</trans-unit>
-			<trans-unit id="flux.columns-66-33">
-				<source>Container 66% / 33%</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-66-33.description">
-				<source>Container mit 2 Spalten - 66% / 33% für Inhaltselemente - optional Offset 1</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-66-33.fields.settings.section.rowClasses">
-				<source>CSS-Klassen für die row</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-66-33.fields.settings.section.col1Classes">
-				<source>CSS-Klassen für die 1. Spalte</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-66-33.fields.settings.section.col2Classes">
-				<source>CSS-Klassen für die 2. Spalte</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-33-66">
-				<source>Container 33% / 66%</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-33-66.description">
-				<source>Container mit 2 Spalten - 33% / 66% für Inhaltselemente - optional Offset 1</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-33-66.fields.settings.section.rowClasses">
-				<source>CSS-Klassen für die row</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-33-66.fields.settings.section.col1Classes">
-				<source>CSS-Klassen für die 1. Spalte</source>
-			</trans-unit>
-			<trans-unit id="flux.columns-33-66.fields.settings.section.col2Classes">
-				<source>CSS-Klassen für die 2. Spalte</source>
-			</trans-unit>
 			<trans-unit id="flux.columns-33-33-33">
-				<source>Container 33% / 33% / 33%</source>
+				<source>3 Spalten Element</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-33-33-33.description">
-				<source>Container mit 3 Spalten - 33% / 33% / 33% für Inhaltselemente</source>
+				<source>Container mit 3 Spalten - frei definierbare Breiten</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-33-33-33.fields.settings.section.rowClasses">
 				<source>CSS-Klassen für die row</source>
@@ -94,10 +64,10 @@
 				<source>CSS-Klassen für die 3. Spalte</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-25-25-25-25">
-				<source>Container 25% / 25% / 25% / 25%</source>
+				<source>4 Spalten Element</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-25-25-25-25.description">
-				<source>Container mit 4 Spalten - 25% / 25% / 25% / 25% für Inhaltselemente</source>
+				<source>Container mit 4 Spalten - frei definierbare Breiten</source>
 			</trans-unit>
 			<trans-unit id="flux.columns-25-25-25-25.fields.settings.section.rowClasses">
 				<source>CSS-Klassen für die row</source>
