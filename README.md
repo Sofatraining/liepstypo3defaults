@@ -2,6 +2,8 @@
 ## TYPO3 11.5 LTS
 Description: This TYPO3-LTSv11-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more.
 
+### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - TESTS NEEDED
+
 See all features on -> https://v10.lieps.de/
 
 ### CHANGELOG
