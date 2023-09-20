@@ -1,8 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:liepstypo3defaults/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Setup/Page" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Setup/Config" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Setup/Content" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Setup/Lib" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Setup/Plugin" extensions="typoscript">
