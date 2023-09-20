@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF[$_EXTKEY] = array (
 	'title' => 'LIEPS TYPO3 Defaults',
 	'description' => '',
 	'category' => 'templates',
@@ -10,23 +10,25 @@ $EM_CONF[$_EXTKEY] = [
 	'state' => 'stable',
 	'clearCacheOnLoad' => 1,
 	'version' => '2.0.9',
-	'constraints' => [
-		'depends' => [
-			'typo3' => '11.5.0-11.5.99',
-			'php' => '7.4.0-8.0.99',
-			'fluid_styled_content' => '11.5.0-11.5.99',
-			'flux' => '9.6.0-9.99.99',
-			'vhs' => '6.1.0-6.99.99',
-			'rte_ckeditor' => '11.5.0-11.5.99',
+	'constraints' => array (
+		'depends' => array (
+			'typo3' => '12.4.0-12.4.99',
+			'php' => '7.4.0-8.1.99',
+			'fluid_styled_content' => '12.4.0-12.4.99',
+			'flux' => '10.0.0-10.0.99',
+			'vhs' => '7.0.0-7.99.99',
+			'rte_ckeditor' => '12.4.0-12.4.99',
 			'image_autoresize' => '2.1.0-2.99.99',
-			'seo' => '11.5.0-11.5.99',
-		],
-		'conflicts' => [],
-		'suggests' => [],
-	],
-	'autoload' => [
-		'psr-4' => [
+			'seo' => '12.4.0-12.4.99',
+		),
+		'conflicts' => array (
+    		),
+		'suggests' => array (
+    		),
+	),
+	'autoload' => array (
+		'psr-4' => array (
 			'LiepsGmbH\\Liepstypo3defaults\\' => 'Classes',
-		],
-	],
-];
+		),
+	),
+);
