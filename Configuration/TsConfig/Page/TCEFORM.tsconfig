@@ -2,10 +2,292 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
+	pages {
 
-    }
-    tt_content {
-
-    }
+	}
+	tt_content {
+		# Disable TCA Header-Section for custom elements
+		# SECTION
+		header.types.liepstypo3defaults_100-section-100.disabled = 1
+		header.types.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_link.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_position.types.liepstypo3defaults_100-section-100.disabled = 1
+		header_layout.types.liepstypo3defaults_100-section-100.disabled = 1
+		date.types.liepstypo3defaults_100-section-100.disabled = 1
+		subheader.types.liepstypo3defaults_100-section-100.disabled = 1
+		# COLUMNS 50/50
+		header.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header.types.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_link.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_position.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		header_layout.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		date.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		subheader.types.liepstypo3defaults_102-columns-50-50.disabled = 1
+		# COLUMNS 66/33
+		header.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header.types.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_link.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_position.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		header_layout.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		date.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		subheader.types.liepstypo3defaults_103-columns-66-33-offset.disabled = 1
+		# COLUMNS 33/66
+		header.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header.types.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_link.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_position.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		header_layout.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		date.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		subheader.types.liepstypo3defaults_104-columns-33-66-offset.disabled = 1
+		# COLUMNS 33/33/33
+		header.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header.types.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_link.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_position.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		header_layout.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		date.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		subheader.types.liepstypo3defaults_105-columns-33-33-33.disabled = 1
+		# COLUMNS 25/25/25
+		header.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header.types.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_link.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_position.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		header_layout.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		date.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		subheader.types.liepstypo3defaults_106-columns-25-25-25-25.disabled = 1
+		# Header
+		header.types.liepstypo3defaults_header.disabled = 1
+		header.types.types.liepstypo3defaults_header.disabled = 1
+		header_link.types.liepstypo3defaults_header.disabled = 1
+		header_position.types.liepstypo3defaults_header.disabled = 1
+		header_layout.types.liepstypo3defaults_header.disabled = 1
+		date.types.liepstypo3defaults_header.disabled = 1
+		subheader.types.liepstypo3defaults_header.disabled = 1
+		# Teaser
+		header.types.liepstypo3defaults_teaser.disabled = 0
+		header.types.liepstypo3defaults_teaser.label = Name des Teasers (nur für interne Datensatz-Verwendung)
+		header.types.types.liepstypo3defaults_teaser.disabled = 1
+		header_link.types.liepstypo3defaults_teaser.disabled = 1
+		header_position.types.liepstypo3defaults_teaser.disabled = 1
+		header_layout.types.liepstypo3defaults_teaser.removeItems = 0,1,2,3,4,5
+		header_layout.types.liepstypo3defaults_teaser.label = Nur Verborgen möglich (interne Verwendung)
+		date.types.liepstypo3defaults_teaser.disabled = 1
+		subheader.types.liepstypo3defaults_teaser.disabled = 1
+		# Ansprechpartnerbox
+		header.types.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_link.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_position.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header_layout.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		date.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		subheader.types.liepstypo3defaults_ansprechpartner.disabled = 1
+		header.types.liepstypo3defaults_ansprechpartner.label = Name
+		# Timeline
+		header.types.liepstypo3defaults_timeline.disabled = 0
+		header.types.liepstypo3defaults_timeline.label = Name der Timeline (nur für interne Datensatz-Verwendung)
+		header.types.types.liepstypo3defaults_timeline.disabled = 1
+		header_link.types.liepstypo3defaults_timeline.disabled = 1
+		header_position.types.liepstypo3defaults_timeline.disabled = 1
+		header_layout.types.liepstypo3defaults_timeline.removeItems = 0,1,2,3,4,5
+		header_layout.types.liepstypo3defaults_timeline.label = Nur Verborgen möglich (interne Verwendung)
+		date.types.liepstypo3defaults_timeline.disabled = 1
+		subheader.types.liepstypo3defaults_timeline.disabled = 1
+		# Modal mit Autostart und Cookie
+		header.types.liepstypo3defaults_modalautostart.disabled = 1
+		header.types.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_link.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_position.types.liepstypo3defaults_modalautostart.disabled = 1
+		header_layout.types.liepstypo3defaults_modalautostart.disabled = 1
+		date.types.liepstypo3defaults_modalautostart.disabled = 1
+		subheader.types.liepstypo3defaults_modalautostart.disabled = 1
+	}
+	sys_file_reference {
+		crop.config.cropVariants {
+			default {
+				title = Desktop
+				selectedRatio = NaN
+				allowedAspectRatios {
+					NaN {
+						title = Free
+						value = 0.0
+					}
+					37:9 {
+						title = 37:9
+						value =  4.1111111
+					}
+					21:9 {
+						title = 21:9
+						value = 2.3333333
+					}
+					2:1 {
+						title = 2:1
+						value = 2
+					}
+					16:9 {
+						title = 16:9
+						value = 1.7777777
+					}
+					3:2 {
+						title = 3:2
+						value = 1.5
+					}
+					4:3 {
+						title = 4:3
+						value = 1.3333333
+					}
+					1:1 {
+						title = 1:1
+						value = 1
+					}
+					3:4 {
+						title = 3:4
+						value = 0.75
+					}
+					2:3 {
+						title = 2:3
+						value = 0.66666667
+					}
+					9:16 {
+						title = 9:16
+						value = 0.5625
+					}
+					9:21 {
+						title = 9:21
+						value = 0.42857143
+					}
+					a:b {
+						title = Goldenen Schnitt
+						value = 1,6180339887498948
+					}
+					b:a {
+						title = Silberner Schnitt
+						value = 0.42857143
+					}
+				}
+			}
+			tablet {
+				title = Tablet
+				selectedRatio = NaN
+				allowedAspectRatios {
+					NaN {
+						title = Free
+						value = 0.0
+					}
+					37:9 {
+						title = 37:9
+						value =  4.1111111
+					}
+					21:9 {
+						title = 21:9
+						value = 2.3333333
+					}
+					2:1 {
+						title = 2:1
+						value = 2
+					}
+					16:9 {
+						title = 16:9
+						value = 1.7777777
+					}
+					3:2 {
+						title = 3:2
+						value = 1.5
+					}
+					4:3 {
+						title = 4:3
+						value = 1.3333333
+					}
+					1:1 {
+						title = 1:1
+						value = 1
+					}
+					3:4 {
+						title = 3:4
+						value = 0.75
+					}
+					2:3 {
+						title = 2:3
+						value = 0.66666667
+					}
+					9:16 {
+						title = 9:16
+						value = 0.5625
+					}
+					9:21 {
+						title = 9:21
+						value = 0.42857143
+					}
+					a:b {
+						title = Goldenen Schnitt
+						value = 1,6180339887498948
+					}
+					b:a {
+						title = Silberner Schnitt
+						value = 0.42857143
+					}
+				}
+			}
+			mobile {
+				title = Mobile
+				selectedRatio = NaN
+				allowedAspectRatios {
+					NaN {
+						title = Free
+						value = 0.0
+					}
+					37:9 {
+						title = 37:9
+						value =  4.1111111
+					}
+					21:9 {
+						title = 21:9
+						value = 2.3333333
+					}
+					2:1 {
+						title = 2:1
+						value = 2
+					}
+					16:9 {
+						title = 16:9
+						value = 1.7777777
+					}
+					3:2 {
+						title = 3:2
+						value = 1.5
+					}
+					4:3 {
+						title = 4:3
+						value = 1.3333333
+					}
+					1:1 {
+						title = 1:1
+						value = 1
+					}
+					3:4 {
+						title = 3:4
+						value = 0.75
+					}
+					2:3 {
+						title = 2:3
+						value = 0.66666667
+					}
+					9:16 {
+						title = 9:16
+						value = 0.5625
+					}
+					9:21 {
+						title = 9:21
+						value = 0.42857143
+					}
+					a:b {
+						title = Goldenen Schnitt
+						value = 1,6180339887498948
+					}
+					b:a {
+						title = Silberner Schnitt
+						value = 0.42857143
+					}
+				}
+			}
+		}		
+	}
 }
