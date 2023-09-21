@@ -11,8 +11,8 @@ call_user_func(function()
      * Default TypoScript for Liepstypo3defaults
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
+        'liepstypo3defaults',
         'Configuration/TypoScript',
-        'LIEPSTYPO3DEFAULTS'
+        'LIEPS TYPO3 Defaults'
     );
 });
