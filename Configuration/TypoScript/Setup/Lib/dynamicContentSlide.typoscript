@@ -1,0 +1,5 @@
+lib.dynamicContentSlide =< lib.dynamicContent
+lib.dynamicContentSlide.20.slide = -1
+
+# Verwendung im Template -> z.B. Inhalte der colPos3 aus der übergeordneten Seite ausgeben
+# <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '3'}"/>
