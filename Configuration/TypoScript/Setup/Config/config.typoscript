@@ -1,0 +1,49 @@
+################
+#### CONFIG ####
+################
+config {
+	absRefPrefix = {$config.absRefPrefix}
+	no_cache = {$config.no_cache}
+	uniqueLinkVars = {$config.uniqueLinkVars}
+	pageTitleFirst = {$config.pageTitleFirst}
+	linkVars = {$config.linkVars}
+	prefixLocalAnchors = {$config.prefixLocalAnchors}
+	renderCharset = {$config.renderCharset}
+	metaCharset = {$config.metaCharset}
+	doctype = {$config.doctype}
+	removeDefaultJS = {$config.removeDefaultJS}
+	inlineStyle2TempFile = {$config.inlineStyle2TempFile}
+	admPanel = {$config.admPanel}
+	debug = {$config.debug}
+	cache_period = {$config.cache_period}
+	sendCacheHeaders = {$config.sendCacheHeaders}
+	intTarget = {$config.intTarget}
+	extTarget = {$config.extTarget}
+	disablePrefixComment = {$config.disablePrefixComment}
+	index_enable = {$config.index_enable}
+	index_externals = {$config.index_externals}
+	index_metatags = {$config.index_metatags}
+	frontend_editing = {$config.frontend_editing}
+	headerComment = {$config.headerComment}
+
+	// Disable Image Upscaling
+	noScaleUp = 1
+
+	// Compression and Concatenation of CSS and JS Files
+	compressJs = 1
+	compressCss = 1
+	concatenateJs = 1
+	concatenateCss = 1
+
+	// PageTitleProvider
+	pageTitleProviders {
+		pages {
+			provider = LiepsGmbH\Liepstypo3defaults\PageTitle\LiepsPageTitleProvider
+			before = seo
+		}
+		seo {
+			provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
+			before = record
+		}
+	}
+}
