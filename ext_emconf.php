@@ -4,7 +4,7 @@
  * Extension Manager/Repository config file for ext "liepstypo3defaults".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'LIEPS TYPO3 DEFAULTS',
+    'title' => 'LIEPSTYPO3DEFAULTS',
     'description' => '',
     'category' => 'fe',
     'constraints' => [
