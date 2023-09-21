@@ -1,6 +1,6 @@
 imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:liepstypo3defaults/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
 editor:
@@ -11,16 +11,15 @@ editor:
             - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
 
         toolbarGroups:
-            - { name: styles, groups: [ format, styles ] }
-            - { name: basicstyles, groups: [ basicstyles ] }
-            - { name: paragraph, groups: [ list, indent, blocks, align ] }
-            - "/"
-            - { name: links, groups: [ links ] }
-            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-            - { name: editing, groups: [ spellchecker ] }
-            - { name: insert, groups: [ insert ] }
-            - { name: tools, groups: [ table, specialchar ] }
-            - { name: document, groups: [ mode ] }
+        - { name: styles, groups: [ styles, format ] }
+        - { name: basicstyles, groups: [ basicstyles ] }
+        - { name: paragraph, groups: [ list, indent, blocks, align ] }
+        - { name: links, groups: [ links ] }
+        - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+        - { name: editing, groups: [ spellchecker ] }
+        - { name: insert, groups: [ insert ] }
+        - { name: tools, groups: [ table, specialchar, insertcharacters ] }
+        - { name: document, groups: [ mode ] }
 
         format_tags: "p;h1;h2;h3;h4;h5;pre"
 
@@ -32,11 +31,7 @@ editor:
 
         extraPlugins:
             - justify
+            - autolink
 
         removePlugins:
             - image
-
-        removeButtons:
-            - Anchor
-            - Underline
-            - Strike
