@@ -1,0 +1,36 @@
+<f:layout name="Default" />
+<f:section name="Main">
+
+	<f:variable name="menuType" >
+    	<f:cObject typoscriptObjectPath="menu.type" />
+	</f:variable>
+
+	<f:if condition="{menuType} == 1">
+		<f:render partial="Header-classic-bs5" arguments="{_all}" />
+	</f:if>
+	<f:if condition="{menuType} == 2">
+		<f:render partial="Header-modal-full-01" arguments="{_all}" />
+	</f:if>
+	<f:if condition="{menuType} == 3">
+		<f:render partial="Header-canvas-from-left-01" arguments="{_all}" />
+	</f:if>
+
+	<f:if condition="<f:cObject typoscriptObjectPath='lib.dynamicContent' data='{colPos: \'3\'}' />">
+	<section class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />
+			</div>
+		</div>
+	</section>
+	</f:if>
+	
+	<section>
+		<div class="container">
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+		</div>
+	</section>
+	
+	<f:render partial="Footer" arguments="{_all}" />
+
+</f:section>

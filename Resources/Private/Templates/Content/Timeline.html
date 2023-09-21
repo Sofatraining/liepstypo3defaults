@@ -1,0 +1,60 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content"/>
+
+	<f:section name="Configuration">
+		<flux:form id="timeline">
+			<flux:form.option.group value="content" />
+			<flux:form.sheet name="TimelineSheet" label="Events">
+				<flux:form.section name="TimelineSection">
+					<flux:form.object name="TimelineObject">
+                        <flux:field.input name="TimelineDatum" label="Datum"/>
+                        <flux:field.input name="TimelineName" label="Veranstaltung"/>
+						<flux:field.input name="TimelineText" label="Beschreibung"/>
+					</flux:form.object>
+				</flux:form.section>
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<b>Timeline-Einträge</b>
+		<f:if condition="{TimelineSection} != 0">
+			<f:then>
+				<f:for each="{TimelineSection}" as="TimelineObjectItem" iteration="iter">
+					<div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
+						<b>Event:</b> {TimelineObjectItem.TimelineObject.TimelineName} | {TimelineObjectItem.TimelineObject.TimelineDatum}<br>
+					</div>
+				</f:for>
+			</f:then>
+			<f:else>
+				Bitte mindestens ein Event anlegen!
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Main">
+		<div class="awg-timeline mt-5">
+            <div class="main-timeline">
+			    <f:render section="TimelineEvent" arguments="{_all}"/>
+            </div>
+		</div>
+	</f:section>
+
+	<f:section name="TimelineEvent">
+		<f:for each="{TimelineSection}" as="TimelineObjectItem" iteration="iter">
+            <div class="timeline">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3>{TimelineObjectItem.TimelineObject.TimelineDatum}</h3>
+                        <h4>{TimelineObjectItem.TimelineObject.TimelineName}</h4>
+                        <p class="mb-0">{TimelineObjectItem.TimelineObject.TimelineText}</p>
+                    </div>
+                </div>
+            </div>           
+		</f:for>
+	</f:section>
+</div>

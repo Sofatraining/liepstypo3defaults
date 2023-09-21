@@ -1,0 +1,140 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="carousel">
+			<flux:form.option.group value="content" />
+			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
+			<flux:field.select name="settings.carousel.quickselectType" items="{0:{0:'Striche',1:'dots'},1:{0:'Bild',1:'images'},2:{0:'Nummer',1:'numbers'}}"/>
+			<flux:field.checkbox name="settings.carousel.arrows" default="1" />
+			<flux:field.checkbox name="settings.carousel.autostart" />
+			<flux:field.input name="settings.carousel.labelNext" default="" />
+			<flux:field.input name="settings.carousel.labelPrev" default="" />
+			<flux:grid>
+				<f:if condition="{elements}">
+					<f:for each="{elements}" as="element" iteration="iteration">
+						<f:for each="{element}" key="elementType" as="elementData">
+							<f:if condition="{0: elementType} == {0: 'content'}">
+								<flux:grid.row>
+									<flux:grid.column colPos="{iteration.index}" name="{elementData.id}" label="{v:l(key: 'flux.carousel.label.grid.column.prefix')}: {elementData.id}" />
+								</flux:grid.row>
+							</f:if>
+						</f:for>
+					</f:for>
+				</f:if>
+			</flux:grid>
+			<flux:form.sheet name="elements" label="Carousel-Elemente">
+				<flux:form.section name="elements">
+					<flux:form.object name="content" label="Carousel-Element">
+						<flux:field.checkbox name="disableContainer" default="1" label="Container deaktivieren" />
+						<f:render section="SharedObjectFields" arguments="{_all}" />
+					</flux:form.object>
+				</flux:form.section>
+			</flux:form.sheet>
+			<flux:form.sheet name="styles" label="CSS Classes">
+				<flux:field.custom name="void">
+					<h3>Adding CSS-Classes</h3>
+					<p>Below you can enter a few classes to be used for this specific carousel instance.<br />
+					See examples and options under <a href="https://getbootstrap.com/docs/5.1/components/carousel/" target="_blank">https://getbootstrap.com/docs/5.1/components/carousel/</a>.</p>
+				</flux:field.custom>
+				<flux:field.input name="settings.carousel.carouselClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselIndicatorClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselIndicatorButtonClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselInnerClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselInnerItemClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselInnerItemCaptionHClasses" default="" />
+				<flux:field.input name="settings.carousel.carouselInnerItemCaptionClasses" default="" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<p><strong>Carousel</strong><br><strong>ID:</strong> #carousel-{record.uid}</p>
+	</f:section>
+
+	<f:section name="SharedObjectFields">
+		<flux:field.input name="interval" default="5000" eval="int,trim" label="Zeit in Millisekunden" />
+		<flux:field.input name="header" required="1" label="Name des Carousel-Elementes" />
+		<flux:field.text name="caption" enableRichText="TRUE" label="Caption des Carousel-Elementes" />
+		<flux:field.checkbox name="hide" label="Name und Caption nicht anzeigen" />
+		<flux:field.input name="id" default="slide-{v:random.number(minimum: 101, maximum: 999)}" label="ID des Carousel-Elementes" />
+		<flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" />
+	</f:section>
+
+	<f:section name="Main">
+		<div id="carousel-{record.uid}" class="carousel slide{f:if(condition: settings.carousel.carouselClasses, then: ' {settings.carousel.carouselClasses}')}" {f:if(condition: settings.carousel.autostart, then: ' data-bs-ride="carousel"')}>
+			<f:if condition="{settings.carousel.quickselect}">
+				<div class="carousel-indicators{f:if(condition: settings.carousel.carouselIndicatorClasses, then: ' {settings.carousel.carouselIndicatorClasses}')}">
+					<f:for each="{elements}" as="image" iteration="iteration">
+						<f:if condition="{settings.carousel.quickselectType} == 'dots'">
+							<button type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')} {f:if(condition: settings.carousel.carouselIndicatorButtonClasses, then: '{settings.carousel.carouselIndicatorButtonClasses}')}" aria-label="{image.content.header}{image.image.header}" {f:if(condition: iteration.isFirst, then: 'aria-current="true"')}></button>
+						</f:if>
+						<f:if condition="{settings.carousel.quickselectType} == 'images'">
+							<f:comment><f:if condition="{image.content.iconImage}">
+								<f:image src="{image.content.iconImage}" alt="{image.content.header}" />							
+							</f:if></f:comment>
+						</f:if>
+						<f:if condition="{settings.carousel.quickselectType} == 'numbers'">
+							<f:comment>{iteration.cycle}</f:comment>
+						</f:if>					
+					</f:for>
+				</div>
+			</f:if>
+			<div class="carousel-inner{f:if(condition: settings.carousel.carouselInnerClasses, then: ' {settings.carousel.carouselInnerClasses}')}">
+				<f:for each="{elements}" as="element" iteration="iteration">
+					<div id="{element.content.id}" class="carousel-item {element.content.id}{f:if(condition: iteration.isFirst, then: ' active')}{f:if(condition: settings.carousel.carouselInnerItemClasses, then: ' {settings.carousel.carouselInnerItemClasses}')}" data-bs-interval="{element.content.interval}">	
+						<f:for each="{element}" key="elementType" as="elementData" >
+							<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
+							<f:if condition="{elementData.hide} == 0">
+								<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
+									<div class="carousel-caption{f:if(condition: settings.carousel.carouselInnerItemCaptionClasses, then: ' {settings.carousel.carouselInnerItemCaptionClasses}')}">
+										<f:if condition="{0: elementData.header} != {0: ''}">
+											<h3 class="{f:if(condition: settings.carousel.carouselInnerItemCaptionHClasses, then: '{settings.carousel.carouselInnerItemCaptionHClasses}')}">{elementData.header -> f:format.raw()}</h3>
+										</f:if>
+										<f:if condition="{0: elementData.caption} != {0: ''}">
+											{elementData.caption -> f:format.html()}
+										</f:if>
+									</div>
+								</f:if>
+							</f:if>
+						</f:for>
+					</div>
+				</f:for>
+			</div>
+			<f:if condition="{settings.carousel.arrows} == 1">
+				<f:if condition="{settings.carousel.labelPrev}">
+					<f:then>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev">{settings.carousel.labelPrev-> f:format.raw()}<span class="visually-hidden">Previous</span></button>
+					</f:then>
+					<f:else>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+					</f:else>
+				</f:if>
+				<f:if condition="{settings.carousel.labelNext}">
+					<f:then>
+						<button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next">{settings.carousel.labelNext-> f:format.raw()}<span class="visually-hidden">Next</span></button>
+					</f:then>
+					<f:else>
+						<button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+					</f:else>
+				</f:if>
+			</f:if>
+		</div>
+	</f:section>
+
+	<f:section name="Content">
+		<f:if condition="{elementData.disableContainer} == 0">
+			<f:then>
+				<div class="container">
+					<flux:content.render area="{elementData.id}" />
+				</div>
+			</f:then>
+			<f:else>
+				<flux:content.render area="{elementData.id}" />
+			</f:else>
+		</f:if>
+	</f:section>
+</div>

@@ -1,0 +1,30 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+	<flux:form id="example">
+		<flux:form.option.group value="test" />
+		<!-- Insert fields, sheets, grid, form section objects etc. here, in this flux:flexform tag -->
+		<flux:field.input name="settings.helloWorld" required="true" />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<!-- If you wish, place custom backend preview content here -->
+	<strong>Your Input:</strong><br />
+	{settings.helloWorld}
+</f:section>
+
+<f:section name="Main">
+	<h3>I am a flux content element!</h3>
+	<p>
+		My template file is EXT:liepstypo3defaults/Resources/Private/Content/Example.html.    
+	</p>
+	<h3>Frontend output</h3>
+	<p>
+		{settings.helloWorld}
+	</p>
+</f:section>

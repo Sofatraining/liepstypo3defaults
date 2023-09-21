@@ -1,0 +1,83 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
+	<f:layout name="Content"/>
+	<f:section name="Configuration">
+		<flux:form id="section-100">
+			<flux:form.option.group value="container" />
+			<flux:field.checkbox name="containerfluid" default="0" />
+			<flux:field.select name="classColor" default="bg-transparent" items="{0:{0:'Transparent',1:'bg-transparent'},1:{0:'Weiß',1:'bg-white'},2:{0:'Primär',1:'bg-primary'},3:{0:'Sekundär',1:'bg-secondary'},4:{0:'Hell',1:'bg-light'},5:{0:'Erfolg',1:'bg-success'},6:{0:'Info',1:'bg-info'},7:{0:'Warnung',1:'bg-warning'},8:{0:'Gefahr',1:'bg-danger'},9:{0:'Schwarz',1:'bg-black'}}"/>
+			<flux:field.select name="classColorfont" default="" items="{0:{0:'Standard',1:''},1:{0:'Weiß',1:'text-white'},2:{0:'Schwarz',1:'text-black'},3:{0:'Hell',1:'text-light'}}"/>
+			<flux:field.select name="classOpacity" default="" items="{0:{0:'Ohne',1:''},1:{0:'Opacity 10',1:'bg-opacity-10'},2:{0:'Opacity 25',1:'bg-opacity-25'},3:{0:'Opacity 50',1:'bg-opacity-50'},4:{0:'Opacity 75',1:'bg-opacity-75'}}"/>
+			<flux:field.select name="classGradient" default="" items="{0:{0:'Nein',1:''},1:{0:'Ja',1:'bg-gradient'}}"/>
+			<flux:field.select name="classPadding" default="" items="{0:{0:'Standard',1:''},1:{0:'Extraklein',1:'py-1'},2:{0:'Klein',1:'py-2'},3:{0:'Mittel',1:'py-3'},4:{0:'Groß',1:'py-4'},5:{0:'Extragroß',1:'py-5'}}"/>
+			<flux:field.inline.fal name="bgImage" minItems="0" maxItems="1" />
+			<flux:field.checkbox name="bgFixed" default="0" />
+			<flux:field.select name="overlay" label="Bild-Overlay" default="" items="{0:{0:'Default',1:''},1:{0:'Black 5%',1:'bg-black-5'},2:{0:'Black 10%',1:'bg-black-10'},3:{0:'Black 15%',1:'bg-black-15'},4:{0:'Black 20%',1:'bg-black-20'},5:{0:'Black 30%',1:'bg-black-30'},6:{0:'Black 40%',1:'bg-black-40'},7:{0:'Black 50%',1:'bg-black-50'},8:{0:'Black 60%',1:'bg-black-60'},9:{0:'Black 70%',1:'bg-black-70'},10:{0:'Black 80%',1:'bg-black-80'},11:{0:'Black 85%',1:'bg-black-85'},12:{0:'Black 90%',1:'bg-black-90'},13:{0:'Black 95%',1:'bg-black-95'},14:{0:'White 5%',1:'bg-white-5'},15:{0:'White 10%',1:'bg-white-10'},16:{0:'White 15%',1:'bg-white-15'},17:{0:'White 20%',1:'bg-white-20'},18:{0:'White 30%',1:'bg-white-30'},19:{0:'White 40%',1:'bg-white-40'},20:{0:'White 50%',1:'bg-white-50'},21:{0:'White 60%',1:'bg-white-60'},22:{0:'White 70%',1:'bg-white-70'},23:{0:'White 80%',1:'bg-white-80'},24:{0:'White 85%',1:'bg-white-85'},25:{0:'White 90%',1:'bg-white-90'},26:{0:'White 95%',1:'bg-white-95'}}"/>
+			<flux:field.select name="size" default="" items="{0:{0:'Default',1:''},1:{0:'Auto',1:'bg-size-auto'},2:{0:'Contain',1:'bg-size-contain'},3:{0:'Cover',1:'bg-size-cover'}}"/>
+			<flux:field.select name="positionX" default="" items="{0:{0:'Default',1:''},1:{0:'Center',1:'bg-position-x-center'},2:{0:'Left',1:'bg-position-x-left'},3:{0:'Right',1:'bg-position-x-right'}}"/>
+			<flux:field.select name="positionY" default="" items="{0:{0:'Default',1:''},1:{0:'Center',1:'bg-position-y-center'},2:{0:'Top',1:'bg-position-y-top'},3:{0:'Bottom',1:'bg-position-y-bottom'}}"/>
+			<flux:field.select name="repeat" default="" items="{0:{0:'Default',1:''},1:{0:'X und Y',1:'bg-repeat'},2:{0:'No-Repeat',1:'bg-repeat-no'},3:{0:'Round',1:'bg-repeat-round'}}"/>
+			<flux:field.select name="repeatX" default="" items="{0:{0:'Default',1:''},1:{0:'X',1:'bg-repeat-x'}}"/>
+			<flux:field.select name="repeatY" default="" items="{0:{0:'Default',1:''},1:{0:'Y',1:'bg-repeat-y'}}"/>
+			<flux:grid>
+				<flux:grid.row>
+					<flux:grid.column name="column1" label="Spalte 1" colPos="1"/>
+				</flux:grid.row>
+			</flux:grid>
+			<flux:form.sheet name="styles" label="CSS Classes">
+				<flux:field.custom name="void">
+					<h3>Adding CSS-Classes</h3>
+					<p>Below you can enter a few classes to be used for this specific section instance.</p>
+				</flux:field.custom>
+				<flux:field.input name="settings.section.sectionClasses" default="" />
+				<flux:field.input name="settings.section.overlayClasses" default="" />
+				<flux:field.input name="settings.section.containerClasses" default="" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Main">
+		<f:if condition="{bgImage}">
+		<f:then>
+		<v:content.resources.fal field="bgImage" as="images" record="{record}">
+		<f:for each="{images}" as="image">
+		<div class="section {classColor}{f:if(condition: '{classColorfont} != ""', then: ' {classColorfont}')}{f:if(condition: '{classOpacity} != ""', then: ' {classOpacity}')}{f:if(condition: '{classGradient} != ""', then: ' {classGradient}')}{f:if(condition: '{classPadding} != "" && {bgImage} == ""', then: ' {classPadding}')}{f:if(condition: settings.section.sectionClasses, then: ' {settings.section.sectionClasses}')}" >
+		<div class="bgimage{f:if(condition: size, then: ' {size}')}{f:if(condition: positionX, then: ' {positionX}')}{f:if(condition: positionY, then: ' {positionY}')}{f:if(condition: repeat, then: ' {repeat}')}{f:if(condition: repeatX, then: ' {repeatX}')}{f:if(condition: repeatY, then: ' {repeatY}')}{f:if(condition: '{bgFixed} == 1', then: ' bg-fixed')}" style="background-image: url('{image.url}');" >
+		<div class="overlay{f:if(condition: overlay, then: ' {overlay}')}{f:if(condition: settings.section.overlayClasses, then: ' {settings.section.overlayClasses}')}{f:if(condition: '{classPadding} != "" && {bgImage} != ""', then: ' {classPadding}')}">
+		</f:for>
+		</v:content.resources.fal>
+		</f:then>
+		<f:else>
+		<div class="section {classColor}{f:if(condition: '{classColorfont} != ""', then: ' {classColorfont}')}{f:if(condition: '{classOpacity} != ""', then: ' {classOpacity}')}{f:if(condition: '{classGradient} != ""', then: ' {classGradient}')}{f:if(condition: '{classPadding} != ""', then: ' {classPadding}')}{f:if(condition: settings.section.sectionClasses, then: ' {settings.section.sectionClasses}')}">
+		</f:else>
+		</f:if>			
+			<f:if condition="{containerfluid} == 0">
+			<f:then>
+			<div class="container{f:if(condition: settings.section.containerClasses, then: ' {settings.section.containerClasses}')}">
+			</f:then>
+			<f:else>
+			<div class="container-fluid{f:if(condition: settings.section.containerClasses, then: ' {settings.section.containerClasses}')}">
+			</f:else>
+			</f:if>
+				<flux:content.render area="column1"/>
+			</div>
+		<f:if condition="{bgImage}">
+		</div>
+		</div>
+		</f:if>
+		</div>
+	</f:section>
+
+	<f:section name="Preview">
+		<strong>Section</strong> (<f:if condition="{containerfluid} == '0'">Container</f:if><f:if condition="{containerfluid} == '1'">Container-Fluid</f:if>)<br>
+		<strong>Hintergrundfarbe: </strong><f:if condition="{classColor} == 'bg-transparent'">Transparent</f:if><f:if condition="{classColor} == 'bg-white'">Weiß</f:if><f:if condition="{classColor} == 'bg-primary'">Primär</f:if><f:if condition="{classColor} == 'bg-secondary'">Sekundär</f:if><f:if condition="{classColor} == 'bg-light'">Hell</f:if><f:if condition="{classColor} == 'bg-success'">Erfolg</f:if><f:if condition="{classColor} == 'bg-warning'">Warnung</f:if><f:if condition="{classColor} == 'bg-info'">Info</f:if><f:if condition="{classColor} == 'bg-danger'">Gefahr</f:if><f:if condition="{classColor} == 'bg-black'">Schwarz</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Textfarbe: </strong><f:if condition="{classColorfont} == ''">Standard</f:if><f:if condition="{classColorfont} == 'text-white'">Weiß</f:if><f:if condition="{classColorfont} == 'text-black'">Schwarz</f:if><f:if condition="{classColorfont} == 'text-light'">Hell</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Opacity: </strong><f:if condition="{classOpacity} == ''">Ohne</f:if><f:if condition="{classOpacity} == 'bg-opacity-10'">10</f:if><f:if condition="{classOpacity} == 'bg-opacity-25'">25</f:if><f:if condition="{classOpacity} == 'bg-opacity-50'">50</f:if><f:if condition="{classOpacity} == 'bg-opacity-75'">75</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Gradient: </strong><f:if condition="{classGradient} == ''">Nein</f:if><f:if condition="{classGradient} == 'bg-gradient'">Ja</f:if>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Abstand: </strong><f:if condition="{classPadding} == ''">Standard</f:if><f:if condition="{classPadding} == 'py-1'">Extraklein</f:if><f:if condition="{classPadding} == 'py-2'">Klein</f:if><f:if condition="{classPadding} == 'py-3'">Mittel</f:if><f:if condition="{classPadding} == 'py-4'">Groß</f:if><f:if condition="{classPadding} == 'py-5'">Extragroß</f:if>
+	</f:section>
+</div>
