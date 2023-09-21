@@ -1,0 +1,23 @@
+{
+    "name": "lieps-gmbh/liepstypo3defaults",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://ohnesorge.live",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^12.4",
+        "typo3/cms-rte-ckeditor": "^12.4",
+        "typo3/cms-fluid-styled-content": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "LiepsGmbh\\Liepstypo3defaults\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "liepstypo3defaults"
+        }
+    }
+}
