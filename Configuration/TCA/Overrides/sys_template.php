@@ -13,6 +13,6 @@ call_user_func(function()
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',
-        'LIEPSTYPO3DEFAULTS'
+        'LIEPS TYPO3 Defaults'
     );
 });
