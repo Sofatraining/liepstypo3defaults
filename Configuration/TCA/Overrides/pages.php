@@ -13,6 +13,6 @@ call_user_func(function()
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/All.tsconfig',
-        'LIEPSTYPO3DEFAULTS'
+        'LIEPS TYPO3 Defaults'
     );
 });
