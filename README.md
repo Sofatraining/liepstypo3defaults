@@ -2,6 +2,7 @@
 ## TYPO3 12.4 LTS
 Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more.
 
+### SETTINGS -> Configure Extension -> Flux -> Disable Page Integration
 ### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - TESTS NEEDED
 
 
