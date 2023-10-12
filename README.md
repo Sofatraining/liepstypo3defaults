@@ -76,7 +76,7 @@ Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalb
 Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.), Update to BS 5.3.0, JQuery 3.7.0 and Font Awesome Free 6.4.0
 ***
 #### v3.0.0
-New Package for TYPO3 V12.4 LTS, Required Flux 10.0.7 (Page-Template-Bug), Update to BS 5.3.2, JQuery 3.7.1 and Font Awesome Free 6.4.2, Change Label Fields in Column-Elements
+Package for TYPO3 V12.4, Required Flux 10.0.7 (Page-Template-Bug), Update to BS 5.3.2, JQuery 3.7.1 and Font Awesome Free 6.4.2, Change Label Fields in Column-Elements
   
 ***   
   
