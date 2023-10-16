@@ -85,7 +85,7 @@ body {word-wrap: break-word;}
 /* BG-Size & BG-Position & BG-Repeat */
 .bg-size-auto {background-size: auto;}
 .bg-size-contain {background-size: contain;}
-.bg-size-cover {background-size: cover;}
+.bg-size-cover {-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
 
 .bg-position-x-center {background-position-x: center;}
 .bg-position-x-left {background-position-x: left;}
