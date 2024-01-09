@@ -315,6 +315,27 @@
 			<trans-unit id="flux.modalautostart.fields.settings.buttonText">
 				<source>Beschriftung des Buttons (Erforderlich wenn ein Link gesetzt wurde!)</source>
 			</trans-unit>
+			<trans-unit id="flux.faq">
+				<source>Scroll Spy</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.description">
+				<source>Das Bootstrap5 Scroll-Spy-Element</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.fields.faq-headline">
+				<source>Titel Scroll Spys</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.fields.faq-title">
+				<source>Titel des Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.fields.faq-text">
+				<source>Text des Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.fields.settings.section.col1Classes">
+				<source>CSS-Klassen für den FAQ-Selector-Container</source>
+			</trans-unit>
+			<trans-unit id="flux.faq.fields.settings.section.col2Classes">
+				<source>CSS-Klassen für den FAQ-List-Container</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
