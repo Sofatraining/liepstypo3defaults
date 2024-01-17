@@ -87,7 +87,7 @@ page {
 	}
 	# Alternativ als Typoscript-Setup für spezielle Page-UIDS
 	# [page["uid"] == 1]
-    	#	 page.includeJSFooter.darksky_start = EXT:liepstypo3defaults/Resources/Public/Js/pace.min.js
+    	#	 page.includeJSFooterlibs.example = EXT:liepstypo3defaults/Resources/Public/Js/example.js
 	# [END]
 
 
