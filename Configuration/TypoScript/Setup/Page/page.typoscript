@@ -86,9 +86,9 @@ page {
 		file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
 	}
 	# Alternativ als Typoscript-Setup für spezielle Seiten
-	#[page["uid"] == 1]
-    	#	page.includeJSFooter.darksky_start = EXT:liepstypo3defaults/Resources/Public/Js/pace.min.js
-	#[END]
+	# [page["uid"] == 1]
+    	#	 page.includeJSFooter.darksky_start = EXT:liepstypo3defaults/Resources/Public/Js/pace.min.js
+	# [END]
 
 
 	bodyTagCObject = TEXT
