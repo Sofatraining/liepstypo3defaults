@@ -9,11 +9,11 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'fe',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.4.0-12.4.99',
-            'fluid_styled_content' => '12.4.0-12.4.99',
-            'rte_ckeditor' => '12.4.0-12.4.99',
+            'typo3' => '11.5.33-12.4.99',
+            'fluid_styled_content' => '11.5.33-12.4.99',
+            'rte_ckeditor' => '11.5.33-12.4.99',
             'flux' => '10.0.7-10.0.99',
-            'vhs' => '7.0.0-7.99.99',
+            'vhs' => '7.0.0-7.3.99',
         ],
         'conflicts' => [
         ],

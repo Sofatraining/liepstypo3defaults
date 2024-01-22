@@ -1,8 +1,8 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 12.4 LTS
+## TYPO3 11.5 LTS und 12.4 LTS
 Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more.
 
-### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - TESTS NEEDED
+### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
 
 
 See all features on -> https://v10.lieps.de/
@@ -75,10 +75,13 @@ Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalb
 #### v2.0.9
 Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.), Update to BS 5.3.0, JQuery 3.7.0 and Font Awesome Free 6.4.0
 ***
-### v3 - Typo3 LTS 12.4
+### v3 - Typo3 LTS 12.4 / LTS 11.5
 
 #### v3.0.0
-Package for TYPO3 V12.4, Required Flux 10.0.7 (Page-Template-Bug), Update to BS 5.3.2, JQuery 3.7.1 and Font Awesome Free 6.4.2, Change Label Fields in Column-Elements
+Package for TYPO3 V12.4, Required Flux 10.0.7 (Page-Template-Bug until 10.0.6), Update to BS 5.3.2, JQuery 3.7.1 and Font Awesome Free 6.4.2, Change Label Fields in Column-Elements
+***
+#### v3.0.1
+New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bugfixes, Update Font Awesome Free 6.5.1
   
 ***   
   

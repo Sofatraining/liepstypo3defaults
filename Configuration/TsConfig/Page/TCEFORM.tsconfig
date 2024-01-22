@@ -99,6 +99,14 @@ TCEFORM {
 		header_layout.types.liepstypo3defaults_modalautostart.disabled = 1
 		date.types.liepstypo3defaults_modalautostart.disabled = 1
 		subheader.types.liepstypo3defaults_modalautostart.disabled = 1
+		# Carousel-Bild
+		header.types.liepstypo3defaults_carousel-image.disabled = 1
+		header.types.types.liepstypo3defaults_carousel-image.disabled = 1
+		header_link.types.liepstypo3defaults_carousel-image.disabled = 1
+		header_position.types.liepstypo3defaults_carousel-image.disabled = 1
+		header_layout.types.liepstypo3defaults_carousel-image.disabled = 1
+		date.types.liepstypo3defaults_carousel-image.disabled = 1
+		subheader.types.liepstypo3defaults_carousel-image.disabled = 1
 	}
 	sys_file_reference {
 		crop.config.cropVariants {

@@ -1,0 +1,6 @@
+# LIB für die Ausgabe des Sitetitles
+# Titel unter Sites -> Site -> Sprachen -> Titel der Website einstellen
+lib.siteTitle = TEXT
+lib.siteTitle.data = siteLanguage:websiteTitle
+
+# Verwenden im Template -> <f:cObject typoscriptObjectPath="lib.siteTitle" />
