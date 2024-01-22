@@ -88,12 +88,12 @@ New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bug
 ## MANUAL
 ### Installation / Settings (translate later in english)
 Um Timeouts bei der Extension-Installation zu vermeiden, sollten die abhängigen Extension vorher installiert werden. Das sind:
-* mask
-* news
-* powermail
-* vhs
-* flux
-* image_autoresize
+* vhs (needed)
+* flux (needed)
+* mask (optional)
+* news (optional)
+* powermail (optional)
+* image_autoresize (optional)
 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
