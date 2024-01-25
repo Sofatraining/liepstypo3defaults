@@ -4,6 +4,8 @@ Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autor
 
 Demo: https://v12.lieps.de/
 
+=======
+
 ### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
   
 ## MANUAL
