@@ -3,32 +3,38 @@
 /**
  * Extension Manager/Repository config file for ext "liepstypo3defaults".
  */
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF[$_EXTKEY] = array (
     'title' => 'LIEPS TYPO3 Defaults',
-    'description' => '',
+    'description' => 'Bootstrap 5 Extension + Various Content Elements with Flux',
     'category' => 'fe',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '11.5.33-12.4.99',
-            'fluid_styled_content' => '11.5.33-12.4.99',
-            'rte_ckeditor' => '11.5.33-12.4.99',
-            'flux' => '10.0.7-10.0.99',
-            'vhs' => '7.0.0-7.3.99',
-        ],
-        'conflicts' => [
-        ],
-    ],
-    'autoload' => [
-        'psr-4' => [
-            'LiepsGmbH\\Liepstypo3defaults\\' => 'Classes',
-        ],
-    ],
+    'version' => '3.0.2',
     'state' => 'stable',
-    'uploadfolder' => 0,
+    'uploadfolder' => false,
     'createDirs' => '',
-    'clearCacheOnLoad' => 1,
+    'clearCacheOnLoad' => true,
     'author' => 'Jürgen Ohnesorge',
     'author_email' => 'juergen.ohnesorge@me.com',
     'author_company' => 'LIEPS GmbH',
-    'version' => '3.0.0',
-];
+    'constraints' => 
+    array (
+        'depends' => 
+            array (
+                'typo3' => '11.5.0-12.4.99',
+                'flux' => '10.0.7-10.0.99',
+                'vhs' => '7.0.0-7.3.99',
+            ),
+        'conflicts' => 
+            array (
+        ),
+        'suggests' => 
+            array (
+        ),
+    ),
+    'autoload' => 
+    array (
+        'psr-4' => 
+            array (
+                'LiepsGmbH\\Liepstypo3defaults\\' => 'Classes',
+        ),
+    ),
+);

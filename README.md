@@ -5,28 +5,28 @@ Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autor
 ### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
   
 ## MANUAL
-### Installation / Settings (translate later in english)
-Um Timeouts bei der Extension-Installation zu vermeiden, sollten die abhängigen Extension vorher installiert werden. Das sind:
-* mask
-* news
-* powermail
-* vhs
-* flux
-* image_autoresize
+### Installation / Settings
+To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
+* vhs (needed)
+* flux (needed)
+* mask (optional)
+* news (optional)
+* powermail (optional)
+* image_autoresize (optional)
 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
 ![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155408223-9910a40c-0790-4871-a944-ac08f29c6adb.png)
   
-* Statische Templates wie im Screenshot hinzufügen
-* SETTINGS -> Configure Extension -> Flux -> Disable Page Integration (Probably a bug in Flux 10.0.6)
-* Nach der Installation die Sprachdateien aktualisieren: Wartung -> Manage Languages -> Update all  
-* !! WICHTIG !! webp generell als Bild-Format in LocalConfiguration zulassen
+* Add static templates like in the screenshot
+* (Bug only in Flux 10.0.6) SETTINGS -> Configure Extension -> Flux -> Disable Page Integration
+* Update the language files after installation: Wartung -> Manage Languages -> Update all  
+* !! IMPORTANT !! Generally allow webp as an image format in LocalConfiguration !!
 ```diff
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp'; 
 ``` 
-* Während der Entwicklung JS und CSS Compression deaktivieren -> Setup 
+* Disable JS and CSS compression during development -> Setup
 ```diff
 config {  
 	compressJs = 0  
@@ -36,12 +36,12 @@ config {
 }  
 ```
 
-#### Typ des Menüs ändern
-Im Template kann über den Konstanteneditor der Typ des Menü gewählt werden. Notwendige JS- und CSS-Dateien werden automatisch über v:assets integriert.
+#### Change menu type
+The type of menu can be selected in the template using the constant editor. Necessary JS and CSS files are automatically integrated via v:assets.
 
 ![Template - Konstanteneditor](https://user-images.githubusercontent.com/47626641/253544264-d22e4b3c-a7d0-4996-b61d-698984f7b2f5.jpg)
 
-Weitere Menütypen werden demnächst integriert
+More menu types will be integrated soon
 ***
 
 ### EXT:Fluid Styled Content
