@@ -77,5 +77,8 @@ Package for TYPO3 V12.4, Required Flux 10.0.7 (Page-Template-Bug until 10.0.6), 
 ***
 #### v3.0.1
 New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bugfixes, Update Font Awesome Free 6.5.1
+***
+#### v3.0.2
+Bugfixes
   
 ***   
