@@ -1,5 +1,5 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 11.5 LTS und 12.4 LTS
+## TYPO3 11.5 LTS and 12.4 LTS
 Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more.
 
 ### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
@@ -58,7 +58,7 @@ More menu types will be integrated soon
 * Dokumentation unter https://fluidtypo3.org/documentation/templating-manual/introduction.html
 ***
 
-### EXT:News
+### EXT:News (If in use)
 ```ini
 [Template -> Enthält -> "News (news)" hinzufügen]   
 ``` 
@@ -68,7 +68,7 @@ More menu types will be integrated soon
 * News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 ***
   
-### EXT:Powermail
+### EXT:Powermail (If in use)
 * Anpassungen für "Add classes and CSS based on bootstrap (powermail)" vorgenommen 
 ```ini
 [Template -> Enthält -> "Main Template (powermail)" hinzufügen]
@@ -76,7 +76,7 @@ More menu types will be integrated soon
 ```  
 ***
   
-### EXT:Mask
+### EXT:Mask (If in use)
 ```ini
 [Template -> Enthält -> "Mask (mask)" hinzufügen]
 ``` 
