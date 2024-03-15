@@ -337,10 +337,10 @@
 				<source>CSS-Klassen für den FAQ-List-Container</source>
 			</trans-unit>
 			<trans-unit id="flux.testimonials">
-				<source>Kundenstimmen</source>
+				<source>Testimonials</source>
 			</trans-unit>
 			<trans-unit id="flux.testimonials.description">
-				<source>Anlegen und Bearbeiten von Kundenstimmen</source>
+				<source>Anlegen und Bearbeiten von Testimonials</source>
 			</trans-unit>
 		</body>
 	</file>
