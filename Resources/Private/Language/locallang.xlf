@@ -336,6 +336,12 @@
 			<trans-unit id="flux.faq.fields.settings.section.col2Classes">
 				<source>CSS-Klassen für den FAQ-List-Container</source>
 			</trans-unit>
+			<trans-unit id="flux.testimonials">
+				<source>Kundenstimmen</source>
+			</trans-unit>
+			<trans-unit id="flux.testimonials.description">
+				<source>Anlegen und Bearbeiten von Kundenstimmen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
