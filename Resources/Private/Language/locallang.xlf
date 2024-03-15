@@ -319,10 +319,10 @@
 				<source>Scroll Spy</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.description">
-				<source>Das Bootstrap5 Scroll-Spy-Element</source>
+				<source>Ein Scroll-Spy Element</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.fields.faq-headline">
-				<source>Titel Scroll Spys</source>
+				<source>Titel Scroll Spy</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.fields.faq-title">
 				<source>Titel des Elements</source>
