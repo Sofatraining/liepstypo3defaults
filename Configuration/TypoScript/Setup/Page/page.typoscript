@@ -70,7 +70,12 @@ page {
 	}
 
 	includeJSLibs {
-		file1 = EXT:liepstypo3defaults/Resources/Public/Js/jquery.min.js
+		#file1 = https://ccm.lieps.de/public/app.js?apiKey=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&amp;domain=XXXXXXX
+		#file1.external = 1
+		#file1.disableCompression = 1
+		#file1.excludeFromConcatenation = 1
+		#file1.referrerpolicy = origin
+		file2 = EXT:liepstypo3defaults/Resources/Public/Js/jquery.min.js
 	}
 
 	includeJS {
