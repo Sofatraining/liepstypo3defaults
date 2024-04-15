@@ -96,15 +96,6 @@
 			<trans-unit id="flux.section-100.fields.repeatY">
 				<source>Image Background-Repeat (Y)</source>
 			</trans-unit>
-			<trans-unit id="flux.section-100.fields.settings.section.sectionClasses">
-				<source>zusätzliche CSS-Klassen für div.section</source>
-			</trans-unit>
-			<trans-unit id="flux.section-100.fields.settings.section.overlayClasses">
-				<source>zusätzliche CSS-Klassen für div.section -> overlay (Nur bei Bildhintergrund!)</source>
-			</trans-unit>			
-			<trans-unit id="flux.section-100.fields.settings.section.containerClasses">
-				<source>zusätzliche CSS-Klassen für div.section -> overlay -> container/container-fluid</source>
-			</trans-unit>
 			<trans-unit id="flux.teaser">
 				<source>Teaser</source>
 			</trans-unit>
