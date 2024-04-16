@@ -333,6 +333,12 @@
 			<trans-unit id="flux.testimonials.description">
 				<source>Anlegen und Bearbeiten von Testimonials</source>
 			</trans-unit>
+			<trans-unit id="flux.linklist">
+				<source>Linkliste</source>
+			</trans-unit>
+			<trans-unit id="flux.linklist.description">
+				<source>Anlegen / Bearbeiten einer Liste von Links oder Sprungmarken</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
