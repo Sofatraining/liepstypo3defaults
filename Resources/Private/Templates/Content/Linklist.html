@@ -1,0 +1,40 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+    xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+    <f:layout name="Content" />
+
+    <f:section name="Configuration">
+        <flux:form id="linklist">
+            <flux:form.option.group value="content" />
+            <flux:form.section name="sectionlinks" label="Links">
+                <flux:form.object name="objectlinks" label="Link">
+                    <flux:field.input name="linktitle" label="Linktitel" required="1" />
+                    <flux:field.input name="inputlink" config="{renderType: 'inputLink'}" required="1" />                       
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <ul class="list-group">
+            <f:for each="{sectionlinks}" as="item">
+                <li class="list-group-item">{item.objectlinks.linktitle}</li>
+            </f:for>
+        </ul>
+    </f:section>
+
+    <f:section name="Main">
+        
+        <div class="menu-links">
+            <ul class="menu-pages d-flex flex-column align-items-center">
+                <f:for each="{sectionlinks}" as="item" key="index">
+                    <f:debug>{item}</f:debug>
+                    <li class="menu-pages-item text-uppercase">
+                        <p class="text-center"><f:link.typolink parameter="{item.objectlinks.inputlink}" class="menu-pages-navitem">{item.objectlinks.linktitle}</f:link.typolink></p>
+                    </li>
+                </f:for>
+            </ul>
+        </div> 
+    </f:section>
+    
+</div>

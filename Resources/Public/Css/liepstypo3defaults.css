@@ -137,6 +137,12 @@ p.authorBody {margin-bottom:0;}
 .timeline:nth-child(even)::before {content: " ";position: absolute;top: 18px;z-index: 1;left: 30px;border: medium solid white;border-width: 10px 10px 10px 0;border-color: transparent white transparent transparent;}
 .timeline:nth-child(even)::after {left: -12px;}
 
+/* Testimonials */
+.testimonial {padding: 15px; border: 1px solid #f1f1f1;margin-bottom: 30px;}
+.testimonial .testimonial-header .timage {width: 60px; height: 60px; border-radius: 50%;}
+.testimonial .testimonial-header .timage.nopic {background-color: var(--bs-primary); color: var(--bs-white); font-size: 1.75rem;}
+.testimonial .testimonial-stars-container {display: flex; gap: 0.2rem;}
+
 /* Powermail */
 .tx-powermail fieldset label {margin-top:10px;}
 
