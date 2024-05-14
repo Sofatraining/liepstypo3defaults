@@ -7,7 +7,7 @@
   },
   "homepage": "https://ohnesorge.live",
   "author": "Jürgen Ohnesorge",
-  "version": "1.0.0",
+  "version": "3.0.3",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "grunt": "^1.0.4",
