@@ -80,5 +80,8 @@ New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bug
 ***
 #### v3.0.2
 Bugfixes
+***
+#### v3.0.3
+Bugfixes, Font Awesome to Version 6.5.2
   
 ***   
