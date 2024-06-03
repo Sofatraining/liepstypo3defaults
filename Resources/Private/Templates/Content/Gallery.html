@@ -1,7 +1,7 @@
 <div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers">
+	 xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers">
 	{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
 
 <f:layout name="Content"/>
@@ -9,9 +9,9 @@
 <f:section name="Configuration">
 	<flux:form id="gallery">
 		<flux:form.option.group value="content" />
-        <flux:field.select name="selectCol" default="col-xl-4 col-lg-6" items="{0:{0:'2 Spalten',1:'col-lg-6'},1:{0:'3 Spalten',1:'col-xl-4 col-lg-6'},2:{0:'4 Spalten',1:'col-xl-3 col-lg-6'}}"/>
+		<flux:field.select name="selectCol" default="col-xl-4 col-lg-6" items="{0:{0:'2 Spalten',1:'col-lg-6'},1:{0:'3 Spalten',1:'col-xl-4 col-lg-6'},2:{0:'4 Spalten',1:'col-xl-3 col-lg-6'},3:{0:'6 Spalten',1:'col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6'}}"/>
 		<flux:field.checkbox name="lightbox" default="0" />
-        <flux:field.inline.fal name="settings.files" minItems="1" maxItems="30" required="1" allowedExtensions="jpg" collapseAll="TRUE" />
+		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="30" required="1" allowedExtensions="jpg,png" collapseAll="TRUE" />
 	</flux:form>
 </f:section>
 
@@ -20,7 +20,7 @@
 		<tr>
 			<td>
 				<strong>Bilder-Galerie</strong><br />
-                Spalten: <strong><f:if condition="{selectCol} == 'col-lg-6'">2</f:if><f:if condition="{selectCol} == 'col-lg-4'">3</f:if><f:if condition="{selectCol} == 'col-lg-3'">4</f:if></strong><br>
+				Spalten: <strong><f:if condition="{selectCol} == 'col-lg-6'">2</f:if><f:if condition="{selectCol} == 'col-lg-4'">3</f:if><f:if condition="{selectCol} == 'col-lg-3'">4</f:if></strong><br>
 				<v:content.resources.fal field="settings.files" as="images" record="{record}">
 					<f:for each="{images}" as="image">
 						<f:if condition="{image}">
@@ -35,22 +35,31 @@
 
 <f:section name="Main">
 	<v:content.resources.fal field="settings.files" as="images" record="{record}">
-        <div class="row">
-            <f:for each="{images}" as="image">
-                <div class="{selectCol}">
-                    <f:if condition="{lightbox} == 0">
-                        <f:then>
-                            <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="d-block w-100 img-fluid img-gallery" cropVariant="default" crop="{image.crop}" />
-                        </f:then>
-                        <f:else>
-                            <f:link.typolink parameter="{image.url}" class="image-link" additionalAttributes="{rel: 'lightbox[{record.uid}]'}">
-                                <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="d-block w-100 img-fluid img-gallery" cropVariant="default" crop="{image.crop}" />
-                            </f:link.typolink>   
-                        </f:else>
-                    </f:if>
-                </div>
-            </f:for>
-        </div>
+		<div class="row px-5">
+			<f:for each="{images}" as="image">
+				<div class="{selectCol} px-5">
+					<f:if condition="{lightbox} == 0">
+						<f:then>
+							<f:if condition="{image.link}">
+								<f:then>
+									<f:link.typolink parameter="{image.link}">
+										<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="d-block w-100 img-fluid img-gallery" cropVariant="default" crop="{image.crop}" />
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="d-block w-100 img-fluid img-gallery" cropVariant="default" crop="{image.crop}" />
+								</f:else>
+							</f:if>
+						</f:then>
+						<f:else>
+							<f:link.typolink parameter="{image.url}" class="image-link" additionalAttributes="{rel: 'lightbox[{record.uid}]'}">
+								<f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="d-block w-100 img-fluid img-gallery" cropVariant="default" crop="{image.crop}" />
+							</f:link.typolink>   
+						</f:else>
+					</f:if>
+				</div>
+			</f:for>
+		</div>
 	</v:content.resources.fal>
 </f:section>
 

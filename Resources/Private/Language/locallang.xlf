@@ -96,15 +96,6 @@
 			<trans-unit id="flux.section-100.fields.repeatY">
 				<source>Image Background-Repeat (Y)</source>
 			</trans-unit>
-			<trans-unit id="flux.section-100.fields.settings.section.sectionClasses">
-				<source>zusätzliche CSS-Klassen für div.section</source>
-			</trans-unit>
-			<trans-unit id="flux.section-100.fields.settings.section.overlayClasses">
-				<source>zusätzliche CSS-Klassen für div.section -> overlay (Nur bei Bildhintergrund!)</source>
-			</trans-unit>			
-			<trans-unit id="flux.section-100.fields.settings.section.containerClasses">
-				<source>zusätzliche CSS-Klassen für div.section -> overlay -> container/container-fluid</source>
-			</trans-unit>
 			<trans-unit id="flux.teaser">
 				<source>Teaser</source>
 			</trans-unit>
@@ -319,10 +310,10 @@
 				<source>Scroll Spy</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.description">
-				<source>Das Bootstrap5 Scroll-Spy-Element</source>
+				<source>Ein Scroll-Spy Element</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.fields.faq-headline">
-				<source>Titel Scroll Spys</source>
+				<source>Titel Scroll Spy</source>
 			</trans-unit>
 			<trans-unit id="flux.faq.fields.faq-title">
 				<source>Titel des Elements</source>
@@ -335,6 +326,39 @@
 			</trans-unit>
 			<trans-unit id="flux.faq.fields.settings.section.col2Classes">
 				<source>CSS-Klassen für den FAQ-List-Container</source>
+			</trans-unit>
+			<trans-unit id="flux.testimonials">
+				<source>Testimonials</source>
+			</trans-unit>
+			<trans-unit id="flux.testimonials.description">
+				<source>Anlegen und Bearbeiten von Testimonials</source>
+			</trans-unit>
+			<trans-unit id="flux.linklist">
+				<source>Linkliste</source>
+			</trans-unit>
+			<trans-unit id="flux.linklist.description">
+				<source>Anlegen / Bearbeiten einer Liste von Links oder Sprungmarken</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer">
+				<source>Störer</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.description">
+				<source>Fixe Störerkarte</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.subheadline">
+				<source>Subheadline</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.headline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.teasertext">
+				<source>Kurztext</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.buchen">
+				<source>Buchen Link</source>
 			</trans-unit>
 		</body>
 	</file>

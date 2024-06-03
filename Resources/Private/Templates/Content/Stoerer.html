@@ -1,0 +1,92 @@
+<div xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="stoerer">
+			<flux:form.option.group value="content" />
+			<flux:field.input name="headline" maxCharacters="60" required="1" />
+			<flux:field.text name="teasertext" rows="5" cols="30" required="0" />
+			<flux:field.input name="buchen" config="{renderType: 'inputLink'}" required="0" />
+			<flux:field.input name="link" config="{renderType: 'inputLink'}" required="0" />
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<table width="100%">
+			<tr>
+				<td>
+					<strong>Störer "<f:format.crop maxCharacters="20">{headline}</f:format.crop>"</strong><br>
+					<f:format.crop maxCharacters="80">{teasertext}</f:format.crop><br><br>
+				</td>
+			</tr>
+		</table>
+	</f:section>
+
+	<f:section name="Main">
+		<script src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Js/js.cookie.min.js"></script>
+        		<v:asset.script name="stoerer{id}" movable="1">
+$(document).ready(function () {
+	// Überprüfen Sie, ob der body-Tag eine id hat
+	var bodyId = $('body').attr('id');
+				
+	if (bodyId && $('.stoerer').length) {
+		$(window).on('load', function () {
+			var cookieName = 'stoererClosed_' + bodyId;
+			var lastClosedSt = Cookies.get(cookieName);
+			  
+			// Wenn das Cookie nicht existiert oder es mehr als 10 Minuten her ist, dass es gesetzt wurde, dann zeigen Sie den 'stoerer'
+			if (
+				!lastClosedSt ||
+				new Date().getTime() - lastClosedSt > 10 * 60 * 1000
+			) {
+				$('.stoerer').show();
+			} else {
+				$('.stoerer').hide();
+			}
+		});
+			  
+		// Wenn der 'stoerer' mit dem 'stoerer-closer' geschlossen wird, setzen Sie das Cookie mit dem aktuellen Zeitstempel
+		$('.stoerer-closer').on('click', function () {
+			var cookieName = 'stoererClosed_' + bodyId;
+			Cookies.set(cookieName, new Date().getTime());
+			$('.stoerer').hide();
+		});
+	}
+});
+		</v:asset.script>
+		<div class="stoerer p-3">
+			<div class="stoerer-head d-flex justify-content-end">
+				<button class="stoerer-closer">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div class="stoerer-body">
+				<div class="stoerer-headlines">
+					<h4 class="text-center">{headline}</h4>
+				</div>
+				<div class="stoerer-teasertext text-center">
+					<f:if condition="{teasertext}">
+						<div class="card-body-top">
+							<small>{teasertext}</small>
+						</div>
+					</f:if>
+				</div>
+			</div>
+			<div class="stoerer-footer d-flex justify-content-center mt-3">
+				<f:if condition="{buchen}">
+					<f:link.typolink parameter="{buchen}" class="btn btn-sm btn-primary">Jetzt Buchen
+					</f:link.typolink>
+				</f:if>
+				<f:if condition="{link}">
+					<f:link.typolink parameter="{link}" class="btn btn-sm btn-secondary">Mehr Lesen
+					</f:link.typolink>
+				</f:if>
+			</div>
+		</div>
+	</f:section>
+
+</div>
