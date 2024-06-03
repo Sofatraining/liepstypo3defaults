@@ -339,6 +339,27 @@
 			<trans-unit id="flux.linklist.description">
 				<source>Anlegen / Bearbeiten einer Liste von Links oder Sprungmarken</source>
 			</trans-unit>
+			<trans-unit id="flux.stoerer">
+				<source>Störer</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.description">
+				<source>Fixe Störerkarte</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.subheadline">
+				<source>Subheadline</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.headline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.teasertext">
+				<source>Kurztext</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flux.stoerer.fields.buchen">
+				<source>Buchen Link</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
