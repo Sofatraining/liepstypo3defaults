@@ -82,6 +82,6 @@ New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bug
 Bugfixes
 ***
 #### v3.0.3
-Bugfixes, Font Awesome to Version 6.5.2, Update to Bootstrap 5.3.3
+Bugfixes, Font Awesome to Version 6.5.2, Update to Bootstrap 5.3.3, Adding CE Stoerer.html, Bugfixes
   
 ***   
