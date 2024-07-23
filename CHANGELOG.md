@@ -85,6 +85,6 @@ Bugfixes
 Bugfixes, Font Awesome to Version 6.5.2, Update to Bootstrap 5.3.3, Adding CE Stoerer.html
 ***
 #### v3.0.4
-Composer-Support, Update ext_emconf.php, Update ext_localconf.php, Update PageTitleProvider.php
+Update composer.json, Update ext_emconf.php, Update ext_localconf.php, Update PageTitleProvider.php
 
 ***   
