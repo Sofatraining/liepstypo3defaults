@@ -1,3 +1,6 @@
+##########################
+### LIEPSTYPO3DEFAULTS ###
+##########################
 plugin.tx_liepstypo3defaults {
 	view {
 		templateRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.templateRootPaths.0}
