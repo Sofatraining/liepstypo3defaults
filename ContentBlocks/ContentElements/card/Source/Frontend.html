@@ -1,0 +1,37 @@
+<f:layout name="Default"/>
+<f:section name="Header" />
+<f:section name="Main">
+<cb:asset.css identifier="content-block-css-liepsgmbh-liepsgmbh/card" file="Frontend.css"/>
+<cb:asset.script identifier="content-block-js-liepsgmbh-liepsgmbh/card" file="Frontend.js"/>
+
+<div class="authorBox mb-4">
+    <f:if condition="{data.image}">
+        <f:for each="{data.image}" as="file">
+            <picture>
+                <source srcset="{f:uri.image(image:file, maxWidth: 2561, cropVariant: default, fileExtension: 'webp')}" media="(min-width: 1601px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 2560, cropVariant: default, fileExtension: 'jpg')}" media="(min-width: 1601px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1601, cropVariant: default, fileExtension: 'webp')}" media="(min-width: 1201px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1600, cropVariant: default, fileExtension: 'jpg')}" media="(min-width: 1201px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1201, cropVariant: tablet, fileExtension: 'webp')}" media="(min-width: 769px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1200, cropVariant: tablet, fileExtension: 'jpg')}" media="(min-width: 769px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 769, cropVariant: tablet, fileExtension: 'webp')}" media="(min-width: 481px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 768, cropVariant: tablet, fileExtension: 'jpg')}" media="(min-width: 481px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 481, cropVariant: mobile, fileExtension: 'webp')}" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 480, cropVariant: mobile, fileExtension: 'jpg')}" type="image/jpeg">
+                <f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" />
+            </picture>
+        </f:for>
+    </f:if>
+    <div class="authorBoxHead">{data.bezeichnung}</div>
+    <div class="authorBoxContent">
+        <p class="authorName">{data.header}</p><hr>
+        <div class="authorBody">
+            <f:if condition="{data.bodytext}"><f:format.html>{data.bodytext}</f:format.html></f:if>
+            <p><f:if condition="{data.email}"><i class="fa-solid fa-envelope"></i>
+                <f:link.email email="{data.email}" title="E-Mail an {data.header} schreiben">E-Mail an {data.header} schreiben</f:link.email><br>
+            </f:if>
+            <f:if condition="{data.phone}"><i class="fa-solid fa-phone"></i>{data.phone}</f:if></p>
+        </div>
+    </div>
+</div>
+</f:section>

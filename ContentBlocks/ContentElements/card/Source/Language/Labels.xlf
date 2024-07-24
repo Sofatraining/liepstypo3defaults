@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-07-23T13:11:57+00:00" product-name="liepsgmbh/card">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Ansprechpartner</source>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source>Inhaltselement basierend auf BS5-Card zum Anlegen und Bearbeiten eines Ansprechpartners</source>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>Name des Ansprechpartners</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

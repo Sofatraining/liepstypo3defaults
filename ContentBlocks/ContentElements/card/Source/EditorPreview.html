@@ -1,0 +1,20 @@
+<cb:asset.css identifier="content-block-liepsgmbh-liepsgmbh/card-be" file="EditorPreview.css"/>
+
+<table>
+    <tr>
+        <td style="padding:5px;">
+            <f:if condition="{data.image}">
+                <f:for each="{data.image}" as="file">
+                    <picture>
+                        <f:media file="{file}" width="50" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
+                    </picture>
+                </f:for>
+            </f:if>
+        </td>
+        <td style="padding:5px;">
+            <f:if condition="{data.email}">E-Mail: {data.email}<br></f:if>
+            <f:if condition="{data.phone}">Telefon: {data.phone}</f:if>
+        </td>
+    </tr>
+</table>
+
