@@ -9,9 +9,6 @@
 			<trans-unit id="description" resname="description">
 				<source>Inhaltselement basierend auf BS5-Card zum Anlegen und Bearbeiten eines Ansprechpartners</source>
 			</trans-unit>
-			<trans-unit id="header.label" resname="header.label">
-				<source>Name des Ansprechpartners</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>
