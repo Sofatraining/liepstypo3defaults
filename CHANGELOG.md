@@ -86,5 +86,8 @@ Bugfixes, Font Awesome to Version 6.5.2, Update to Bootstrap 5.3.3, Adding CE St
 ***
 #### v3.0.4
 Update composer.json, Update ext_emconf.php, Update ext_localconf.php, Update PageTitleProvider.php
+***
+#### v3.0.5
+Migrate Flux-Content-Elements to new Content-Blocks (Ansprechpartner, ..., ...)
 
 ***   
