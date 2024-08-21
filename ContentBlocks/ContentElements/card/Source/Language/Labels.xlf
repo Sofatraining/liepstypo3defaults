@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
-				<source>Ansprechpartner</source>
+				<source>Ansprechpartnerbox</source>
 			</trans-unit>
 			<trans-unit id="description" resname="description">
 				<source>Inhaltselement zum Anlegen und Bearbeiten einer Ansprechpartner-Box</source>
