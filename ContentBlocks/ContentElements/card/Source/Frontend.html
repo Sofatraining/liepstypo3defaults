@@ -8,16 +8,16 @@
     <f:if condition="{data.image}">
         <f:for each="{data.image}" as="file">
             <picture>
-                <source srcset="{f:uri.image(image:file, maxWidth: 2561, cropVariant: default, fileExtension: 'webp')}" media="(min-width: 1601px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 2560, cropVariant: default, fileExtension: 'jpg')}" media="(min-width: 1601px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1601, cropVariant: default, fileExtension: 'webp')}" media="(min-width: 1201px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1600, cropVariant: default, fileExtension: 'jpg')}" media="(min-width: 1201px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1201, cropVariant: tablet, fileExtension: 'webp')}" media="(min-width: 769px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1200, cropVariant: tablet, fileExtension: 'jpg')}" media="(min-width: 769px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 769, cropVariant: tablet, fileExtension: 'webp')}" media="(min-width: 481px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 768, cropVariant: tablet, fileExtension: 'jpg')}" media="(min-width: 481px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 481, cropVariant: mobile, fileExtension: 'webp')}" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 480, cropVariant: mobile, fileExtension: 'jpg')}" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 2561, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 1601px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 2560, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 1601px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1601, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 1201px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1600, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 1201px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1201, cropVariant: tablet, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 769px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1200, cropVariant: tablet, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 769px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 769, cropVariant: tablet, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 481px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 768, cropVariant: tablet, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 481px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 481, cropVariant: mobile, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 480, cropVariant: mobile, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
                 <f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" />
             </picture>
         </f:for>
