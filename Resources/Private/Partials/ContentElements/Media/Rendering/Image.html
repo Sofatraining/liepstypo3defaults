@@ -10,13 +10,6 @@
 		<source srcset="{f:uri.image(image:file, maxWidth: 768, cropVariant: tablet, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 481px)" type="image/jpeg">
 		<source srcset="{f:uri.image(image:file, maxWidth: 481, cropVariant: mobile, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
 		<source srcset="{f:uri.image(image:file, maxWidth: 480, cropVariant: mobile, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
-		<img
-			class="image-embed-item img-fluid"
-			title="{file.title}"
-			alt="{file.alternative}"
-			src="{f:uri.image(image:file, maxWidth: 1600, cropVariant: 'mobile', treatIdAsReference: 1)}"
-			width="{dimensions.width}"
-			height="{dimensions.height}"
-			loading="{settings.media.lazyLoading}" />
+		<f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="img-fluid image-embed-item w-100" cropVariant="mobile" />
 	</picture>
 </html>
