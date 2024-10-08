@@ -21,14 +21,14 @@
     <table width="100%">
         <tr>
             <td>
-				{type}<br>
-				<v:content.resources.fal field="settings.files" as="images" record="{record}">
-					<f:if condition="{images}">
-                        <f:for each="{images}" as="image">
-							<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" />
-					    </f:for>
-                    </f:if>
-				</v:content.resources.fal><br>
+		{type}<br>
+		<v:content.resources.fal field="settings.files" as="images" record="{record}">
+			<f:if condition="{images}">
+                        	<f:for each="{images}" as="image">
+					<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" />
+				</f:for>
+                    	</f:if>
+		</v:content.resources.fal><br>
             </td>
         </tr>
     </table>
