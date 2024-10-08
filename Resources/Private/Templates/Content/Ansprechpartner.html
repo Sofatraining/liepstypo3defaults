@@ -53,7 +53,7 @@
                     <f:link.email email="{mail}" title="E-Mail an {name} schreiben">E-Mail an {record.header} schreiben</f:link.email><br>
                     <f:comment><a href="mailto:{mail}" title="E-Mail an {name} schreiben">{mail}</a></f:comment>
                 </f:if>
-                <f:if condition="{phone}"><i class="fa-solid fa-phone"></i>{phone}</f:if></p>
+                <f:if condition="{phone}"><i class="fa-solid fa-phone"></i><a href="tel:{lieps:removeSpaces(phone: phone)}" title="{record.header} anrufen">{phone}</a></f:if></p>
             </div>
 		</div>
 	</div>	
