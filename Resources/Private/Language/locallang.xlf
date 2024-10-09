@@ -321,6 +321,9 @@
 			<trans-unit id="flux.faq.fields.faq-text">
 				<source>Text des Elements</source>
 			</trans-unit>
+			<trans-unit id="flux.faq.fields.settings.section.rowClasses">
+				<source>CSS-Klassen für den FAQ-Container</source>
+			</trans-unit>
 			<trans-unit id="flux.faq.fields.settings.section.col1Classes">
 				<source>CSS-Klassen für den FAQ-Selector-Container</source>
 			</trans-unit>
