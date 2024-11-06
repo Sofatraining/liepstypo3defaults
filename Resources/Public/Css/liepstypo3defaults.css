@@ -156,6 +156,10 @@ p.authorBody {margin-bottom:0;}
 /* Powermail */
 .tx-powermail fieldset label {margin-top:10px;}
 
+/* Modalbox */
+.modal-backdrop { --bs-backdrop-opacity: 0.7;}
+.modal-dialog-centered {align-items: flex-start; min-height:unset; align-content: center; flex-wrap: wrap;}
+
 /* FOOTER */
 
 
