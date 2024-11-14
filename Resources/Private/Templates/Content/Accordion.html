@@ -11,18 +11,19 @@
 					<flux:form.object name="panel">
 						<flux:field.input name="title" label="Titel" />
 						<flux:field.checkbox name="active" label="Aufgeklappt anzeigen" />
+						<flux:field.checkbox name="hidden" label="Panel deaktivieren" />
 					</flux:form.object>
 				</flux:form.section>
-			<flux:field.checkbox name="flush" label="Kein Rand" />	
+				<flux:field.checkbox name="flush" label="Kein Rand" />	
 			</flux:form.sheet>
 			<flux:grid>
-				<f:if condition="{panels -> f:count()} > 0">
-					<f:for each="{panels}" as="panel" iteration="iteration">
+				<f:for each="{panels}" as="panel" iteration="iteration">
+					<f:if condition="{panel.panel.hidden} == 0">
 						<flux:grid.row>
 							<flux:grid.column colPos="{iteration.index}" name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel #{iteration.cycle} ({panel.panel.id})')}" />
 						</flux:grid.row>
-					 </f:for>
-				</f:if>
+					</f:if>
+				</f:for>
 			</flux:grid>
 		</flux:form>
 	</f:section>
@@ -35,21 +36,23 @@
 	<f:section name="Main">
 		<v:variable.set name="activeTabIndex" value="-1" />
 		<f:for each="{panels}" as="panel" iteration="iteration">
-			<f:if condition="{panel.panel.active}">
+			<f:if condition="{panel.panel.active} && !{panel.panel.hidden}">
 				<v:variable.set name="activeTabIndex" value="{iteration.index}" />
 			</f:if>
 		</f:for>
 
 		<div class="accordion {f:if(condition: '{flush}', then: 'accordion-flush')}" id="accordion-{record.uid}">
 			<f:for each="{panels}" as="panel" iteration="iteration">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="heading-{record.uid}-{iteration.index}">
-						<button class="accordion-button {f:if(condition: '{activeTabIndex} == {iteration.index}', then: '', else: 'collapsed')}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{record.uid}-{iteration.index}" aria-expanded="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}" aria-controls="collapse-{record.uid}-{iteration.index}">{panel.panel.title}</button>
-					</h2>
-					<div id="collapse-{record.uid}-{iteration.index}" class="accordion-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show')}" aria-labelledby="heading-{record.uid}-{iteration.index}" data-bs-parent="#accordion-{record.uid}">
-						<div class="accordion-body"><flux:content.render area="content.{iteration.index}" /></div>
+				<f:if condition="!{panel.panel.hidden}">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading-{record.uid}-{iteration.index}">
+							<button class="accordion-button {f:if(condition: '{activeTabIndex} == {iteration.index}', then: '', else: 'collapsed')}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{record.uid}-{iteration.index}" aria-expanded="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}" aria-controls="collapse-{record.uid}-{iteration.index}">{panel.panel.title}</button>
+						</h2>
+						<div id="collapse-{record.uid}-{iteration.index}" class="accordion-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show')}" aria-labelledby="heading-{record.uid}-{iteration.index}" data-bs-parent="#accordion-{record.uid}">
+							<div class="accordion-body"><flux:content.render area="content.{iteration.index}" /></div>
+						</div>
 					</div>
-				</div>
+				</f:if>
 			</f:for>
 		</div>
 	</f:section>
