@@ -17,4 +17,4 @@ class RemoveSpacesViewHelper extends AbstractViewHelper
     }
 }
 
-/* <a href="tel:{lieps:removeSpaces(phone: phone)}" title="{record.header} anrufen">{phone}</a> */
+/* <a href="tel:{lieps:removeSpaces(phone: phone)}" title="" anrufen">{phone}</a> */
