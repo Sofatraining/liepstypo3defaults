@@ -1,5 +1,5 @@
 html {scroll-behavior: smooth; scroll-padding-top: 30px;}
-body {word-wrap: break-word;}
+body {word-wrap: break-word; max-width: 2500px; margin: 0 auto;}
 
 /* Overwrite Fluid-Styled-Content CSS */
 /* Bootstrap 5 konforme Ausgabe von Videos (Content-Element -> 'Text & Medien') */
