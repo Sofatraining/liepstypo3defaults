@@ -5,6 +5,10 @@ page = PAGE
 page {
 	typeNum = 0
 	shortcutIcon = EXT:liepstypo3defaults/Resources/Public/Icons/favicon.ico
+	
+	bodyTagCObject = TEXT
+	bodyTagCObject.dataWrap = <body id="page{field:uid}" class="parent{levelfield:-2,uid}">
+
 	### 5 Important for FLUX!!! Do not Delete!! ###
 	5 >
 	10 = FLUIDTEMPLATE
@@ -90,12 +94,9 @@ page {
 		file8 = EXT:liepstypo3defaults/Resources/Public/Js/magnific-popup.min.js
 		file9 = EXT:liepstypo3defaults/Resources/Public/Js/custom.js
 	}
+
 	# Alternativ als Typoscript-Setup für spezielle Page-UIDS
 	# [page["uid"] == 1]
     	#	 page.includeJSFooterlibs.example = EXT:liepstypo3defaults/Resources/Public/Js/example.js
 	# [END]
-
-
-	bodyTagCObject = TEXT
-	bodyTagCObject.dataWrap = <body id="page{field:uid}" class="parent{levelfield:-2,uid}">
 }
