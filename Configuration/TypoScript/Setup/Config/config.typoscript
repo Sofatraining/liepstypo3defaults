@@ -37,10 +37,10 @@ config {
 
 	// PageTitleProvider
 	pageTitleProviders {
-	#	pages {
-	#		provider = LiepsGmbH\Liepstypo3defaults\PageTitle\LiepsPageTitleProvider
-	#		before = seo
-	#	}
+		pages {
+			provider = LiepsGmbH\Liepstypo3defaults\PageTitle\LiepsPageTitleProvider
+			before = seo
+		}
 		seo {
 			provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
 			before = record
