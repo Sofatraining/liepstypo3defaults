@@ -90,3 +90,6 @@ Update composer.json, Update ext_emconf.php, Update ext_localconf.php, Update Pa
 #### v3.0.5
 Migrate Flux-Content-Elements to new Content-Blocks (Ansprechpartner) - (more in Next Release), Add function to disable Tab- or Accordeon-Pane to Flux-Template, Adding Custom Scrollbar (CSS), Update Font Awesome to 6.7.2
 ***   
+#### v4.0.0
+Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1
+***   
