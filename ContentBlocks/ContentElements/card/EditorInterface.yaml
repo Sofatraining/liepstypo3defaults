@@ -1,0 +1,45 @@
+name: liepsgmbh/card
+typeName: ansprechpartner
+description: 'Inhaltselement basierend auf BS5-Card zum Anlegen und Bearbeiten eines Ansprechpartners'
+group: common
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  -
+    identifier: header
+    useExistingField: true
+    label: 'Name des Ansprechpartners'
+    required: true
+    placeholder: 'Geben Sie hier den Namen ein.'
+  - identifier: bezeichnung
+    type: Text
+    label: 'Berufsbezeichnung / Abteilung'
+    placeholder: 'Geben Sie hier die Berufsbezeichnung ein.'
+    required: true
+    max: 30
+  - identifier: image
+    type: File
+    useExistingField: true
+    label: 'Bild des Ansprechpartners'
+    maxitems: 1
+    allowed: common-image-types
+  - identifier: email
+    type: Email
+    label: 'E-Mail-Adresse des Ansprechpartners'
+    placeholder: 'Geben Sie hier die E-Mail-Adresse ein.'
+    max: 50
+  - identifier: phone
+    type: Text
+    label: 'Telefonnummer des Ansprechpartners'
+    max: 20
+    placeholder: 'Geben Sie hier die Telefonnumer ein.'
+  - identifier: bodytext
+    type: Textarea
+    useExistingField: true
+    label: 'Funktion / Adresse des Ansprechpartners'
+    enableRichtext: true
+    placeholder: 'Geben Sie hier die Funktion und/oder Adresse ein.'

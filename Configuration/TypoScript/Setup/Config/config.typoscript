@@ -46,4 +46,8 @@ config {
 			before = record
 		}
 	}
+
+	#spamProtectEmailAddresses = 3
+	#spamProtectEmailAddresses_atSubst = (at)
+	#spamProtectEmailAddresses_lastDotSubst = (dot)
 }

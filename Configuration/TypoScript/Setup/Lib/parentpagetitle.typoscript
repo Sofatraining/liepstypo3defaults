@@ -1,0 +1,5 @@
+lib.parentPageTitle = TEXT
+lib.parentPageTitle {
+    data = levelfield:-1, title, slide
+    wrap = |
+}

@@ -1,0 +1,4 @@
+lib.contentBlock {
+    layoutRootPaths.10 < lib.contentElement.layoutRootPaths.0
+    partialRootPaths.10 < lib.contentElement.partialRootPaths.0
+}

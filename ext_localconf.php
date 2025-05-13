@@ -15,3 +15,4 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['liepstypo3defaults'] = 'EXT:lieps
 
 // Setzen der Konstante [GFX][imagefile_ext]
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locales']['default'] = 'de_DE';

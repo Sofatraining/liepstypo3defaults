@@ -1,5 +1,38 @@
 html {scroll-behavior: smooth; scroll-padding-top: 30px;}
-body {word-wrap: break-word;}
+body {word-wrap: break-word; max-width: 2750px; margin: 0 auto;}
+
+/* Scrollbar */
+/* Scrollbar für Webkit-Browser (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Breite der Scrollbar */
+  background-color: var(--bs-body-bg); /* Hintergrundfarbe der Scrollbar */
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bs-primary); /* Farbe des Scrollbalkens */
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--bs-body-bg); /* Hintergrundfarbe der Ecke */
+}
+/* Scrollbar für Firefox */
+html {
+  scrollbar-width: thin; /* Dünne Scrollbar */
+  scrollbar-color: var(--bs-primary) var(--bs-body-bg); /* Scrollbalken-Farbe und Hintergrundfarbe */
+}
+
+/* Scrollbar für Edge (Chromium-basierend) */
+* {
+  -ms-overflow-style: none; /* Versteckt Standard-Scrollbar in Edge */
+}
+*::-webkit-scrollbar {
+  width: 10px; /* Breite der Scrollbar */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bs-primary); /* Farbe des Scrollbalkens */
+  border-radius: 10px; /* Abgerundete Ecken */
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--bs-body-bg); /* Hintergrundfarbe der Scrollbar */
+}
 
 /* Overwrite Fluid-Styled-Content CSS */
 /* Bootstrap 5 konforme Ausgabe von Videos (Content-Element -> 'Text & Medien') */
@@ -155,6 +188,10 @@ p.authorBody {margin-bottom:0;}
 
 /* Powermail */
 .tx-powermail fieldset label {margin-top:10px;}
+
+/* Modalbox */
+.modal-backdrop { --bs-backdrop-opacity: 0.7;}
+.modal-dialog-centered {align-items: flex-start; min-height:unset; align-content: center; flex-wrap: wrap;}
 
 /* FOOTER */
 
