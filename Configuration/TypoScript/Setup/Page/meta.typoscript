@@ -29,10 +29,10 @@ page {
 			attribute = property
 			field = title
 		}
-		og:site_name {
-			attribute = property
-			data = TSFE:tmpl|setup|sitetitle
-		}
+		#og:site_name {
+		#	attribute = property
+		#	data = TSFE:tmpl|setup|sitetitle
+		#}
 		og:description = {$page.meta.description}
 		og:description {
 			attribute = property
