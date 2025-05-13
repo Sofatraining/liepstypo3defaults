@@ -1,6 +1,6 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 11.5 LTS and 12.4 LTS
-Description: This TYPO3-LTS12-Sitepackage will install flux, vhs and image_autoresize. Install Mask, powermail and news as you needed. It contains section-, container- and flux-templates for a bootstrap5 site, various menu-types and many more. 
+## TYPO3 13.4 LTS
+Description: This TYPO3-LTS13-Sitepackage will install flux, vhs and image_autoresize. Install mask, powermail and news as you needed. It contains section-, container- and flux- and conten-blocks-templates for a bootstrap5 site, various menu-types and many more. 
 
 Demo: https://v12.lieps.de/
 
