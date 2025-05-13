@@ -1,0 +1,30 @@
+<html
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:layout name="Preview"/>
+
+<f:section name="Header">
+    <be:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</be:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+    <f:if condition="{data.image}">
+        <f:for each="{data.image}" as="file">
+            <picture>
+                <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
+            </picture>
+        </f:for>
+    </f:if>
+    <br>
+    <f:if condition="{data.email}">E-Mail: {data.email}</f:if>
+    <f:if condition="{data.phone}">Telefon: {data.phone}</f:if>
+</f:section>
+
+<f:comment>
+<!-- Uncomment to override preview footer -->
+<f:section name="Footer">
+    My custom Footer
+</f:section>
+</f:comment>
