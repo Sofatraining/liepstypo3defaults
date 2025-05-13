@@ -1,6 +1,6 @@
 name: liepsgmbh/card
 typeName: ansprechpartner
-group: defaull
+group: default
 prefixFields: true
 prefixType: full
 basics:
