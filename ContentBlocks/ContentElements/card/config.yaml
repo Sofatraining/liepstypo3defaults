@@ -1,7 +1,6 @@
 name: liepsgmbh/card
 typeName: ansprechpartner
-description: 'Inhaltselement basierend auf BS5-Card zum Anlegen und Bearbeiten eines Ansprechpartners'
-group: common
+group: defaull
 prefixFields: true
 prefixType: full
 basics:
