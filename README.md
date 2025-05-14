@@ -13,10 +13,6 @@ Demo: https://v13.lieps.de/
 To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
 * vhs (needed)
 * flux (needed)
-* mask (optional)
-* news (optional)
-* powermail (optional)
-* image_autoresize (optional)
 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
