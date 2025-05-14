@@ -16,10 +16,10 @@ To avoid timeouts during extension installation, the dependent extensions should
 
   #### Installation
 Stable
-*Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
+* Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
 
 Development
-*Under /typo3conf/ext/ -> git clone --branch v13-dev https://github.com/Sofatraining/liepstypo3defaults.git
+* Under /typo3conf/ext/ -> git clone --branch v13-dev https://github.com/Sofatraining/liepstypo3defaults.git
 
 #### Settings
 
