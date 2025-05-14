@@ -276,6 +276,9 @@
 			<trans-unit id="flux.gallery.fields.lightbox">
 				<source>Bildvergrößerung</source>
 			</trans-unit>
+			<trans-unit id="flux.gallery.fields.margin">
+				<source>Großer Bildabstand</source>
+			</trans-unit>
 			<trans-unit id="flux.gallery.fields.settings.files">
 				<source>Bilder</source>
 			</trans-unit>
