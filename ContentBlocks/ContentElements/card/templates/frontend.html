@@ -1,3 +1,5 @@
+{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
 <f:layout name="Default"/>
 <f:section name="Header" />
 <f:section name="Main">
@@ -28,7 +30,7 @@
             <p><f:if condition="{data.email}"><i class="fa-solid fa-envelope"></i>
                 <f:link.email email="{data.email}" title="E-Mail an {data.header} schreiben">E-Mail an {data.header} schreiben</f:link.email><br>
             </f:if>
-            <f:if condition="{data.phone}"><i class="fa-solid fa-phone"></i>{data.phone}</f:if></p>
+            <f:if condition="{data.phone}"><i class="fa-solid fa-phone"></i><a href="tel:{lieps:removeSpaces(phone: data.phone)}" title="Jetzt {data.phone} anrufen">{data.phone}</a></f:if></p>
         </div>
     </div>
 </div>
