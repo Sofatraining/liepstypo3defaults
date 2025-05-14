@@ -30,7 +30,6 @@ Development
   
 * Add static templates like in the screenshot (should be the last entry)
 * Update the language files after installation: Wartung -> Manage Languages -> Update all  
-``` 
 * Disable JS and CSS compression during development -> Setup
 ```diff
 config {  
