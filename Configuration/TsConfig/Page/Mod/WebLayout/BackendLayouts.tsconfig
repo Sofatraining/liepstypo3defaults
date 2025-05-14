@@ -1,4 +1,4 @@
 #
 # BACKENDLAYOUTS
 #
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
+@import "EXT:liepstypo3defaults/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.typoscript"
