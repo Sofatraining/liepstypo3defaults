@@ -1,8 +1,8 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:liepstypo3defaults/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+@import "EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript"
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Page" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Config" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Content" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Lib" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Plugin" extensions="typoscript">
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Helper/DynamicContent.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Page/*.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Config/*.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Content/*.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Lib/*.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TypoScript/Setup/Plugin/*.typoscript"

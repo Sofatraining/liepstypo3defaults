@@ -1,0 +1,2 @@
+# EXT:liepstypo3defaults/Configuration/page.tsconfig
+@import 'EXT:liepstypo3defaults/Configuration/TsConfig/Page/All.tsconfig'
