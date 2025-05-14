@@ -14,7 +14,7 @@ To avoid timeouts during extension installation, the dependent extensions should
 * vhs (needed)
 * flux (needed)
 
-  #### Installation
+#### Installation
 Stable
 * Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
 
