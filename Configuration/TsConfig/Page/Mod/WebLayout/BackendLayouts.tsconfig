@@ -1,4 +1,4 @@
 #
 # BACKENDLAYOUTS
 #
-@import "EXT:liepstypo3defaults/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.typoscript"
+@import "EXT:liepstypo3defaults/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig"
