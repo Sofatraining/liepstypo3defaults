@@ -25,13 +25,13 @@ page {
 		}
 
 		# OpenGraph Tags
-    	og:title {
-      		attribute = property
-      		key = og:title
-      		# Hier werden Seitentitel und Website-Titel per dataWrap verbunden
-      		stdWrap.dataWrap = {field:title} - {siteLanguage:websiteTitle // site:websiteTitle}
-      		stdWrap.insertData = 1
-    	}
+		og:title {
+			attribute = property
+			key = og:title
+			# Hier werden Seitentitel und Website-Titel per dataWrap verbunden
+			stdWrap.dataWrap = {field:title} - {siteLanguage:websiteTitle // site:websiteTitle}
+			stdWrap.insertData = 1
+		}	
 		og:description = {$page.meta.description}
 		og:description {
 			attribute = property
