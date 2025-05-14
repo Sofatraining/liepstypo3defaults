@@ -29,7 +29,6 @@ Development
 ![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155408223-9910a40c-0790-4871-a944-ac08f29c6adb.png)
   
 * Add static templates like in the screenshot (should be the last entry)
-* (Bug only in Flux 10.0.6) SETTINGS -> Configure Extension -> Flux -> Disable Page Integration
 * Update the language files after installation: Wartung -> Manage Languages -> Update all  
 ``` 
 * Disable JS and CSS compression during development -> Setup
