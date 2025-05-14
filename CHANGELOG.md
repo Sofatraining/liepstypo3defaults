@@ -91,7 +91,7 @@ Update composer.json, Update ext_emconf.php, Update ext_localconf.php, Update Pa
 Migrate Flux-Content-Elements to new Content-Blocks (Ansprechpartner) - (more in Next Release), Add function to disable Tab- or Accordeon-Pane to Flux-Template, Adding Custom Scrollbar (CSS), Update Font Awesome to 6.7.2
 ***   
 #### v4.0.0
-Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1
+Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1, new TYPO3_CONF_VARS, new Content-Blocks-Structure (Ansprechpartner) - (more in Next Release),
 
 Bugs to fix before first V13-Release: PageTitleProvider and 
 component="TYPO3.CMS.Core.Error.ErrorHandler": Core: Error handler (FE): PHP Warning: Undefined property: TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController::$tmpl in /www/htdocs/w00bb5ef/dev/v13/typo3_src-13.4.9/typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php line 4259 
