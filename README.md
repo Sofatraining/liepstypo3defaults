@@ -11,8 +11,9 @@ Demo: https://v13.lieps.de/
 To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
 * vhs (needed)
 * flux (needed)
+* content_blocks (needed)
 
-#### Installation
+#### Installation via git clone
 Stable
 * Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
 
