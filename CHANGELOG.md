@@ -92,4 +92,11 @@ Migrate Flux-Content-Elements to new Content-Blocks (Ansprechpartner) - (more in
 ***   
 #### v4.0.0
 Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1, new TYPO3_CONF_VARS, new Content-Blocks-Structure (Ansprechpartner) - (more in Next Release),
-***   
+*** 
+#### v4.0.1
+Small Bugfixes
+*** 
+#### v4.0.2
+Carousel - Check for correct syntax
+<f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
+*** 
