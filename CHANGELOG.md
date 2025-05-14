@@ -97,7 +97,7 @@ Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1, new TYPO3_CONF_VARS
 Small Bugfixes
 *** 
 #### v4.0.2
-ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localconf.php - add EXT:liepstypo3defaults/Configuration/page.tsconfig, Fixing Carousel, Fixing meta.typoscript, Fixing locallang.xlf
+ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localconf.php - add EXT:liepstypo3defaults/Configuration/page.tsconfig, Remove deprecated INCLUDE_TYPOSCRIPT to @import, Fixing Carousel, Fixing meta.typoscript, Fixing locallang.xlf
 
 <f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
 *** 
