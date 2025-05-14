@@ -61,7 +61,7 @@
 		<flux:field.text name="caption" enableRichText="TRUE" label="Caption des Carousel-Elementes" />
 		<flux:field.checkbox name="hide" label="Name und Caption nicht anzeigen" />
 		<flux:field.input name="id" default="slide-{v:random.number(minimum: 101, maximum: 999)}" label="ID des Carousel-Elementes" />
-		<flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" />
+		<f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
 	</f:section>
 
 	<f:section name="Main">
