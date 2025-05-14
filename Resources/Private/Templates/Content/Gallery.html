@@ -11,6 +11,7 @@
 		<flux:form.option.group value="content" />
 		<flux:field.select name="selectCol" default="col-xl-4 col-lg-6" items="{0:{0:'2 Spalten',1:'col-lg-6'},1:{0:'3 Spalten',1:'col-xl-4 col-lg-6'},2:{0:'4 Spalten',1:'col-xl-3 col-lg-6'},3:{0:'6 Spalten',1:'col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6'}}"/>
 		<flux:field.checkbox name="lightbox" default="0" />
+		<flux:field.checkbox name="margin" default="0" />
 		<flux:field.inline.fal name="settings.files" minItems="1" maxItems="30" required="1" allowedExtensions="jpg,png" collapseAll="TRUE" />
 	</flux:form>
 </f:section>
@@ -35,9 +36,9 @@
 
 <f:section name="Main">
 	<v:content.resources.fal field="settings.files" as="images" record="{record}">
-		<div class="row px-5">
+		<div class="row{f:if(condition: '{margin} == 1', then: ' px-5', else: '')}">
 			<f:for each="{images}" as="image">
-				<div class="{selectCol} px-5">
+				<div class="{selectCol}{f:if(condition: '{margin} == 1', then: ' px-5', else: '')}">
 					<f:if condition="{lightbox} == 0">
 						<f:then>
 							<f:if condition="{image.link}">
