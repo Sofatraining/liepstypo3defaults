@@ -5,16 +5,15 @@ Description: This TYPO3-LTS13-Sitepackage will install flux, vhs and content_blo
 Demo: https://v13.lieps.de/
 
 =======
-
-### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
   
 ## MANUAL
 ### Installation / Settings
 To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
 * vhs (needed)
 * flux (needed)
+* content_blocks (needed)
 
-#### Installation
+#### Installation via git clone
 Stable
 * Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
 
