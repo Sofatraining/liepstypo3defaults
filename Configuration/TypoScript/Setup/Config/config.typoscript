@@ -36,16 +36,16 @@ config {
 	concatenateCss = 1
 
 	// PageTitleProvider
-	pageTitleProviders {
+	#pageTitleProviders {
 	#	pages {
 	#		provider = LiepsGmbH\Liepstypo3defaults\PageTitle\LiepsPageTitleProvider
 	#		before = seo
 	#	}
-		seo {
-			provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
-			before = record
-		}
-	}
+	#	seo {
+	#		provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
+	#		before = record
+	#	}
+	#}
 
 	#spamProtectEmailAddresses = 3
 	#spamProtectEmailAddresses_atSubst = (at)

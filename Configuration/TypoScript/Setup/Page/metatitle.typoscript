@@ -1,0 +1,28 @@
+page = PAGE
+page {
+  # 1. Vollständiges Abschalten der Standard-Title-Ausgabe
+  config.noPageTitle = 2
+
+  # 2. Manuelle Title-Ausgabe via COA
+    headerData {
+        10 = COA
+        10 {
+            # 10 = Seitentitel (z.B. field=title)
+            10 = TEXT
+            10.field = title
+
+            # 20 = Trenner "::" mit Leerzeichen rechts/links
+            20 = TEXT
+            20.value = ::
+            20.noTrimWrap = | | |
+
+            # 30 = Website-Titel (Sprachabhängig mit Fallback)
+            30 = TEXT
+            30.data = siteLanguage:websiteTitle
+            30.ifEmpty.data = site:websiteTitle
+
+            # Gesamtes Wrap um Title-Tag
+            wrap = <title>|</title>
+        }
+    }
+}
