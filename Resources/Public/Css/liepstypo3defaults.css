@@ -193,6 +193,9 @@ p.authorBody {margin-bottom:0;}
 .modal-backdrop { --bs-backdrop-opacity: 0.7;}
 .modal-dialog-centered {align-items: flex-start; min-height:unset; align-content: center; flex-wrap: wrap;}
 
+/* Magnific Popup */
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {cursor: pointer !important;}
+
 /* FOOTER */
 
 

@@ -5,31 +5,30 @@ Description: This TYPO3-LTS13-Sitepackage will install flux, vhs and content_blo
 Demo: https://v13.lieps.de/
 
 =======
-
-### Possible incompatibility between flux >= 10.0.0 and MASK Version 8 - MORE TESTS NEEDED
   
 ## MANUAL
 ### Installation / Settings
 To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
 * vhs (needed)
 * flux (needed)
-* mask (optional)
-* news (optional)
-* powermail (optional)
-* image_autoresize (optional)
+* content_blocks (needed)
+
+#### Installation via git clone
+Stable
+* Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
+
+Development
+* Under /typo3conf/ext/ -> git clone --branch v13-dev https://github.com/Sofatraining/liepstypo3defaults.git
+
+#### Settings
 
 ```ini
 [Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
 ```   
 ![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155408223-9910a40c-0790-4871-a944-ac08f29c6adb.png)
   
-* Add static templates like in the screenshot
-* (Bug only in Flux 10.0.6) SETTINGS -> Configure Extension -> Flux -> Disable Page Integration
+* Add static templates like in the screenshot (should be the last entry)
 * Update the language files after installation: Wartung -> Manage Languages -> Update all  
-* !! IMPORTANT !! Generally allow webp as an image format in LocalConfiguration !!
-```diff
-$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] = 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp'; 
-``` 
 * Disable JS and CSS compression during development -> Setup
 ```diff
 config {  
