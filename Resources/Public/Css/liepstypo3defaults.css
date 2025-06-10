@@ -111,6 +111,11 @@ html {
 
 .breadcrumb {margin-bottom: 0rem;}
 
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 /* BG-Color rgba (White and Black) */
 .bg-black-5 {background-color: rgba(0, 0, 0, 0.05); overflow: overlay;}.bg-black-10 {background-color: rgba(0, 0, 0, 0.1); overflow: overlay;}.bg-black-15 {background-color: rgba(0, 0, 0, 0.15); overflow: overlay;}.bg-black-20 {background-color: rgba(0, 0, 0, 0.2); overflow: overlay;}.bg-black-30 {background-color: rgba(0, 0, 0, 0.3); overflow: overlay;}.bg-black-40 {background-color: rgba(0, 0, 0, 0.4); overflow: overlay;}.bg-black-50 {background-color: rgba(0, 0, 0, 0.5); overflow: overlay;}.bg-black-60 {background-color: rgba(0, 0, 0, 0.6); overflow: overlay;}.bg-black-70 {background-color: rgba(0, 0, 0, 0.7); overflow: overlay;}.bg-black-80 {background-color: rgba(0, 0, 0, 0.8); overflow: overlay;}.bg-black-85 {background-color: rgba(0, 0, 0, 0.85); overflow: overlay;}.bg-black-90 {background-color: rgba(0, 0, 0, 0.9); overflow: overlay;}.bg-black-95 {background-color: rgba(0, 0, 0, 0.95); overflow: overlay;}
 .bg-white-5 {background-color: rgba(255, 255, 255, 0.05); overflow: overlay;}.bg-white-10 {background-color: rgba(255, 255, 255, 0.1); overflow: overlay;}.bg-white-15 {background-color: rgba(255, 255, 255, 0.15); overflow: overlay;}.bg-white-20 {background-color: rgba(255, 255, 255, 0.2); overflow: overlay;}.bg-white-30 {background-color: rgba(255, 255, 255, 0.3); overflow: overlay;}.bg-white-40 {background-color: rgba(255, 255, 255, 0.4); overflow: overlay;}.bg-white-50 {background-color: rgba(255, 255, 255, 0.5); overflow: overlay;}.bg-white-60 {background-color: rgba(255, 255, 255, 0.6); overflow: overlay;}.bg-white-70 {background-color: rgba(255, 255, 255, 0.7); overflow: overlay;}.bg-white-80 {background-color: rgba(255, 255, 255, 0.8); overflow: overlay;}.bg-white-85 {background-color: rgba(255, 255, 255, 0.85); overflow: overlay;}.bg-white-90 {background-color: rgba(255, 255, 255, 0.9); overflow: overlay;}.bg-white-95 {background-color: rgba(255, 255, 255, 0.95); overflow: overlay;}
