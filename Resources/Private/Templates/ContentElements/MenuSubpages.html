@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+    <f:if condition="{menu}">
+        <div class="row">
+            <f:for each="{menu}" as="page">
+            <f:if condition="{page.data.doktype} != 254">
+                <div class="col-xl-4 col-lg-6">
+                    <div class="mentry shadow-sm card my-4">
+                        <a href="{page.link}" {f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+                            <!-- Zugriff auf das erste FAL-Bild der Seite -->
+                            <f:if condition="{page.files.0}">
+                                <f:then>
+                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.title}" title="{page.title}" class="img-fluid"/>
+                                </f:then>
+                                <f:else>
+                                    <!-- Fallback-Bild, falls kein Bild vorhanden ist -->
+                                    <img src="/fileadmin/admin/bilder/teaser/teaser.jpg" alt="{page.title}" title="{page.title}" class="img-fluid"/>
+                                </f:else>
+                            </f:if>
+                            <div class="title pt-3 ps-3 pe-3 pb-2">{page.title}</div>
+                        </a>
+                    </div>
+                </div>
+            </f:if>
+            </f:for>
+        </div>
+    </f:if>
+
+</f:section>
+</html>
