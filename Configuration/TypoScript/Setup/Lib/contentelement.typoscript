@@ -1,0 +1,25 @@
+lib.element = CONTENT
+lib.element {
+  table = tt_content
+  select {
+    # PID des Datensatzen
+    pidInList = 59
+    # Aus welcher Spalte
+    where = colPos=2
+    orderBy = uid desc
+  }
+}
+
+#Wenn du willst, dass bei fehlenden Inhalten auf der aktuellen Seite nach oben „geslidet“ wird:
+#lib.element = CONTENT
+#lib.element {
+#  table = tt_content
+#  select {
+#    where = colPos=2
+#    orderBy = uid desc
+#    pidInList.data = levelfield:-1,uid
+#    # oder einfach "this" für aktuelle Seite:
+#    # pidInList = this
+#  }
+#  slide = -1
+#}
