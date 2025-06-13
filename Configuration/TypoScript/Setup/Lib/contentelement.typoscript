@@ -23,3 +23,5 @@ lib.element {
 #  }
 #  slide = -1
 #}
+
+# Ausgabe mit <f:cObject typoscriptObjectPath="lib.element" />
