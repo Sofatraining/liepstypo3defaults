@@ -11,30 +11,53 @@ final class NormalizePhoneViewHelper extends AbstractViewHelper
         $this->registerArgument(
             'phone',
             'string',
-            'Telefonnummer, die formatiert werden soll',
+            'Die Telefonnummer, die normalisiert werden soll',
             true
         );
     }
 
     public function render(): string
     {
-        $phone = $this->arguments['phone'] ?? '';
-        // Unerwünschte Zeichen (Leerzeichen, Bindestrich, Schrägstrich, Klammern) entfernen
-        $cleaned = str_replace([' ', '-', '/', '(', ')'], '', $phone);
-        // "0049" etc. am Anfang durch "+" ersetzen (internationales Format mit 00-Prefix)
-        if (strpos($cleaned, '00') === 0) {
-            $cleaned = '+' . substr($cleaned, 2);
+        $input = $this->arguments['phone'] ?? '';
+        $number = trim((string)$input);
+
+        if ($number === '') {
+            return '';
         }
-        // Lokale Rufnummer (beginnend mit einzelner 0) -> +49 voranstellen
-        elseif (strpos($cleaned, '0') === 0) {
-            $cleaned = '+49' . substr($cleaned, 1);
+
+        // 1. Optionale Vorwahl (0) in Klammern entfernen, z.B. +49 (0)30 ...
+        $number = preg_replace('/\(\s*0\s*\)/u', '', $number);
+
+        // 2. Alle weiteren Leerzeichen, Bindestriche, Schrägstriche und Klammern entfernen
+        $number = preg_replace('/[ \-\(\)\/]+/u', '', $number);
+
+        // 3. "00" am Anfang durch "+" ersetzen
+        if (strpos($number, '00') === 0) {
+            $number = '+' . substr($number, 2);
         }
-        // Falls nach Bereinigung weder "+" noch "00" am Anfang stehen, "+" voranstellen
-        if ($cleaned !== '' && $cleaned[0] !== '+') {
-            $cleaned = '+' . $cleaned;
+
+        // 4. Falls bereits "+" am Anfang steht UND direkt danach erneut "00" steht, das "00" entfernen (Sonderfall "+0049..." -> "+49...")
+        if (strpos($number, '+00') === 0) {
+            $number = '+' . substr($number, 3);
         }
-        return $cleaned;
+
+        // 5. Falls Nummer mit einfacher "0" beginnt (nationales Format), +49 voranstellen
+        if (strpos($number, '0') === 0) {
+            $number = '+49' . substr($number, 1);
+        }
+
+        // 6. Sicherheits-Trim, falls z.B. jemand "+ 49 ..." eingegeben hat
+        $number = preg_replace('/[^\d\+]+/', '', $number);
+
+        // 7. Finale Format-Prüfung: + gefolgt von Ziffern
+        if (!preg_match('/^\+[1-9][0-9]{3,14}$/', $number)) {
+            // Keine gültige internationale Telefonnummer (min. 4, max. 15 Ziffern nach +)
+            return '';
+        }
+
+        return $number;
     }
 }
 
-/* <a href="tel:{lieps:normalizePhone(phone: phone)}" title="" anrufen">{phone}</a> */
+
+/* <a href="tel:{lieps:normalizePhone(phone: phone)}" title="" anrufen">{phone}</a> *
