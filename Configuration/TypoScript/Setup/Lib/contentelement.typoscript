@@ -3,9 +3,9 @@ lib.element {
   table = tt_content
   select {
     # PID des Datensatzen
-    pidInList = 59
+    pidInList = 1
     # Aus welcher Spalte
-    where = colPos=2
+    where = colPos=0
     orderBy = uid desc
   }
 }
