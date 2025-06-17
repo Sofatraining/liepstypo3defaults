@@ -2,9 +2,9 @@ lib.element = CONTENT
 lib.element {
   table = tt_content
   select {
-    # PID des Datensatzen
+    # PID der Seite wo das Element liegt
     pidInList = 1
-    # Aus welcher Spalte
+    # Spalte wo das Element liegt
     where = colPos=0
     orderBy = uid desc
   }
