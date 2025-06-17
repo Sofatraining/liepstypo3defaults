@@ -16,4 +16,11 @@ plugin.tx_powermail {
 			1 = {$plugin.tx_powermail.view.layoutRootPath}
 		}
 	}
+	settings {
+		setup {
+			misc {
+				addQueryString = 1
+			}
+		}
+	}
 }
