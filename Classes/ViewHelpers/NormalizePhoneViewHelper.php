@@ -60,4 +60,4 @@ final class NormalizePhoneViewHelper extends AbstractViewHelper
 }
 
 
-/* <a href="tel:{lieps:normalizePhone(phone: phone)}" title="" anrufen">{phone}</a> *
+/* <a href="tel:{lieps:normalizePhone(phone: phone)}" title="" anrufen">{phone}</a> */
