@@ -1,0 +1,24 @@
+// Header Component Styles
+
+.site-header {
+  position: relative;
+  background-color: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+  .navbar-brand {
+    img {
+      max-height: 50px;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      font-weight: 600;
+      transition: color 0.2s ease;
+      
+      &.active, &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -215,3 +215,40 @@ p.authorBody {margin-bottom:0;}
 	.timeline:nth-child(odd)::before, .timeline:nth-child(even)::before {display: none;}
 	.timeline:nth-child(even) {left: 0%;}
 }
+
+
+/**
+ * LIEPS TYPO3 Defaults CSS (NEW GitHub Copilot - 26.06.2025)
+ * 
+ * Globale Stile für die LIEPS TYPO3 Default Extension
+ */
+
+/* Allgemeine Stile */
+.text-primary {color: #ff8172 !important;}
+.text-secondary {color: #343a40 !important;}
+.bg-primary {background-color: #ff8172 !important;}
+.bg-secondary {background-color: #343a40 !important;}
+
+/* Button Stile */
+.btn-primary {background-color: #ff8172;border-color: #ff8172;}
+.btn-primary:hover,
+.btn-primary:focus {background-color: #ff6350;border-color: #ff6350;}
+.btn-outline-primary {border-color: #ff8172;color: #ff8172;}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {background-color: #ff8172;color: #fff;}
+
+/* Link Stile */
+a {color: #ff8172;text-decoration: none;}
+a:hover {color: #ff6350;text-decoration: underline;}
+
+/* Frame Layout Stile */
+.frame-layout-1 {background-color: rgba(255, 129, 114, 0.1);padding: 1.5rem;border-radius: 0.25rem;}
+.frame-layout-2 {background-color: rgba(52, 58, 64, 0.1);padding: 1.5rem;border-radius: 0.25rem;}
+
+/* Typo3 Spezifische Stile */
+.ce-gallery {margin-bottom: 1.5rem;}
+.ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {overflow: visible;}
+
+/* Content Element Stile */
+.ce-above .ce-gallery {margin-bottom: 1.5rem;}
+.ce-below .ce-gallery {margin-top: 1.5rem;}

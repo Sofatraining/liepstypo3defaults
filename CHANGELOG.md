@@ -100,4 +100,7 @@ Small Bugfixes
 ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localconf.php - add EXT:liepstypo3defaults/Configuration/page.tsconfig, Remove deprecated INCLUDE_TYPOSCRIPT to @import, Fixing Carousel, Fixing meta.typoscript, Fixing locallang.xlf, Add Viewhelper ParentPageTitleViewHelper.php, Remove RemoveSpacesVieHelper.php - add NormalizePhoneViewHelper.php
 
 <f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
-*** 
+***
+#### v4.0.3
+Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing
+***

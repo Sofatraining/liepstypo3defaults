@@ -1,0 +1,33 @@
+// Footer Component Styles
+
+.site-footer {
+  padding: 3rem 0;
+  background-color: $secondary;
+  color: rgba($white, 0.8);
+  
+  a {
+    color: rgba($white, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  
+  .footer-heading {
+    color: $white;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .footer-nav {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
