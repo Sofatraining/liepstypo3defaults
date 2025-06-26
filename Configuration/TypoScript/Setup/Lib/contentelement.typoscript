@@ -2,10 +2,10 @@ lib.element = CONTENT
 lib.element {
   table = tt_content
   select {
-    # PID des Datensatzen
-    pidInList = 59
-    # Aus welcher Spalte
-    where = colPos=2
+    # PID der Seite wo das Element liegt
+    pidInList = 1
+    # Spalte wo das Element liegt
+    where = colPos=0
     orderBy = uid desc
   }
 }
@@ -23,3 +23,5 @@ lib.element {
 #  }
 #  slide = -1
 #}
+
+# Ausgabe mit <f:cObject typoscriptObjectPath="lib.element" />
