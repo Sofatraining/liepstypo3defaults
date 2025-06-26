@@ -1,4 +1,4 @@
-const sass = require('node-sass');
+const sass = require('sass');
 
 module.exports = function(grunt) {
 
@@ -32,6 +32,9 @@ module.exports = function(grunt) {
                 files: {
                     "<%= paths.js %>/Dist/scripts.js": [
                         "<%= paths.js %>Src/main.js"
+                    ],
+                    "<%= paths.resources %>Public/Js/custom.min.js": [
+                        "<%= paths.resources %>Public/Js/custom.js"
                     ]
                 }
             }
@@ -54,10 +57,10 @@ module.exports = function(grunt) {
                 map: false,
                 processors: [
                     require('autoprefixer')({
-                        browsers: [
+                        overrideBrowserslist: [
                             'Last 2 versions',
                             'Firefox ESR',
-                            'IE 9'
+                            'not IE < 11'
                         ]
                     })
                 ]
@@ -74,6 +77,10 @@ module.exports = function(grunt) {
             layout: {
                 src: '<%= paths.css %>layout.css',
                 dest: '<%= paths.css %>layout.min.css'
+            },
+            lieps: {
+                src: '<%= paths.resources %>Public/Css/liepstypo3defaults.css',
+                dest: '<%= paths.resources %>Public/Css/liepstypo3defaults.min.css'
             }
         },
         imagemin: {
@@ -97,15 +104,26 @@ module.exports = function(grunt) {
                 tasks: ['css']
             },
             javascript: {
-                files: '<%= paths.js %>Src/**/*.js',
+                files: [
+                    '<%= paths.js %>Src/**/*.js',
+                    '<%= paths.resources %>Public/Js/**/*.js',
+                    '!<%= paths.resources %>Public/Js/**/*.min.js'
+                ],
                 tasks: ['js']
+            },
+            css: {
+                files: [
+                    '<%= paths.resources %>Public/Css/**/*.css',
+                    '!<%= paths.resources %>Public/Css/**/*.min.css'
+                ],
+                tasks: ['cssmin']
             }
         }
     });
 
     /**
      * Register tasks
-    //  */
+     */
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -114,11 +132,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
 
     /**
-     * Grunt update task
+     * Grunt tasks
      */
     grunt.registerTask('css', ['sass', 'postcss', 'cssmin']);
     grunt.registerTask('js', ['uglify']);
     grunt.registerTask('build', ['js', 'css', 'imagemin']);
     grunt.registerTask('default', ['build']);
-
 };
