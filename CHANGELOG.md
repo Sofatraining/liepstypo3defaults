@@ -102,5 +102,6 @@ ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localc
 <f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
 ***
 #### v4.0.3
-Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing
+Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing,
+Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
 ***
