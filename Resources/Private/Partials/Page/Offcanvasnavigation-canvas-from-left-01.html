@@ -44,7 +44,7 @@
                                 <h3 class="childhead" data-target="{child.data.uid}"></h3>
                                 <f:for each="{child.children}" as="subchild" iteration="subchilditer">
                                     <li class="nav-item{f:if(condition: subchild.active, then:' active')}{f:if(condition: subchild.children, then:' sub')}">
-                                        <f:link.typolink href="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item">
+                                        <f:link.typolink parameter="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item">
                                             {subchild.title}
                                         </f:link.typolink>
                                     </li>
