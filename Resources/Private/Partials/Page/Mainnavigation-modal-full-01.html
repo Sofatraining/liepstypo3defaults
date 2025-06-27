@@ -7,7 +7,7 @@
 				<li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
 					<f:if condition="{mainnavigationItem.children}">
 						<f:then>
-							<a href="#" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">{mainnavigationItem.title}</a>
+							<a href="javascript:void(0);" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">{mainnavigationItem.title}</a>
 						</f:then>
 						<f:else>
 							<f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">{mainnavigationItem.title}</f:link.typolink>
