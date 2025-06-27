@@ -105,3 +105,49 @@ ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localc
 Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing,
 Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
 ***
+
+
+Nächste Schritte:
+
+2. Flux zu Content Blocks Migration
+Vollständige Migration von Flux-Elementen zu Content Blocks
+Nutzung der neuen Content Block Features in TYPO3 13.4 mit YAML-Konfiguration
+
+
+3. Optimierung für TYPO3 13.4
+Nutzung des AssetCollector-API statt VHS
+Einsatz von Dependency Injection statt ExtensionUtility
+Migration von Hooks zu Events
+Optimierung des Caching-Frameworks
+
+
+4. Bootstrap 5 Integration
+Aktualisierung auf Bootstrap 5.3.x
+Nutzung moderner Bootstrap-Layouts und Komponenten
+Erweiterte Nutzung von CSS-Variablen für Theming
+
+
+5. Code-Qualität
+PSR-12 Coding Standards
+Einführung von Static Analysis (PHPStan oder Psalm)
+Unit Tests für PHP-Klassen
+End-to-End Tests mit Cypress oder Playwright
+
+6. Dokumentation
+Verbesserte PHP-Dokumentation mit PHPDoc
+Aktualisierung der README.md
+Strukturiertes Changelog nach Keep a Changelog-Format
+Detaillierte Content-Block-Dokumentation
+
+7. Sicherheit und Performance
+Content-Security-Policy-Unterstützung
+Subresource Integrity für externe Ressourcen
+Lazy Loading für Bilder und iframes
+HTTP/2 Optimierung
+
+8. Barrierefreiheit
+WCAG 2.1 AA-Konformität
+Verbesserte Tastaturnavigation
+Ergänzung fehlender aria-Attribute
+Überprüfung des Farbkontrasts
+Von diesen Punkten haben Sie bisher den ersten Punkt (Modernisierung des Build-Systems) umgesetzt und im Changelog dokumentiert.
