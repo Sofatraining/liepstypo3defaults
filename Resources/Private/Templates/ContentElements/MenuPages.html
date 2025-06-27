@@ -12,11 +12,11 @@
                             <!-- Erstes FAL-Bild der Seite -->
                             <f:if condition="{page.files.0}">
                                 <f:then>
-                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.title}" title="{page.title}" class="img-fluid"/>
+                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.files.0.alternative}" title="{page.title}" class="img-fluid"/>
                                 </f:then>
                                 <f:else>
                                     <!-- Fallback-Bild -->
-                                    <img src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Logos/lieps-teaser.jpg" alt="{page.title}" title="{page.title}" class="img-fluid"/>
+                                    <img src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Logos/lieps-teaser.jpg" alt="Dieses Bild dient illustrativen Zwecken" title="{page.title}" class="img-fluid"/>
                                 </f:else>
                             </f:if>
                             <f:comment><!-- Titel der übergeordneten Seite mit ViewHelper ParentPageTitleViewHelper.php --></f:comment>
