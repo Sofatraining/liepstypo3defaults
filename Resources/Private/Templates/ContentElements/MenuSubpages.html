@@ -12,7 +12,7 @@
                             <!-- Zugriff auf das erste FAL-Bild der Seite -->
                             <f:if condition="{page.files.0}">
                                 <f:then>
-                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.alternative}" title="{page.title}" class="img-fluid"/>
+                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.files.0.alternative}" title="{page.title}" class="img-fluid"/>
                                 </f:then>
                                 <f:else>
                                     <!-- Fallback-Bild, falls kein Bild vorhanden ist -->
