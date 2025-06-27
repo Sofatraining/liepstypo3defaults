@@ -10,9 +10,12 @@
             <ul class="mainmenu">
                 <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="mainiter">
                     <li class="nav-item{f:if(condition: mainnavigationItem.active, then:' active')}">
-                        <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" data-target="{mainnavigationItem.data.uid}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" {f:if(condition: mainnavigationItem.children, then:' data-bs-toggle="dropdown"')}>
+                        <f:comment><a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" data-target="{mainnavigationItem.data.uid}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" {f:if(condition: mainnavigationItem.children, then:' data-bs-toggle="dropdown"')}>
                             {mainnavigationItem.title}
-                        </a>
+                        </a></f:comment>
+                        <f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" additionalAttributes="{data-target: mainnavigationItem.data.uid}{f:if(condition: mainnavigationItem.children, then:', data-bs-toggle: dropdown', else: '')}">
+                            {mainnavigationItem.title}
+                        </f:link.typolink>
                     </li>
                 </f:for>
             </ul>
@@ -25,9 +28,12 @@
                         <h3 class="mainhead" data-target="{mainnavigationItem.data.uid}"></h3>
                         <f:for each="{mainnavigationItem.children}" as="child" iteration="childiter">
                             <li class="nav-item{f:if(condition: child.active, then:' active')}{f:if(condition: child.children, then:' sub')}">
-                                <a href="{child.link}" data-target="{child.data.uid}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" {f:if(condition: child.children, then:' data-bs-toggle="dropdown"')}>
+                                <f:comment><a href="{child.link}" data-target="{child.data.uid}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" {f:if(condition: child.children, then:' data-bs-toggle="dropdown"')}>
                                     {child.title}
-                                </a>
+                                </a></f:comment>
+                                <f:link.typolink parameter="{child.link}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" additionalAttributes="{data-target: child.data.uid}{f:if(condition: child.children, then:', data-bs-toggle: dropdown', else: '')}">
+                                    {child.title}
+                                </f:link.typolink>
                             </li>
                         </f:for>
                     </ul>
