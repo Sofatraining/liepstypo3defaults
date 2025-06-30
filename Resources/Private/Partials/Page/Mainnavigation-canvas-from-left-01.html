@@ -3,18 +3,14 @@
 		<li class="nav-item{f:if(condition: mainnavigationItem.active, then:' active')}">
 			<f:if condition="{mainnavigationItem.children}">
 				<f:then>
-					<a href="{mainnavigationItem.link}" data-target="{mainnavigationItem.data.uid}"
-						data-bs-target="#offcanvas" aria-controls="offcanvas" role="button" data-bs-toggle="offcanvas"
-						target="{mainnavigationItem.target}" title="{mainnavigationItem.title}"
-						class="child{mainiter.index} position-relative nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}">
+					<f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="child{mainiter.index} position-relative nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" additionalAttributes="{data-target: mainnavigationItem.data.uid, data-bs-target: '#offcanvas', aria-controls: 'offcanvas', role: 'button', data-bs-toggle: 'offcanvas'}">
 						{mainnavigationItem.title}
-					</a>
+					</f:link.typolink>	
 				</f:then>
 				<f:else>
-					<a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}"
-						title="{mainnavigationItem.title}" class="child{mainiter.index} position-relative nav-link">
+					<f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="child{mainiter.index} position-relative nav-link">
 						{mainnavigationItem.title}
-					</a>
+					</f:link.typolink>
 				</f:else>
 			</f:if>
 		</li>

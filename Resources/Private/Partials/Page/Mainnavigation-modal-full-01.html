@@ -2,19 +2,22 @@
 	<div class="blob"></div>
 	<nav>
 		<ul>
-			<li><a href="/" target="_self" title="Zur Startseite">Home</a></li>
+			<li><f:link.page pageUid="1" title="Zur Startseite">Home</f:link.page></li>
 			<f:for each="{mainnavigation}" as="mainnavigationItem">
 				<li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
-					<f:if condition="{mainnavigationItem.children}"><f:then><a href="#" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}"></f:then><f:else><a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}"></f:else></f:if>
-						{mainnavigationItem.title}
-					</a>
+					<f:if condition="{mainnavigationItem.children}">
+						<f:then>
+							<a href="javascript:void(0);" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">{mainnavigationItem.title}</a>
+						</f:then>
+						<f:else>
+							<f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">{mainnavigationItem.title}</f:link.typolink>
+						</f:else>
+					</f:if>
 					<f:if condition="{mainnavigationItem.children}">
 						<ul>
 							<f:for each="{mainnavigationItem.children}" as="child">
 								<li class="{f:if(condition: child.active, then:'active')}">
-									<a href="{child.link}" target="{child.target}" title="{child.title}">
-										{child.title}
-									</a>
+									<f:link.typolink parameter="{child.link}" target="{child.target}" title="{child.title}">{child.title}</f:link.typolink>
 								</li>
 							</f:for>
 						</ul>

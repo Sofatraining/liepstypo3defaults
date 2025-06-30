@@ -1,0 +1,27 @@
+lib.element = CONTENT
+lib.element {
+  table = tt_content
+  select {
+    # PID der Seite wo das Element liegt
+    pidInList = 1
+    # Spalte wo das Element liegt
+    where = colPos=0
+    orderBy = uid desc
+  }
+}
+
+#Wenn du willst, dass bei fehlenden Inhalten auf der aktuellen Seite nach oben „geslidet“ wird:
+#lib.element = CONTENT
+#lib.element {
+#  table = tt_content
+#  select {
+#    where = colPos=2
+#    orderBy = uid desc
+#    pidInList.data = levelfield:-1,uid
+#    # oder einfach "this" für aktuelle Seite:
+#    # pidInList = this
+#  }
+#  slide = -1
+#}
+
+# Ausgabe mit <f:cObject typoscriptObjectPath="lib.element" />

@@ -1,0 +1,33 @@
+{namespace lieps=LiepsGmbH\Liepstypo3defaults\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:if condition="{menu}">
+        <div class="row">
+            <f:for each="{menu}" as="page">
+                <div class="col-xl-4 col-lg-6">
+                    <div class="mentry shadow-sm card my-4">
+                        <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+                            <!-- Erstes FAL-Bild der Seite -->
+                            <f:if condition="{page.files.0}">
+                                <f:then>
+                                    <f:image image="{page.files.0}" cropVariant="default" alt="{page.files.0.alternative}" title="{page.title}" class="img-fluid"/>
+                                </f:then>
+                                <f:else>
+                                    <!-- Fallback-Bild -->
+                                    <img src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Logos/lieps-teaser.jpg" alt="Dieses Bild dient illustrativen Zwecken" title="{page.title}" class="img-fluid"/>
+                                </f:else>
+                            </f:if>
+                            <f:comment><!-- Titel der übergeordneten Seite mit ViewHelper ParentPageTitleViewHelper.php --></f:comment>
+                            <div class="text-muted text-small ps-3 pe-3 pt-3">
+                                <lieps:parentPageTitle pid="{page.data.pid}" />
+                            </div>
+                            <div class="title ps-3 pe-3 pb-2">{page.title}</div>
+                        </a>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>

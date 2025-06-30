@@ -1,0 +1,67 @@
+// Content Elements Component Styles
+
+// Allgemeine Rahmen-Stile
+.frame {
+  position: relative;
+  margin-bottom: 2rem;
+  
+  &.frame-ruler-before {
+    padding-top: 1rem;
+    border-top: 1px solid rgba($black, 0.1);
+  }
+  
+  &.frame-ruler-after {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+}
+
+// Textstile für Content-Elemente
+.frame-header {
+  margin-bottom: 1rem;
+}
+
+// Cards
+.card {
+  margin-bottom: 1.5rem;
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+// Ansprechpartner
+.ce-ansprechpartner {
+  .ansprechpartner-image {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .ansprechpartner-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .ansprechpartner-position {
+    color: $secondary;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .ansprechpartner-contact {
+    a {
+      display: block;
+      margin-bottom: 0.5rem;
+      
+      i {
+        width: 20px;
+        text-align: center;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

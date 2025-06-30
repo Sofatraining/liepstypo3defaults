@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16"><path fill="#59F" d="M8 2a3 3 0 110 6 3 3 0 010-6z"></path><path fill="#E9F2FF" d="M1 13.5c0-2.5 2-4.5 4.5-4.5h5c2.5 0 4.5 2 4.5 4.5v.5H1v-.5z"></path><path fill="#ACF" d="M8 9.5c-2 0-3.5 1.5-3.5 3.5v1h7v-1c0-2-1.5-3.5-3.5-3.5z"></path><path fill="#999" d="M1 1v14h14V1H1zm1 1h12v12H2V2z"></path><circle cx="8" cy="5" r="2" fill="#FFF"></circle></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">
+  <!-- Visitenkarte/Box Hintergrund -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+  
+  <!-- Person Icon -->
+  <circle cx="5" cy="6.5" r="1.5" fill="#fff"/>
+  <path d="M2.5 11.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5v1.5h-5v-1.5z" fill="#fff"/>
+  
+  <!-- Kontakt-Linien (symbolisieren Text/Informationen) -->
+  <rect x="8.5" y="5" width="5" height="0.8" rx="0.4" fill="#fff" opacity="0.9"/>
+  <rect x="8.5" y="6.5" width="4" height="0.8" rx="0.4" fill="#fff" opacity="0.9"/>
+  <rect x="8.5" y="8" width="5.5" height="0.8" rx="0.4" fill="#fff" opacity="0.9"/>
+  
+  <!-- Telefon/Kontakt Symbol -->
+  <circle cx="9" cy="10.5" r="0.4" fill="#fff"/>
+  <circle cx="10.5" cy="10.5" r="0.4" fill="#fff"/>
+  <circle cx="12" cy="10.5" r="0.4" fill="#fff"/>
+  
+  <!-- Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>

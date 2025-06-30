@@ -162,6 +162,7 @@ plugin.tx_powermail {
 		main.optin = 0
 		main.moresteps = 0
 		misc.ajaxSubmit = 1
+		misc.addQueryString = 1
 		styles {
 			bootstrap.rowClasses = row
 			# eine Spalte

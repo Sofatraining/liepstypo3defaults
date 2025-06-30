@@ -111,6 +111,11 @@ html {
 
 .breadcrumb {margin-bottom: 0rem;}
 
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 /* BG-Color rgba (White and Black) */
 .bg-black-5 {background-color: rgba(0, 0, 0, 0.05); overflow: overlay;}.bg-black-10 {background-color: rgba(0, 0, 0, 0.1); overflow: overlay;}.bg-black-15 {background-color: rgba(0, 0, 0, 0.15); overflow: overlay;}.bg-black-20 {background-color: rgba(0, 0, 0, 0.2); overflow: overlay;}.bg-black-30 {background-color: rgba(0, 0, 0, 0.3); overflow: overlay;}.bg-black-40 {background-color: rgba(0, 0, 0, 0.4); overflow: overlay;}.bg-black-50 {background-color: rgba(0, 0, 0, 0.5); overflow: overlay;}.bg-black-60 {background-color: rgba(0, 0, 0, 0.6); overflow: overlay;}.bg-black-70 {background-color: rgba(0, 0, 0, 0.7); overflow: overlay;}.bg-black-80 {background-color: rgba(0, 0, 0, 0.8); overflow: overlay;}.bg-black-85 {background-color: rgba(0, 0, 0, 0.85); overflow: overlay;}.bg-black-90 {background-color: rgba(0, 0, 0, 0.9); overflow: overlay;}.bg-black-95 {background-color: rgba(0, 0, 0, 0.95); overflow: overlay;}
 .bg-white-5 {background-color: rgba(255, 255, 255, 0.05); overflow: overlay;}.bg-white-10 {background-color: rgba(255, 255, 255, 0.1); overflow: overlay;}.bg-white-15 {background-color: rgba(255, 255, 255, 0.15); overflow: overlay;}.bg-white-20 {background-color: rgba(255, 255, 255, 0.2); overflow: overlay;}.bg-white-30 {background-color: rgba(255, 255, 255, 0.3); overflow: overlay;}.bg-white-40 {background-color: rgba(255, 255, 255, 0.4); overflow: overlay;}.bg-white-50 {background-color: rgba(255, 255, 255, 0.5); overflow: overlay;}.bg-white-60 {background-color: rgba(255, 255, 255, 0.6); overflow: overlay;}.bg-white-70 {background-color: rgba(255, 255, 255, 0.7); overflow: overlay;}.bg-white-80 {background-color: rgba(255, 255, 255, 0.8); overflow: overlay;}.bg-white-85 {background-color: rgba(255, 255, 255, 0.85); overflow: overlay;}.bg-white-90 {background-color: rgba(255, 255, 255, 0.9); overflow: overlay;}.bg-white-95 {background-color: rgba(255, 255, 255, 0.95); overflow: overlay;}
@@ -193,6 +198,9 @@ p.authorBody {margin-bottom:0;}
 .modal-backdrop { --bs-backdrop-opacity: 0.7;}
 .modal-dialog-centered {align-items: flex-start; min-height:unset; align-content: center; flex-wrap: wrap;}
 
+/* Magnific Popup */
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {cursor: pointer !important;}
+
 /* FOOTER */
 
 
@@ -207,3 +215,40 @@ p.authorBody {margin-bottom:0;}
 	.timeline:nth-child(odd)::before, .timeline:nth-child(even)::before {display: none;}
 	.timeline:nth-child(even) {left: 0%;}
 }
+
+
+/**
+ * LIEPS TYPO3 Defaults CSS (NEW GitHub Copilot - 26.06.2025)
+ * 
+ * Globale Stile für die LIEPS TYPO3 Default Extension
+ */
+
+/* Allgemeine Stile */
+.text-primary {color: var(--bs-primary);}
+.text-secondary {color: var(--bs-secondary);}
+.bg-primary {background-color: var(--bs-primary);}
+.bg-secondary {background-color: var(--bs-secondary);}
+
+/* Button Stile */
+.btn-primary {background-color: var(--bs-primary);;border-color: var(--bs-primary);}
+.btn-primary:hover,
+.btn-primary:focus {background-color: var(--bs-secondary);border-color: var(--bs-secondary);}
+.btn-outline-primary {border-color: var(--bs-primary);color: var(--bs-primary);}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {background-color: var(--bs-primary);color: #fff;}
+
+/* Link Stile */
+a {color: var(--bs-primary);text-decoration: none;}
+a:hover {color: var(--bs-secondary);text-decoration: underline;}
+
+/* Frame Layout Stile */
+.frame-layout-1 {background-color: rgba(255, 129, 114, 0.1);padding: 1.5rem;border-radius: 0.25rem;}
+.frame-layout-2 {background-color: rgba(52, 58, 64, 0.1);padding: 1.5rem;border-radius: 0.25rem;}
+
+/* Typo3 Spezifische Stile */
+.ce-gallery {margin-bottom: 1.5rem;}
+.ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {overflow: visible;}
+
+/* Content Element Stile */
+.ce-above .ce-gallery {margin-bottom: 1.5rem;}
+.ce-below .ce-gallery {margin-top: 1.5rem;}

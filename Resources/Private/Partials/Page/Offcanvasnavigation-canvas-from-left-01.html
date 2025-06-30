@@ -1,8 +1,8 @@
 <div class="navigation offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
     <div class="offcanvas-header">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none" title="Zur Startseite">
+        <f:link.page pageUid="1" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none" title="Zur Startseite">
             <img src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Logos/lieps-logo.png" class="sitelogo" alt="Firmenlogo">
-        </a>
+        </f:link.page>
         <button type="button" class="btn-offcanvas-close btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="offcanvas-body">
@@ -10,9 +10,9 @@
             <ul class="mainmenu">
                 <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="mainiter">
                     <li class="nav-item{f:if(condition: mainnavigationItem.active, then:' active')}">
-                        <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" data-target="{mainnavigationItem.data.uid}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" {f:if(condition: mainnavigationItem.children, then:' data-bs-toggle="dropdown"')}>
+                        <f:link.typolink parameter="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}" class="child{mainiter.index} position-relative offcanvas-link nav-link{f:if(condition: mainnavigationItem.children, then:' first-dropdown-toggle')}" additionalAttributes="{f:if(condition: mainnavigationItem.children, then: '{data-target: \'{mainnavigationItem.data.uid}\', data-bs-toggle: \'dropdown\'}', else: '{data-target: \'{mainnavigationItem.data.uid}\'}')}">
                             {mainnavigationItem.title}
-                        </a>
+                        </f:link.typolink>
                     </li>
                 </f:for>
             </ul>
@@ -25,9 +25,9 @@
                         <h3 class="mainhead" data-target="{mainnavigationItem.data.uid}"></h3>
                         <f:for each="{mainnavigationItem.children}" as="child" iteration="childiter">
                             <li class="nav-item{f:if(condition: child.active, then:' active')}{f:if(condition: child.children, then:' sub')}">
-                                <a href="{child.link}" data-target="{child.data.uid}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" {f:if(condition: child.children, then:' data-bs-toggle="dropdown"')}>
+                                <f:link.typolink parameter="{child.link}" target="{child.target}" title="{child.title}" class="subchild{childiter.index} position-relative dropdown-item{f:if(condition: child.children, then:' second-dropdown-toggle')}" additionalAttributes="{data-target: child.data.uid, data-bs-toggle: '{f:if(condition: child.children, then: \'dropdown\', else: \'\')}'}">
                                     {child.title}
-                                </a>
+                                </f:link.typolink>
                             </li>
                         </f:for>
                     </ul>
@@ -43,10 +43,10 @@
                                 <button class="childchildmenucloser d-block d-lg-none"><i class="fa-solid fa-arrow-left"></i></button>
                                 <h3 class="childhead" data-target="{child.data.uid}"></h3>
                                 <f:for each="{child.children}" as="subchild" iteration="subchilditer">
-                                    <li class="nav-item{f:if(condition: subchild.active, then:' active')}{f:if(condition: subchild.children, then:' sub')}">
-                                        <a href="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item{f:if(condition: subchild.children, then:' third-dropdown-toggle')}" {f:if(condition: subchild.children, then:' data-bs-toggle="dropdown"')}>
+                                    <li class="nav-item{f:if(condition: subchild.active, then:' active')}">
+                                        <f:link.typolink parameter="{subchild.link}" target="{subchild.target}" title="{subchild.title}" class="position-relative dropdown-item">
                                             {subchild.title}
-                                        </a>
+                                        </f:link.typolink>
                                     </li>
                                 </f:for>
                             </ul>
@@ -62,18 +62,14 @@
     tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
     <div class="container mt-4 offcanvas-header">
         <h4 class="offcanvas-title text-white" id="offcanvasLabel">Webseitensuche</h4>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
-                class="fa-solid fa-xmark text-white"></i></button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark text-white"></i></button>
     </div>
     <div class="container">
         <div class="search-section">
             <form class="" method="get" id="form_kesearch_pi1" name="form_kesearch_pi1" action="/suchergebnisse">
                 <div class="input-group mb-5">
-                    <input type="search" id="ke_search_sword" name="tx_kesearch_pi1[sword]"
-                        class="form-control border-radius" placeholder="Suchbegriff eingeben..." minlength="3"
-                        aria-label="Search" aria-describedby="button-addon2">
-                    <button class="btn btn-icon" type="submit" id="button-addon2"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" id="ke_search_sword" name="tx_kesearch_pi1[sword]" class="form-control border-radius" placeholder="Suchbegriff eingeben..." minlength="3" aria-label="Search" aria-describedby="button-addon2">
+                    <button class="btn btn-icon" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
         </div>

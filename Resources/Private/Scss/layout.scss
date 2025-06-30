@@ -1,0 +1,41 @@
+// LIEPS Bootstrap 5 Default Layout
+// Main SCSS file
+
+// Variables
+$primary: #ff8172;
+$secondary: #343a40;
+$font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Bootstrap
+// Kommentiere die nicht benötigten Komponenten aus
+@import "bootstrap/scss/bootstrap";
+
+// Custom components
+@import "components/header";
+@import "components/footer";
+@import "components/content-elements";
+@import "components/typography";
+
+// Allgemeine Seiten-Stile
+body {
+  overflow-x: hidden;
+  font-family: $font-family-base;
+}
+
+// Media queries
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+// TYPO3-spezifische Stile
+.frame {
+  margin-bottom: 2rem;
+}
+
+// Utility-Klassen
+.text-primary {
+  color: $primary !important;
+}
