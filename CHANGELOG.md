@@ -105,6 +105,9 @@ ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localc
 Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing,
 Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
 ***
+#### v4.0.4
+Migration Flux to Content-Blocks-Elements
+***
 
 
 Nächste Schritte:
