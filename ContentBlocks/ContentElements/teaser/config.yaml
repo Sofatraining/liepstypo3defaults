@@ -7,26 +7,6 @@ basics:
   - TYPO3/Links
   - TYPO3/Categories
 fields:
-  - identifier: image
-    type: File
-    useExistingField: true
-    label: 'Teaser Bild'
-    required: true
-    maxitems: 1
-    allowed: common-image-types
-    crop:
-      default:
-        title: 'Standard'
-        allowedAspectRatios:
-          '16:9':
-            title: '16:9'
-            value: 1.777777777777778
-          '4:3':
-            title: '4:3'
-            value: 1.333333333333333
-          '1:1':
-            title: '1:1'
-            value: 1
   - identifier: header
     type: Text
     useExistingField: true
@@ -41,6 +21,26 @@ fields:
     required: true
     rows: 5
     placeholder: 'Geben Sie hier den Teaser-Text ein.'
+  - identifier: image
+    type: File
+    useExistingField: true
+    label: 'Teaser Bild'
+    required: true
+    maxitems: 1
+    allowed: common-image-types
+    crop:
+      default:
+        title: 'Desktop'
+        allowedAspectRatios:
+          '16:9':
+            title: '16:9'
+            value: 1.777777777777778
+          '4:3':
+            title: '4:3'
+            value: 1.333333333333333
+          '1:1':
+            title: '1:1'
+            value: 1
   - identifier: header_link
     type: Link
     useExistingField: true
