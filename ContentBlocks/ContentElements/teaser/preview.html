@@ -1,0 +1,10 @@
+<div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <strong>Teaser "<f:format.crop maxCharacters="20">{data.header}</f:format.crop>"</strong><br>
+    <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop><br>
+    <f:if condition="{data.image}">
+        <f:image image="{data.image}" maxWidth="100" cropVariant="default" /><br>
+    </f:if>
+    <f:if condition="{data.header_link}">
+        <small>Link: {data.header_link}</small>
+    </f:if>
+</div>

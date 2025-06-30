@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="labels" date="2025-06-27T14:00:00Z">
+        <header/>
+        <body>
+            <trans-unit id="title">
+                <source>Teaser</source>
+                <target>Teaser</target>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>A teaser element with image, headline, text and link</source>
+                <target>Ein Teaser-Element mit Bild, Überschrift, Text und Link</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

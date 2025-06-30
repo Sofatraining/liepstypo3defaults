@@ -1,0 +1,23 @@
+<div class="card shadow-sm mb-4">
+    <f:if condition="{data.image}">
+        <f:image image="{data.image}" title="{data.image.title}" alt="{data.image.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" />
+    </f:if>
+    <f:if condition="{data.header_link}">
+        <f:link.typolink parameter="{data.header_link}">
+            <div class="card-img-overlay">
+                <h4 class="text-white">{data.header}</h4>
+            </div>
+        </f:link.typolink>
+    </f:if>
+    <div class="card-body">
+        <p class="card-text">{data.bodytext}...</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <f:if condition="{data.header_link}">
+                    <f:link.typolink parameter="{data.header_link}" class="btn btn-sm btn-outline-secondary">Mehr lesen</f:link.typolink>
+                </f:if>
+            </div>
+            <small class="text-muted"><f:format.date format="d.m.Y">{data.tstamp}</f:format.date></small>
+        </div>
+    </div>
+</div>
