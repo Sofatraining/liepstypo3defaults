@@ -7,7 +7,7 @@
   },
   "homepage": "https://ohnesorge.live",
   "author": "Jürgen Ohnesorge",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@babel/core": "^7.23.5",
