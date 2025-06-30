@@ -1,6 +1,6 @@
 name: liepsgmbh/teaser
 typeName: teaser
-group: content
+group: default
 prefixFields: false
 basics:
   - TYPO3/Appearance
