@@ -18,10 +18,6 @@
   <rect x="2.5" y="12.5" width="4" height="1" rx="0.5" fill="#fff"/>
   <text x="4.5" y="13.2" text-anchor="middle" fill="#ff8172" font-size="0.6" font-family="Arial">Link</text>
   
-  <!-- Link-Indikator -->
-  <circle cx="12.5" cy="12.8" r="0.7" fill="#fff" opacity="0.9"/>
-  <path d="M12 12.3 L13 13.3 M13 12.3 L12 13.3" stroke="#ff8172" stroke-width="0.4" stroke-linecap="round"/>
-  
   <!-- Rahmen -->
   <rect x="1" y="2" width="14" height="12" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
 </svg>
