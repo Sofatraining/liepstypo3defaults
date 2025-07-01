@@ -1,0 +1,42 @@
+<div class="button-wrapper">
+    <f:variable name="buttonBlockVar" value="{f:if(condition: data.button_block, then: 'd-grid gap-2', else: '')}" />
+    <f:variable name="groupClass" value="{f:if(condition: data.button_group_vertical, then: 'btn-group-vertical', else: 'btn-group')}" />
+
+    <f:if condition="{data.button_group}">
+        <f:then>
+            <div class="{groupClass} {data.button_position}" role="group">
+                <f:render section="Button" arguments="{_all}" />
+            </div>
+        </f:then>
+        <f:else>
+            <div class="buttonwrap{f:if(condition: buttonBlockVar, then: ' {buttonBlockVar}')} {data.button_position}">
+                <f:render section="Button" arguments="{_all}" />
+            </div>
+        </f:else>
+    </f:if>
+</div>
+
+<f:section name="Button">
+    <f:for each="{data.buttons}" as="button" iteration="iter">
+        <f:if condition="{button.button_link}">
+            <f:then></f:then>
+                <f:render section="ButtonWithLink" arguments="{button: button, data: data}" />
+            </f:then>
+            <f:else>
+                <f:render section="ButtonWithoutLink" arguments="{button: button, data: data}" />
+            </f:else>
+        </f:if>
+    </f:for>
+</f:section>
+
+<f:section name="ButtonWithoutLink">
+    <button type="button" class="btn btn-{button.button_style} {f:if(condition: '{data.button_size} != \'default\'', then: 'btn-{data.button_size}', else: '')} {f:if(condition: button.button_disabled, then: 'disabled', else: '')}">
+        {button.button_text}
+    </button>
+</f:section>
+
+<f:section name="ButtonWithLink">
+    <f:link.typolink parameter="{button.button_link}" class="btn btn-{button.button_style} {f:if(condition: '{data.button_size} != \'default\'', then: 'btn-{data.button_size}', else: '')} {f:if(condition: button.button_disabled, then: 'disabled', else: '')}" additionalAttributes="{role: 'button'}">
+        {button.button_text}
+    </f:link.typolink>
+</f:section>

@@ -1,0 +1,84 @@
+name: liepsgmbh/button
+typeName: button
+group: default
+prefixFields: false
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  # Button Settings
+  - identifier: button_size
+    type: Select
+    label: 'Button-Größe'
+    default: 'default'
+    items:
+      default: 'Standard'
+      sm: 'Klein'
+      lg: 'Groß'
+  - identifier: button_position
+    type: Select
+    label: 'Position des Buttons'
+    default: 'start'
+    items:
+      start: 'Links'
+      center: 'Mitte'
+      end: 'Rechts'
+  - identifier: button_block
+    type: Checkbox
+    label: 'Button Block'
+    default: false
+  - identifier: button_group
+    type: Checkbox
+    label: 'Group (Button Block wird deaktiviert)'
+    default: false
+  - identifier: button_group_vertical
+    type: Checkbox
+    label: 'Group-Vertical (Group muss aktiviert werden)'
+    default: false
+  # Button Collection
+  - identifier: buttons
+    type: Collection
+    label: 'Buttons'
+    foreign_table: 'tx_liepstypo3defaults_button_item'
+    foreign_field: 'parent_uid'
+    foreign_sortby: 'sorting'
+    appearance:
+      collapseAll: true
+      expandSingle: true
+      useSortable: true
+    fields:
+      - identifier: button_text
+        type: Text
+        label: 'Button-Text'
+        required: true
+      - identifier: button_link
+        type: Link
+        label: 'Link'
+        required: false
+      - identifier: button_style
+        type: Select
+        label: 'Farbe des Buttons'
+        default: 'primary'
+        items:
+          primary: 'Primary'
+          secondary: 'Secondary'
+          success: 'Success'
+          info: 'Info'
+          warning: 'Warning'
+          danger: 'Danger'
+          light: 'Light'
+          dark: 'Dark'
+          link: 'Link'
+          outline-primary: 'Outline Primary'
+          outline-secondary: 'Outline Secondary'
+          outline-success: 'Outline Success'
+          outline-info: 'Outline Info'
+          outline-warning: 'Outline Warning'
+          outline-danger: 'Outline Danger'
+          outline-light: 'Outline Light'
+          outline-dark: 'Outline Dark'
+      - identifier: button_disabled
+        type: Checkbox
+        label: 'Disabled'
+        default: false

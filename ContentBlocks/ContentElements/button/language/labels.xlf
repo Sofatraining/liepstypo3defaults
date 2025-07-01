@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="labels" date="2025-06-27T16:00:00Z">
+        <header/>
+        <body>
+            <trans-unit id="title">
+                <source>Buttons</source>
+                <target>Buttons</target>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>Multiple configurable buttons with various styles and layouts</source>
+                <target>Mehrere konfigurierbare Buttons mit verschiedenen Stilen und Layouts</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

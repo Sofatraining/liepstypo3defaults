@@ -1,0 +1,24 @@
+<div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <strong>Buttons</strong><br>
+    <f:if condition="{data.buttons}">
+        <f:then>
+            <f:for each="{data.buttons}" as="button" iteration="iter">
+                <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
+                    <strong>Text:</strong> {button.button_text} | 
+                    <strong>Layout:</strong> {button.button_style} | 
+                </div>
+            </f:for>
+            <small>
+                <strong>Einstellungen:</strong> 
+                Größe: {data.button_size}, 
+                Position: {data.button_position}
+                <f:if condition="{data.button_block}">, Block aktiviert</f:if>
+                <f:if condition="{data.button_group}">, Group aktiviert</f:if>
+                <f:if condition="{data.button_group_vertical}">, Vertikal</f:if>
+            </small>
+        </f:then>
+        <f:else>
+            <em>Bitte mindestens einen Button anlegen!</em>
+        </f:else>
+    </f:if>
+</div>
