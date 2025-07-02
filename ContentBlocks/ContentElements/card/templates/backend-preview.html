@@ -14,12 +14,13 @@
             </picture>
         </f:for>
     </f:if>
-    <br>
-    <f:if condition="{data.email}">E-Mail: {data.email}<br></f:if>
-    <f:if condition="{data.phone}">Telefon: {data.phone}</f:if>
+    <div style="margin: 10px 0 0 0;">
+        <f:if condition="{data.email}"><strong>E-Mail:</strong> {data.email}<br></f:if>
+        <f:if condition="{data.phone}"><strong>Telefon:</strong> {data.phone}</f:if>
+    </div>
 </f:section>
 
 
 <f:section name="Footer">
-    <small>LIEPS - Content-Element</small>
+    <small>LIEPS - Element</small>
 </f:section>
