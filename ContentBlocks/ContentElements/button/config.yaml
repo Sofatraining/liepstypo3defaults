@@ -1,6 +1,6 @@
 name: liepsgmbh/button
 typeName: button
-group: default
+group: LIEPS Seiteninhalte
 prefixFields: false
 basics:
   - TYPO3/Appearance
