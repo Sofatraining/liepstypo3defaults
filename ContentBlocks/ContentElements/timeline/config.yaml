@@ -1,0 +1,30 @@
+name: liepsgmbh/timeline
+typeName: timeline
+group: default
+prefixFields: false
+basics:
+  - TYPO3/Appearance
+fields:
+  - identifier: timeline_events
+    type: Collection
+    label: 'Timeline-Einträge'
+    required: true
+    min: 1
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+    foreign_field: 'parent_uid'
+    foreign_sortby: 'sorting'
+    fields:
+      - identifier: date
+        type: Text
+        label: 'Datum'
+        required: true
+      - identifier: name
+        type: Text
+        label: 'Überschrift'
+        required: true
+      - identifier: description
+        type: Text
+        label: 'Beschreibung'
+        required: false
