@@ -1,0 +1,37 @@
+<html xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview"/>
+
+<f:section name="Header">
+    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>Accordion</strong></be:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+    <div style="margin-bottom: 10px;">
+        <strong>Option:</strong> {f:if(condition: data.flush, then: 'Kein Rand', else: 'Mit Rand')}
+    </div>
+    
+    <f:if condition="{data.accordion_panels}">
+        <f:then>
+            <div style="margin-top: 10px;">
+                <strong>Panels:</strong>
+                <f:for each="{data.accordion_panels}" as="panel" iteration="iteration">
+                    <div style="margin: 5px 0; padding: 5px; background-color: #f8f9fa; border-left: 3px solid #0d6efd;">
+                        <strong>{panel.title}</strong>
+                        <f:if condition="{panel.active}"><span style="margin-left: 10px; color: green;">✓ Geöffnet</span></f:if>
+                        <f:if condition="{panel.hidden}"><span style="margin-left: 10px; color: red;">⨯ Deaktiviert</span></f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:then>
+        <f:else>
+            <em>Keine Panels definiert</em>
+        </f:else>
+    </f:if>
+</f:section>
+
+<f:section name="Footer">
+    <small>LIEPS - Element</small>
+</f:section>
+
+</html>

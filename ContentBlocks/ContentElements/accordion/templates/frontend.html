@@ -1,0 +1,33 @@
+<f:variable name="activeTabIndex" value="-1" />
+<f:for each="{data.accordion_panels}" as="panel" iteration="iteration">
+    <f:if condition="{panel.active} && !{panel.hidden}">
+        <f:variable name="activeTabIndex" value="{iteration.index}" />
+    </f:if>
+</f:for>
+
+<div class="accordion {f:if(condition: data.image_zoom, then: 'accordion-flush')}" id="accordion-{data.uid}">
+    <f:for each="{data.accordion_panels}" as="panel" iteration="iteration">
+        <f:if condition="!{panel.hidden}">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-{data.uid}-{iteration.index}">
+                    <button class="accordion-button {f:if(condition: '{activeTabIndex} == {iteration.index}', then: '', else: 'collapsed')}" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapse-{data.uid}-{iteration.index}" 
+                            aria-expanded="{f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'true', else: 'false')}" 
+                            aria-controls="collapse-{data.uid}-{iteration.index}">
+                        {panel.title}
+                    </button>
+                </h2>
+                <div id="collapse-{data.uid}-{iteration.index}" 
+                     class="accordion-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'show')}" 
+                     aria-labelledby="heading-{data.uid}-{iteration.index}" 
+                     data-bs-parent="#accordion-{data.uid}">
+                    <div class="accordion-body">
+                        <f:format.raw>{panel.content}</f:format.raw>
+                    </div>
+                </div>
+            </div>
+        </f:if>
+    </f:for>
+</div>
