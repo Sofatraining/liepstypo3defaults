@@ -7,11 +7,6 @@
   <rect x="2.5" y="6.5" width="11" height="2.5" rx="0.5" fill="#fff" stroke="#e6735f" stroke-width="0.3"/>
   <rect x="2.5" y="10" width="11" height="2.5" rx="0.5" fill="#fff" stroke="#e6735f" stroke-width="0.3"/>
   
-  <!-- Pfeil-Symbole für die Panels (offen/geschlossen) -->
-  <path d="M4.5 4 L6 5.5 L7.5 4" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
-  <path d="M4.5 7.75 L6 6.25 L7.5 7.75" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
-  <path d="M4.5 11.25 L6 12.75 L7.5 11.25" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
-  
   <!-- Linien für Text im Accordion -->
   <line x1="9" y1="4.25" x2="12" y2="4.25" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round"/>
   <line x1="9" y1="7.75" x2="12" y2="7.75" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round"/>
