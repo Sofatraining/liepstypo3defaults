@@ -1,12 +1,9 @@
-<html
-    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
-    data-namespace-typo3-fluid="true"
->
+<html xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:layout name="Preview"/>
 
 <f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</be:link.editRecord>
+    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
 </f:section>
 
 <f:section name="Content">
@@ -17,13 +14,11 @@
             </picture>
         </f:for>
     </f:if>
-    <br>
-    <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop><br>
+    <div style="margin: 10px 0 0 0;">
+        <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop>
+    </div>
 </f:section>
 
-<f:comment>
-<!-- Uncomment to override preview footer -->
 <f:section name="Footer">
-    My custom Footer
+    <small>LIEPS - Content-Element</small>
 </f:section>
-</f:comment>

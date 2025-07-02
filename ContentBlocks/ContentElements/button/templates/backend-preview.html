@@ -1,5 +1,13 @@
-<div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-    <strong>Buttons</strong><br>
+<html xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Preview"/>
+
+<f:section name="Header">
+    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
+</f:section>
+
+<f:section name="Content">
+        <strong>Buttons</strong><br>
     <f:if condition="{data.button_items}">
         <f:then>
             <div style="margin: 8px 0;">
@@ -37,4 +45,8 @@
             <em>Bitte mindestens einen Button anlegen!</em>
         </f:else>
     </f:if>
-</div>
+</f:section>
+
+<f:section name="Footer">
+    <small>LIEPS - Content-Element</small>
+</f:section>
