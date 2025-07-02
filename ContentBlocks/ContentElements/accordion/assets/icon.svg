@@ -1,7 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <path fill="#0080C9" d="M0 2v12h16V2H0zm1 2h14v9H1V4z"/>
-    <path fill="#0080C9" d="M2 5h12v1H2zM2 8h12v1H2zM2 11h12v1H2z"/>
-    <path fill="#0080C9" d="M13 4.5l-1.1 1.1L10.8 4.5"/>
-    <path fill="#0080C9" d="M13 7.5l-1.1 1.1L10.8 7.5"/>
-    <path fill="#0080C9" d="M13 10.5l-1.1-1.1-1.1 1.1"/>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">
+  <!-- Haupthintergrund -->
+  <rect x="1" y="1" width="14" height="14" rx="1" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+  
+  <!-- Accordion Panels -->
+  <rect x="2.5" y="3" width="11" height="2.5" rx="0.5" fill="#fff" stroke="#e6735f" stroke-width="0.3"/>
+  <rect x="2.5" y="6.5" width="11" height="2.5" rx="0.5" fill="#fff" stroke="#e6735f" stroke-width="0.3"/>
+  <rect x="2.5" y="10" width="11" height="2.5" rx="0.5" fill="#fff" stroke="#e6735f" stroke-width="0.3"/>
+  
+  <!-- Pfeil-Symbole für die Panels (offen/geschlossen) -->
+  <path d="M4.5 4 L6 5.5 L7.5 4" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+  <path d="M4.5 7.75 L6 6.25 L7.5 7.75" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+  <path d="M4.5 11.25 L6 12.75 L7.5 11.25" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+  
+  <!-- Linien für Text im Accordion -->
+  <line x1="9" y1="4.25" x2="12" y2="4.25" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round"/>
+  <line x1="9" y1="7.75" x2="12" y2="7.75" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round"/>
+  <line x1="9" y1="11.25" x2="12" y2="11.25" stroke="#ff8172" stroke-width="0.7" stroke-linecap="round"/>
+  
+  <!-- Äußerer Rahmen -->
+  <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
 </svg>
