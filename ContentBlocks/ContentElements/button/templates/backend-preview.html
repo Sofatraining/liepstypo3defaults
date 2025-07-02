@@ -1,17 +1,33 @@
 <div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
     <strong>Buttons</strong><br>
-    <f:if condition="{data.buttons}">
+    <f:if condition="{data.button_items}">
         <f:then>
-            <f:for each="{data.buttons}" as="button" iteration="iter">
-                <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
-                    <strong>Text:</strong> {button.button_text} | 
-                    <strong>Layout:</strong> {button.button_style} | 
+            <div style="margin: 8px 0;">
+            <f:for each="{data.button_items}" as="button" iteration="iter">
+                <div style="margin-bottom: 0; padding: 3px 0 3px 10px;">
+                    <strong>Text:</strong> {button.text} | 
+                    <strong>Layout:</strong> {button.style} | 
+                    <strong>Disabled:</strong> {f:if(condition: button.disabled, then: 'Ja', else: 'Nein')} | 
+                    <strong>Link:</strong>
                 </div>
             </f:for>
+            </div>
             <small>
                 <strong>Einstellungen:</strong> 
-                Größe: {data.button_size}, 
-                Position: {data.button_position}
+                Größe: 
+                <f:switch expression="{data.bullets_type}">
+                    <f:case value="1">Standard</f:case>
+                    <f:case value="2">Klein</f:case>
+                    <f:case value="3">Groß</f:case>
+                    <f:defaultCase>Standard</f:defaultCase>
+                </f:switch>, 
+                Position: 
+                <f:switch expression="{data.table_enclosure}">
+                    <f:case value="1">Links</f:case>
+                    <f:case value="2">Mitte</f:case>
+                    <f:case value="3">Rechts</f:case>
+                    <f:defaultCase>Links</f:defaultCase>
+                </f:switch>
                 <f:if condition="{data.button_block}">, Block aktiviert</f:if>
                 <f:if condition="{data.button_group}">, Group aktiviert</f:if>
                 <f:if condition="{data.button_group_vertical}">, Vertikal</f:if>

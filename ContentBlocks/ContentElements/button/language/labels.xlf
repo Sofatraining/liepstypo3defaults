@@ -5,11 +5,9 @@
         <body>
             <trans-unit id="title">
                 <source>Buttons</source>
-                <target>Buttons</target>
             </trans-unit>
             <trans-unit id="description">
-                <source>Multiple configurable buttons with various styles and layouts</source>
-                <target>Mehrere konfigurierbare Buttons mit verschiedenen Stilen und Layouts</target>
+                <source>Mehrere konfigurierbare Buttons mit verschiedenen Stilen und Layouts</source>
             </trans-unit>
         </body>
     </file>
