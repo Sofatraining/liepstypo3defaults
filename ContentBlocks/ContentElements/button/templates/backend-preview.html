@@ -12,7 +12,7 @@
         <f:then>
             <div style="margin: 8px 0;">
             <f:for each="{data.button_items}" as="button" iteration="iter">
-                <div style="margin-bottom: 0; padding: 3px 0 3px 10px;">
+                <div style="margin-bottom:8px; padding-left:0.5em; border-left:3px solid #ff8172;">
                     <strong>Text:</strong> {button.text} | 
                     <strong>Layout:</strong> {button.style} | 
                     <strong>Disabled:</strong> {f:if(condition: button.disabled, then: 'Ja', else: 'Nein')} | 
