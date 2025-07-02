@@ -62,6 +62,7 @@ fields:
         required: true
       - identifier: link
         type: Link
+        required: true
         label: 'Link'
       - identifier: style
         type: Select

@@ -8,7 +8,7 @@
                     <strong>Text:</strong> {button.text} | 
                     <strong>Layout:</strong> {button.style} | 
                     <strong>Disabled:</strong> {f:if(condition: button.disabled, then: 'Ja', else: 'Nein')} | 
-                    <strong>Link:</strong>
+                    <strong>Link:</strong> {f:uri.typolink(parameter: button.link)}
                 </div>
             </f:for>
             </div>
