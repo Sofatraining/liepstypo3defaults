@@ -1,6 +1,6 @@
 name: liepsgmbh/card
 typeName: ansprechpartner
-group: LIEPS Seiten-Elemente
+group: LIEPS Seiteninhalte
 prefixFields: true
 prefixType: full
 basics:
