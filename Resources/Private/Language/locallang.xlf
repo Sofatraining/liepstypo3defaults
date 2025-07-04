@@ -13,10 +13,10 @@
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
 			<trans-unit id="flux.newContentWizard.container">
-				<source>LIEPS Containerelemente</source>
+				<source>LIEPS Container</source>
 			</trans-unit>
 			<trans-unit id="flux.newContentWizard.content">
-				<source>LIEPS Spezielle Elemente</source>
+				<source>LIEPS Nested</source>
 			</trans-unit>
 			<trans-unit id="flux.newContentWizard.test">
 				<source>Test</source>
