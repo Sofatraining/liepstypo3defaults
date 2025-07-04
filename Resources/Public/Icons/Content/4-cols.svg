@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">
+  <!-- Haupthintergrund -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+  
+  <!-- Container-Rahmen -->
+  <rect x="2.5" y="4" width="11" height="8" rx="0.5" fill="none" stroke="#fff" stroke-width="0.8"/>
+  
+  <!-- Vier Spalten -->
+  <rect x="3.5" y="5" width="1.8" height="6" rx="0.2" fill="#fff" opacity="0.9"/>
+  <rect x="5.8" y="5" width="1.8" height="6" rx="0.2" fill="#fff" opacity="0.9"/>
+  <rect x="8.1" y="5" width="1.8" height="6" rx="0.2" fill="#fff" opacity="0.9"/>
+  <rect x="10.4" y="5" width="1.8" height="6" rx="0.2" fill="#fff" opacity="0.9"/>
+  
+  <!-- Trennlinien zwischen den Spalten -->
+  <line x1="5.5" y1="5.5" x2="5.5" y2="10.5" stroke="#ff8172" stroke-width="0.25"/>
+  <line x1="7.8" y1="5.5" x2="7.8" y2="10.5" stroke="#ff8172" stroke-width="0.25"/>
+  <line x1="10.1" y1="5.5" x2="10.1" y2="10.5" stroke="#ff8172" stroke-width="0.25"/>
+  
+  <!-- Grid-Punkte als Symbol für Bootstrap-Grid -->
+  <circle cx="4.4" cy="6.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="4.4" cy="8" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="4.4" cy="9.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  
+  <circle cx="6.7" cy="6.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="6.7" cy="8" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="6.7" cy="9.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  
+  <circle cx="9" cy="6.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="9" cy="8" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="9" cy="9.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  
+  <circle cx="11.3" cy="6.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="11.3" cy="8" r="0.15" fill="#ff8172" opacity="0.7"/>
+  <circle cx="11.3" cy="9.5" r="0.15" fill="#ff8172" opacity="0.7"/>
+  
+  <!-- Äußerer Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>

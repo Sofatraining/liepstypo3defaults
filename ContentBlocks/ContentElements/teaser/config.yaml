@@ -1,0 +1,36 @@
+name: liepsgmbh/teaser
+typeName: teaser
+group: LIEPS Seiteninhalte
+prefixFields: false
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: header
+    type: Text
+    useExistingField: true
+    label: 'Überschrift'
+    required: true
+    max: 50
+    placeholder: 'Geben Sie hier die Überschrift ein.'
+  - identifier: bodytext
+    type: Textarea
+    useExistingField: true
+    label: 'Teaser Text'
+    required: true
+    rows: 5
+    placeholder: 'Geben Sie hier den Teaser-Text ein.'
+  - identifier: image
+    type: File
+    useExistingField: true
+    label: 'Teaser Bild'
+    required: true
+    maxitems: 1
+    allowed: common-image-types
+  - identifier: header_link
+    type: Link
+    useExistingField: true
+    label: 'Link'
+    required: true
+    placeholder: 'Geben Sie hier den Link ein.'

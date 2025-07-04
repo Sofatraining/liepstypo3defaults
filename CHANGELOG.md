@@ -102,16 +102,22 @@ ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localc
 <f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
 ***
 #### v4.0.3
-Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung der Asset-Pipeline, Integration von modernen JavaScript- und CSS-Verarbeitungstools, Verbesserte Asset-Optimierung mit Cache-Busting durch Hashing,
+Modernisierung des Build-Systems
 Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
 ***
+#### v4.0.4
+Migration Flux to Content-Blocks-Elements (card/ap/timeline/teaser), Neue Icons
+***
+
+
+
+
 
 
 Nächste Schritte:
 
 2. Flux zu Content Blocks Migration
-Vollständige Migration von Flux-Elementen zu Content Blocks
-Nutzung der neuen Content Block Features in TYPO3 13.4 mit YAML-Konfiguration
+Migration von Flux-Elementen zu Content Blocks für einfache Elemente ohne Nested Elements
 
 
 3. Optimierung für TYPO3 13.4
@@ -122,7 +128,6 @@ Optimierung des Caching-Frameworks
 
 
 4. Bootstrap 5 Integration
-Aktualisierung auf Bootstrap 5.3.x
 Nutzung moderner Bootstrap-Layouts und Komponenten
 Erweiterte Nutzung von CSS-Variablen für Theming
 

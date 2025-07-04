@@ -240,6 +240,7 @@ p.authorBody {margin-bottom:0;}
 /* Link Stile */
 a {color: var(--bs-primary);text-decoration: none;}
 a:hover {color: var(--bs-secondary);text-decoration: underline;}
+.btn a:hover, a.btn:hover {text-decoration: none;}
 
 /* Frame Layout Stile */
 .frame-layout-1 {background-color: rgba(255, 129, 114, 0.1);padding: 1.5rem;border-radius: 0.25rem;}

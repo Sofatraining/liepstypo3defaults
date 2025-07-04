@@ -1,0 +1,60 @@
+<f:variable name="buttonBlockClass" value="{f:if(condition: data.button_block, then: 'd-grid gap-2', else: '')}" />
+<f:variable name="groupClass" value="{f:if(condition: data.button_group_vertical, then: 'btn-group-vertical', else: 'btn-group')}" />
+<!-- Positionen: 1=Links/start, 2=Mitte/center, 3=Rechts/end -->
+<f:variable name="positionClass">
+    <f:switch expression="{data.table_enclosure}">
+        <f:case value="1">start</f:case>
+        <f:case value="2">center</f:case>
+        <f:case value="3">end</f:case>
+        <f:defaultCase>start</f:defaultCase>
+    </f:switch>
+</f:variable>
+<!-- Größen: 1=Standard/default, 2=Klein/sm, 3=Groß/lg -->
+<f:variable name="sizeClass">
+    <f:switch expression="{data.bullets_type}">
+        <f:case value="2">btn-sm</f:case>
+        <f:case value="3">btn-lg</f:case>
+        <f:defaultCase></f:defaultCase>
+    </f:switch>
+</f:variable>
+
+<f:if condition="{data.button_group}">
+    <f:then>
+        <div class="{groupClass} text-{positionClass}" role="group">
+            <f:for each="{data.button_items}" as="button">
+                <f:if condition="{button.link}">
+                    <f:then>
+                        <f:variable name="ariaDisabled" value="{f:if(condition: button.disabled, then: 'true', else: null)}" />
+                        <f:link.typolink parameter="{button.link}" class="btn btn-{button.style} {sizeClass}{f:if(condition: button.disabled, then: ' disabled')}" additionalAttributes="{role: 'button', aria-disabled: ariaDisabled}">
+                            {button.text}
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <button type="button" class="btn btn-{button.style} {sizeClass}" {f:if(condition: button.disabled, then: 'disabled')}>
+                            {button.text}
+                        </button>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="buttonwrap {buttonBlockClass} text-{positionClass}">
+            <f:for each="{data.button_items}" as="button">
+                <f:if condition="{button.link}">
+                    <f:then>
+                        <f:variable name="ariaDisabled" value="{f:if(condition: button.disabled, then: 'true', else: null)}" />
+                        <f:link.typolink parameter="{button.link}" class="btn btn-{button.style} {sizeClass}{f:if(condition: button.disabled, then: ' disabled')}" additionalAttributes="{role: 'button', aria-disabled: ariaDisabled}">
+                            {button.text}
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <button type="button" class="btn btn-{button.style} {sizeClass}" {f:if(condition: button.disabled, then: 'disabled')}>
+                            {button.text}
+                        </button>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </f:else>
+</f:if>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">
+  <!-- Haupthintergrund -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+  
+  <!-- Container-Rahmen -->
+  <rect x="2.5" y="4" width="11" height="8" rx="0.5" fill="none" stroke="#fff" stroke-width="0.8"/>
+  
+  <!-- Zwei Spalten (50-50 Layout) -->
+  <rect x="3.5" y="5" width="4" height="6" rx="0.3" fill="#fff" opacity="0.9"/>
+  <rect x="8.5" y="5" width="4" height="6" rx="0.3" fill="#fff" opacity="0.9"/>
+  
+  <!-- Trennlinie zwischen den Spalten -->
+  <line x1="8" y1="5.5" x2="8" y2="10.5" stroke="#ff8172" stroke-width="0.4"/>
+  
+  <!-- Grid-Punkte als Symbol für Bootstrap-Grid -->
+  <circle cx="5.5" cy="6.5" r="0.3" fill="#ff8172" opacity="0.7"/>
+  <circle cx="5.5" cy="8" r="0.3" fill="#ff8172" opacity="0.7"/>
+  <circle cx="5.5" cy="9.5" r="0.3" fill="#ff8172" opacity="0.7"/>
+  
+  <circle cx="10.5" cy="6.5" r="0.3" fill="#ff8172" opacity="0.7"/>
+  <circle cx="10.5" cy="8" r="0.3" fill="#ff8172" opacity="0.7"/>
+  <circle cx="10.5" cy="9.5" r="0.3" fill="#ff8172" opacity="0.7"/>
+  
+  <!-- Äußerer Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>

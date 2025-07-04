@@ -1,0 +1,110 @@
+name: liepsgmbh/button
+typeName: button
+group: LIEPS Seiteninhalte
+prefixFields: false
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: bullets_type
+    type: Select
+    renderType: selectSingle
+    useExistingField: true
+    label: 'Button-Größe'
+    default: 1
+    items:
+      - label: 'Standard'
+        value: 1
+      - label: 'Klein'
+        value: 2
+      - label: 'Groß'
+        value: 3
+  - identifier: table_enclosure
+    type: Select
+    renderType: selectSingle
+    useExistingField: true
+    label: 'Position des Buttons'
+    default: 1
+    items:
+      - label: 'Links'
+        value: 1
+      - label: 'Mitte'
+        value: 2
+      - label: 'Rechts'
+        value: 3
+  - identifier: button_block
+    type: Checkbox
+    label: 'Button Block'
+    default: false
+  - identifier: button_group
+    type: Checkbox
+    label: 'Group (Button Block wird deaktiviert)'
+    default: false
+  - identifier: button_group_vertical
+    type: Checkbox
+    label: 'Group-Vertical (Group muss aktiviert werden)'
+    default: false
+  - identifier: button_items
+    type: Collection
+    label: 'Buttons'
+    required: true
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+    min: 1
+    foreign_field: 'parent_uid'
+    foreign_sortby: 'sorting'
+    fields:
+      - identifier: text
+        type: Text
+        label: 'Button-Text'
+        required: true
+      - identifier: link
+        type: Link
+        required: true
+        label: 'Link'
+      - identifier: style
+        type: Select
+        renderType: selectSingle
+        label: 'Farbe des Buttons'
+        default: 'primary'
+        items:
+          - label: 'Primary'
+            value: primary
+          - label: 'Secondary'
+            value: secondary
+          - label: 'Success'
+            value: success
+          - label: 'Info'
+            value: info
+          - label: 'Warning'
+            value: warning
+          - label: 'Danger'
+            value: danger
+          - label: 'Light'
+            value: light
+          - label: 'Dark'
+            value: dark
+          - label: 'Link'
+            value: link
+          - label: 'Outline Primary'
+            value: outline-primary
+          - label: 'Outline Secondary'
+            value: outline-secondary
+          - label: 'Outline Success'
+            value: outline-success
+          - label: 'Outline Info'
+            value: outline-info
+          - label: 'Outline Warning'
+            value: outline-warning
+          - label: 'Outline Danger'
+            value: outline-danger
+          - label: 'Outline Light'
+            value: outline-light
+          - label: 'Outline Dark'
+            value: outline-dark
+      - identifier: disabled
+        type: Checkbox
+        label: 'Disabled'
+        default: false

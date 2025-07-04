@@ -1,48 +1,58 @@
 {
-  "name": "lieps-gmbh-liepstypo3defaults",
-  "description": "Bootstrap 5 Extension + Various Content Elements with Flux",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sofatraining/liepstypo3defaults"
+  "name": "liepsgmbh/liepstypo3defaults",
+  "version": "4.0.4",
+  "description": "Build tools for LIEPS-TYPO3-Defaults Extension",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch",
+    "serve": "webpack serve --mode=development",
+    "clean": "rimraf ../Resources/Public/Js/Dist ../Resources/Public/Css/Dist",
+    "lint:js": "eslint ../Resources/Public/Js/Src/**/*.js",
+    "lint:css": "stylelint ../Resources/Public/Css/Src/**/*.{css,scss}",
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "homepage": "https://ohnesorge.live",
-  "author": "Jürgen Ohnesorge",
-  "version": "4.0.3",
-  "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@babel/core": "^7.23.5",
-    "@babel/preset-env": "^7.23.5",
-    "autoprefixer": "^10.4.16",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
     "babel-loader": "^9.1.3",
-    "browser-sync": "^2.29.3",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
-    "cssnano": "^6.0.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.52.0",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss": "^8.4.31",
-    "postcss-loader": "^7.3.3",
+    "rimraf": "^5.0.5",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
     "terser-webpack-plugin": "^5.3.9",
+    "url-loader": "^4.1.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "webpack-manifest-plugin": "^5.0.0"
+    "webpack-dev-server": "^4.15.1"
   },
-  "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "serve": "webpack serve --mode development",
-    "css": "webpack --mode production --config webpack.css.config.js",
-    "js": "webpack --mode production --config webpack.js.config.js",
-    "analyze": "webpack --mode production --analyze"
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "@fortawesome/fontawesome-free": "^6.7.2"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead",
-    "not IE 11"
-  ]
+    "not ie 11"
+  ],
+  "keywords": [
+    "typo3",
+    "sitepackage",
+    "bootstrap",
+    "webpack",
+    "lieps"
+  ],
+  "author": "LIEPS GmbH",
+  "license": "GPL-2.0+"
 }
