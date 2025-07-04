@@ -1,6 +1,6 @@
 name: liepsgmbh/timeline
 typeName: timeline
-group: LIEPS Seiteninhalte
+group: LIEPS Seiten-Elemente
 prefixFields: false
 basics:
   - TYPO3/Appearance
