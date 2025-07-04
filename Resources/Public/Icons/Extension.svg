@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">  <!-- Haupthintergrund im LIEPS-Stil -->  <rect x="1" y="1" width="14" height="14" rx="2" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>  <!-- Großes L aus lieps.svg - exakt 1:1 übernommen, mittig positioniert -->
-  <g transform="translate(3.5,1.75) scale(0.35)">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16">  <!-- Haupthintergrund im LIEPS-Stil -->  <rect x="1" y="1" width="14" height="14" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>  <!-- Großes L aus lieps.svg - exakt 1:1 übernommen, mittig positioniert -->
+  <g transform="translate(3.5,2.75) scale(0.2975)">
     <path d="M8.001,27.222l0.004,2.006c0.169,1.188,0.085,2.572,1.272,3.252l0.649,0.197
 	c4.439,0.028,9.134,0.368,13.121-0.849c0.65-0.197,1.245-0.595,1.839-0.935c-0.113,1.133-0.142,2.574-1.414,2.771L3.17,33.608
 	c-0.112-0.112-0.339-0.112-0.311-0.311c0.622-0.34,1.471-0.197,2.036-0.65c0.396-0.453,0.479-1.018,0.509-1.641l-0.008-3.785H8.001
@@ -10,5 +10,5 @@
   </g>
   
   <!-- Äußerer Rahmen -->
-  <rect x="1" y="1" width="14" height="14" rx="2" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+  <rect x="1" y="1" width="14" height="14" fill="none" stroke="#cc5d4a" stroke-width="1.6"/>
 </svg>

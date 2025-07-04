@@ -106,7 +106,7 @@ Modernisierung des Build-Systems: Migration von Grunt zu Webpack, Aktualisierung
 Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
 ***
 #### v4.0.4
-Migration Flux to Content-Blocks-Elements
+Migration Flux to Content-Blocks-Elements (card/ap/), Neue Icons
 ***
 
 
