@@ -1,7 +1,7 @@
 {
-  "name": "liepstypo3defaults-build",
+  "name": "liepsgmbh/liepstypo3defaults",
   "version": "4.0.4",
-  "description": "Build tools for LIEPS TYPO3 Defaults Extension",
+  "description": "Build tools for LIEPS-TYPO3-Defaults Extension",
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",
