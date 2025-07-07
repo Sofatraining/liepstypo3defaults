@@ -112,8 +112,6 @@ Migration Flux to Content-Blocks-Elements (card/ap/timeline/teaser), Neue Icons
 
 
 
-
-
 Nächste Schritte:
 
 2. Flux zu Content Blocks Migration
