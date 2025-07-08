@@ -50,7 +50,6 @@
     "typo3",
     "sitepackage",
     "bootstrap",
-    "webpack",
     "lieps"
   ],
   "author": "LIEPS GmbH",
