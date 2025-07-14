@@ -191,6 +191,9 @@ p.authorBody {margin-bottom:0;}
 .stoerer::before {content: ''; position: absolute; inset: 0; background: transparent; z-index: 1; width: 100%; height: 100%; border: 12px solid var(--bs-white);}
 .stoerer::after {content: ''; position: absolute; inset: 0; background: transparent; z-index: 1; width: 100%; height: 100%; border: 3px solid var(--bs-primary);}
 
+/* Accordion */
+.accordion-button {display: flex; align-items: flex-start;}
+
 /* Powermail */
 .tx-powermail fieldset label {margin-top:10px;}
 
