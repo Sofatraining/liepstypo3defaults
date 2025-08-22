@@ -79,7 +79,7 @@ html {
 .h4, h4 {font-size: calc(var(--bs-body-font-size) + .55vw);}
 .h5, h5 {font-size: calc(var(--bs-body-font-size) + .275vw);}
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .h1, h1 {font-size: 3.775rem;}
     .h2, h2 {font-size: 3.075rem;}
     .h3, h3 {font-size: 2.575rem;}
@@ -256,3 +256,46 @@ a:hover {color: var(--bs-secondary);text-decoration: underline;}
 /* Content Element Stile */
 .ce-above .ce-gallery {margin-bottom: 1.5rem;}
 .ce-below .ce-gallery {margin-top: 1.5rem;}
+
+/* RWS TYPO3 Abstände */
+@media (max-width: 1199.98px) {
+  .frame-space-before-extra-small {margin-top: .8em;}
+  .frame-space-before-small {margin-top: 1.6em;}
+  .frame-space-before-medium {margin-top: 2.4em;}
+  .frame-space-before-large {margin-top: 3.2em;}
+  .frame-space-before-extra-large {margin-top: 4em;}
+
+  .frame-space-after-extra-small {margin-bottom: .8em;}
+  .frame-space-after-small {margin-bottom: 1.6em;}
+  .frame-space-after-medium {margin-bottom: 2.4em;}
+  .frame-space-after-large {margin-bottom: 3.2em;}
+  .frame-space-after-extra-large {margin-bottom: 4em;}
+}
+
+@media (max-width: 991.98px) {
+  .frame-space-before-extra-small {margin-top: .6em;}
+  .frame-space-before-small {margin-top: 1.2em;}
+  .frame-space-before-medium {margin-top: 1.8em;}
+  .frame-space-before-large {margin-top: 2.4em;}
+  .frame-space-before-extra-large {margin-top: 3em;}
+
+  .frame-space-after-extra-small {margin-bottom: .6em;}
+  .frame-space-after-small {margin-bottom: 1.2em;}
+  .frame-space-after-medium {margin-bottom: 1.8em;}
+  .frame-space-after-large {margin-bottom: 2.4em;}
+  .frame-space-after-extra-large {margin-bottom: 3em;}
+}
+
+@media (max-width: 767.98px) {
+  .frame-space-before-extra-small {margin-top: .4em;}
+  .frame-space-before-small {margin-top: .8em;}
+  .frame-space-before-medium {margin-top: 1.2em;}
+  .frame-space-before-large {margin-top: 1.6em;}
+  .frame-space-before-extra-large {margin-top: 2em;}
+
+  .frame-space-after-extra-small {margin-bottom: .4em;}
+  .frame-space-after-small {margin-bottom: .8em;}
+  .frame-space-after-medium {margin-bottom: 1.2em;}
+  .frame-space-after-large {margin-bottom: 1.6em;}
+  .frame-space-after-extra-large {margin-bottom: 2em;}
+}
