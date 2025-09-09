@@ -194,8 +194,11 @@ p.authorBody {margin-bottom:0;}
 /* Accordion */
 .accordion-button {display: flex; align-items: flex-start;}
 
+/* Downloads List Icon */
+.downloads .icon { width: 50px; margin-left: 5px;}
+
 /* Powermail */
-.tx-powermail fieldset label {margin-top:10px;}
+.tx-powermail fieldset label {margin-top: 10px;}
 
 /* Modalbox */
 .modal-backdrop { --bs-backdrop-opacity: 0.7;}
@@ -210,8 +213,8 @@ p.authorBody {margin-bottom:0;}
 /* RWS */
 @media screen and (max-width:991px){
 	.main-timeline::after {left: 15px;}
-	.timeline {width: 100%;padding-left: 70px;padding-right: 25px;}
-	.timeline::before {left: 60px;border: medium solid white;border-width: 10px 10px 10px 0;border-color: transparent white transparent transparent;}
+	.timeline {width: 100%; padding-left: 70px; padding-right: 25px;}
+	.timeline::before {left: 60px; border: medium solid white; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent;}
 	.timeline:nth-child(odd) {padding: 0px 0px 20px 40px;}
 	.timeline:nth-child(odd)::after,
 	.timeline:nth-child(even)::after {left: 3px;}
@@ -299,3 +302,4 @@ a:hover {color: var(--bs-secondary);text-decoration: underline;}
   .frame-space-after-large {margin-bottom: 1.6em;}
   .frame-space-after-extra-large {margin-bottom: 2em;}
 }
+
