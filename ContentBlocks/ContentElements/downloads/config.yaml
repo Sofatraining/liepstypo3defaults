@@ -1,0 +1,40 @@
+name: liepsgmbh/downloads
+typeName: downloads
+group: LIEPS Seiteninhalte
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: items
+    type: Collection
+    label: 'Einträge'
+    labelField: title
+    fields:
+      - identifier: title
+        type: Text
+        label: 'Titel'
+        required: true
+
+      - identifier: icon
+        type: Select
+        renderType: selectSingle
+        label: 'Icon (Font Awesome)'
+        default: 'fa-solid fa-file'
+        items:
+          - { label: 'Allgemein (Datei)',   value: 'fa-solid fa-file' }
+          - { label: 'Download',            value: 'fa-solid fa-download' }
+          - { label: 'PDF',                 value: 'fa-solid fa-file-pdf' }
+          - { label: 'Word / DOCX',         value: 'fa-solid fa-file-word' }
+          - { label: 'PowerPoint / PPTX',   value: 'fa-solid fa-file-powerpoint' }
+          - { label: 'Text / Info',         value: 'fa-solid fa-file-lines' }
+          - { label: 'Anhang / Paperclip',  value: 'fa-solid fa-paperclip' }
+          - { label: 'Ordner',              value: 'fa-solid fa-folder' }
+
+      - identifier: file
+        type: File
+        label: 'Datei (PDF, PPTX, DOCX, DOC, PPT, TXT)'
+        allowed: [pdf, pptx, docx, doc, ppt, txt]
+        minitems: 1
+        maxitems: 1
