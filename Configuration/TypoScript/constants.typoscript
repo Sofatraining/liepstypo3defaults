@@ -164,7 +164,7 @@ plugin.tx_powermail {
 		misc.ajaxSubmit = 1
 		misc.addQueryString = 1
 		styles {
-			# Änerung von bootstrap auf framework (Ab Powermail Version 13)
+			# Änderung von bootstrap auf framework (Ab Powermail Version 13)
 			framework.rowClasses = row
 			# eine Spalte
 			framework.numberOfColumns = 1
@@ -173,8 +173,12 @@ plugin.tx_powermail {
 			# framework.numberOfColumns = 2
 			# framework.fieldAndLabelWrappingClasses = form-group col-md-6
 			framework.fieldWrappingClasses = 
+			framework.fieldClasses = form-control
 			framework.labelClasses = control-label
 			framework.offsetClasses = 
+			framework.radioClasses = form-check powermail_radiowrap
+			framework.checkClasses = form-check powermail_checkwrap
+			framework.createClasses = powermail_create
 			framework.submitClasses = btn btn-primary
 			framework.important = 1
 		}
