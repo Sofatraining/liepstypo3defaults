@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/carouselimage">
+    <body>
+      <trans-unit id="title">
+        <source>Carousel und Header-Bild</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Bild für BS5-Carousel oder Header</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
