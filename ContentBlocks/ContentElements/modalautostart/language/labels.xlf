@@ -5,14 +5,14 @@
         <body>
             <!-- Title and description of the Content Type -->
             <trans-unit id="title"><source>Modalbox (Autostart)</source></trans-unit>
-            <trans-unit id="description"><source>Zeigt beim Laden der Seite eine Bootstrap-Modalbox mit optionalem Bild, Text und Button-Link. Erneute Anzeige frühestens nach 5 Minuten.</source></trans-unit>
+            <trans-unit id="description"><source>Zeigt beim Laden der Seite eine Bootstrap-Modalbox mit optionalem Bild, Text und Button-Link. Erneute Anzeige frühestens 5 Minuten nach schließen.</source></trans-unit>
 
             <!-- Field labels -->
-            <trans-unit id="title.label"><source>Titel</source></trans-unit>
+            <trans-unit id="title.label"><source>Überschrift</source></trans-unit>
             <trans-unit id="text.label"><source>Text</source></trans-unit>
-            <trans-unit id="files.label"><source>Bild</source></trans-unit>
-            <trans-unit id="link.label"><source>Button‑Link</source></trans-unit>
-            <trans-unit id="buttonText.label"><source>Button‑Text</source></trans-unit>
+            <trans-unit id="files.label"><source>Bild (optional)</source></trans-unit>
+            <trans-unit id="link.label"><source>Link (optional)</source></trans-unit>
+            <trans-unit id="buttonText.label"><source>Beschriftung des Buttons (erforderlich wenn ein Link gesetzt wurde!)</source></trans-unit>
         </body>
     </file>
 </xliff>
