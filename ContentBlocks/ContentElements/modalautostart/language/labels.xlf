@@ -5,7 +5,7 @@
         <body>
             <!-- Title and description of the Content Type -->
             <trans-unit id="title"><source>Modalbox (Autostart)</source></trans-unit>
-            <trans-unit id="description"><source>Zeigt beim Laden der Seite eine Bootstrap-Modalbox mit optionalem Bild, Text und Button-Link. Erneute Anzeige frühestens 5 Minuten nach schließen.</source></trans-unit>
+            <trans-unit id="description"><source>Zeigt beim Laden der Seite eine Modalbox an. Erneute Anzeige frühestens 5 Minuten nach schließen.</source></trans-unit>
 
             <!-- Field labels -->
             <trans-unit id="title.label"><source>Überschrift</source></trans-unit>
