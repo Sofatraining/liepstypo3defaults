@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="lieps/modalautostart">
+        <header/>
+        <body>
+            <!-- Title and description of the Content Type -->
+            <trans-unit id="title"><source>Modalbox (Autostart)</source></trans-unit>
+            <trans-unit id="description"><source>Zeigt beim Laden der Seite eine Bootstrap-Modalbox mit optionalem Bild, Text und Button-Link. Erneute Anzeige frühestens nach 5 Minuten.</source></trans-unit>
+
+            <!-- Field labels -->
+            <trans-unit id="title.label"><source>Titel</source></trans-unit>
+            <trans-unit id="text.label"><source>Text</source></trans-unit>
+            <trans-unit id="files.label"><source>Bild</source></trans-unit>
+            <trans-unit id="link.label"><source>Button‑Link</source></trans-unit>
+            <trans-unit id="buttonText.label"><source>Button‑Text</source></trans-unit>
+        </body>
+    </file>
+</xliff>
