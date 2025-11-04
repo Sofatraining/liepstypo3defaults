@@ -1,0 +1,7 @@
+# FE-Response-Header setzen (gilt nicht fürs Backend)
+HTTP.Response.Headers {
+  10 {
+    name = Content-Security-Policy
+    value = default-src 'self'; img-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-ancestors 'self';
+  }
+}
