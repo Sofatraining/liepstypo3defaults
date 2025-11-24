@@ -7,7 +7,7 @@
                 <source>Teaser</source>
             </trans-unit>
             <trans-unit id="description">
-                <source>Ein Teaser-Element mit Bild, Überschrift, Text und Link</source>
+                <source>Anlegen und Bearbeiten eines Teasers mit Bild, Überschrift, Text und Link.</source>
             </trans-unit>
         </body>
     </file>

@@ -6,7 +6,7 @@
         <source>Carousel und Header-Bild</source>
       </trans-unit>
       <trans-unit id="description">
-        <source>Bild für BS5-Carousel oder Header</source>
+        <source>Ein Bild für BS5-Carousel oder den Seitenheader.</source>
       </trans-unit>
     </body>
   </file>

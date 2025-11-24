@@ -1,0 +1,30 @@
+name: liepsgmbh/stoerer
+typeName: stoerer
+group: LIEPS Seiteninhalte
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: header
+    useExistingField: true
+    required: true
+    label: 'Titel'
+    maxCharacters: 45
+  - identifier: bodytext
+    useExistingField: true
+    type: Text
+    label: 'Text'
+    required: false
+    rows: 5
+  - identifier: header_link
+    useExistingField: true
+    type: Link
+    label: 'Link: Jetzt buchen'
+    required: false
+    placeholder: 'Hier einen Buchungslink anlegen.'
+  - identifier: more_link
+    type: Link
+    label: 'Link: Mehr lesen'
+    required: false
+    placeholder: 'Hier einen Link für weitere Infos anlegen.'

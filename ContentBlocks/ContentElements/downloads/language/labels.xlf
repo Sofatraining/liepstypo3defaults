@@ -6,7 +6,7 @@
         <source>Downloadliste</source>
       </trans-unit>
       <trans-unit id="description">
-        <source>Eine Liste von Datei-Downloads (PDF, DOCX, PPTX)</source>
+        <source>Eine Liste von verschiedenen Datei-Downloads (PDF, DOCX, PPTX).</source>
       </trans-unit>
     </body>
   </file>

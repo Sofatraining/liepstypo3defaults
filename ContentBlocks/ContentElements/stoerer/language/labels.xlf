@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-05-13T13:33:02+00:00" product-name="liepsgmbh/stoerer">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Störer</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Anlegen und Bearbeiten einer Info-Box. Erneute Anzeige nach 5 Minuten.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
