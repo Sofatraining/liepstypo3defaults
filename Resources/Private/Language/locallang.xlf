@@ -96,24 +96,6 @@
 			<trans-unit id="flux.section-100.fields.repeatY">
 				<source>Image Background-Repeat (Y)</source>
 			</trans-unit>
-			<trans-unit id="flux.teaser">
-				<source>Teaser</source>
-			</trans-unit>
-			<trans-unit id="flux.teaser.description">
-				<source>Das Bootstrap5 Card-Element</source>
-			</trans-unit>
-			<trans-unit id="flux.teaser.fields.settings.files">
-				<source>Bild</source>
-			</trans-unit>
-			<trans-unit id="flux.teaser.fields.headline">
-				<source>Headline</source>
-			</trans-unit>
-			<trans-unit id="flux.teaser.fields.teasertext">
-				<source>Kurztext</source>
-			</trans-unit>
-			<trans-unit id="flux.teaser.fields.link">
-				<source>Link</source>
-			</trans-unit>
 			<trans-unit id="flux.accordion">
 				<source>Accordion</source>
 			</trans-unit>
@@ -237,33 +219,6 @@
 			<trans-unit id="flux.offcanvas.fields.settings.additionalClassesCanvas">
 				<source>zusätzliche CSS-Klassen der Canvas-Box</source>
 			</trans-unit>
-			<trans-unit id="flux.button">
-				<source>Button</source>
-			</trans-unit>
-			<trans-unit id="flux.button.description">
-				<source>Ein Bootstrap5 Button-Element</source>
-			</trans-unit>
-			<trans-unit id="flux.ap">
-				<source>Ansprechpartner</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.description">
-				<source>Box für Ansprechpartner erstellen</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.fields.type">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.fields.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.fields.address">
-				<source>Funktion / Adresse</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.fields.mail">
-				<source>E-Mail</source>
-			</trans-unit>
-			<trans-unit id="flux.ap.fields.phone">
-				<source>Telefon</source>
-			</trans-unit>
 			<trans-unit id="flux.gallery">
 				<source>Bilder-Galerie</source>
 			</trans-unit>
@@ -281,12 +236,6 @@
 			</trans-unit>
 			<trans-unit id="flux.gallery.fields.settings.files">
 				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="flux.timeline">
-				<source>Timeline</source>
-			</trans-unit>
-			<trans-unit id="flux.timeline.description">
-				<source>Ein Timeline-Element</source>
 			</trans-unit>
 			<trans-unit id="flux.faq">
 				<source>Scroll Spy</source>
@@ -317,33 +266,6 @@
 			</trans-unit>
 			<trans-unit id="flux.testimonials.description">
 				<source>Anlegen und Bearbeiten von Testimonials</source>
-			</trans-unit>
-			<trans-unit id="flux.linklist">
-				<source>Linkliste</source>
-			</trans-unit>
-			<trans-unit id="flux.linklist.description">
-				<source>Anlegen / Bearbeiten einer Liste von Links oder Sprungmarken</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer">
-				<source>Störer</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.description">
-				<source>Fixe Störerkarte</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.fields.subheadline">
-				<source>Subheadline</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.fields.headline">
-				<source>Headline</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.fields.teasertext">
-				<source>Kurztext</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.fields.link">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="flux.stoerer.fields.buchen">
-				<source>Buchen Link</source>
 			</trans-unit>
 		</body>
 	</file>
