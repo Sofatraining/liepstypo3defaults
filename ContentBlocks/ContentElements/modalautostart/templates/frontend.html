@@ -11,6 +11,7 @@
                     </f:if>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
                     <f:if condition="{data.bodytext}">
                         <f:format.html>{data.bodytext}</f:format.html>
@@ -21,8 +22,10 @@
                         </f:for>
                     </f:if>
                 </div>
+
                 <div class="modal-footer pt-3">
-                    <f:if condition="{data.header_link}">
+                    <!-- Prüfe auf tatsächliche URL -->
+                    <f:if condition="{data.header_link.url}">
                         <f:then>
                             <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Schließen</button>
                             <f:link.typolink class="btn btn-sm btn-primary" parameter="{data.header_link}">
@@ -30,7 +33,7 @@
                                 <f:then>{data.subheader}</f:then>
                                 <f:else>Weiter</f:else>
                             </f:if>
-                        </f:link.typolink>
+                            </f:link.typolink>
                         </f:then>
                         <f:else>
                             <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Schließen</button>

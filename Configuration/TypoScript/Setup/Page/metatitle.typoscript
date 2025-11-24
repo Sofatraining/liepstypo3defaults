@@ -1,28 +1,69 @@
+##Produziert Title aus Pagetitel und Webseitentitel - z.B.: <title>Bootsmotoren :: Müritz-Yacht Management - MYM</title>
 page = PAGE
 page {
   # 1. Vollständiges Abschalten der Standard-Title-Ausgabe
   config.noPageTitle = 2
 
   # 2. Manuelle Title-Ausgabe via COA
-    headerData {
-        10 = COA
-        10 {
-            # 10 = Seitentitel (z.B. field=title)
-            10 = TEXT
-            10.field = title
+  headerData {
+  10 = COA
+    10 {
+      # 10 = Seitentitel (z.B. field=title)
+      10 = TEXT
+      10.field = seo_title
+      10.ifEmpty.field = title
 
-            # 20 = Trenner "::" mit Leerzeichen rechts/links
-            20 = TEXT
-            20.value = ::
-            20.noTrimWrap = | | |
+      # 20 = Trenner "::" mit Leerzeichen rechts/links
+      20 = TEXT
+      20.value = ::
+      20.noTrimWrap = | | |
 
-            # 30 = Website-Titel (Sprachabhängig mit Fallback)
-            30 = TEXT
-            30.data = siteLanguage:websiteTitle
-            30.ifEmpty.data = site:websiteTitle
+      # 30 = Website-Titel (Sprachabhängig mit Fallback)
+      30 = TEXT
+      30.data = siteLanguage:websiteTitle
+      30.ifEmpty.data = site:websiteTitle
 
-            # Gesamtes Wrap um Title-Tag
-            wrap = <title>|</title>
-        }
+      # Gesamtes Wrap um Title-Tag
+      wrap = <title>|</title>
     }
+  }
 }
+
+
+##Produziert Title aus Pagetitel, Parent-Page-Title und Webseitentitel - z.B.: <title>Bootsmotoren :: Verkauf :: Müritz-Yacht Management - MYM</title>
+#page = PAGE
+#page {
+#  # 1. Vollständiges Abschalten der Standard-Title-Ausgabe
+#  config.noPageTitle = 2
+#
+#  headerData {
+#    10 = COA
+#    10 {
+#      # 10: SEO-Titel (Fallback: normaler Titel)
+#      10 = TEXT
+#      10 {
+#        field = seo_title
+#        ifEmpty.field = title
+#      }
+#
+#      # 20: Parent-Titel (eine Ebene höher)
+#      20 = TEXT
+#      20.data = levelfield:-2,title
+#      20.if.isTrue.data = levelfield:-2,title
+#      20.noTrimWrap = | :: ||  
+#
+#      # 30: Website-Titel (sprachabhängig mit Fallback)
+#      30 = TEXT
+#      30.data = siteLanguage:websiteTitle
+#      30.ifEmpty.data = site:websiteTitle
+#      30.noTrimWrap = | :: ||  
+#
+#      wrap = <title>|</title>
+#    }
+#  }
+#}
+
+##Auf diesen Seiten KEIN Parent-Titel
+#[page["uid"] in [1, 2, 3, 4, 5, 20, 21, 22, 23, 24, 25, 26, 27]]
+#page.headerData.10.20 >
+#[end]

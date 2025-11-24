@@ -9,7 +9,7 @@ console.log(
 // Magnific Popup
 $(function () {
   $('body').magnificPopup({
-    delegate: 'a.mfp-link',
+    delegate: 'a.image-link',
     type: 'image',
     gallery: { enabled: true },
     callbacks: {
