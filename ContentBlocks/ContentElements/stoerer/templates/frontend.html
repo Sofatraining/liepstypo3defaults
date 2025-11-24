@@ -1,0 +1,52 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+  <script src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Js/js.cookie.min.js"></script>
+  <f:asset.script identifier="stoerer{data.uid}" movable="1">
+    $(function() {
+      var bodyId = $('body').attr('id'),
+          $stoerer = $('.stoerer');
+      if (bodyId && $stoerer.length) {
+        var cookieName = 'stoererClosed_' + bodyId;
+        var lastClosed = parseInt(Cookies.get(cookieName) || 0, 10);
+        if (!lastClosed || (Date.now() - lastClosed) > 10 * 60 * 1000) {
+          $stoerer.show();
+        } else {
+          $stoerer.hide();
+        }
+        $('.stoerer-closer').on('click', function() {
+          Cookies.set(cookieName, Date.now());
+          $stoerer.hide();
+        });
+      }
+    });
+  </f:asset.script>
+
+  <div class="stoerer p-3" style="display:none;">
+    <div class="stoerer-head d-flex justify-content-end">
+      <button class="stoerer-closer" aria-label="Störer schließen">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="stoerer-body">
+      <div class="stoerer-headlines">
+        <h4 class="text-center">{data.header}</h4>
+      </div>
+      <f:if condition="{data.bodytext}">
+        <div class="stoerer-teasertext text-center card-body-top">
+          <small>{data.bodytext}</small>
+        </div>
+      </f:if>
+    </div>
+
+    <div class="stoerer-footer d-flex justify-content-center mt-3">
+      <f:if condition="{data.header_link.url}">
+        <f:link.typolink parameter="{data.header_link}" class="btn btn-sm btn-primary{f:if(condition: data.more_link.url, then: ' me-5')}">Jetzt buchen</f:link.typolink>
+      </f:if>
+      <f:if condition="{data.more_link.url}">
+        <f:link.typolink parameter="{data.more_link}" class="btn btn-sm btn-secondary">Mehr lesen</f:link.typolink>
+      </f:if>
+    </div>
+  </div>
+</f:section>

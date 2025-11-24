@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24" height="24"
+     viewBox="0 0 16 16" aria-hidden="true" role="img">
+  <!-- Background per style guide -->
+  <rect x="0.25" y="0.25" width="15.5" height="15.5"
+        rx="1" ry="1"
+        fill="#ff8172" stroke="#e6735f" stroke-width="0.5" />
+  <!-- Modal outline -->
+  <rect x="3" y="4" width="10" height="8" rx="1.2" ry="1.2"
+        fill="none" stroke="#ffffff" stroke-width="1" />
+  <!-- Close X -->
+  <line x1="11" y1="5.2" x2="12.4" y2="6.6" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+  <line x1="12.4" y1="5.2" x2="11" y2="6.6" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+  <!-- Title line -->
+  <line x1="4.2" y1="7.2" x2="9.8" y2="7.2" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+  <!-- Button -->
+  <rect x="7" y="10.2" width="3.2" height="1.8" rx="0.6" ry="0.6" fill="#ffffff"/>
+</svg>

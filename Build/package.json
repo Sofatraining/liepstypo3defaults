@@ -1,6 +1,6 @@
 {
   "name": "liepsgmbh/liepstypo3defaults",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "Build tools for LIEPS-TYPO3-Defaults Extension",
   "private": true,
   "scripts": {
@@ -36,7 +36,7 @@
     "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
     "@fortawesome/fontawesome-free": "^6.7.2"
   },
@@ -50,7 +50,6 @@
     "typo3",
     "sitepackage",
     "bootstrap",
-    "webpack",
     "lieps"
   ],
   "author": "LIEPS GmbH",

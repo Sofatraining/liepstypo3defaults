@@ -7,7 +7,7 @@
                 <source>Timeline</source>
             </trans-unit>
             <trans-unit id="description">
-                <source>Ein Timeline-Element mit Überschrift und Text</source>
+                <source>Anlegen und Bearbeiten eines Timeline-Element mit Überschrift und Text.</source>
             </trans-unit>
         </body>
     </file>

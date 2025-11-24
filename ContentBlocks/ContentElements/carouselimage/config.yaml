@@ -1,0 +1,15 @@
+name: liepsgmbh/carouselimage
+typeName: carouselimage
+group: LIEPS Seiteninhalte
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: image
+    type: File
+    useExistingField: true
+    label: 'Bild'
+    minitems: 1
+    maxitems: 1
+    allowed: common-image-types

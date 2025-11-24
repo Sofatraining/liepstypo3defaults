@@ -21,11 +21,11 @@
 		<tr>
 			<td>
 				<strong>Bilder-Galerie</strong><br />
-				Spalten: <strong><f:if condition="{selectCol} == 'col-lg-6'">2</f:if><f:if condition="{selectCol} == 'col-lg-4'">3</f:if><f:if condition="{selectCol} == 'col-lg-3'">4</f:if></strong><br>
+				Spalten: <strong><f:if condition="{selectCol} == 'col-lg-6'">2</f:if><f:if condition="{selectCol} == 'col-xl-4 col-lg-6'">3</f:if><f:if condition="{selectCol} == 'col-xl-3 col-lg-6'">4</f:if><f:if condition="{selectCol} == 'col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6'">6</f:if></strong><br>
 				<v:content.resources.fal field="settings.files" as="images" record="{record}">
 					<f:for each="{images}" as="image">
 						<f:if condition="{image}">
-							<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" />
+							<f:image src="{image.id}" treatIdAsReference="1" maxWidth="100" cropVariant="default" crop="{image.crop}" style="padding-right:15px;" />
 						</f:if>
 					</f:for>
 				</v:content.resources.fal>

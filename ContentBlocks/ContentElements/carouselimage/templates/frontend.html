@@ -1,0 +1,7 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <f:for each="{data.image}" as="image">
+    <f:image image="{image}" cropVariant="default" class="d-block w-100 img-fluid" title="{image.title}" alt="{image.alternative}" />
+  </f:for>
+
+</html>

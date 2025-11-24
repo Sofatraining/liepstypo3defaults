@@ -1,0 +1,46 @@
+<f:spaceless>
+    <!-- Assets des Content Blocks laden -->
+    <f:asset.script identifier="modalautostart-js" src="{cb:assetPath()}/frontend.js" />
+
+    <div class="modal home fade auto-start" id="ms{data.uid}" data-cb-modal-uid="{data.uid}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-{data.uid}" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered {data.additionalClassesModal}">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <f:if condition="{data.header}">
+                        <h4 class="modal-title" id="ModalLabel-{data.uid}">{data.header}</h4>
+                    </f:if>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <f:if condition="{data.bodytext}">
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </f:if>
+                    <f:if condition="{data.image}">
+                        <f:for each="{data.image}" as="image">
+                            <f:image image="{image}" class="img-fluid mb-3" alt="{image.alternative}" title="{image.title}" />
+                        </f:for>
+                    </f:if>
+                </div>
+
+                <div class="modal-footer pt-3">
+                    <!-- Prüfe auf tatsächliche URL -->
+                    <f:if condition="{data.header_link.url}">
+                        <f:then>
+                            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                            <f:link.typolink class="btn btn-sm btn-primary" parameter="{data.header_link}">
+                            <f:if condition="{data.subheader}">
+                                <f:then>{data.subheader}</f:then>
+                                <f:else>Weiter</f:else>
+                            </f:if>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Schließen</button>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>

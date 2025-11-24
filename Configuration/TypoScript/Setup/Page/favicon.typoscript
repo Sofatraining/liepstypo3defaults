@@ -1,6 +1,6 @@
 page.headerData = COA
-page.headerData.10 = TEXT
-page.headerData.10.value (<link rel="apple-touch-icon" sizes="57x57" href="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Favicon/apple-icon-57x57.png">
+page.headerData.50 = TEXT
+page.headerData.50.value (<link rel="apple-touch-icon" sizes="57x57" href="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Favicon/apple-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="/typo3conf/ext/liepstypo3defaults/Resources/Public/Images/Favicon/apple-icon-76x76.png">

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/downloads">
+    <body>
+      <trans-unit id="title">
+        <source>Downloadliste</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Eine Liste von verschiedenen Datei-Downloads (PDF, DOCX, PPTX).</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
