@@ -1,7 +1,7 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-  <script src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Js/js.cookie.min.js"></script>
+  <f:asset.script identifier="cookiemin-js" src="{cb:assetPath()}/js.cookie.min.js" />
   <f:asset.script identifier="stoerer{data.uid}" movable="1">
     $(function() {
       var bodyId = $('body').attr('id'),
