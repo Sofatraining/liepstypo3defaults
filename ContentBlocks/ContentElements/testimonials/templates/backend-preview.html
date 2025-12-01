@@ -4,7 +4,7 @@
 <f:layout name="Preview"/>
 
 <f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</be:link.editRecord>
+    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
 </f:section>
 
 <f:section name="Content">
@@ -16,8 +16,7 @@
         </f:for>
     </f:if>
     <div style="margin: 10px 0 0 0;">
-        <f:if condition="{data.email}"><strong>E-Mail:</strong> {data.email}<br></f:if>
-        <f:if condition="{data.phone}"><strong>Telefon:</strong> {data.phone}</f:if>
+        <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop>
     </div>
 </f:section>
 

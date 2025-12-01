@@ -1,0 +1,56 @@
+name: liepsgmbh/testimonials
+typeName: testimonials
+group: LIEPS Seiteninhalte
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: header
+    useExistingField: true
+    label: 'Überschrift'
+    required: true
+    placeholder: 'Geben Sie hier die Überschrift ein.'
+  - identifier: bullets_type
+    type: Select
+    renderType: selectSingle
+    useExistingField: true
+    label: Anzahl Spalten
+    default: 'col-xxl-3 col-xl-4 col-lg-6'
+    items:
+      - { label: '2 Spalten', value: 'col-md-6' }
+      - { label: '3 Spalten', value: 'col-xl-4 col-lg-6' }
+      - { label: '4 Spalten', value: 'col-xxl-3 col-xl-4 col-lg-6' }
+      - { label: '6 Spalten', value: 'col-xxl-2 col-xl-3 col-lg-4 col-md-6' }  
+  - identifier: testimonials
+    type: Collection
+    label: 'Bewertungen'
+    labelField: name
+    fields:
+      - identifier: title
+        type: Text
+        label: 'Titel'
+        required: true 
+      - identifier: bild
+        type: Image
+        label: 'Bild des Kunden'
+        allowedExtensions: [jpg, png]
+        maxItems: 1 
+      - identifier: sterne
+        type: Select
+        label: 'Sterne'
+        default: '5'
+        renderType: selectSingle
+        items:
+          - { label: '1 Stern', value: '1' }
+          - { label: '2 Sterne', value: '2' }
+          - { label: '3 Sterne', value: '3' }
+          - { label: '4 Sterne', value: '4' }
+          - { label: '5 Sterne', value: '5' }
+      - identifier: datum
+        type: DateTime
+        label: 'Datum der Bewertung' 
+      - identifier: bewertung
+        type: Text
+        label: 'Bewertungstext' 
