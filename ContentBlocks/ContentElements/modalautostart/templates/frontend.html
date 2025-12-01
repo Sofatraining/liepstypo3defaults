@@ -1,6 +1,8 @@
-<f:spaceless>
+<f:layout name="Default" />
+<f:section name="Header" />
+
+<f:section name="Main">
     <!-- Assets des Content Blocks laden -->
-    <f:asset.script identifier="cookiemin-js" src="{cb:assetPath()}/js.cookie.min.js" />
     <f:asset.script identifier="modalautostart-js-{data.uid}" src="{cb:assetPath()}/modalautostart.js" />
 
     <div class="modal home fade auto-start" id="ms{data.uid}" data-cb-modal-uid="{data.uid}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-{data.uid}" aria-hidden="true">
@@ -44,4 +46,4 @@
             </div>
         </div>
     </div>
-</f:spaceless>
+</f:section>

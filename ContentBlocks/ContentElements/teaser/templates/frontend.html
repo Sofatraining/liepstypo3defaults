@@ -1,25 +1,30 @@
-<div class="card shadow-sm mb-4">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="image">
-            <f:image image="{image}" title="{image.title}" alt="{image.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" />
-        </f:for>
-    </f:if>
-    <f:if condition="{data.header_link}">
-        <f:link.typolink parameter="{data.header_link}">
-            <div class="card-img-overlay">
-                <h4 class="text-white">{data.header}</h4>
+<f:layout name="Default" />
+<f:section name="Header" />
+
+<f:section name="Main">
+    <div class="card shadow-sm mb-4">
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="image">
+                <f:image image="{image}" title="{image.title}" alt="{image.alternative}" class="bd-placeholder-img card-img-top h-100" cropVariant="default" />
+            </f:for>
+        </f:if>
+        <f:if condition="{data.header_link}">
+            <f:link.typolink parameter="{data.header_link}">
+                <div class="card-img-overlay">
+                    <h4 class="text-white">{data.header}</h4>
+                </div>
+            </f:link.typolink>
+        </f:if>
+        <div class="card-body">
+            <p class="card-text">{data.bodytext}...</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <f:if condition="{data.header_link}">
+                        <f:link.typolink parameter="{data.header_link}" class="btn btn-primary">Mehr lesen</f:link.typolink>
+                    </f:if>
+                </div>
+                <small class="text-muted"><f:format.date format="d.m.Y">{data.tstamp}</f:format.date></small>
             </div>
-        </f:link.typolink>
-    </f:if>
-    <div class="card-body">
-        <p class="card-text">{data.bodytext}...</p>
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-                <f:if condition="{data.header_link}">
-                    <f:link.typolink parameter="{data.header_link}" class="btn btn-primary">Mehr lesen</f:link.typolink>
-                </f:if>
-            </div>
-            <small class="text-muted"><f:format.date format="d.m.Y">{data.tstamp}</f:format.date></small>
         </div>
     </div>
-</div>
+</f:section>
