@@ -8,15 +8,15 @@
 </f:section>
 
 <f:section name="Content">
-    <hr style=="margin: 10px 0 10px 0;" />
+    <div style="display:flex;align-items:center;gap:0;padding:.25rem 0;border-top:1px solid #e5e5e5;"></div>
     <f:for each="{data.items}" as="item">
-    <div style="margin: 10px 0 0 0;">
+    <div style="margin: 5px 0 0 0;">
         <f:format.crop maxCharacters="80">{item.title}</f:format.crop>
     </div>    
-    <div style="margin: 5px 0 0 0;">
+    <div style="margin: 0 0 10px 0;">
         <f:format.crop maxCharacters="80">{item.bewertung}</f:format.crop>
     </div>
-    <hr style=="margin: 10px 0 10px 0;" />
+    <div style="display:flex;align-items:center;gap:0;padding:.25rem 0;border-top:1px solid #e5e5e5;"></div>
     </f:for>
 </f:section>
 

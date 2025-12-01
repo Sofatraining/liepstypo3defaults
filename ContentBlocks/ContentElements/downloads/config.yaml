@@ -11,6 +11,9 @@ fields:
     type: Collection
     label: 'Einträge'
     labelField: title
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
     fields:
       - identifier: title
         type: Text
