@@ -8,16 +8,16 @@
 </f:section>
 
 <f:section name="Content">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="file">
-            <picture>
-                <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
-            </picture>
-        </f:for>
-    </f:if>
+    <hr style=="margin: 10px 0 10px 0;" />
+    <f:for each="{data.items}" as="item">
     <div style="margin: 10px 0 0 0;">
-        <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop>
+        <f:format.crop maxCharacters="80">{item.title}</f:format.crop>
+    </div>    
+    <div style="margin: 5px 0 0 0;">
+        <f:format.crop maxCharacters="80">{item.bewertung}</f:format.crop>
     </div>
+    <hr style=="margin: 10px 0 10px 0;" />
+    </f:for>
 </f:section>
 
 <f:section name="Footer">

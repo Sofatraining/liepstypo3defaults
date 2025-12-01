@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/testimonials">
+    <body>
+      <trans-unit id="title">
+        <source>Testimonials</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Anlegen und Bearbeiten von Kundenstimmen mit Name, Bild, Sternen und Bewertungstext.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

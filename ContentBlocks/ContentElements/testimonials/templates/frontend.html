@@ -2,19 +2,19 @@
 <f:section name="Header" />
 
 <f:section name="Main">
-    <f:if condition="{oname}">
-        <h4 class="my-4">{oname}</h4>
+    <f:if condition="{data.header}">
+        <h4 class="my-4">{data.header}</h4>
     </f:if>
 
     <div class="testimonials">
         <div class="row">
-            <f:for each="{testimonials}" as="item">
-            <div class="{spalten}">
+            <f:for each="{data.items}" as="item">
+            <div class="{data.header_position}">
                 <div class="testimonial shadow-sm">
                 <div class="testimonial-header">
                     <div class="testimonial-info d-flex justify-content-between">
                         <div class="testimonial-info-container">
-                            <strong>{item.name}</strong>
+                            <strong>{item.title}</strong>
                             <div class="testimonial-stars">
                                 <div class="testimonial-stars-container">
                                     <f:for each="{0: 1, 1: 2, 2: 3, 3: 4, 4: 5}" as="star">
