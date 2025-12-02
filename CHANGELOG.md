@@ -111,6 +111,9 @@ Migration Flux to Content-Blocks-Elements (card/ap/timeline/teaser), Neue Icons
 #### v4.0.5
 Compatibility to Flux > 11.0.3, Migration Flux to Content-Blocks-Elements (stoerer/carouselimage/downloads/modalautostart), Bugfixes & Cleaning
 ***
+#### v4.0.6
+Migration Flux to Content-Blocks-Elements (testimonials/), Bugfixes & Cleaning
+***
 
 
 
