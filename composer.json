@@ -9,13 +9,15 @@
     "extension",
     "sitepackage",
     "bootstrap",
-    "flux"
+    "flux",
+    "vhs",
+    "content_blocks"
   ],
   "authors": [
     {
       "name": "Jürgen Ohnesorge",
       "email": "juergen.ohnesorge@me.com",
-      "role": "Developer"
+      "role": "CEO / Developer"
     },
     {
       "name": "LIEPS GmbH",
