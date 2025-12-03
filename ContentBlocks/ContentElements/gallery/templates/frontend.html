@@ -2,52 +2,34 @@
 <f:section name="Header" />
 
 <f:section name="Main">
-
-    <f:if condition="{data.file_collections}">
-        <div class="row{f:if(condition: '{data.imageborder} == 1', then: ' px-5')}">
-            <f:for each="{data.items}" as="image">
-                <div class="{data.header_position}{f:if(condition: '{data.imageborder} == 1', then: ' px-5')}">
-                    <f:if condition="{data.image_zoom} == 0">
-                        <f:then>
-                            <!-- Normaler Link, wenn in der Bildreferenz ein Link gesetzt ist -->
-                            <f:if condition="{image.link}">
-                                <f:then>
-                                    <f:link.typolink parameter="{image.link}">
-                                        <f:image
-                                            image="{image}"
-                                            title="{image.title}"
-                                            alt="{image.alternative}"
-                                            class="d-block w-100 img-fluid img-gallery"
-                                            cropVariant="default" />
-                                    </f:link.typolink>
+    <f:if condition="{data.image}">
+        <div class="row{f:if(condition: '{data.image_zoom} == 1', then: ' p-4')}">
+            <f:for each="{data.image}" as="file">
+                <f:if condition="{file}">
+                    <div class="{data.header_position}{f:if(condition: '{data.image_zoom} == 1', then: ' p-4')}">
+                        <!-- Lightbox: direkter Link auf das Bild -->
+                        <f:if condition="{data.imageborder} == 0">
+                            <f:then>
+                                <!-- Normaler Link, wenn in der Bildreferenz ein Link gesetzt ist und Lightbox NICHT aktiviert wurde -->
+                                <f:if condition="{file.link}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{file.link}">
+                                            <f:image image="{file}" title="{file.title}" alt="{file.alternative}" class="d-block w-100 img-fluid img-gallery{f:if(condition: '{data.image_zoom} == 0', then: ' mb-4')}" cropVariant="default" />
+                                        </f:link.typolink>
+                                        </f:then>
+                                        <f:else>
+                                            <f:image image="{file}" title="{file.title}" alt="{file.alternative}" class="d-block w-100 img-fluid img-gallery{f:if(condition: '{data.image_zoom} == 0', then: ' mb-4')}" cropVariant="default" />
+                                        </f:else>
+                                    </f:if>
                                 </f:then>
                                 <f:else>
-                                    <f:image
-                                        image="{image}"
-                                        title="{image.title}"
-                                        alt="{image.alternative}"
-                                        class="d-block w-100 img-fluid img-gallery"
-                                        cropVariant="default" />
+                                    <f:link.typolink parameter="{file.publicUrl}" class="image-link" additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
+                                        <f:image image="{file}" title="{file.title}" alt="{file.alternative}" class="d-block w-100 img-fluid img-gallery{f:if(condition: '{data.image_zoom} == 0', then: ' mb-4')}" cropVariant="default" />
+                                    </f:link.typolink>
                                 </f:else>
                             </f:if>
-                        </f:then>
-
-                        <f:else>
-                            <!-- Lightbox: direkter Link auf das Bild -->
-                            <f:link.typolink
-                                parameter="{image.publicUrl}"
-                                class="image-link"
-                                additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
-                                <f:image
-                                    image="{image}"
-                                    title="{image.title}"
-                                    alt="{image.alternative}"
-                                    class="d-block w-100 img-fluid img-gallery"
-                                    cropVariant="default" />
-                            </f:link.typolink>
-                        </f:else>
-                    </f:if>
-                </div>
+                        </div>
+                </f:if>
             </f:for>
         </div>
     </f:if>

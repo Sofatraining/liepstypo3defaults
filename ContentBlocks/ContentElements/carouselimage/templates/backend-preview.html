@@ -1,26 +1,28 @@
 {namespace be=TYPO3\CMS\Backend\ViewHelpers}
+
 <html data-namespace-typo3-fluid="true">
 
-<f:layout name="Preview"/>
+    <f:layout name="Preview"/>
 
-<f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>Carousel-Bild oder Header-Bild</strong></be:link.editRecord>
-</f:section>
+    <f:section name="Header">
+        <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>Carousel-Bild oder Header-Bild</strong></be:link.editRecord>
+    </f:section>
 
-<f:section name="Content">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="image" iteration="it">
-            <f:if condition="{it.isFirst}">
-                <picture>
-                    <f:media file="{image}" width="160" title="{image.title}" alt="{image.alternative}" cropVariant="default" />
-                </picture>
-            </f:if>
-        </f:for>
-    </f:if>
-</f:section>
+    <f:section name="Content">
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="image" iteration="it">
+                <f:if condition="{it.isFirst}">
+                    <picture>
+                        <f:media file="{image}" width="160" title="{image.title}" alt="{image.alternative}" cropVariant="default" />
+                    </picture>
+                </f:if>
+            </f:for>
+        </f:if>
+    </f:section>
 
-<f:section name="Footer">
-    <small>LIEPS - Element</small>
-</f:section>
+    <f:section name="Footer">
+        (LIEPS) Element zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">{data.rawRecord.tstamp}</f:format.date>
+    </f:section>
 
 </html>

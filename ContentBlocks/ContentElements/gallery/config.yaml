@@ -32,38 +32,17 @@ fields:
   - identifier: image_zoom
     useExistingField: true
     type: Checkbox
-    label: 'Innenabstand (px-5)'
+    label: 'großer Abstand (p-5)'
     default: 0
 
   # Bildauswahl
-  - identifier: items
-    type: Collection
+  - identifier: image
+    useExistingField: true
+    type: File
     label: 'Bilder'
-    labelField: image
+    allowedExtensions: jpg, png, jpeg, webp
+    minitems: 1
+    maxitems: 30
     appearance:
       collapseAll: true
-      levelLinksPosition: bottom
-    fields:
-      - identifier: image
-        type: File
-        label: 'Bild'
-        allowedExtensions: [jpg, png]
-        maxItems: 1
-        maxitems: 30
-        extendedPalette: true
-        appearance:
-          collapseAll: true
-          levelLinksPosition: bottom
-  
-  # Bildauswahl
-  #- identifier: file_collections
-  #  useExistingField: true
-  #  type: File
-  #  label: 'Bilder'
-  #  allowed: jpg,jpeg,png
-  #  minitems: 1
-  #  maxitems: 30
-  #  extendedPalette: true
-  #  appearance:
-  #    collapseAll: true
-  #    levelLinksPosition: bottom
+      levelLinksPosition: bottom 

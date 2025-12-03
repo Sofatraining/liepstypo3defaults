@@ -1,55 +1,57 @@
 {namespace be=TYPO3\CMS\Backend\ViewHelpers}
+
 <html data-namespace-typo3-fluid="true">
 
-<f:layout name="Preview"/>
+    <f:layout name="Preview"/>
 
-<f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
-</f:section>
+    <f:section name="Header">
+        <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
+    </f:section>
 
-<f:section name="Content">
-        <strong>Buttons</strong><br>
-    <f:if condition="{data.button_items}">
-        <f:then>
-            <div style="margin: 8px 0;">
-            <f:for each="{data.button_items}" as="button" iteration="iter">
-                <div style="margin-bottom:8px; padding-left:0.5em; border-left:3px solid #ff8172;">
-                    <strong>Text:</strong> {button.text} | 
-                    <strong>Layout:</strong> {button.style} | 
-                    <strong>Disabled:</strong> {f:if(condition: button.disabled, then: 'Ja', else: 'Nein')} | 
-                    <strong>Link:</strong> {f:uri.typolink(parameter: button.link)}
+    <f:section name="Content">
+            <strong>Buttons</strong><br>
+        <f:if condition="{data.button_items}">
+            <f:then>
+                <div style="margin: 8px 0;">
+                <f:for each="{data.button_items}" as="button" iteration="iter">
+                    <div style="margin-bottom:8px; padding-left:0.5em; border-left:3px solid #ff8172;">
+                        <strong>Text:</strong> {button.text} | 
+                        <strong>Layout:</strong> {button.style} | 
+                        <strong>Disabled:</strong> {f:if(condition: button.disabled, then: 'Ja', else: 'Nein')} | 
+                        <strong>Link:</strong> {f:uri.typolink(parameter: button.link)}
+                    </div>
+                </f:for>
                 </div>
-            </f:for>
-            </div>
-            <small>
-                <strong>Einstellungen:</strong> 
-                Größe: 
-                <f:switch expression="{data.bullets_type}">
-                    <f:case value="1">Standard</f:case>
-                    <f:case value="2">Klein</f:case>
-                    <f:case value="3">Groß</f:case>
-                    <f:defaultCase>Standard</f:defaultCase>
-                </f:switch>, 
-                Position: 
-                <f:switch expression="{data.table_enclosure}">
-                    <f:case value="1">Links</f:case>
-                    <f:case value="2">Mitte</f:case>
-                    <f:case value="3">Rechts</f:case>
-                    <f:defaultCase>Links</f:defaultCase>
-                </f:switch>
-                <f:if condition="{data.button_block}">, Block aktiviert</f:if>
-                <f:if condition="{data.button_group}">, Group aktiviert</f:if>
-                <f:if condition="{data.button_group_vertical}">, Vertikal</f:if>
-            </small>
-        </f:then>
-        <f:else>
-            <em>Bitte mindestens einen Button anlegen!</em>
-        </f:else>
-    </f:if>
-</f:section>
+                <small>
+                    <strong>Einstellungen:</strong> 
+                    Größe: 
+                    <f:switch expression="{data.bullets_type}">
+                        <f:case value="1">Standard</f:case>
+                        <f:case value="2">Klein</f:case>
+                        <f:case value="3">Groß</f:case>
+                        <f:defaultCase>Standard</f:defaultCase>
+                    </f:switch>, 
+                    Position: 
+                    <f:switch expression="{data.table_enclosure}">
+                        <f:case value="1">Links</f:case>
+                        <f:case value="2">Mitte</f:case>
+                        <f:case value="3">Rechts</f:case>
+                        <f:defaultCase>Links</f:defaultCase>
+                    </f:switch>
+                    <f:if condition="{data.button_block}">, Block aktiviert</f:if>
+                    <f:if condition="{data.button_group}">, Group aktiviert</f:if>
+                    <f:if condition="{data.button_group_vertical}">, Vertikal</f:if>
+                </small>
+            </f:then>
+            <f:else>
+                <em>Bitte mindestens einen Button anlegen!</em>
+            </f:else>
+        </f:if>
+    </f:section>
 
-<f:section name="Footer">
-    <small>LIEPS - Element</small>
-</f:section>
+    <f:section name="Footer">
+        (LIEPS) Element zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">{data.rawRecord.tstamp}</f:format.date>
+    </f:section>
 
 </html>

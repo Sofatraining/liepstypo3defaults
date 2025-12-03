@@ -1,28 +1,30 @@
 {namespace be=TYPO3\CMS\Backend\ViewHelpers}
+
 <html data-namespace-typo3-fluid="true">
 
-<f:layout name="Preview"/>
+    <f:layout name="Preview"/>
 
-<f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</be:link.editRecord>
-</f:section>
+    <f:section name="Header">
+        <be:link.editRecord uid="{data.uid}" table="{data.mainType}">{data.header}</be:link.editRecord>
+    </f:section>
 
-<f:section name="Content">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="file">
-            <picture>
-                <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
-            </picture>
-        </f:for>
-    </f:if>
-    <div style="margin: 10px 0 0 0;">
-        <f:if condition="{data.email}"><strong>E-Mail:</strong> {data.email}<br></f:if>
-        <f:if condition="{data.phone}"><strong>Telefon:</strong> {data.phone}</f:if>
-    </div>
-</f:section>
+    <f:section name="Content">
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="file">
+                <picture>
+                    <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
+                </picture>
+            </f:for>
+        </f:if>
+        <div style="margin: 10px 0 0 0;">
+            <f:if condition="{data.email}"><strong>E-Mail:</strong> {data.email}<br></f:if>
+            <f:if condition="{data.phone}"><strong>Telefon:</strong> {data.phone}</f:if>
+        </div>
+    </f:section>
 
-<f:section name="Footer">
-    <small>LIEPS - Element</small>
-</f:section>
+    <f:section name="Footer">
+        (LIEPS) Element zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">{data.rawRecord.tstamp}</f:format.date>
+    </f:section>
 
 </html>
