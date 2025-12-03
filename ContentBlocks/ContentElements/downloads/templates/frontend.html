@@ -4,7 +4,7 @@
     <f:for each="{data.items}" as="item">
       <f:if condition="{item.file}">
         <f:for each="{item.file}" as="ref"> <!-- Collection, auch bei 1 Element -->
-          <f:link.typolink parameter="t3://file?uid={ref.originalFile.properties.uid}" class="border rounded shadow-sm w-100 text-start d-flex align-items-center gap-3 link" target="_blank" additionalAttributes="{rel: 'noopener noreferrer'}" title="Download starten: {item.title}">
+          <f:link.typolink parameter="t3://file?uid={ref.originalFile.properties.uid}" class="border shadow-sm w-100 text-start d-flex align-items-center gap-3 link" target="_blank" additionalAttributes="{rel: 'noopener noreferrer'}" title="Download starten: {item.title}">
             <span class="icon d-inline-flex align-items-center justify-content-center px-3 py-2 bg-white" aria-hidden="true">
               <i class="{f:if(condition: item.icon, then: item.icon, else: 'fa-solid fa-file')} fs-4"></i>
             </span>
