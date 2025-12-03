@@ -1,6 +1,6 @@
 name: liepsgmbh/testimonials
 typeName: testimonials
-group: LIEPS Seiteninhalte
+group: LIEPS Inhaltselemente
 prefixFields: true
 basics:
   - TYPO3/Appearance
