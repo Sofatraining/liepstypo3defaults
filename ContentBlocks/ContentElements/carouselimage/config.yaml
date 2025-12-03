@@ -1,6 +1,6 @@
 name: liepsgmbh/carouselimage
 typeName: carouselimage
-group: LIEPS Seiteninhalte
+group: LIEPS Inhaltselemente
 basics:
   - TYPO3/Appearance
   - TYPO3/Links
