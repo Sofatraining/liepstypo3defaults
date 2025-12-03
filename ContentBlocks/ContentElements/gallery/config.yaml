@@ -46,16 +46,14 @@ fields:
     fields:
       - identifier: image
         type: File
-        label: 'Bilder'
-        allowed: jpg,jpeg,png
-        minitems: 1
+        label: 'Bild'
+        allowedExtensions: [jpg, png]
+        maxItems: 1
         maxitems: 30
         extendedPalette: true
         appearance:
           collapseAll: true
           levelLinksPosition: bottom
-
-  
   
   # Bildauswahl
   #- identifier: file_collections
