@@ -151,6 +151,12 @@ html {
 
 /* CONTENT */
 
+/* Teaser */
+.card {
+    --bs-card-border-color: #f1f1f1;
+    --bs-card-border-width: 1px;
+}
+
 /* Ansprechpartnerbox */
 .authorBox {border: 1px solid #f1f1f1;}
 .authorBoxHead {background: var(--bs-primary);color: var(--bs-white);padding:10px 20px 10px 20px;}
