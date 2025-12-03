@@ -39,6 +39,7 @@ fields:
   - identifier: items
     type: Collection
     label: 'Bilder'
+    labelField: image
     appearance:
       collapseAll: true
       levelLinksPosition: bottom
