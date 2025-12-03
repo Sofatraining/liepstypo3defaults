@@ -10,18 +10,18 @@
 
     <f:section name="Content">
         <f:variable name="colCount">
-            <f:if condition="{data.header_position} == 'col-lg-6'">
+            <f:if condition="{data.header_position} == 'col-md-6'">
                 <f:then>2</f:then>
                 <f:else>
                     <f:if condition="{data.header_position} == 'col-xl-4 col-lg-6'">
                         <f:then>3</f:then>
                         <f:else>
-                            <f:if condition="{data.header_position} == 'col-xl-3 col-lg-6'">
+                            <f:if condition="{data.header_position} == 'col-xxl-3 col-xl-4 col-lg-6'">
                                 <f:then>4</f:then>
                                 <f:else>
-                                    <f:if condition="{data.header_position} == 'col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6'">
+                                    <f:if condition="{data.header_position} == 'col-xxl-2 col-xl-3 col-lg-4 col-md-6'">
                                         <f:then>6</f:then>
-                                        <f:else>–</f:else>
+                                        <f:else>1</f:else>
                                     </f:if>
                                 </f:else>
                             </f:if>

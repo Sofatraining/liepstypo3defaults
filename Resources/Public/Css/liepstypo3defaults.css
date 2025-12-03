@@ -152,7 +152,7 @@ html {
 /* CONTENT */
 
 /* Ansprechpartnerbox */
-.authorBox {border: 1px solid var(--bs-primary);}
+.authorBox {border: 1px solid #f1f1f1;}
 .authorBoxHead {background: var(--bs-primary);color: var(--bs-white);padding:10px 20px 10px 20px;}
 .authorBoxContent {padding:20px 20px 15px 20px;line-height: 28px;}
 .authorName {color: var(--bs-primary);font-size: 1.2rem;margin-bottom:0;}
