@@ -1,0 +1,49 @@
+name: liepstypo3defaults/gallery
+typeName: gallery
+group: LIEPS Seiteninhalte
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  # Auswahl der Spaltenbreite
+  - identifier: header_position
+    type: Select
+    renderType: selectSingle
+    useExistingField: true
+    label: 'Spalten'
+    default: 'col-xl-4 col-lg-6'
+    items:
+      - { label: '1 Spalte', value: 'col-12' }
+      - { label: '2 Spalten', value: 'col-md-6' }
+      - { label: '3 Spalten', value: 'col-xl-4 col-lg-6' }
+      - { label: '4 Spalten', value: 'col-xxl-3 col-xl-4 col-lg-6' }
+      - { label: '6 Spalten', value: 'col-xxl-2 col-xl-3 col-lg-4 col-md-6' } 
+
+  # Lightbox an/aus
+  - identifier: imagewidth
+    useExistingField: true
+    type: Checkbox
+    label: 'Lightbox verwenden'
+    default: 0
+
+  # Innenabstand
+  - identifier: imageheight
+    useExistingField: true
+    type: Checkbox
+    label: 'Innenabstand (px-5)'
+    default: 0
+
+  # Bildauswahl
+  - identifier: file_collections
+    useExistingField: true
+    type: File
+    label: 'Bilder'
+    allowed: jpg,jpeg,png
+    minitems: 1
+    maxitems: 30
+    extendedPalette: true
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom

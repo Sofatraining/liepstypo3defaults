@@ -1,0 +1,50 @@
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+<html data-namespace-typo3-fluid="true">
+
+    <f:layout name="Preview" />
+
+    <f:section name="Header">
+        <strong>Bilder-Galerie</strong>
+    </f:section>
+
+    <f:section name="Content">
+        <f:variable name="colCount">
+            <f:if condition="{data.header_position} == 'col-lg-6'">
+                <f:then>2</f:then>
+                <f:else>
+                    <f:if condition="{data.header_position} == 'col-xl-4 col-lg-6'">
+                        <f:then>3</f:then>
+                        <f:else>
+                            <f:if condition="{data.header_position} == 'col-xl-3 col-lg-6'">
+                                <f:then>4</f:then>
+                                <f:else>
+                                    <f:if condition="{data.header_position} == 'col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6'">
+                                        <f:then>6</f:then>
+                                        <f:else>–</f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:variable>
+
+        <div>
+            Spalten: <strong>{colCount}</strong><br />
+            <f:if condition="{data.file_collections}">
+                <f:for each="{data.file_collections}" as="image">
+                    <f:image image="{image}" maxWidth="100" cropVariant="default" style="padding-right:15px;" />
+                </f:for>
+            </f:if>
+        </div>
+    </f:section>
+
+    <f:section name="Footer">
+        <f:variable name="lastUpdated">
+            <f:format.date>{data.rawRecord.tstamp}</f:format.date>
+        </f:variable>
+        <div>Element zuletzt geändert: {lastUpdated}</div>
+    </f:section>
+
+</html>

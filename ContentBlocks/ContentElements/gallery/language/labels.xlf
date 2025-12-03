@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/gallery">
+    <body>
+      <trans-unit id="title">
+        <source>Bilder-Galerie</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Bilder in Bootstrap-Spalten mit oder ohne Bildvergrößerung.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
