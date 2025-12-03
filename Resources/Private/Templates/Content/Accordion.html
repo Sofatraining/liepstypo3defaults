@@ -41,7 +41,7 @@
 			</f:if>
 		</f:for>
 
-		<div class="accordion {f:if(condition: '{flush}', then: 'accordion-flush')}" id="accordion-{record.uid}">
+		<div class="accordion shadow-sm{f:if(condition: '{flush}', then: ' accordion-flush')}" id="accordion-{record.uid}">
 			<f:for each="{panels}" as="panel" iteration="iteration">
 				<f:if condition="!{panel.panel.hidden}">
 					<div class="accordion-item">
