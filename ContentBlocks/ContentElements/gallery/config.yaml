@@ -25,14 +25,14 @@ fields:
   - identifier: imageborder
     useExistingField: true
     type: Checkbox
-    label: 'Lightbox verwenden'
+    label: 'Lightbox verwenden (Bildvergrößerung beim Anklicken)'
     default: 0
 
   # Innenabstand
   - identifier: image_zoom
     useExistingField: true
     type: Checkbox
-    label: 'großer Abstand (p-5)'
+    label: 'großer Abstand (p-4) um die Bilder'
     default: 0
 
   # Bildauswahl
