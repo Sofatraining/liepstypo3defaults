@@ -5,7 +5,7 @@
 
     <f:if condition="{data.file_collections}">
         <div class="row{f:if(condition: '{data.imageborder} == 1', then: ' px-5')}">
-            <f:for each="{data.file_collections}" as="image">
+            <f:for each="{data.items}" as="image">
                 <div class="{data.header_position}{f:if(condition: '{data.imageborder} == 1', then: ' px-5')}">
                     <f:if condition="{data.image_zoom} == 0">
                         <f:then>

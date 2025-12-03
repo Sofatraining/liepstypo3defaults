@@ -32,8 +32,8 @@
 
         <div>
             Spalten: <strong>{colCount}</strong><br />
-            <f:if condition="{data.file_collections}">
-                <f:for each="{data.file_collections}" as="image">
+            <f:if condition="{data.items}">
+                <f:for each="{data.items}" as="image">
                     <f:image image="{image}" maxWidth="100" cropVariant="default" style="padding-right:15px;" />
                 </f:for>
             </f:if>
