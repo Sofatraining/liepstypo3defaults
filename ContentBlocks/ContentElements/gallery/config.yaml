@@ -36,14 +36,36 @@ fields:
     default: 0
 
   # Bildauswahl
-  - identifier: file_collections
-    useExistingField: true
-    type: File
+  - identifier: items
+    type: Collection
     label: 'Bilder'
-    allowed: jpg,jpeg,png
-    minitems: 1
-    maxitems: 30
-    extendedPalette: true
+    labelField: title
     appearance:
       collapseAll: true
       levelLinksPosition: bottom
+    fields:
+      - identifier: image
+        type: File
+        label: 'Bilder'
+        allowed: jpg,jpeg,png
+        minitems: 1
+        maxitems: 30
+        extendedPalette: true
+        appearance:
+          collapseAll: true
+          levelLinksPosition: bottom
+
+  
+  
+  # Bildauswahl
+  #- identifier: file_collections
+  #  useExistingField: true
+  #  type: File
+  #  label: 'Bilder'
+  #  allowed: jpg,jpeg,png
+  #  minitems: 1
+  #  maxitems: 30
+  #  extendedPalette: true
+  #  appearance:
+  #    collapseAll: true
+  #    levelLinksPosition: bottom
