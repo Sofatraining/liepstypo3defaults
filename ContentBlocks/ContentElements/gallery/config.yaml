@@ -22,14 +22,14 @@ fields:
       - { label: '6 Spalten', value: 'col-xxl-2 col-xl-3 col-lg-4 col-md-6' } 
 
   # Lightbox an/aus
-  - identifier: imagewidth
+  - identifier: imageborder
     useExistingField: true
     type: Checkbox
     label: 'Lightbox verwenden'
     default: 0
 
   # Innenabstand
-  - identifier: imageheight
+  - identifier: image_zoom
     useExistingField: true
     type: Checkbox
     label: 'Innenabstand (px-5)'
