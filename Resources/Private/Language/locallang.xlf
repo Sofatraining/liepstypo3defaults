@@ -16,7 +16,7 @@
 				<source>LIEPS Container</source>
 			</trans-unit>
 			<trans-unit id="flux.newContentWizard.content">
-				<source>LIEPS Spezial</source>
+				<source>LIEPS Rahmenelemente</source>
 			</trans-unit>
 			<trans-unit id="flux.newContentWizard.test">
 				<source>Test</source>
