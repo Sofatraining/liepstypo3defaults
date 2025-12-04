@@ -116,8 +116,6 @@ Migration Flux to Content-Blocks-Elements (testimonials/gallery/scrollspy/modalb
 ***
 
 
-
-
 Nächste Schritte:
 
 3. Optimierung für TYPO3 13.4
