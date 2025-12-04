@@ -23,6 +23,12 @@
             </div>
         </f:if>
 
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="image">
+				<f:image image="{image}" maxWidth="100" cropVariant="default" style="padding-top: 4px;" />
+            </f:for>
+        </f:if>
+
         <div style="margin-top: 4px;">
             <strong>Button:</strong>
             <span> {data.table_caption}</span>
