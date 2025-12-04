@@ -1,6 +1,6 @@
 name: liepsgmbh/downloads
 typeName: downloads
-group: LIEPS Seiteninhalte
+group: LIEPS Inhaltselemente
 prefixFields: true
 basics:
   - TYPO3/Appearance
