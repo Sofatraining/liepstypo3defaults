@@ -189,15 +189,6 @@
 			<trans-unit id="flux.carousel.label.grid.column.prefix">
 				<source>Carousel-Element</source>
 			</trans-unit>
-			<trans-unit id="flux.carousel-image">
-				<source>Carousel-Bild</source>
-			</trans-unit>
-			<trans-unit id="flux.carousel-image.description">
-				<source>Für die Verwendung innhalb eines Carousels</source>
-			</trans-unit>
-			<trans-unit id="flux.carousel-image.fields.settings.files">
-				<source>Bild</source>
-			</trans-unit>
 			<trans-unit id="flux.offcanvas">
 				<source>OffCanvas</source>
 			</trans-unit>
@@ -218,54 +209,6 @@
 			</trans-unit>
 			<trans-unit id="flux.offcanvas.fields.settings.additionalClassesCanvas">
 				<source>zusätzliche CSS-Klassen der Canvas-Box</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery">
-				<source>Bilder-Galerie</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery.description">
-				<source>Bildergalerie in Spalten mit/ohne Bildvergrößerung</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery.fields.selectCol">
-				<source>Anzahl der Spalten</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery.fields.lightbox">
-				<source>Bildvergrößerung</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery.fields.margin">
-				<source>Großer Bildabstand</source>
-			</trans-unit>
-			<trans-unit id="flux.gallery.fields.settings.files">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="flux.faq">
-				<source>Scroll Spy</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.description">
-				<source>Ein Scroll-Spy Element</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.faq-headline">
-				<source>Titel Scroll Spy</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.faq-title">
-				<source>Titel des Elements</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.faq-text">
-				<source>Text des Elements</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.settings.section.rowClasses">
-				<source>CSS-Klassen für den FAQ-Container</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.settings.section.col1Classes">
-				<source>CSS-Klassen für den FAQ-Selector-Container</source>
-			</trans-unit>
-			<trans-unit id="flux.faq.fields.settings.section.col2Classes">
-				<source>CSS-Klassen für den FAQ-List-Container</source>
-			</trans-unit>
-			<trans-unit id="flux.testimonials">
-				<source>Testimonials</source>
-			</trans-unit>
-			<trans-unit id="flux.testimonials.description">
-				<source>Anlegen und Bearbeiten von Testimonials</source>
 			</trans-unit>
 		</body>
 	</file>

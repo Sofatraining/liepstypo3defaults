@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- Hintergrund / Seite -->
+  <rect x="1" y="2" width="14" height="12" rx="1"
+        fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+
+  <!-- Angedeuteter Seiten-Content im Hintergrund -->
+  <rect x="2.2" y="3" width="8" height="0.7" rx="0.35"
+        fill="#fff" opacity="0.35"/>
+  <rect x="2.2" y="4.1" width="7" height="0.7" rx="0.35"
+        fill="#fff" opacity="0.3"/>
+  <rect x="2.2" y="5.2" width="6" height="0.7" rx="0.35"
+        fill="#fff" opacity="0.25"/>
+
+  <!-- Modal-Box zentriert -->
+  <rect x="3" y="4.5" width="10" height="6.5" rx="0.7"
+        fill="#fff" opacity="0.97"/>
+
+  <!-- Modal-Header -->
+  <rect x="3.6" y="5.3" width="7.4" height="0.9" rx="0.45"
+        fill="#ff8172" opacity="0.95"/>
+
+  <!-- Modal-Textzeilen -->
+  <rect x="3.6" y="7" width="8.4" height="0.7" rx="0.35"
+        fill="#ff8172" opacity="0.35"/>
+  <rect x="3.6" y="8.2" width="7.2" height="0.7" rx="0.35"
+        fill="#ff8172" opacity="0.3"/>
+  <rect x="3.6" y="9.4" width="6.4" height="0.7" rx="0.35"
+        fill="#ff8172" opacity="0.3"/>
+
+  <!-- Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1"
+        fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>
