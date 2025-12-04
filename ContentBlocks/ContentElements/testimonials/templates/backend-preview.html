@@ -9,15 +9,15 @@
     </f:section>
 
     <f:section name="Content">
-        <div style="display:flex;align-items:center;gap:0;padding:.25rem 0;border-top:1px solid #e5e5e5;"></div>
         <f:for each="{data.items}" as="item">
-        <div style="margin: 5px 0 0 0;">
-            <f:format.crop maxCharacters="80">{item.title}</f:format.crop>
-        </div>    
-        <div style="margin: 0 0 10px 0;">
-            <f:format.crop maxCharacters="80">{item.bewertung}</f:format.crop>
-        </div>
-        <div style="display:flex;align-items:center;gap:0;padding:.25rem 0;border-top:1px solid #e5e5e5;"></div>
+            <div style="margin-bottom:8px; padding-left:0.5em; border-left:3px solid #ff8172;">
+                <div style="margin: 5px 0 0 0;">
+                    <f:format.crop maxCharacters="80"><b>{item.title}</b></f:format.crop>
+                </div>    
+                <div style="margin: 0 0 10px 0;">
+                    <f:format.crop maxCharacters="120">{item.bewertung}</f:format.crop>
+                </div>
+            </div>
         </f:for>
     </f:section>
 
