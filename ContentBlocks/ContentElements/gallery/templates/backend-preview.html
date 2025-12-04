@@ -1,0 +1,77 @@
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+
+<html data-namespace-typo3-fluid="true">
+
+    <f:layout name="Preview" />
+
+    <f:section name="Header">
+        <strong>Bilder-Galerie</strong>
+    </f:section>
+
+    <f:section name="Content">
+        <f:variable name="colCount">
+            <f:if condition="{data.header_position} == 'col-md-6'">
+                <f:then>2</f:then>
+                <f:else>
+                    <f:if condition="{data.header_position} == 'col-xl-4 col-lg-6'">
+                        <f:then>3</f:then>
+                        <f:else>
+                            <f:if condition="{data.header_position} == 'col-xxl-3 col-xl-4 col-lg-6'">
+                                <f:then>4</f:then>
+                                <f:else>
+                                    <f:if condition="{data.header_position} == 'col-xxl-2 col-xl-3 col-lg-4 col-md-6'">
+                                        <f:then>6</f:then>
+                                        <f:else>1</f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:variable>
+
+        <div>
+            Anzahl der Spalten: <strong>{colCount}</strong><br />
+            <f:if condition="{data.image}">
+                <f:for each="{data.image}" as="image">
+					<f:image image="{image}" maxWidth="100" cropVariant="default" style="padding: 10px 15px 0 0;" />
+                </f:for>
+            </f:if>
+        </div>
+    </f:section>
+
+    <f:section name="Footer">
+        <b>LIEPS Inhaltselement:</b> Zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">
+            {data.rawRecord.tstamp}
+        </f:format.date>
+
+        <!-- Abstand davor nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_before_class}">
+            <br />
+            <b>Abstand davor:</b>
+            <f:switch expression="{data.space_before_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+
+        <!-- Abstand danach nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_after_class}">
+            <br />
+            <b>Abstand danach:</b>
+            <f:switch expression="{data.space_after_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+    </f:section>
+
+</html>

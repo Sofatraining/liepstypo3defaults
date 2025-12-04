@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/stickymenu">
+    <body>
+      <trans-unit id="title">
+        <source>Sticky Menü</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Ein Element mit festem Menü links und scrollendem Inhalten rechts.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

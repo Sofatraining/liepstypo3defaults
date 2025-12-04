@@ -1,26 +1,56 @@
-<html xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+<html data-namespace-typo3-fluid="true">
 
-<f:layout name="Preview"/>
+    <f:layout name="Preview"/>
 
-<f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
-</f:section>
+    <f:section name="Header">
+        <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
+    </f:section>
 
-<f:section name="Content">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="file">
-            <picture>
-                <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
-            </picture>
-        </f:for>
-    </f:if>
-    <div style="margin: 10px 0 0 0;">
-        <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop>
-    </div>
-</f:section>
+    <f:section name="Content">
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="file">
+                <picture>
+                    <f:media file="{file}" width="80" title="{file.title}" alt="{file.alternative}" cropVariant="default" />
+                </picture>
+            </f:for>
+        </f:if>
+        <div style="margin: 10px 0 0 0;">
+            <f:format.crop maxCharacters="80">{data.bodytext}</f:format.crop>
+        </div>
+    </f:section>
 
-<f:section name="Footer">
-    <small>LIEPS - Element</small>
-</f:section>
+    <f:section name="Footer">
+        <b>LIEPS Inhaltselement:</b> Zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">
+            {data.rawRecord.tstamp}
+        </f:format.date>
+
+        <!-- Abstand davor nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_before_class}">
+            <br />
+            <b>Abstand davor:</b>
+            <f:switch expression="{data.space_before_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+
+        <!-- Abstand danach nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_after_class}">
+            <br />
+            <b>Abstand danach:</b>
+            <f:switch expression="{data.space_after_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+    </f:section>
 
 </html>

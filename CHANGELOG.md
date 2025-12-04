@@ -111,15 +111,12 @@ Migration Flux to Content-Blocks-Elements (card/ap/timeline/teaser), Neue Icons
 #### v4.0.5
 Compatibility to Flux > 11.0.3, Migration Flux to Content-Blocks-Elements (stoerer/carouselimage/downloads/modalautostart), Bugfixes & Cleaning
 ***
-
-
+#### v4.0.6
+Migration Flux to Content-Blocks-Elements (testimonials/gallery/scrollspy/modalbox), Bugfixes & Cleaning
+***
 
 
 Nächste Schritte:
-
-2. Flux zu Content Blocks Migration
-Migration von Flux-Elementen zu Content Blocks für einfache Elemente ohne Nested Elements
-
 
 3. Optimierung für TYPO3 13.4
 Nutzung des AssetCollector-API statt VHS
@@ -133,25 +130,19 @@ Nutzung moderner Bootstrap-Layouts und Komponenten
 Erweiterte Nutzung von CSS-Variablen für Theming
 
 
-5. Code-Qualität
-PSR-12 Coding Standards
-Einführung von Static Analysis (PHPStan oder Psalm)
-Unit Tests für PHP-Klassen
-End-to-End Tests mit Cypress oder Playwright
-
-6. Dokumentation
+5. Dokumentation
 Verbesserte PHP-Dokumentation mit PHPDoc
 Aktualisierung der README.md
 Strukturiertes Changelog nach Keep a Changelog-Format
 Detaillierte Content-Block-Dokumentation
 
-7. Sicherheit und Performance
+6. Sicherheit und Performance
 Content-Security-Policy-Unterstützung
 Subresource Integrity für externe Ressourcen
 Lazy Loading für Bilder und iframes
 HTTP/2 Optimierung
 
-8. Barrierefreiheit
+7. Barrierefreiheit
 WCAG 2.1 AA-Konformität
 Verbesserte Tastaturnavigation
 Ergänzung fehlender aria-Attribute

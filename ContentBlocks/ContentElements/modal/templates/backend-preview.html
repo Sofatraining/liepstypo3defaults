@@ -1,0 +1,77 @@
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
+
+<html data-namespace-typo3-fluid="true">
+
+    <f:layout name="Preview"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="Content">
+        <f:if condition="{data.header}">
+            <div>
+                <strong>Titel:</strong>
+                <span> {data.header}</span>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.bodytext}">
+            <div style="margin-top: 4px;">
+                <strong>Text:</strong>
+                <f:format.crop maxCharacters="90">
+                    <f:format.stripTags>{data.bodytext}</f:format.stripTags>
+                </f:format.crop>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="image">
+				<f:image image="{image}" maxWidth="100" cropVariant="default" style="padding-top: 4px;" />
+            </f:for>
+        </f:if>
+
+        <div style="margin-top: 4px;">
+            <strong>Button:</strong>
+            <span> {data.table_caption}</span>
+        </div>
+
+        <f:if condition="{data.subheader}">
+            <div style="margin-top: 4px; font-size: 0.8em; color: #999;">
+                <strong>.modal-dialog - zusätzliche Klassen:</strong> {data.subheader}
+            </div>
+        </f:if>
+    </f:section>
+
+    <f:section name="Footer">
+        <b>LIEPS Inhaltselement:</b> Zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">
+            {data.rawRecord.tstamp}
+        </f:format.date>
+
+        <!-- Abstand davor nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_before_class}">
+            <br />
+            <b>Abstand davor:</b>
+            <f:switch expression="{data.space_before_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+
+        <!-- Abstand danach nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_after_class}">
+            <br />
+            <b>Abstand danach:</b>
+            <f:switch expression="{data.space_after_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+    </f:section>
+
+</html>

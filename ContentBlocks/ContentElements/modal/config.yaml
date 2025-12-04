@@ -1,0 +1,53 @@
+name: liepstypo3defaults/modal
+typeName: modal
+group: LIEPS Inhaltselemente
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+
+fields:
+  - identifier: header
+    useExistingField: true
+    label: 'Titel der Modalbox'
+    required: true
+    max: 90
+
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    label: 'Textinhalt der Modalbox'
+    placeholder: 'Geben Sie hier den Text ein.'
+
+  - identifier: image
+    useExistingField: true
+    type: File
+    label: 'Bilder'
+    maxItems: 1
+    appearance:
+      collapseAll: true
+  - identifier: table_class
+    useExistingField: true
+    type: Select
+    renderType: selectSingle
+    label: 'Position des Bildes'
+    default: 'top'
+    items:
+      - { label: 'Bitte auswählen ...', value: 'top' }
+      - { label: 'Über dem Fließtext', value: 'top' }
+      - { label: 'Unter dem Fließtext', value: 'bottom' }
+      
+
+  - identifier: subheader
+    useExistingField: true
+    type: Text
+    label: 'Zusätzliche CSS-Klassen für .modal-dialog (z.B. modal-xl oder modal-lg) - Leerzeichen getrennt'
+    max: 125
+
+  - identifier: table_caption
+    useExistingField: true
+    type: Text
+    label: 'Text im Button (Aufruf der Modalbox)'
+    required: true
+    max: 75

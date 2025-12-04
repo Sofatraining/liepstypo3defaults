@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- Hintergrund -->
+  <rect x="1" y="2" width="14" height="12" rx="1"
+        fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+
+  <!-- Berechnung:
+       Innenbereich: 14×12
+       Galeriefläche: Breite = 3×3.2 + 2×0.6 = 10.4
+                       Höhe  = 3×2.5 + 2×0.5 = 8.5
+       Zentrierung:  (14 - 10.4)/2 = 1.8  → startX
+                     (12 - 8.5)/2 = 1.75 → startY
+  -->
+
+  <!-- Spalte 1 -->
+  <rect x="2.6" y="3.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="2.6" y="6.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="2.6" y="9.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+
+  <!-- Spalte 2 -->
+  <rect x="6.4" y="3.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="6.4" y="6.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="6.4" y="9.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+
+  <!-- Spalte 3 -->
+  <rect x="10.2" y="3.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="10.2" y="6.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+  <rect x="10.2" y="9.75" width="3.2" height="2.5" rx="0.4" fill="#fff" opacity="0.95"/>
+
+  <!-- Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1"
+        fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>

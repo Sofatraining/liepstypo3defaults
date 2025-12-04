@@ -1,0 +1,88 @@
+<f:layout name="Default"/>
+<f:section name="Header" />
+
+<f:section name="Main">
+
+    <!-- eindeutige ID pro Inhaltselement (lokalisierungssicher) -->
+    <f:variable name="id" value="modal-{data.computedProperties.localizedUid}" />
+
+    <!-- Button zum Öffnen der Modalbox -->
+    <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#{id}">
+        {data.table_caption}
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade"
+         id="{id}"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="ModalLabel-{id}"
+         aria-hidden="true">
+        <div class="modal-dialog{f:if(condition: data.subheader, then: ' {data.subheader}')}">
+            <div class="modal-content">
+
+                <!-- Header -->
+                <div class="modal-header">
+                    <f:if condition="{data.header}">
+                        <h4 class="modal-title" id="ModalLabel-{id}">
+                            {data.header}
+                        </h4>
+                    </f:if>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+
+                    <!-- Bild ÜBER dem Fließtext (Standard: top / Bitte auswählen ...) -->
+                    <f:if condition="{data.image}">
+                        <f:if condition="{data.table_class} != 'bottom'">
+                            <div class="mb-3">
+                                <f:for each="{data.image}" as="image">
+                                    <f:image image="{image}" class="img-fluid" />
+                                </f:for>
+                            </div>
+                        </f:if>
+                    </f:if>
+
+                    <!-- Text -->
+                    <f:if condition="{data.bodytext}">
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </f:if>
+
+                    <!-- Bild UNTER dem Fließtext -->
+                    <f:if condition="{data.image}">
+                        <f:if condition="{data.table_class} == 'bottom'">
+                            <div class="mt-3">
+                                <f:for each="{data.image}" as="image">
+                                    <f:image image="{image}" class="img-fluid" />
+                                </f:for>
+                            </div>
+                        </f:if>
+                    </f:if>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Schließen
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</f:section>
+
+</html>

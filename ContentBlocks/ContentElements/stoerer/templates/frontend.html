@@ -1,26 +1,8 @@
 <f:layout name="Default" />
+<f:section name="Header" />
 
 <f:section name="Main">
-  <script src="/typo3conf/ext/liepstypo3defaults/Resources/Public/Js/js.cookie.min.js"></script>
-  <f:asset.script identifier="stoerer{data.uid}" movable="1">
-    $(function() {
-      var bodyId = $('body').attr('id'),
-          $stoerer = $('.stoerer');
-      if (bodyId && $stoerer.length) {
-        var cookieName = 'stoererClosed_' + bodyId;
-        var lastClosed = parseInt(Cookies.get(cookieName) || 0, 10);
-        if (!lastClosed || (Date.now() - lastClosed) > 10 * 60 * 1000) {
-          $stoerer.show();
-        } else {
-          $stoerer.hide();
-        }
-        $('.stoerer-closer').on('click', function() {
-          Cookies.set(cookieName, Date.now());
-          $stoerer.hide();
-        });
-      }
-    });
-  </f:asset.script>
+  <f:asset.script identifier="stoerer-js-{data.uid}" src="{cb:assetPath()}/stoerer.js" />
 
   <div class="stoerer p-3" style="display:none;">
     <div class="stoerer-head d-flex justify-content-end">
@@ -35,7 +17,7 @@
       </div>
       <f:if condition="{data.bodytext}">
         <div class="stoerer-teasertext text-center card-body-top">
-          <small>{data.bodytext}</small>
+          <p>{data.bodytext}</p>
         </div>
       </f:if>
     </div>

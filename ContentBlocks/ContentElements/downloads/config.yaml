@@ -1,6 +1,6 @@
 name: liepsgmbh/downloads
 typeName: downloads
-group: LIEPS Seiteninhalte
+group: LIEPS Inhaltselemente
 prefixFields: true
 basics:
   - TYPO3/Appearance
@@ -11,6 +11,9 @@ fields:
     type: Collection
     label: 'Einträge'
     labelField: title
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
     fields:
       - identifier: title
         type: Text

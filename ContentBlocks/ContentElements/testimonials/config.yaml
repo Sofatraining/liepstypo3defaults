@@ -1,0 +1,63 @@
+name: liepsgmbh/testimonials
+typeName: testimonials
+group: LIEPS Inhaltselemente
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  - identifier: header
+    useExistingField: true
+    label: 'Überschrift'
+    required: false
+    placeholder: 'Geben Sie hier die Überschrift ein.'
+  - identifier: header_position
+    type: Select
+    renderType: selectSingle
+    useExistingField: true
+    label: 'Anzahl Spalten'
+    default: 'col-xxl-3 col-xl-4 col-lg-6'
+    items:
+      - { label: '1 Spalte', value: 'col-12' }
+      - { label: '2 Spalten', value: 'col-md-6' }
+      - { label: '3 Spalten', value: 'col-xl-4 col-lg-6' }
+      - { label: '4 Spalten', value: 'col-xxl-3 col-xl-4 col-lg-6' }
+      - { label: '6 Spalten', value: 'col-xxl-2 col-xl-3 col-lg-4 col-md-6' }  
+  - identifier: items
+    type: Collection
+    label: 'Bewertungen'
+    labelField: title
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+    fields:
+      - identifier: title
+        type: Text
+        label: 'Name'
+        required: true 
+      - identifier: bild
+        type: File
+        label: 'Bild des Kunden'
+        allowedExtensions: [jpg, png]
+        maxItems: 1 
+      - identifier: sterne
+        type: Select
+        label: 'Sterne'
+        default: '5'
+        renderType: selectSingle
+        items:
+          - { label: '1 Stern', value: '1' }
+          - { label: '2 Sterne',  value: '2' }
+          - { label: '3 Sterne',  value: '3' }
+          - { label: '4 Sterne',  value: '4' }
+          - { label: '5 Sterne',  value: '5' }
+      - identifier: datum
+        type: DateTime
+        format: date
+        label: 'Datum der Bewertung' 
+      - identifier: bewertung
+        type: Textarea
+        label: 'Bewertungstext'
+        required: false
+        rows: 5

@@ -1,0 +1,282 @@
+name: liepstypo3defaults/stickymenu
+typeName: stickymenu
+group: LIEPS Inhaltselemente
+prefixFields: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+  - TYPO3/Categories
+fields:
+  #########################################################################
+  # Headline (faq-headline)
+  #########################################################################
+  - identifier: header
+    useExistingField: true
+    label: 'FAQ-Überschrift'
+    max: 120
+
+  #########################################################################
+  # FAQ-Panels (flux:form.section name="panels")
+  #########################################################################
+  - identifier: panels
+    type: Collection
+    label: 'FAQ-Einträge'
+    minitems: 1
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+    fields:
+      - identifier: title
+        type: Text
+        label: 'Titel'
+        required: true
+      - identifier: bild
+        type: File
+        label: 'Bilder'
+        maxItems: 3
+        appearance:
+          collapseAll: true
+      - identifier: bildposition
+        type: Select
+        renderType: selectSingle
+        label: 'Position des Bildes'
+        default: 'top'
+        items:
+          - { label: 'Über dem Fließtext', value: 'top' }
+          - { label: 'Unter dem Fließtext', value: 'bottom' }
+      - identifier: lightbox
+        type: Checkbox
+        label: 'Lightbox verwenden (Bildvergrößerung beim Anklicken)'
+        default: 0  
+      - identifier: text
+        type: Textarea
+        label: 'Text'
+        enableRichtext: true        
+
+  #########################################################################
+  # Layout-Settings als Collection (ausgelagert in eigene Tabelle)
+  # ersetzt: settings.col*xxl/xl/lg/md/sm/xs, settings.offset*, settings.section.*
+  #########################################################################
+  - identifier: collayout
+    type: Collection
+    label: 'Layout-Einstellungen'
+    minitems: 1
+    maxitems: 1
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+    fields:
+      # XXL (≥1400px)
+      - identifier: col1xxl
+        type: Select
+        renderType: selectSingle
+        label: 'XXL: Breite Spalte 1'
+        default: 'col-xxl-4'
+        items:
+          - { label: '1 - (col-xxl-1)', value: 'col-xxl-1' }
+          - { label: '2 - (col-xxl-2)', value: 'col-xxl-2' }
+          - { label: '3 - (col-xxl-3)', value: 'col-xxl-3' }
+          - { label: '4 - (col-xxl-4)', value: 'col-xxl-4' }
+          - { label: '5 - (col-xxl-5)', value: 'col-xxl-5' }
+          - { label: '6 - (col-xxl-6)', value: 'col-xxl-6' }
+          - { label: '7 - (col-xxl-7)', value: 'col-xxl-7' }
+          - { label: '8 - (col-xxl-8)', value: 'col-xxl-8' }
+          - { label: '9 - (col-xxl-9)', value: 'col-xxl-9' }
+          - { label: '10 - (col-xxl-10)', value: 'col-xxl-10' }
+          - { label: '11 - (col-xxl-11)', value: 'col-xxl-11' }
+          - { label: '12 - (col-xxl-12)', value: 'col-xxl-12' }
+
+      - identifier: col2xxl
+        type: Select
+        renderType: selectSingle
+        label: 'XXL: Breite Spalte 2'
+        default: 'col-xxl-7'
+        items:
+          - { label: '1 - (col-xxl-1)', value: 'col-xxl-1' }
+          - { label: '2 - (col-xxl-2)', value: 'col-xxl-2' }
+          - { label: '3 - (col-xxl-3)', value: 'col-xxl-3' }
+          - { label: '4 - (col-xxl-4)', value: 'col-xxl-4' }
+          - { label: '5 - (col-xxl-5)', value: 'col-xxl-5' }
+          - { label: '6 - (col-xxl-6)', value: 'col-xxl-6' }
+          - { label: '7 - (col-xxl-7)', value: 'col-xxl-7' }
+          - { label: '8 - (col-xxl-8)', value: 'col-xxl-8' }
+          - { label: '9 - (col-xxl-9)', value: 'col-xxl-9' }
+          - { label: '10 - (col-xxl-10)', value: 'col-xxl-10' }
+          - { label: '11 - (col-xxl-11)', value: 'col-xxl-11' }
+          - { label: '12 - (col-xxl-12)', value: 'col-xxl-12' }
+
+      - identifier: offsetXxl
+        type: Checkbox
+        label: 'XXL: Abstand zwischen den Spalten (offset-xxl-1)'
+        default: 1
+
+      # XL (≥1200px)
+      - identifier: col1xl
+        type: Select
+        renderType: selectSingle
+        label: 'XL: Breite Spalte 1'
+        default: 'col-xl-5'
+        items:
+          - { label: '1 - (col-xl-1)', value: 'col-xl-1' }
+          - { label: '2 - (col-xl-2)', value: 'col-xl-2' }
+          - { label: '3 - (col-xl-3)', value: 'col-xl-3' }
+          - { label: '4 - (col-xl-4)', value: 'col-xl-4' }
+          - { label: '5 - (col-xl-5)', value: 'col-xl-5' }
+          - { label: '6 - (col-xl-6)', value: 'col-xl-6' }
+          - { label: '7 - (col-xl-7)', value: 'col-xl-7' }
+          - { label: '8 - (col-xl-8)', value: 'col-xl-8' }
+          - { label: '9 - (col-xl-9)', value: 'col-xl-9' }
+          - { label: '10 - (col-xl-10)', value: 'col-xl-10' }
+          - { label: '11 - (col-xl-11)', value: 'col-xl-11' }
+          - { label: '12 - (col-xl-12)', value: 'col-xl-12' }
+
+      - identifier: col2xl
+        type: Select
+        renderType: selectSingle
+        label: 'XL: Breite Spalte 2'
+        default: 'col-xl-6'
+        items:
+          - { label: '1 - (col-xl-1)', value: 'col-xl-1' }
+          - { label: '2 - (col-xl-2)', value: 'col-xl-2' }
+          - { label: '3 - (col-xl-3)', value: 'col-xl-3' }
+          - { label: '4 - (col-xl-4)', value: 'col-xl-4' }
+          - { label: '5 - (col-xl-5)', value: 'col-xl-5' }
+          - { label: '6 - (col-xl-6)', value: 'col-xl-6' }
+          - { label: '7 - (col-xl-7)', value: 'col-xl-7' }
+          - { label: '8 - (col-xl-8)', value: 'col-xl-8' }
+          - { label: '9 - (col-xl-9)', value: 'col-xl-9' }
+          - { label: '10 - (col-xl-10)', value: 'col-xl-10' }
+          - { label: '11 - (col-xl-11)', value: 'col-xl-11' }
+          - { label: '12 - (col-xl-12)', value: 'col-xl-12' }
+
+      - identifier: offsetXl
+        type: Checkbox
+        label: 'XL: Abstand zwischen den Spalten (offset-xl-1)'
+        default: 1
+
+      # LG (≥992px)
+      - identifier: col1lg
+        type: Select
+        renderType: selectSingle
+        label: 'LG: Breite Spalte 1'
+        default: 'col-lg-5'
+        items:
+          - { label: '1 - (col-lg-1)', value: 'col-lg-1' }
+          - { label: '2 - (col-lg-2)', value: 'col-lg-2' }
+          - { label: '3 - (col-lg-3)', value: 'col-lg-3' }
+          - { label: '4 - (col-lg-4)', value: 'col-lg-4' }
+          - { label: '5 - (col-lg-5)', value: 'col-lg-5' }
+          - { label: '6 - (col-lg-6)', value: 'col-lg-6' }
+          - { label: '7 - (col-lg-7)', value: 'col-lg-7' }
+          - { label: '8 - (col-lg-8)', value: 'col-lg-8' }
+          - { label: '9 - (col-lg-9)', value: 'col-lg-9' }
+          - { label: '10 - (col-lg-10)', value: 'col-lg-10' }
+          - { label: '11 - (col-lg-11)', value: 'col-lg-11' }
+          - { label: '12 - (col-lg-12)', value: 'col-lg-12' }
+
+      - identifier: col2lg
+        type: Select
+        renderType: selectSingle
+        label: 'LG: Breite Spalte 2'
+        default: 'col-lg-6'
+        items:
+          - { label: '1 - (col-lg-1)', value: 'col-lg-1' }
+          - { label: '2 - (col-lg-2)', value: 'col-lg-2' }
+          - { label: '3 - (col-lg-3)', value: 'col-lg-3' }
+          - { label: '4 - (col-lg-4)', value: 'col-lg-4' }
+          - { label: '5 - (col-lg-5)', value: 'col-lg-5' }
+          - { label: '6 - (col-lg-6)', value: 'col-lg-6' }
+          - { label: '7 - (col-lg-7)', value: 'col-lg-7' }
+          - { label: '8 - (col-lg-8)', value: 'col-lg-8' }
+          - { label: '9 - (col-lg-9)', value: 'col-lg-9' }
+          - { label: '10 - (col-lg-10)', value: 'col-lg-10' }
+          - { label: '11 - (col-lg-11)', value: 'col-lg-11' }
+          - { label: '12 - (col-lg-12)', value: 'col-lg-12' }
+
+      - identifier: offsetLg
+        type: Checkbox
+        label: 'LG: Abstand zwischen den Spalten (offset-lg-1)'
+        default: 1
+
+      # MD (≥768px)
+      - identifier: col1md
+        type: Select
+        renderType: selectSingle
+        label: 'MD: Breite Spalte 1'
+        default: 'col-md-12'
+        items:
+          - { label: '1 - (col-md-1)', value: 'col-md-1' }
+          - { label: '2 - (col-md-2)', value: 'col-md-2' }
+          - { label: '3 - (col-md-3)', value: 'col-md-3' }
+          - { label: '4 - (col-md-4)', value: 'col-md-4' }
+          - { label: '5 - (col-md-5)', value: 'col-md-5' }
+          - { label: '6 - (col-md-6)', value: 'col-md-6' }
+          - { label: '7 - (col-md-7)', value: 'col-md-7' }
+          - { label: '8 - (col-md-8)', value: 'col-md-8' }
+          - { label: '9 - (col-md-9)', value: 'col-md-9' }
+          - { label: '10 - (col-md-10)', value: 'col-md-10' }
+          - { label: '11 - (col-md-11)', value: 'col-md-11' }
+          - { label: '12 - (col-md-12)', value: 'col-md-12' }
+
+      - identifier: col2md
+        type: Select
+        renderType: selectSingle
+        label: 'MD: Breite Spalte 2'
+        default: 'col-md-12'
+        items:
+          - { label: '1 - (col-md-1)', value: 'col-md-1' }
+          - { label: '2 - (col-md-2)', value: 'col-md-2' }
+          - { label: '3 - (col-md-3)', value: 'col-md-3' }
+          - { label: '4 - (col-md-4)', value: 'col-md-4' }
+          - { label: '5 - (col-md-5)', value: 'col-md-5' }
+          - { label: '6 - (col-md-6)', value: 'col-md-6' }
+          - { label: '7 - (col-md-7)', value: 'col-md-7' }
+          - { label: '8 - (col-md-8)', value: 'col-md-8' }
+          - { label: '9 - (col-md-9)', value: 'col-md-9' }
+          - { label: '10 - (col-md-10)', value: 'col-md-10' }
+          - { label: '11 - (col-md-11)', value: 'col-md-11' }
+          - { label: '12 - (col-md-12)', value: 'col-md-12' }
+
+      - identifier: offsetMd
+        type: Checkbox
+        label: 'MD: Abstand zwischen den Spalten (offset-md-1)'
+        default: 0
+
+      # SM (≥576px)
+      - identifier: col1sm
+        type: Select
+        renderType: selectSingle
+        label: 'SM: Breite Spalte 1'
+        default: 'col-sm-12'
+        items:
+          - { label: '1 - (col-sm-1)', value: 'col-sm-1' }
+          - { label: '2 - (col-sm-2)', value: 'col-sm-2' }
+          - { label: '3 - (col-sm-3)', value: 'col-sm-3' }
+          - { label: '4 - (col-sm-4)', value: 'col-sm-4' }
+          - { label: '5 - (col-sm-5)', value: 'col-sm-5' }
+          - { label: '6 - (col-sm-6)', value: 'col-sm-6' }
+          - { label: '7 - (col-sm-7)', value: 'col-sm-7' }
+          - { label: '8 - (col-sm-8)', value: 'col-sm-8' }
+          - { label: '9 - (col-sm-9)', value: 'col-sm-9' }
+          - { label: '10 - (col-sm-10)', value: 'col-sm-10' }
+          - { label: '11 - (col-sm-11)', value: 'col-sm-11' }
+          - { label: '12 - (col-sm-12)', value: 'col-sm-12' }
+
+      - identifier: col2sm
+        type: Select
+        renderType: selectSingle
+        label: 'SM: Breite Spalte 2'
+        default: 'col-sm-12'
+        items:
+          - { label: '1 - (col-sm-1)', value: 'col-sm-1' }
+          - { label: '2 - (col-sm-2)', value: 'col-sm-2' }
+          - { label: '3 - (col-sm-3)', value: 'col-sm-3' }
+          - { label: '4 - (col-sm-4)', value: 'col-sm-4' }
+          - { label: '5 - (col-sm-5)', value: 'col-sm-5' }
+          - { label: '6 - (col-sm-6)', value: 'col-sm-6' }
+          - { label: '7 - (col-sm-7)', value: 'col-sm-7' }
+          - { label: '8 - (col-sm-8)', value: 'col-sm-8' }
+          - { label: '9 - (col-sm-9)', value: 'col-sm-9' }
+          - { label: '10 - (col-sm-10)', value: 'col-sm-10' }
+          - { label: '11 - (col-sm-11)', value: 'col-sm-11' }
+          - { label: '12 - (col-sm-12)', value: 'col-sm-12' }

@@ -1,0 +1,72 @@
+<f:layout name="Default"/>
+<f:section name="Header" />
+
+<f:section name="Main">
+
+    <!-- minitems:1, maxitems:1 -> genau ein Layout-Datensatz, aber als Array -->
+    <f:for each="{data.collayout}" as="layout">
+        <div class="row{f:if(condition: layout.rowClasses, then: ' {layout.rowClasses}')}">
+
+            <!-- FAQ Selector (linke Spalte) -->
+            <div id="faq-selector-container"
+                 class="faq-selector-container
+                    {layout.col1xxl}
+                    {layout.col1xl}
+                    {layout.col1lg}
+                    {layout.col1md}
+                    {layout.col1sm}
+                    {layout.col1xs}
+                    {f:if(condition: layout.col1Classes, then: ' {layout.col1Classes}')}">
+
+                <ul class="faq-selector position-sticky top-0 py-3">
+                    <f:if condition="{data.header}">
+                        <h3 class="mb-5">{data.header}</h3>
+                    </f:if>
+
+                    <f:for each="{data.panels}" as="panel" iteration="iteration">
+                        <div class="faq-selector-item">
+                            <a href="#faq-list-item-{iteration.index}"
+                               title="{panel.title}"
+                               class="p-1">
+                                <i class="fa-solid fa-arrow-right mt-2 pe-2 ps-0"></i>
+                                <span>{panel.title}</span>
+                            </a>
+                        </div>
+                    </f:for>
+                </ul>
+            </div>
+
+            <!-- FAQ List (rechte Spalte) -->
+            <div class="faq-list-container pt-4
+                 {layout.col2xxl}
+                 {layout.col2xl}
+                 {layout.col2lg}
+                 {layout.col2md}
+                 {layout.col2sm}
+                 {layout.col2xs}
+                 {f:if(condition: layout.offsetXxl, then: ' offset-xxl-1', else: ' offset-xxl-0')}
+                 {f:if(condition: layout.offsetXl,  then: ' offset-xl-1',  else: ' offset-xl-0')}
+                 {f:if(condition: layout.offsetLg,  then: ' offset-lg-1',  else: ' offset-lg-0')}
+                 {f:if(condition: layout.offsetMd,  then: ' offset-md-1',  else: ' offset-md-0')}
+                 {f:if(condition: layout.offsetSm,  then: ' offset-sm-1',  else: ' offset-sm-0')}
+                 offset-xs-0
+                 {f:if(condition: layout.col2Classes, then: ' {layout.col2Classes}')}"
+            >
+                <div class="faq-list" data-bs-spy="scroll" data-bs-target="#faq-selector-container" data-bs-smooth-scroll="true" tabindex="0">
+
+                    <f:for each="{data.panels}" as="panel" iteration="iteration">
+                        <div id="faq-list-item-{iteration.index}"
+                             class="faq-list-item {f:if(condition: iteration.isFirst, then: 'pb-4', else: 'py-4')}">
+                            <h4>{panel.title}</h4>
+                            <f:if condition="{panel.text}">
+                                <f:format.html>{panel.text}</f:format.html>
+                            </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+
+        </div>
+    </f:for>
+
+</f:section>

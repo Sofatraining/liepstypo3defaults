@@ -1,36 +1,76 @@
-<div style="font-weight:600;margin-bottom:.25rem;">
-  Elemente für den Download
-</div>
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
 
-<f:if condition="{data.items}">
-  <f:then>
-    <div style="color:#666;margin-bottom:.5rem;">
-      Einträge: <f:count subject="{data.items}" />
+<html data-namespace-typo3-fluid="true">
+
+  <f:layout name="Preview"/>
+
+  <f:section name="Header">
+      <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>{data.header}</strong></be:link.editRecord>
+  </f:section>
+
+  <f:section name="Content">
+    <div style="font-weight:600;margin-bottom:.5rem;">
+      Elemente im Download-Bereich:
     </div>
 
-    <ul style="list-style:none;padding:0;margin:0;">
-      <f:for each="{data.items}" as="item">
-        <li style="display:flex;align-items:center;gap:.5rem;padding:.25rem 0;border-top:1px solid #e5e5e5;">
-          <span aria-hidden="true">
-            <i class="{f:if(condition: item.icon, then: item.icon, else: 'fa-solid fa-file')}"></i>
-          </span>
-          <span>
-            <f:if condition="{item.title}">
-              <f:then>{item.title}</f:then>
-              <f:else>
-                <f:if condition="{item.file.properties.title}">
-                  <f:then>{item.file.properties.title}</f:then>
-                  <f:else>{item.file.properties.name}</f:else>
-                </f:if>
-              </f:else>
-            </f:if>
-          </span>
-        </li>
-      </f:for>
-    </ul>
-  </f:then>
+    <f:if condition="{data.items}">
+      <f:then>
 
-  <f:else>
-    <em style="color:#666;">Noch keine Einträge angelegt.</em>
-  </f:else>
-</f:if>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <f:for each="{data.items}" as="item" iteration="iterator">
+            <li style="display:flex; align-items:center; gap:0; margin-bottom:8px; padding-left:0.5em; border-left:3px solid #ff8172;">
+              <span><b>Download {iterator.cycle}:</b> 
+                <f:if condition="{item.title}">
+                  <f:then>{item.title}</f:then>
+                  <f:else>
+                    <f:if condition="{item.file.properties.title}">
+                      <f:then>{item.file.properties.title}</f:then>
+                      <f:else>{item.file.properties.name}</f:else>
+                    </f:if>
+                  </f:else>
+                </f:if>
+              </span>
+            </li>
+          </f:for>
+        </ul>
+      </f:then>
+      <f:else>
+        <em style="color:#666;">Noch keine Einträge angelegt.</em>
+      </f:else>
+    </f:if>
+  </f:section>
+
+  <f:section name="Footer">
+    <b>LIEPS Inhaltselement:</b> Zuletzt geändert am
+    <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">
+      {data.rawRecord.tstamp}
+    </f:format.date>
+
+    <!-- Abstand davor nur anzeigen, wenn mindestens Extraklein -->
+    <f:if condition="{data.space_before_class}">
+      <br />
+      <b>Abstand davor:</b>
+      <f:switch expression="{data.space_before_class}">
+        <f:case value="extra-small">Extraklein</f:case>
+        <f:case value="small">Klein</f:case>
+        <f:case value="medium">Mittel</f:case>
+        <f:case value="large">Groß</f:case>
+        <f:case value="extra-large">Extragroß</f:case>
+      </f:switch>
+    </f:if>
+
+    <!-- Abstand danach nur anzeigen, wenn mindestens Extraklein -->
+    <f:if condition="{data.space_after_class}">
+      <br />
+      <b>Abstand danach:</b>
+      <f:switch expression="{data.space_after_class}">
+        <f:case value="extra-small">Extraklein</f:case>
+        <f:case value="small">Klein</f:case>
+        <f:case value="medium">Mittel</f:case>
+        <f:case value="large">Groß</f:case>
+        <f:case value="extra-large">Extragroß</f:case>
+      </f:switch>
+    </f:if>
+  </f:section>
+
+</html>

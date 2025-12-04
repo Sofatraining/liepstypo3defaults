@@ -1,25 +1,56 @@
-<html xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace be=TYPO3\CMS\Backend\ViewHelpers}
 
-<f:layout name="Preview"/>
+<html data-namespace-typo3-fluid="true">
 
-<f:section name="Header">
-    <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>Carousel-Bild oder Header-Bild</strong></be:link.editRecord>
-</f:section>
+    <f:layout name="Preview"/>
 
-<f:section name="Content">
-    <f:if condition="{data.image}">
-        <f:for each="{data.image}" as="image" iteration="it">
-            <f:if condition="{it.isFirst}">
-                <picture>
-                    <f:media file="{image}" width="160" title="{image.title}" alt="{image.alternative}" cropVariant="default" />
-                </picture>
-            </f:if>
-        </f:for>
-    </f:if>
-</f:section>
+    <f:section name="Header">
+        <be:link.editRecord uid="{data.uid}" table="{data.mainType}"><strong>Carousel-Bild oder Header-Bild</strong></be:link.editRecord>
+    </f:section>
 
-<f:section name="Footer">
-    <small>LIEPS - Element</small>
-</f:section>
+    <f:section name="Content">
+        <f:if condition="{data.image}">
+            <f:for each="{data.image}" as="image" iteration="it">
+                <f:if condition="{it.isFirst}">
+                    <picture>
+                        <f:media file="{image}" width="160" title="{image.title}" alt="{image.alternative}" cropVariant="default" />
+                    </picture>
+                </f:if>
+            </f:for>
+        </f:if>
+    </f:section>
+
+    <f:section name="Footer">
+        <b>LIEPS Inhaltselement:</b> Zuletzt geändert am
+        <f:format.date format="d.m.Y \u\m H:i:s \U\h\r">
+            {data.rawRecord.tstamp}
+        </f:format.date>
+
+        <!-- Abstand davor nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_before_class}">
+            <br />
+            <b>Abstand davor:</b>
+            <f:switch expression="{data.space_before_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+
+        <!-- Abstand danach nur anzeigen, wenn mindestens Extraklein -->
+        <f:if condition="{data.space_after_class}">
+            <br />
+            <b>Abstand danach:</b>
+            <f:switch expression="{data.space_after_class}">
+                <f:case value="extra-small">Extraklein</f:case>
+                <f:case value="small">Klein</f:case>
+                <f:case value="medium">Mittel</f:case>
+                <f:case value="large">Groß</f:case>
+                <f:case value="extra-large">Extragroß</f:case>
+            </f:switch>
+        </f:if>
+    </f:section>
 
 </html>

@@ -1,0 +1,44 @@
+{
+  "name": "sofatraining/liepstypo3defaults",
+  "type": "typo3-cms-extension",
+  "description": "LIEPS TYPO3 Defaults – Bootstrap 5 Extension + Various Content Elements",
+  "version": "4.0.6",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "typo3",
+    "extension",
+    "sitepackage",
+    "bootstrap",
+    "flux",
+    "vhs",
+    "content_blocks"
+  ],
+  "authors": [
+    {
+      "name": "Jürgen Ohnesorge",
+      "email": "juergen.ohnesorge@me.com",
+      "role": "CEO / IT-Specialist / Developer"
+    },
+    {
+      "name": "LIEPS GmbH",
+      "role": "Company"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "typo3/cms-core": ">=13.4.19 <14.0",
+    "friendsoftypo3/content-blocks": "^1.3.18",
+    "fluidtypo3/flux": "^11.1",
+    "fluidtypo3/vhs": "^7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "LiepsGmbH\\Liepstypo3defaults\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "liepstypo3defaults"
+    }
+  }
+}

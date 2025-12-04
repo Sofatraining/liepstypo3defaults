@@ -1,6 +1,6 @@
 name: liepstypo3defaults/modalautostart
 typeName: modalautostart
-group: LIEPS Seiteninhalte
+group: LIEPS Inhaltselemente
 prefixFields: true
 basics:
   - TYPO3/Appearance

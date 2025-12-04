@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" product-name="liepsgmbh/modal">
+    <body>
+      <trans-unit id="title">
+        <source>Modalbox</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Zeigt eine Modalbox an wenn auf einen Button geklickt wird.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
