@@ -1,27 +1,31 @@
-<!-- EXT:liepstypo3defaults/ContentBlocks/ContentElements/downloads/templates/frontend.html -->
-<div class="downloads mb-5">
-  <div class="d-grid gap-2">
-    <f:for each="{data.items}" as="item">
-      <f:if condition="{item.file}">
-        <f:for each="{item.file}" as="ref"> <!-- Collection, auch bei 1 Element -->
-          <f:link.typolink parameter="t3://file?uid={ref.originalFile.properties.uid}" class="border shadow-sm w-100 text-start d-flex align-items-center gap-3 link" target="_blank" additionalAttributes="{rel: 'noopener noreferrer'}" title="Download starten: {item.title}">
-            <span class="icon d-inline-flex align-items-center justify-content-center px-3 py-2 bg-white" aria-hidden="true">
-              <i class="{f:if(condition: item.icon, then: item.icon, else: 'fa-solid fa-file')} fs-4"></i>
-            </span>
-            <span class="flex-grow-1">
-              <f:if condition="{item.title}">
-                <f:then>{item.title}</f:then>
-                <f:else>
-                  <f:if condition="{ref.properties.title}">
-                    <f:then>{ref.properties.title}</f:then>
-                    <f:else>{ref.properties.name}</f:else>
-                  </f:if>
-                </f:else>
-              </f:if>
-            </span>
-          </f:link.typolink>
-        </f:for>
-      </f:if>
-    </f:for>
+<f:layout name="Default"/>
+<f:section name="Header" />
+
+<f:section name="Main">
+  <div class="downloads mb-5">
+    <div class="d-grid gap-2">
+      <f:for each="{data.items}" as="item">
+        <f:if condition="{item.file}">
+          <f:for each="{item.file}" as="ref"> <!-- Collection, auch bei 1 Element -->
+            <f:link.typolink parameter="t3://file?uid={ref.originalFile.properties.uid}" class="border shadow-sm w-100 text-start d-flex align-items-center gap-3 link" target="_blank" additionalAttributes="{rel: 'noopener noreferrer'}" title="Download starten: {item.title}">
+              <span class="icon d-inline-flex align-items-center justify-content-center px-3 py-2 bg-white" aria-hidden="true">
+                <i class="{f:if(condition: item.icon, then: item.icon, else: 'fa-solid fa-file')} fs-4"></i>
+              </span>
+              <span class="flex-grow-1">
+                <f:if condition="{item.title}">
+                  <f:then>{item.title}</f:then>
+                  <f:else>
+                    <f:if condition="{ref.properties.title}">
+                      <f:then>{ref.properties.title}</f:then>
+                      <f:else>{ref.properties.name}</f:else>
+                    </f:if>
+                  </f:else>
+                </f:if>
+              </span>
+            </f:link.typolink>
+          </f:for>
+        </f:if>
+      </f:for>
+    </div>
   </div>
-</div>
+</f:section>

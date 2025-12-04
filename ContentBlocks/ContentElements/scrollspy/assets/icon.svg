@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- Hintergrund / Karte -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="#ff8172" stroke="#e6735f" stroke-width="0.5"/>
+
+  <!-- Linke Scroll-Spy-Balken (alle identisch wie der oberste) -->
+  <rect x="2.2" y="3.6" width="3.2" height="0.9" rx="0.55" fill="#fff" opacity="0.95"/>
+  <rect x="2.2" y="5.1" width="3.2" height="0.9" rx="0.55" fill="#fff" opacity="0.95"/>
+  <rect x="2.2" y="6.6" width="3.2" height="0.9" rx="0.55" fill="#fff" opacity="0.95"/>
+
+  <!-- Rechte Inhaltsbereiche (Sektionen) -->
+  <!-- Sektion 1 -->
+  <rect x="6.3" y="3.6" width="7.0" height="0.9" rx="0.45" fill="#fff" opacity="0.95"/>
+  <rect x="6.3" y="4.9" width="4.0" height="0.7" rx="0.35" fill="#fff" opacity="0.9"/>
+  <rect x="6.3" y="5.9" width="4.0" height="0.7" rx="0.35" fill="#fff" opacity="0.9"/>
+
+  <!-- Sektion 2 -->
+  <rect x="6.3" y="6.9" width="7.0" height="0.9" rx="0.45" fill="#fff" opacity="0.9"/>
+  <rect x="6.3" y="8.2" width="4.0" height="0.7" rx="0.35" fill="#fff" opacity="0.85"/>
+  <rect x="6.3" y="9.2" width="4.0" height="0.7" rx="0.35" fill="#fff" opacity="0.85"/>
+
+  <!-- Sektion 3 -->
+  <rect x="6.3" y="10.2" width="7.0" height="0.9" rx="0.45" fill="#fff" opacity="0.85"/>
+  <rect x="6.3" y="11.4" width="4.0" height="0.7" rx="0.35" fill="#fff" opacity="0.8"/>
+
+  <!-- Rahmen -->
+  <rect x="1" y="2" width="14" height="12" rx="1" fill="none" stroke="#cc5d4a" stroke-width="0.8"/>
+</svg>
