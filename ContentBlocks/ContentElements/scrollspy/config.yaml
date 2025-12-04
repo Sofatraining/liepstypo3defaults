@@ -30,10 +30,28 @@ fields:
         type: Text
         label: 'Titel'
         required: true
+      - identifier: bild
+        type: File
+        label: 'Bilder'
+        maxItems: 3
+        appearance:
+          collapseAll: true
+      - identifier: bildposition
+        type: Select
+        renderType: selectSingle
+        label: 'Position des Bildes'
+        default: 'top'
+        items:
+          - { label: 'Über dem Fließtext', value: 'top' }
+          - { label: 'Unter dem Fließtext', value: 'bottom' }
+      - identifier: lightbox
+        type: Checkbox
+        label: 'Lightbox verwenden (Bildvergrößerung beim Anklicken)'
+        default: 0  
       - identifier: text
         type: Textarea
         label: 'Text'
-        enableRichtext: true
+        enableRichtext: true        
 
   #########################################################################
   # Layout-Settings als Collection (ausgelagert in eigene Tabelle)
