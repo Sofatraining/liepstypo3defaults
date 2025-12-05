@@ -58,9 +58,82 @@
                         <div id="faq-list-item-{iteration.index}"
                              class="faq-list-item {f:if(condition: iteration.isFirst, then: 'pb-4', else: 'py-4')}">
                             <h4>{panel.title}</h4>
+
+                            <f:if condition="{panel.bild}">
+                                <f:if condition="{panel.bildposition} == 'top' || !{panel.bildposition}">
+                                    <div class="faq-images mb-3">
+                                        <f:for each="{panel.bild}" as="image">
+                                            <f:if condition="{panel.lightbox}">
+                                                <f:then>
+                                                    <f:link.typolink
+                                                        parameter="{image.publicUrl}"
+                                                        class="image-link d-inline-block me-2 mb-2"
+                                                        additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
+                                                        <f:image image="{image}" class="img-fluid" />
+                                                    </f:link.typolink>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{image.link}">
+                                                        <f:then>
+                                                            <f:link.typolink
+                                                                parameter="{image.link}"
+                                                                class="d-inline-block me-2 mb-2">
+                                                                <f:image image="{image}" class="img-fluid" />
+                                                            </f:link.typolink>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:image image="{image}" class="img-fluid d-inline-block me-2 mb-2" />
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                            </f:if>
+
                             <f:if condition="{panel.text}">
                                 <f:format.html>{panel.text}</f:format.html>
                             </f:if>
+
+                            <f:if condition="{panel.bild}">
+                                <f:if condition="{panel.bildposition} == 'bottom'">
+                                    <div class="faq-images mt-3">
+                                        <f:for each="{panel.bild}" as="image">
+
+                                            <!-- LIGHTBOX aktiv -->
+                                            <f:if condition="{panel.lightbox}">
+                                                <f:then>
+                                                    <f:link.typolink
+                                                        parameter="{image.publicUrl}"
+                                                        class="image-link d-inline-block me-2 mb-2"
+                                                        additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
+                                                        <f:image image="{image}" class="img-fluid" />
+                                                    </f:link.typolink>
+                                                </f:then>
+
+                                                <f:else>
+                                                    <!-- LIGHTBOX aus: Prüfen auf normalen Bild-Link -->
+                                                    <f:if condition="{image.link}">
+                                                        <f:then>
+                                                            <f:link.typolink
+                                                                parameter="{image.link}"
+                                                                class="d-inline-block me-2 mb-2">
+                                                                <f:image image="{image}" class="img-fluid" />
+                                                            </f:link.typolink>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:image image="{image}" class="img-fluid d-inline-block me-2 mb-2" />
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                            </f:if>
+
                         </div>
                     </f:for>
                 </div>
