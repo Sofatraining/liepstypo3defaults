@@ -21,6 +21,9 @@
                     </f:if>
                   </f:else>
                 </f:if>
+                  <span class="small ms-1">
+                    - &nbsp;<f:format.bytes value="{ref.originalFile.properties.size}" />
+                  </span>
               </span>
             </f:link.typolink>
           </f:for>
