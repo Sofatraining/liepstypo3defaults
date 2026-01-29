@@ -27,26 +27,48 @@ page {
 		# OpenGraph Tags
 		og:title {
 			attribute = property
-			key = og:title
-			# Hier werden Seitentitel und Website-Titel per dataWrap verbunden
-			stdWrap.dataWrap = {field:title} - {siteLanguage:websiteTitle // site:websiteTitle}
-			stdWrap.insertData = 1
-		}	
-		og:description = {$page.meta.description}
+			field = title
+		}
+
+		og:site_name {
+			attribute = property
+			data = site:websiteTitle
+			# optional, falls Plugins das auch setzen:
+			replace = 1
+		}
+
 		og:description {
 			attribute = property
 			field = description
 		}
-		twitter:title {
-			attribute = name
-			key = twitter:title
-			stdWrap.dataWrap = {field:title} - {siteLanguage:websiteTitle // site:websiteTitle}
-			stdWrap.insertData = 1
-		}
-		twitter:description = {$page.meta.description}
-		twitter:description {
-			attribute = name
-			field = description
+
+		og:image {
+			attribute = property
+			stdWrap.cObject = FILES
+			stdWrap.cObject {
+				references {
+					data = levelfield:-1, media, slide
+				}
+				maxItems = 1
+
+				# statt COA+TSFE:lastImgResourceInfo: URL direkt sauber erzeugen
+				renderObj = TEXT
+				renderObj {
+					typolink {
+						parameter.cObject = IMG_RESOURCE
+						parameter.cObject {
+						file {
+							import.data = file:current:uid
+							treatIdAsReference = 1
+							width = 1280c
+							height = 720c
+						}
+						}
+						returnLast = url
+						forceAbsoluteUrl = 1
+					}
+				}
+			}
 		}
 	}
 }
