@@ -1,7 +1,14 @@
 {namespace f=TYPO3\CMS\Fluid\ViewHelpers}
 
-	<picture>
-		<source srcset="{f:uri.image(image:file, maxWidth: 2561, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 1601px)" type="image/webp">
+<f:variable name="ext" value="{f:format.case(value: file.extension, mode: 'lower')}" />
+
+<f:if condition="{ext} == 'pdf'">
+  <f:then>
+    <f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="img-fluid image-embed-item w-100" />
+  </f:then>
+  <f:else>
+    <picture>
+      	<source srcset="{f:uri.image(image:file, maxWidth: 2561, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 1601px)" type="image/webp">
 		<source srcset="{f:uri.image(image:file, maxWidth: 2560, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 1601px)" type="image/jpeg">
 		<source srcset="{f:uri.image(image:file, maxWidth: 1601, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 1201px)" type="image/webp">
 		<source srcset="{f:uri.image(image:file, maxWidth: 1600, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 1201px)" type="image/jpeg">
@@ -11,6 +18,7 @@
 		<source srcset="{f:uri.image(image:file, maxWidth: 768, cropVariant: tablet, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 481px)" type="image/jpeg">
 		<source srcset="{f:uri.image(image:file, maxWidth: 481, cropVariant: mobile, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
 		<source srcset="{f:uri.image(image:file, maxWidth: 480, cropVariant: mobile, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
-		<f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="img-fluid image-embed-item w-100" cropVariant="mobile" />
-	</picture>
-</html>
+      <f:media file="{file}" title="{file.title}" alt="{file.alternative}" class="img-fluid image-embed-item w-100" cropVariant="desktop" />
+    </picture>
+  </f:else>
+</f:if>
