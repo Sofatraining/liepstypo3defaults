@@ -114,7 +114,9 @@ Compatibility to Flux > 11.0.3, Migration Flux to Content-Blocks-Elements (stoer
 #### v4.0.6
 Migration Flux to Content-Blocks-Elements (testimonials/gallery/scrollspy/modalbox), Bugfixes & Cleaning
 ***
-
+#### v4.0.7
+Update to Jquery 4.0.0, Upgrade FontAwesome to 7.2, Update Bootstrap to 5.3.8, Bugfixes & Cleaning
+***
 
 Nächste Schritte:
 
