@@ -19,7 +19,7 @@ lib.element {
 #  }
 #}
 
-## LIB für Inhaltselemente Variante 2
+## LIB für Inhaltselemente Variante 3
 ## Wenn du willst, dass bei fehlenden Inhalten auf der aktuellen Seite nach oben „geslidet“ wird:
 #lib.element = CONTENT
 #lib.element {
