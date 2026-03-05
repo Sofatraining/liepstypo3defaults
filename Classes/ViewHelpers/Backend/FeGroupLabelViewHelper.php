@@ -14,7 +14,7 @@ final class FeGroupLabelViewHelper extends AbstractViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'string', 'fe_group raw value (e.g. "-2,3,7")', false, '');
-        $this->registerArgument('separator', 'string', 'Output separator', false, ', ');
+        $this->registerArgument('separator', 'string', 'Output separator', false, ' | ');
         $this->registerArgument('emptyLabel', 'string', 'Label if no restriction is set', false, '');
     }
 
