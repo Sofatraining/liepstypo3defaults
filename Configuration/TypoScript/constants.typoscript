@@ -38,7 +38,9 @@ page {
 		templateRootPath = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
 	}
 	meta {
-		description.field = description
+		description =
+		keywords =
+		author =
 		viewport = width=device-width, initial-scale=1
 		robots = index,follow
 		format-detection = telephone=no
