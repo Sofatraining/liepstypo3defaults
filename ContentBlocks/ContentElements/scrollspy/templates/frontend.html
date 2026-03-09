@@ -10,16 +10,16 @@
             <!-- FAQ Selector (linke Spalte) -->
             <div id="faq-selector-container" class="faq-selector-container {layout.col1xxl} {layout.col1xl} {layout.col1lg} {layout.col1md} {layout.col1sm} {layout.col1xs}{f:if(condition: layout.col1Classes, then: ' {layout.col1Classes}')}">
 
-                <ul class="faq-selector position-sticky top-0 py-3">
+                <ul class="faq-selector position-sticky top-0 py-3 mt-3 btn-group-vertical btn-group-wrap w-100" role="group">
                     <f:if condition="{data.header}">
                         <h3 class="mb-5">{data.header}</h3>
                     </f:if>
 
                     <f:for each="{data.panels}" as="panel" iteration="iteration">
-                        <div class="faq-selector-item">
-                            <a href="#faq-list-item-{iteration.index}" title="{panel.title}" class="p-1">
-                                <i class="fa-solid fa-arrow-right mt-2 pe-2 ps-0"></i>
-                                <span>{panel.title}</span>
+                        <div class="faq-selector-item w-100">
+                            <a href="#faq-list-item-{iteration.index}" title="{panel.title}" class="btn btn-primary btn-primary-skew mb-1 w-100">
+                                <span class="btn-primary-skew__label">{panel.title}</span>
+                                <i class="fa-solid fa-arrow-right ps-3"></i>
                             </a>
                         </div>
                     </f:for>
@@ -41,19 +41,49 @@
                                         <f:for each="{panel.bild}" as="image">
                                             <f:if condition="{panel.lightbox}">
                                                 <f:then>
-                                                    <f:link.typolink parameter="{image.publicUrl}" class="image-link d-inline-block me-2 mb-2" additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
-                                                        <f:image image="{image}" class="img-fluid" />
+                                                    <f:link.typolink parameter="{image.publicUrl}" class="image-link d-inline-block me-2 mb-2" additionalAttributes="{rel: 'lightbox[{data.uid}]'}">
+                                                        <picture>
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                            <f:media file="{image}" class="img-fluid" alt="{image.alt}" title="{image.title}" />
+                                                        </picture>
                                                     </f:link.typolink>
                                                 </f:then>
                                                 <f:else>
                                                     <f:if condition="{image.link}">
                                                         <f:then>
                                                             <f:link.typolink parameter="{image.link}" class="d-inline-block me-2 mb-2">
-                                                                <f:image image="{image}" class="img-fluid" />
+                                                                <picture>
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                                    <f:media file="{image}" class="img-fluid" alt="{image.alt}" title="{image.title}" />
+                                                                </picture>
                                                             </f:link.typolink>
                                                         </f:then>
                                                         <f:else>
-                                                            <f:image image="{image}" class="img-fluid d-inline-block me-2 mb-2" />
+                                                            <picture>
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                                <f:media file="{image}" class="img-fluid d-inline-block me-2 mb-2" alt="{image.alt}" title="{image.title}" cropVariant="default" />
+                                                            </picture>
                                                         </f:else>
                                                     </f:if>
                                                 </f:else>
@@ -73,19 +103,49 @@
                                         <f:for each="{panel.bild}" as="image">
                                             <f:if condition="{panel.lightbox}">
                                                 <f:then>
-                                                    <f:link.typolink parameter="{image.publicUrl}" class="image-link d-inline-block me-2 mb-2" additionalAttributes="{rel: 'lightbox[{data.computedProperties.localizedUid}]'}">
-                                                        <f:image image="{image}" class="img-fluid" />
+                                                    <f:link.typolink parameter="{image.publicUrl}" class="image-link d-inline-block me-2 mb-2" additionalAttributes="{rel: 'lightbox[{data.uid}]'}">
+                                                        <picture>
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                            <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                            <f:media file="{image}" class="img-fluid" alt="{image.alt}" title="{image.title}" />
+                                                        </picture>
                                                     </f:link.typolink>
                                                 </f:then>
                                                 <f:else>
                                                     <f:if condition="{image.link}">
                                                         <f:then>
-                                                            <f:link.typolink parameter="{image.link}" class="d-inline-block me-2 mb-2">
-                                                                <f:image image="{image}" class="img-fluid" />
+                                                            <f:link.typolink parameter="{image.publicUrl}" class="image-link d-inline-block me-2 mb-2" additionalAttributes="{rel: 'lightbox[{data.uid}]'}">
+                                                                <picture>
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                                    <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                                    <f:media file="{image}" class="img-fluid" alt="{image.alt}" title="{image.title}" />
+                                                                </picture>
                                                             </f:link.typolink>
                                                         </f:then>
                                                         <f:else>
-                                                            <f:image image="{image}" class="img-fluid d-inline-block me-2 mb-2" />
+                                                            <picture>
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 900, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 992px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 700, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 768px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 576, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" media="(min-width: 576px)" type="image/jpeg">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'webp', treatIdAsReference: 1)}" type="image/webp">
+                                                                <source srcset="{f:uri.image(image:image, maxWidth: 575, cropVariant: default, fileExtension: 'jpg', treatIdAsReference: 1)}" type="image/jpeg">
+                                                                <f:media file="{image}" class="img-fluid d-inline-block me-2 mb-2" alt="{image.alt}" title="{image.title}" cropVariant="default" />
+                                                            </picture>
                                                         </f:else>
                                                     </f:if>
                                                 </f:else>
@@ -103,5 +163,5 @@
 
         </div>
     </f:for>
-
+    
 </f:section>
