@@ -130,6 +130,4 @@ Falls KESEARCH im Einsatz ist:
 
 ***   
 ## ToDo
-* TCEFORM Overwrite for Header-Section
-* Image sourceset and webp for Fluxtemplates
-* image_autoresize Settings
+* VHS ab Version 8 ohne v:assets style - UMbau der Menü-Partials notwendig
