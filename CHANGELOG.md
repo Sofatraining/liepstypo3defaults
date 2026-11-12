@@ -2,6 +2,15 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 6: CKEditor 5 / RTE-Konfiguration für TYPO3 14.3
+- `Configuration/RTE/Default.yaml` auf die CKEditor-5-Struktur migriert: `toolbar.items`, `style.definitions` (Lead), `heading.options` (Absatz, H1–H5, Pre) und `alignment.options` statt der alten CKEditor-4-Einstellungen.
+- TYPO3-Core-Konfigurationen `Processing.yaml`, `Editor/Base.yaml` und `Editor/Plugins.yaml` importiert; die obsolete eigene `Configuration/RTE/Editor/Base.yaml` entfernt.
+- RTE-Höhe 450 px, eigene Editor-CSS, Tabellenwerkzeuge sowie Wort-/Zeichenzählung mittels CKEditor-5-`WordCount` beibehalten bzw. ergänzt. TYPO3-Link-/Whitespace-Plugins bleiben über den Core-Import verfügbar.
+- Vorhandene Ausrichtungsklassen `text-left`, `text-center`, `text-right` und `text-justify` bewusst erhalten, damit bestehende Texte nicht unmittelbar auf neue Klassen umgestellt werden.
+- `Resources/Public/Css/rte.css` für CKEditor 5 aktualisiert (`:root` und `p.lead`), `.cke_*`-Selektoren und IE-spezifische Altlasten entfernt; übrige Inhaltsstile weitergeführt.
+- Keine pauschale Freigabe beliebiger HTML-Klassen oder `data-*`-Attribute wie im früheren `extraAllowedContent`; etwaige Sonderformatierungen müssen gezielt geprüft werden.
+- `ext_localconf.php` und `Configuration/TsConfig/Page/RTE.tsconfig` bleiben unverändert. **Offen:** RTE-Laufzeittest unter TYPO3 14.3 inklusive TYPO3-Linkbrowser, Wortzählung und Prüfung bestehender HTML-Inhalte vor und nach dem Speichern.
+
 ### Schritt 5: Content Blocks 2.4.10 – statische Schema-Bereinigung
 - Alle zwölf Content-Blocks-Konfigurationen mit den Feldoptionen des offiziellen 2.4.10-JSON-Schemas abgeglichen; zehn `config.yaml`-Dateien korrigiert, `carouselimage` und `downloads` unverändert.
 - `button`: Vier Checkbox-Defaults von `false` auf den schema-konformen Integer `0` gesetzt; `required: true` und `min: 1` bei der Collection `button_items` durch `minitems: 1` ersetzt.

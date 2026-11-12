@@ -1,59 +1,28 @@
-/****************************************************************************************
-# Default css file for content edited with CKEditor
-#
-# Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
-# For licensing, see LICENSE.md or http://ckeditor.com/license
-#
-# Defines a few class selectors that can be simply taken as examples by anyone who needs to configure the RTE.
-# This css file is referenced by property RTE.default.contentCSS in TSconfig.
-# ***************************************************************************************/
+/*
+ * LIEPS editor styles for TYPO3 14.3 / CKEditor 5.
+ * Originally based on CKSource sample content CSS (c) 2003-2016, CKSource.
+ * TYPO3 scopes these selectors automatically to the CKEditor editing area.
+ */
 
-body
-{
-	/* Font */
-	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 12px;
-
-	/* Text color */
-	color: #333;
-
-	/* Remove the background color to make it transparent */
-	background-color: #fff;
-
-	margin: 20px;
+:root {
+    font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
 }
 
-.cke_editable
-{
-	font-size: 13px;
-	line-height: 1.6;
-
-	/* Fix for missing scrollbars with RTL texts. (#10488) */
-	word-wrap: break-word;
+p.lead {
+    font-size: 1.25em;
+    font-weight: 300;
 }
 
-blockquote
-{
-	font-style: italic;
-	font-family: Georgia, Times, "Times New Roman", serif;
-	padding: 2px 0;
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 0;
-}
-
-.cke_contents_ltr blockquote
-{
-	padding-left: 20px;
-	padding-right: 8px;
-	border-left-width: 5px;
-}
-
-.cke_contents_rtl blockquote
-{
-	padding-left: 8px;
-	padding-right: 20px;
-	border-right-width: 5px;
+blockquote {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 2px 8px 2px 20px;
+    border-inline-start: 5px solid #ccc;
 }
 
 a
@@ -61,12 +30,8 @@ a
 	color: #0782C1;
 }
 
-ol,ul,dl
-{
-	/* IE7: reset rtl list margin. (#7334) */
-	*margin-right: 0px;
-	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
-	padding: 0 40px;
+ol, ul, dl {
+    padding: 0 40px;
 }
 
 h1,h2,h3,h4,h5,h6
@@ -97,12 +62,10 @@ img.left
 	padding: 5px;
 }
 
-pre
-{
-	white-space: pre-wrap; /* CSS 2.1 */
-	word-wrap: break-word; /* IE7 */
-	-moz-tab-size: 4;
-	tab-size: 4;
+pre {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    tab-size: 4;
 }
 
 table {
@@ -149,7 +112,7 @@ figure
 figure > figcaption
 {
 	text-align: center;
-	display: block; /* For IE8 */
+	display: block;
 }
 
 a > img {
