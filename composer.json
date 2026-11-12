@@ -38,10 +38,7 @@
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "liepstypo3defaults",
-      "Package": {
-        "providesPackages": {}
-      }
+      "extension-key": "liepstypo3defaults"
     }
   }
 }
