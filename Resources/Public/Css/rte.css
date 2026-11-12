@@ -21,7 +21,9 @@ p.lead {
 blockquote {
     font-style: italic;
     font-family: Georgia, Times, "Times New Roman", serif;
-    padding: 2px 8px 2px 20px;
+    padding-block: 2px;
+    padding-inline-start: 20px;
+    padding-inline-end: 8px;
     border-inline-start: 5px solid #ccc;
 }
 
