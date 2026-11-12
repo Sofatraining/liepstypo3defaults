@@ -2,14 +2,11 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
-### Schritt 1: Versionsnummer und Abhängigkeiten
-- Version auf **5.0.0** gesetzt (`composer.json`, `ext_emconf.php`; `Build/package.json` war bereits auf 5.0.0).
-- Composer-Mindestanforderungen: PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`.
-- Abhängigkeiten in `ext_emconf.php` entsprechend abgeglichen. Die historische Version 4.x bleibt dem TYPO3-13-Zweig zugeordnet.
-
-### Schritt 2: VHS-8-Asset-Migration
-- Sechs entfernte `v:asset.style`- und `v:asset.script`-Aufrufe in den Page-Header-Partials `Header-classic-bs5.html`, `Header-modal-full-01.html` und `Header-canvas-from-left-01.html` durch TYPO3s `f:asset.css` / `f:asset.script` ersetzt.
-- Eindeutige Asset-Kennungen je Navigationsvariante; vorhandene CSS-/JS-Dateien bleiben unverändert.
+### Schritt 4: Flux 12 / VHS 8 – statische Template-Prüfung
+- Fluid-/Flux-Syntaxfehler in `Resources/Private/Templates/Content/106-Columns-25-25-25-25.html` behoben: Bei `settings.section.rowClasses` wurde `default="""` zu `default=""` korrigiert.
+- Vorhandene Flux-Grid-Kennungen, Spaltennummern, FlexForm-Feldnamen und Renderbereiche unverändert belassen, um Bestandsdaten nicht ohne Migrationstest zu beeinflussen.
+- Statisch geprüft: verwendete Flux-/VHS-ViewHelper sind in Flux 12.0.2 bzw. VHS 8.0.0 vorhanden; die Formel für verschachtelte `colPos`-Werte ist gegenüber Flux 11.1.4 unverändert.
+- **Noch offen (späterer TYPO3-14.3-Integrationstest):** Registrierung/Instanziierung eigener Flux-Controller einschließlich Dependency Injection, Frontend- und Backend-Rendering, vorhandene FlexForms, verschachtelte Inhalte, Seitenlayouts, Übersetzungen und Workspaces. Für diese Punkte wird aktuell keine Funktionsfreigabe behauptet.
 
 ### Schritt 3: TypoScript-Bereinigung für TYPO3 14
 - Veraltete `config`-Optionen aus `constants.typoscript` und `Setup/Config/config.typoscript` entfernt: `absRefPrefix`, `uniqueLinkVars`, `linkVars = L`, `prefixLocalAnchors`, `renderCharset`, `metaCharset`, `frontend_editing`.
@@ -17,6 +14,15 @@
 - `TSFE:id` in `Helper/DynamicContent.typoscript` durch `page:uid` ersetzt, um die aktuelle Seiten-UID über die TYPO3-14-getText-API zu beziehen.
 - Veraltete, auskommentierte `disableCompression`- und `excludeFromConcatenation`-Optionen aus `Setup/Page/page.typoscript` entfernt; die aktiven CSS-/JS-Einbindungen wurden nicht verändert.
 - `README.md` an TYPO3 14.3, den Entwicklungsstand, VHS 8 und entfallene CSS-/JS-Komprimierungsoptionen angepasst.
+
+### Schritt 2: VHS-8-Asset-Migration
+- Sechs entfernte `v:asset.style`- und `v:asset.script`-Aufrufe in den Page-Header-Partials `Header-classic-bs5.html`, `Header-modal-full-01.html` und `Header-canvas-from-left-01.html` durch TYPO3s `f:asset.css` / `f:asset.script` ersetzt.
+- Eindeutige Asset-Kennungen je Navigationsvariante; vorhandene CSS-/JS-Dateien bleiben unverändert.
+
+### Schritt 1: Versionsnummer und Abhängigkeiten
+- Version auf **5.0.0** gesetzt (`composer.json`, `ext_emconf.php`; `Build/package.json` war bereits auf 5.0.0).
+- Composer-Mindestanforderungen: PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`.
+- Abhängigkeiten in `ext_emconf.php` entsprechend abgeglichen. Die historische Version 4.x bleibt dem TYPO3-13-Zweig zugeordnet.
 
 **Status:** Noch keine vollständige TYPO3-14.3-Kompatibilitätsfreigabe oder Laufzeitprüfung. Die weiteren Entwicklungsschritte erfolgen ausschließlich auf `v14-dev`; `v14-main` wird erst nach Freigabe zur stabilen Version.
 
