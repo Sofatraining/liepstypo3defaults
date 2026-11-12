@@ -1,16 +1,26 @@
-lib.element = CONTENT
-lib.element {
-  table = tt_content
-  select {
-    # PID der Seite wo das Element liegt
-    pidInList = 1
-    # Spalte wo das Element liegt
-    where = colPos=0
-    orderBy = uid desc
-  }
+## LIB für Inhaltselemente Variante 1
+lib.element = RECORDS 
+lib.element { 
+  tables = tt_content 
+  source = 125 
+  dontCheckPid = 1
 }
 
-#Wenn du willst, dass bei fehlenden Inhalten auf der aktuellen Seite nach oben „geslidet“ wird:
+## LIB für Inhaltselemente Variante 2
+#lib.element = CONTENT
+#lib.element {
+#  table = tt_content
+#  select {
+#    # PID der Seite wo das Element liegt
+#    pidInList = 1
+#    # Spalte wo das Element liegt
+#    where = colPos=0
+#    orderBy = uid desc
+#  }
+#}
+
+## LIB für Inhaltselemente Variante 3
+## Wenn du willst, dass bei fehlenden Inhalten auf der aktuellen Seite nach oben „geslidet“ wird:
 #lib.element = CONTENT
 #lib.element {
 #  table = tt_content
