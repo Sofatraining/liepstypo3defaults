@@ -1,5 +1,28 @@
 
 # CHANGELOG for Sitepackage CMS TYPO3
+
+## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
+
+### Schritt 1: Versionsnummer und Abhängigkeiten
+- Version auf **5.0.0** gesetzt (`composer.json`, `ext_emconf.php`; `Build/package.json` war bereits auf 5.0.0).
+- Composer-Mindestanforderungen: PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`.
+- Abhängigkeiten in `ext_emconf.php` entsprechend abgeglichen. Die historische Version 4.x bleibt dem TYPO3-13-Zweig zugeordnet.
+
+### Schritt 2: VHS-8-Asset-Migration
+- Sechs entfernte `v:asset.style`- und `v:asset.script`-Aufrufe in den Page-Header-Partials `Header-classic-bs5.html`, `Header-modal-full-01.html` und `Header-canvas-from-left-01.html` durch TYPO3s `f:asset.css` / `f:asset.script` ersetzt.
+- Eindeutige Asset-Kennungen je Navigationsvariante; vorhandene CSS-/JS-Dateien bleiben unverändert.
+
+### Schritt 3: TypoScript-Bereinigung für TYPO3 14
+- Veraltete `config`-Optionen aus `constants.typoscript` und `Setup/Config/config.typoscript` entfernt: `absRefPrefix`, `uniqueLinkVars`, `linkVars = L`, `prefixLocalAnchors`, `renderCharset`, `metaCharset`, `frontend_editing`.
+- Zusätzlich aus `Setup/Config/config.typoscript` entfernt: `noScaleUp`, `compressJs`, `compressCss`, `concatenateJs`, `concatenateCss`. CSS-/JavaScript-Build findet außerhalb des TYPO3-Runtimes statt.
+- `TSFE:id` in `Helper/DynamicContent.typoscript` durch `page:uid` ersetzt, um die aktuelle Seiten-UID über die TYPO3-14-getText-API zu beziehen.
+- Veraltete, auskommentierte `disableCompression`- und `excludeFromConcatenation`-Optionen aus `Setup/Page/page.typoscript` entfernt; die aktiven CSS-/JS-Einbindungen wurden nicht verändert.
+- `README.md` an TYPO3 14.3, den Entwicklungsstand, VHS 8 und entfallene CSS-/JS-Komprimierungsoptionen angepasst.
+
+**Status:** Noch keine vollständige TYPO3-14.3-Kompatibilitätsfreigabe oder Laufzeitprüfung. Die weiteren Entwicklungsschritte erfolgen ausschließlich auf `v14-dev`; `v14-main` wird erst nach Freigabe zur stabilen Version.
+
+---
+
 ## TYPO3 11.5 LTS und 12.4 LTS
 
 ### CHANGELOG

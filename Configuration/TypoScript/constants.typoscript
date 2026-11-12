@@ -58,14 +58,8 @@ page {
 ### CONFIG ###
 ##############
 config {
-	absRefPrefix = auto
 	no_cache = 0
-	uniqueLinkVars = 1
 	pageTitleFirst = 1
-	linkVars = L
-	prefixLocalAnchors = all
-	renderCharset = utf-8
-	metaCharset = utf-8
 	doctype = html5
 	removeDefaultJS = 0
 	inlineStyle2TempFile = 1
@@ -79,7 +73,6 @@ config {
 	index_enable = 1
 	index_externals = 1
 	index_metatags = 1
-	frontend_editing = 0
 	headerComment = Design and Coding: Lieps GmbH - Die Werbeagentur - www.lieps.de -
 }
 
