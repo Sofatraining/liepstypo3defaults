@@ -41,7 +41,7 @@ fields:
     useExistingField: true
     type: File
     label: 'Bilder'
-    allowedExtensions: jpg, png, jpeg, webp
+    allowed: [jpg, png, jpeg, webp]
     minitems: 1
     maxitems: 30
     appearance:

@@ -21,7 +21,6 @@ fields:
     useExistingField: true
     type: File
     label: 'Bild'
-    minitems: 0
     maxitems: 1
     allowed: common-image-types
   - identifier: header_link

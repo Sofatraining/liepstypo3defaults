@@ -24,7 +24,7 @@ fields:
     useExistingField: true
     type: File
     label: 'Bilder'
-    maxItems: 1
+    maxitems: 1
     appearance:
       collapseAll: true
   - identifier: table_class

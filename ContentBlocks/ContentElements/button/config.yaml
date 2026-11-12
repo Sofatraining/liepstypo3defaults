@@ -37,23 +37,22 @@ fields:
   - identifier: button_block
     type: Checkbox
     label: 'Button Block'
-    default: false
+    default: 0
   - identifier: button_group
     type: Checkbox
     label: 'Group (Button Block wird deaktiviert)'
-    default: false
+    default: 0
   - identifier: button_group_vertical
     type: Checkbox
     label: 'Group-Vertical (Group muss aktiviert werden)'
-    default: false
+    default: 0
   - identifier: button_items
     type: Collection
     label: 'Buttons'
-    required: true
     appearance:
       collapseAll: true
       levelLinksPosition: bottom
-    min: 1
+    minitems: 1
     foreign_field: 'parent_uid'
     foreign_sortby: 'sorting'
     fields:
@@ -108,4 +107,4 @@ fields:
       - identifier: disabled
         type: Checkbox
         label: 'Disabled'
-        default: false
+        default: 0

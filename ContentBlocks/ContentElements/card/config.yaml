@@ -31,7 +31,6 @@ fields:
     type: Email
     label: 'E-Mail-Adresse des Ansprechpartners'
     placeholder: 'Geben Sie hier die E-Mail-Adresse ein.'
-    max: 50
   - identifier: phone
     type: Text
     label: 'Telefonnummer des Ansprechpartners'

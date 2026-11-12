@@ -40,8 +40,8 @@ fields:
       - identifier: bild
         type: File
         label: 'Bild des Kunden'
-        allowedExtensions: [jpg, png]
-        maxItems: 1 
+        allowed: [jpg, png]
+        maxitems: 1 
       - identifier: sterne
         type: Select
         label: 'Sterne'

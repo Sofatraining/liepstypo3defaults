@@ -2,6 +2,15 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 5: Content Blocks 2.4.10 – statische Schema-Bereinigung
+- Alle zwölf Content-Blocks-Konfigurationen mit den Feldoptionen des offiziellen 2.4.10-JSON-Schemas abgeglichen; zehn `config.yaml`-Dateien korrigiert, `carouselimage` und `downloads` unverändert.
+- `button`: Vier Checkbox-Defaults von `false` auf den schema-konformen Integer `0` gesetzt; `required: true` und `min: 1` bei der Collection `button_items` durch `minitems: 1` ersetzt.
+- `timeline`: Bei Collection `timeline_events` `required: true` und `min: 1` zu `minitems: 1` zusammengeführt.
+- Dateifelder: `allowedExtensions` in `gallery` und `testimonials` zu `allowed`, `maxItems` in `modal`, `scrollspy` und `testimonials` zu `maxitems` geändert; `teaser.image` mit `minitems: 1` statt `required: true` abgesichert; ungültiges `minitems: 0` in `modalautostart` entfernt (Datei bleibt optional).
+- `card`: Nicht unterstütztes `max: 50` aus dem Feldtyp `Email` entfernt. `stoerer`: Nicht unterstütztes `maxCharacters` zu `max` geändert und den wiederverwendeten `bodytext` passend als `Textarea` statt `Text` deklariert.
+- Inhaltstypen, Feld-/Collection-Identifikatoren, Präfixregeln und Relationseinstellungen nicht verändert; keine Datenbankmigration und keine Anpassung von Fluid-Templates.
+- **Prüfung:** Statischer Abgleich der verwendeten Feldoptionen und primitiven Werttypen gegen das 2.4.10-Schema ohne verbliebene Befunde. Ein vollständiges `content-blocks:lint` sowie Frontend-/Backend- und Bestandsdaten-Tests sind erst in einer TYPO3-14.3-Testinstallation möglich; es besteht noch keine Laufzeitfreigabe.
+
 ### Schritt 4: Flux 12 / VHS 8 – statische Template-Prüfung
 - Fluid-/Flux-Syntaxfehler in `Resources/Private/Templates/Content/106-Columns-25-25-25-25.html` behoben: Bei `settings.section.rowClasses` wurde `default="""` zu `default=""` korrigiert.
 - Vorhandene Flux-Grid-Kennungen, Spaltennummern, FlexForm-Feldnamen und Renderbereiche unverändert belassen, um Bestandsdaten nicht ohne Migrationstest zu beeinflussen.
