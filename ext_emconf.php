@@ -7,7 +7,7 @@ $EM_CONF[$_EXTKEY] = array (
     'title' => 'LIEPS TYPO3 Defaults',
     'description' => 'Bootstrap 5 Extension + Various Content Elements with Flux',
     'category' => 'fe',
-    'version' => '4.0.7',
+    'version' => '5.0.0',
     'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
@@ -19,10 +19,10 @@ $EM_CONF[$_EXTKEY] = array (
     array (
         'depends' => 
             array (
-                'typo3' => '13.4.19-13.4.99',
-                'content_blocks' => '1.3.18-1.9.99',
-                'flux' => '11.1.0-12.1.99',
-                'vhs' => '7.1.4-7.2.99',
+                'typo3' => '14.3.11-14.3.99',
+                'content_blocks' => '2.4.0-2.9.99',
+                'flux' => '12.0.0-12.9.99',
+                'vhs' => '8.0.0-8.9.99',
             ),
         'conflicts' => 
             array (
