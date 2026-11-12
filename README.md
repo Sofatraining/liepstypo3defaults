@@ -1,8 +1,6 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 13.4 LTS
+## TYPO3 14.3 LTS
 Description: This TYPO3-LTS13-Sitepackage will install flux, vhs and content_blocks. Install mask, image_autoresize, powermail and news as you needed. It contains section-, container- and flux- and conten-blocks-templates for a bootstrap5 site, various menu-types and many more. 
-
-Demo: https://v13.lieps.de/
 
 =======
   
@@ -15,10 +13,10 @@ To avoid timeouts during extension installation, the dependent extensions should
 
 #### Installation via git clone
 Stable
-* Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
+* Under /typo3conf/ext/ -> git clone --branch v14-main https://github.com/Sofatraining/liepstypo3defaults.git
 
 Development
-* Under /typo3conf/ext/ -> git clone --branch v13-dev https://github.com/Sofatraining/liepstypo3defaults.git
+* Under /typo3conf/ext/ -> git clone --branch v14-dev https://github.com/Sofatraining/liepstypo3defaults.git
 
 #### Settings
 
