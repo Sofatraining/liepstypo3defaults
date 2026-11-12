@@ -1,5 +1,4 @@
-
-# CHANGELOG for Sitepackage CMS TYPO3
+# Changelog – LIEPS TYPO3 Defaults
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
@@ -23,153 +22,188 @@
 
 ---
 
-## TYPO3 11.5 LTS und 12.4 LTS
+## TYPO3 13.4 LTS – Version 4.x
 
-### CHANGELOG
-### v1 - Typo3 LTS 10.4
-#### v1.0.0  
-Intial Release - Original plugin from [https://www.sitepackagebuilder.com/](https://www.sitepackagebuilder.com/)
-***
-#### v1.0.1  
-Changes in constants.typoscript and setup.typoscript to LIEPS-Defaults
-***
-#### v1.0.2  
-Multiple changes (BE-layout + templates, RTE, install ext: image_autoresize, mask, powermail, news + bugfixes)
-***
-#### v1.0.3  
-setup.typoscript + constants.typoscript + templatepath for news and powermail  
-***
-#### v1.0.4  
-Add jquery magnific popup + add template and partials (fluid-styled-content) + code-cleaning + bugfixes  
-***
-#### v1.0.5  
-new file-structure for TS-files + VHS and flux-integration + adding flux-templates  
-***
-#### v1.0.6  
-Adding breadcrumb-menu with menuprocessor + adding BS5-styles to EXT:news + code-cleaning + bugfixes 
-***
-#### v1.0.7  
-Fix for BS5-styles to EXT:news + font awesome 6 integration
-***
-#### v1.0.8  
-Adding flux-templates for content-elements (teaser, accordion, tabs, carousel + carousel-image) + fix error for autoloading classes
-***
-#### v1.0.9  
-Add lib.dynamicContentSlide + add flux-template for OffCanvas element + add option container-fluid to section template + add background-image to section template + fix error page-template None.html + finetuning 
-***
-#### v1.0.10  
-Add new bootstrap menu + fix error section (BG-Image-Path) + add new PageTitleProvider + add flux-template for buttons 
-***
-#### v1.0.11  
-Add fields for css-classes für row + col in container-elements
-***
-### v2 - Typo3 LTS 11.5  
+### v4.0.7
+- jQuery auf 4.0.0, Font Awesome auf 7.2 und Bootstrap auf 5.3.8 aktualisiert (historischer Changelog-Eintrag).
+- Backend-Footer der Content Blocks um zusätzliche Informationen ergänzt.
+- Fehlerbehebungen und Codebereinigung.
 
-#### v2.0.1  
-Add Support for TYPO3 V11.5 LTS
-***
-#### v2.0.2  
-Fix Powermail-Templates
-***
-#### v2.0.3
-Add sourceset and webp for fluid -> rendering -> Image.html
-***
-#### v2.0.4
-Small fixes + Adding AP-Box + Overwrite TCEFORM -> tt_content + Overwrite Fluid-Styled-Content > Partial > Header > All.html 
-***
-#### v2.0.5
-Fixed Error in ext_emconf.php
-***
-#### v2.0.6
-Adding Image-Gallery (rows) + New Menu (Fullscreen) + Update Bootstrap to 5.2.3 + Update Font Awesome to 6.2.1
-***
-#### v2.0.7
-Element Buttons now with Positioning + Small Fixes + Disable TCA Header-Section for custom elements
-Change from bootstrap.min.js to bootstrap.bundel.min.js
-***
-#### v2.0.8
-Adding Timeline-Element, Cleaning Depends in emconf.php, Adding Autostart-Modalbox with Cookie-Handling (Disable after Closing for 5 Minutes), Adding new Menutypes and Chancing via Constants
-***
-#### v2.0.9
-Column-Elemente überarbeitet (Spaltenbreiten für jede Spalte in allen Viewports anpassbar.), Update to BS 5.3.0, JQuery 3.7.0 and Font Awesome Free 6.4.0
-***
-### v3 - Typo3 LTS 12.4 / LTS 11.5
+### v4.0.6
+- Flux-Inhaltselemente Testimonials, Galerie, Scrollspy und Modalbox auf Content Blocks migriert.
+- Fehlerbehebungen und Codebereinigung.
 
-#### v3.0.0
-Package for TYPO3 V12.4, Required Flux 10.0.7 (Page-Template-Bug until 10.0.6), Update to BS 5.3.2, JQuery 3.7.1 and Font Awesome Free 6.4.2, Change Label Fields in Column-Elements
-***
-#### v3.0.1
-New Lib for Sitetitle (Site-Config -> Language -> Title), New Element "FAQ", Bugfixes, Update Font Awesome Free 6.5.1
-***
-#### v3.0.2
-Bugfixes
-***
-#### v3.0.3
-Bugfixes, Font Awesome to Version 6.5.2, Update to Bootstrap 5.3.3, Adding CE Stoerer.html
-***
-#### v3.0.4
-Update composer.json, Update ext_emconf.php, Update ext_localconf.php, Update PageTitleProvider.php
-***
-#### v3.0.5
-Migrate Flux-Content-Elements to new Content-Blocks (Ansprechpartner) - (more in Next Release), Add function to disable Tab- or Accordeon-Pane to Flux-Template, Adding Custom Scrollbar (CSS), Update Font Awesome to 6.7.2
-***   
-#### v4.0.0
-Package for TYPO3 V13.4, Required min Flux 11.0 and VHS 7.1, new TYPO3_CONF_VARS, new Content-Blocks-Structure (Ansprechpartner) - (more in Next Release),
-*** 
-#### v4.0.1
-Small Bugfixes
-*** 
-#### v4.0.2
-ExtensionManagementUtility::addPageTSConfig() deprecated - removed in ext_localconf.php - add EXT:liepstypo3defaults/Configuration/page.tsconfig, Remove deprecated INCLUDE_TYPOSCRIPT to @import, Fixing Carousel, Fixing meta.typoscript, Fixing locallang.xlf, Add Viewhelper ParentPageTitleViewHelper.php, Remove RemoveSpacesVieHelper.php - add NormalizePhoneViewHelper.php
+### v4.0.5
+- Kompatibilität mit Flux-Versionen oberhalb 11.0.3 angepasst.
+- Flux-Inhaltselemente Störer, Carousel-Image, Downloads und Autostart-Modalbox auf Content Blocks migriert.
+- Fehlerbehebungen und Codebereinigung.
 
+### v4.0.4
+- Weitere Flux-Inhaltselemente (Ansprechpartner/Card, Timeline und Teaser) auf Content Blocks migriert.
+- Neue Icons ergänzt.
+
+### v4.0.3
+- Build-System modernisiert.
+- HTML-`<a>`-Elemente in den Menütemplates durch Fluid-`f:link`-ViewHelper ersetzt.
+
+### v4.0.2
+- Veralteten Aufruf `ExtensionManagementUtility::addPageTSConfig()` aus `ext_localconf.php` entfernt und `Configuration/page.tsconfig` ergänzt.
+- Veraltete `INCLUDE_TYPOSCRIPT`-Anweisungen durch `@import` ersetzt.
+- Carousel, `meta.typoscript` und `locallang.xlf` korrigiert.
+- `ParentPageTitleViewHelper.php` hinzugefügt; `RemoveSpacesVieHelper.php` entfernt und `NormalizePhoneViewHelper.php` ergänzt.
+- Historisches auskommentiertes Beispiel für ein Carousel-Vorschaubild:
+
+```html
 <f:comment><flux:field.file name="iconImage" allowed="jpg,png,svg" showThumbnails="1" minItems="0" maxItems="1" useFalRelation="1" internalType="file_reference" label="Vorschaubild (nur wenn Art des Paginators -> Bild)" /></f:comment>
-***
-#### v4.0.3
-Modernisierung des Build-Systems
-Entfernen von a-Tags und Ersetzen mit f:link-Anweisungen in den Menütemplates
-***
-#### v4.0.4
-Migration Flux to Content-Blocks-Elements (card/ap/timeline/teaser), Neue Icons
-***
-#### v4.0.5
-Compatibility to Flux > 11.0.3, Migration Flux to Content-Blocks-Elements (stoerer/carouselimage/downloads/modalautostart), Bugfixes & Cleaning
-***
-#### v4.0.6
-Migration Flux to Content-Blocks-Elements (testimonials/gallery/scrollspy/modalbox), Bugfixes & Cleaning
-***
-#### v4.0.7
-Update to Jquery 4.0.0, Upgrade FontAwesome to 7.2, Update Bootstrap to 5.3.8, Bugfixes & Cleaning, Content-Blocks Backend-Footer additional Infos
-***
+```
 
-Nächste Schritte:
+### v4.0.1
+- Kleinere Fehlerbehebungen.
 
-3. Optimierung für TYPO3 13.4
-Nutzung des AssetCollector-API statt VHS
-Einsatz von Dependency Injection statt ExtensionUtility
-Migration von Hooks zu Events
-Optimierung des Caching-Frameworks
+### v4.0.0
+- Unterstützung für TYPO3 13.4 eingeführt.
+- Mindestanforderungen: Flux 11.0 und VHS 7.1.
+- Neue `TYPO3_CONF_VARS`-Konfiguration.
+- Neue Content-Blocks-Struktur für Ansprechpartner; weitere Migrationen angekündigt.
 
+---
 
-4. Bootstrap 5 Integration
-Nutzung moderner Bootstrap-Layouts und Komponenten
-Erweiterte Nutzung von CSS-Variablen für Theming
+## TYPO3 12.4 / 11.5 LTS – Version 3.x
 
+### v3.0.5
+- Migration der Flux-Inhaltselemente zu Content Blocks mit dem Ansprechpartner-Element begonnen.
+- Deaktivierung einzelner Tabs und Accordion-Panels in den Flux-Templates ermöglicht.
+- Benutzerdefinierte Scrollbar (CSS) ergänzt.
+- Font Awesome auf 6.7.2 aktualisiert.
 
-5. Dokumentation
-Verbesserte PHP-Dokumentation mit PHPDoc
-Aktualisierung der README.md
-Strukturiertes Changelog nach Keep a Changelog-Format
-Detaillierte Content-Block-Dokumentation
+### v3.0.4
+- `composer.json`, `ext_emconf.php`, `ext_localconf.php` und `PageTitleProvider.php` aktualisiert.
 
-6. Sicherheit und Performance
-Content-Security-Policy-Unterstützung
-Subresource Integrity für externe Ressourcen
-Lazy Loading für Bilder und iframes
-HTTP/2 Optimierung
+### v3.0.3
+- Inhaltselement Störer (`Stoerer.html`) ergänzt.
+- Font Awesome auf 6.5.2 und Bootstrap auf 5.3.3 aktualisiert.
+- Fehlerbehebungen.
 
-7. Barrierefreiheit
-WCAG 2.1 AA-Konformität
-Verbesserte Tastaturnavigation
-Ergänzung fehlender aria-Attribute
-Überprüfung des Farbkontrasts
-Von diesen Punkten haben Sie bisher den ersten Punkt (Modernisierung des Build-Systems) umgesetzt und im Changelog dokumentiert.
+### v3.0.2
+- Fehlerbehebungen.
+
+### v3.0.1
+- TypoScript-Bibliothek für den Site-Titel hinzugefügt (Site-Konfiguration → Sprache → Website-Titel).
+- FAQ-Inhaltselement ergänzt.
+- Font Awesome auf 6.5.1 aktualisiert.
+- Fehlerbehebungen.
+
+### v3.0.0
+- Unterstützung für TYPO3 12.4 eingeführt.
+- Mindestens Flux 10.0.7 vorausgesetzt (Page-Template-Fehler bis 10.0.6).
+- Bootstrap auf 5.3.2, jQuery auf 3.7.1 und Font Awesome auf 6.4.2 aktualisiert.
+- Feldbezeichnungen in den Spaltenelementen angepasst.
+
+---
+
+## TYPO3 11.5 LTS – Version 2.x
+
+### v2.0.9
+- Spaltenelemente überarbeitet: Spaltenbreiten für jede Spalte und alle Viewports individuell einstellbar.
+- Bootstrap auf 5.3.0, jQuery auf 3.7.0 und Font Awesome Free auf 6.4.0 aktualisiert.
+
+### v2.0.8
+- Timeline-Element ergänzt.
+- Abhängigkeiten in `ext_emconf.php` bereinigt.
+- Autostart-Modalbox mit Cookie-Steuerung ergänzt (nach dem Schließen für fünf Minuten deaktiviert).
+- Weitere Menüvarianten und Umschaltung über TypoScript-Konstanten ergänzt.
+
+### v2.0.7
+- Positionierung für Button-Elemente ergänzt.
+- TCA-Header-Bereich bei benutzerdefinierten Inhaltselementen deaktiviert.
+- Von `bootstrap.min.js` auf `bootstrap.bundle.min.js` umgestellt.
+- Kleinere Fehlerbehebungen.
+
+### v2.0.6
+- Bildergalerie (Zeilenlayout) und Fullscreen-Menü ergänzt.
+- Bootstrap auf 5.2.3 und Font Awesome auf 6.2.1 aktualisiert.
+
+### v2.0.5
+- Fehler in `ext_emconf.php` behoben.
+
+### v2.0.4
+- Kleinere Fehlerbehebungen.
+- AP-Box ergänzt.
+- TCEFORM für `tt_content` sowie das Fluid-Styled-Content-Partial `Header/All.html` überschrieben.
+
+### v2.0.3
+- Responsive Bildquellen (`srcset`) und WebP-Unterstützung im Fluid-Partial `Media/Rendering/Image.html` ergänzt.
+
+### v2.0.2
+- Powermail-Templates korrigiert.
+
+### v2.0.1
+- Unterstützung für TYPO3 11.5 LTS eingeführt.
+
+---
+
+## TYPO3 10.4 LTS – Version 1.x
+
+### v1.0.11
+- CSS-Klassen für Reihen und Spalten in Containerelementen konfigurierbar gemacht.
+
+### v1.0.10
+- Neue Bootstrap-Navigation und Flux-Button-Template ergänzt.
+- Pfad zum Hintergrundbild des Section-Elements korrigiert.
+- Neuen PageTitleProvider hinzugefügt.
+
+### v1.0.9
+- `lib.dynamicContentSlide` ergänzt.
+- Flux-Template für OffCanvas ergänzt.
+- Option `container-fluid` und Hintergrundbild für das Section-Template hinzugefügt.
+- Fehler im Page-Template `None.html` behoben; weitere Feinabstimmungen.
+
+### v1.0.8
+- Flux-Templates für Teaser, Accordion, Tabs, Carousel und Carousel-Image ergänzt.
+- Fehler beim Autoloading der Klassen behoben.
+
+### v1.0.7
+- Bootstrap-5-Darstellung für News korrigiert.
+- Font Awesome 6 integriert.
+
+### v1.0.6
+- Breadcrumb-Navigation mit MenuProcessor ergänzt.
+- Bootstrap-5-Darstellung für News eingeführt.
+- Codebereinigung und Fehlerbehebungen.
+
+### v1.0.5
+- Dateistruktur für TypoScript überarbeitet.
+- VHS und Flux integriert; Flux-Templates ergänzt.
+
+### v1.0.4
+- jQuery Magnific Popup integriert.
+- Templates und Partials für Fluid Styled Content ergänzt.
+- Codebereinigung und Fehlerbehebungen.
+
+### v1.0.3
+- `setup.typoscript`, `constants.typoscript` und die Template-Pfade für News und Powermail angepasst.
+
+### v1.0.2
+- Backend-Layouts, Templates und RTE erweitert bzw. angepasst.
+- Zusätzliche Extensions wie image_autoresize, Mask, Powermail und News berücksichtigt.
+- Fehlerbehebungen.
+
+### v1.0.1
+- `constants.typoscript` und `setup.typoscript` an die LIEPS-Standards angepasst.
+
+### v1.0.0
+- Erste Veröffentlichung auf Basis eines Sitepackages von [sitepackagebuilder.com](https://www.sitepackagebuilder.com/).
+
+---
+
+## Historische Planung (ältere To-do-Liste)
+
+Die folgenden Punkte stammen aus einer früheren Planung. Sie sind **kein verifizierter aktueller Arbeitsstand** der TYPO3-14-Migration.
+
+- **TYPO3-13-Optimierung:** Einsatz der AssetCollector-API statt VHS-Assets (für die drei Navigations-Partials in v5.0.0 umgesetzt), Dependency Injection statt `ExtensionUtility`, Migration von Hooks zu Events und Optimierung des Caching-Frameworks.
+- **Bootstrap 5:** Moderne Layouts und Komponenten sowie zusätzliche CSS-Variablen für Theming.
+- **Dokumentation:** PHPDoc verbessern, README aktualisieren, Changelog strukturieren und Content Blocks detaillierter dokumentieren.
+- **Sicherheit und Performance:** Content-Security-Policy, Subresource Integrity für externe Ressourcen, Lazy Loading für Bilder und iFrames sowie HTTP/2-Optimierung.
+- **Barrierefreiheit:** WCAG 2.1 AA, Tastaturnavigation, ARIA-Attribute und Farbkontraste verbessern.
+
+Die Modernisierung des Build-Systems wurde bereits in **v4.0.3** dokumentiert.
