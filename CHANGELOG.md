@@ -2,6 +2,13 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 11: Automatisch generierte Content-Blocks-Site-Sets im Backend ausblenden (16.11.2026)
+- `Configuration/user.tsconfig` ergänzt. TYPO3 14.3 lädt diese Datei als globale User-TSconfig automatisch; eine PHP-Registrierung ist nicht notwendig.
+- Mit `options.sites.hideSets := addToList(...)` alle zwölf automatisch erzeugten Site Sets der LIEPS-Content-Blocks und das Set `liepstypo3defaults/content-blocks-bundle` aus der Liste **Verfügbare Objekte** ausgeblendet.
+- Das eigentliche Site Set `liepsgmbh/liepstypo3defaults` bleibt sichtbar und aktivierbar. Die ausgeblendeten Sets bleiben technisch vorhanden; bereits ausgewählte Sets werden weiterhin bei den aktivierten Objekten angezeigt.
+- **Keine Änderungen** an Content-Block-Definitionen, CTypes, Datenbankfeldern, Templates oder der Site-Set-Registrierung. Da keine einzelnen Content-Block-Sets aktiviert werden müssen, bleibt die bisherige Sichtbarkeit der zwölf Inhaltselemente erhalten.
+- **Offen:** Nach `git pull`, Leeren der TYPO3-Caches und erneutem Öffnen der Site-Konfiguration prüfen, ob die zwölf Einträge und das Bundle aus den verfügbaren Sets verschwunden sind.
+
 ### Schritt 10: Fehlende Beschriftung des Buttons-Content-Blocks (16.11.2026)
 - Im TYPO3-14.3-Assistenten für neue Inhaltselemente wurden Titel und Beschreibung des Content Blocks `liepsgmbh/button` nicht angezeigt.
 - In `ContentBlocks/ContentElements/button/language/labels.xlf` das widersprüchliche Attribut `target-language="de"` entfernt. Die Datei enthält ausschließlich englisch deklarierte `<source>`-Einträge und keine `<target>`-Übersetzungen; TYPO3 behandelt sie nun als Ausgangssprachdatei.
