@@ -2,6 +2,13 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 14: Doppelte Flux-Page `Default/Default` entfernt (16.11.2026)
+- Die beiden Dateien `Resources/Private/Templates/Page/Default.html` und `Resources/Private/Templates/Page/Default/Default.html` geprüft: Der Fluid-Code ist identisch; nur das explizite Anzeigelabel unterscheidet sich.
+- Flux 12 findet und registriert wegen seiner rekursiven Page-Template-Suche beide Dateien als getrennte Seitenlayouts. Die verschachtelte Variante `Default/Default` wird nicht benötigt, um die reguläre Vorlage `Default` aufzulösen.
+- `Resources/Private/Templates/Page/Default/Default.html` gelöscht; `Page/Default.html` und alle anderen zwölf Seitentemplates unverändert beibehalten. Im Git-Repository keine direkten Verweise auf die verschachtelte Variante gefunden.
+- **Bestandsdaten-Hinweis:** Falls bei einer vorhandenen Website `Default/Default` explizit in `pages.tx_fed_page_controller_action` oder `pages.tx_fed_page_controller_action_sub` gespeichert ist, muss diese Seitenlayout-Zuordnung auf `Default` geändert werden. Die Website-Datenbank wurde nicht geprüft und wird nicht verändert.
+- **Test offen:** Nach dem Update TYPO3-/Flux-Caches leeren und die Seite sowie die Site-Konfiguration erneut überprüfen; erwartet werden zwölf statt dreizehn Flux-Seitenlayouts.
+
 ### Schritt 13: Eigene Bezeichnungen für Flux-Inhaltselemente im Site-Konfigurator (16.11.2026)
 - Im Site-Konfigurator unter **Flux-Provider → Verfügbare Inhaltselemente** werden die neun bestehenden Flux-Inhaltstypen künftig mit sprechenden Anzeigenamen dargestellt.
 - Neue Bezeichnungen: `Sektion`, `2 Spalten-Element`, `3 Spalten-Element`, `4 Spalten-Element`, `Bootstrap Accordion`, `Bootstrap Carousel`, `Beispiel-Inhalt`, `Bootstrap Offcanvas` und `Bootstrap Tabs`.
