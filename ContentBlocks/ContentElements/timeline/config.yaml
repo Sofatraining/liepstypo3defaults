@@ -11,8 +11,7 @@ fields:
   - identifier: timeline_events
     type: Collection
     label: 'Timeline-Einträge'
-    required: true
-    min: 1
+    minitems: 1
     appearance:
       collapseAll: true
       levelLinksPosition: bottom

@@ -1,0 +1,15 @@
+categories:
+  Liepstypo3defaults:
+    label: 'LIEPS TYPO3 Defaults'
+
+settings:
+  plugin.tx_liepstypo3defaults.settings.headerOption:
+    label: 'Menüvariante'
+    description: 'Wählt das Navigations-Layout der Seite.'
+    category: Liepstypo3defaults
+    type: string
+    default: '1'
+    enum:
+      '1': 'Classic'
+      '2': 'Modal Fullscreen'
+      '3': 'OffCanvas von links'

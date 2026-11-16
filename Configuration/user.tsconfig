@@ -1,0 +1,11 @@
+# TYPO3 14.3: Nur die automatisch generierten Content-Blocks-Site-Sets
+# aus der Auswahl im Site-Setup ausblenden (nicht deaktivieren).
+# Das LIEPS-Hauptset liepsgmbh/liepstypo3defaults bleibt auswählbar.
+#
+# Bereits aktivierte Sets werden weiterhin unter "Ausgewählte Objekte" angezeigt.
+
+options.sites.hideSets := addToList(liepstypo3defaults/content-blocks-bundle)
+
+options.sites.hideSets := addToList(liepsgmbh/button,liepsgmbh/card,liepsgmbh/carouselimage,liepsgmbh/downloads)
+options.sites.hideSets := addToList(liepsgmbh/stoerer,liepsgmbh/teaser,liepsgmbh/testimonials,liepsgmbh/timeline)
+options.sites.hideSets := addToList(liepstypo3defaults/gallery,liepstypo3defaults/modal,liepstypo3defaults/modalautostart,liepstypo3defaults/stickymenu)

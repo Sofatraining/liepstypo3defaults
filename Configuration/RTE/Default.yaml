@@ -1,37 +1,80 @@
+# LIEPS TYPO3 Defaults RTE preset for TYPO3 14.3 / CKEditor 5.
+# TYPO3's imported configuration provides HTML processing, link handling and base editor settings.
 imports:
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:liepstypo3defaults/Configuration/RTE/Editor/Base.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
 
 editor:
-    config:
-        contentsCss: "EXT:liepstypo3defaults/Resources/Public/Css/rte.css"
+  config:
+    height: 450
 
-        stylesSet:
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+    contentsCss:
+      - 'EXT:liepstypo3defaults/Resources/Public/Css/rte.css'
 
-        toolbarGroups:
-        - { name: styles, groups: [ styles, format ] }
-        - { name: basicstyles, groups: [ basicstyles ] }
-        - { name: paragraph, groups: [ list, indent, blocks, align ] }
-        - { name: links, groups: [ links ] }
-        - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-        - { name: editing, groups: [ spellchecker ] }
-        - { name: insert, groups: [ insert ] }
-        - { name: tools, groups: [ table, specialchar, insertcharacters ] }
-        - { name: document, groups: [ mode ] }
+    toolbar:
+      items:
+        - style
+        - heading
+        - '|'
+        - bold
+        - italic
+        - subscript
+        - superscript
+        - '|'
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - alignment
+        - '|'
+        - findAndReplace
+        - link
+        - '|'
+        - removeFormat
+        - undo
+        - redo
+        - '|'
+        - insertTable
+        - specialCharacters
+        - horizontalLine
+        - sourceEditing
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+    style:
+      definitions:
+        - { name: 'Lead', element: 'p', classes: ['lead'] }
 
-        justifyClasses:
-            - text-left
-            - text-center
-            - text-right
-            - text-justify
+    heading:
+      options:
+        - { model: 'paragraph', title: 'Absatz' }
+        - { model: 'heading1', view: 'h1', title: 'Überschrift 1' }
+        - { model: 'heading2', view: 'h2', title: 'Überschrift 2' }
+        - { model: 'heading3', view: 'h3', title: 'Überschrift 3' }
+        - { model: 'heading4', view: 'h4', title: 'Überschrift 4' }
+        - { model: 'heading5', view: 'h5', title: 'Überschrift 5' }
+        - { model: 'formatted', view: 'pre', title: 'Vorformatiert' }
 
-        extraPlugins:
-            - justify
-            - autolink
+    # Preserve existing text-left / text-right classes in stored RTE content.
+    alignment:
+      options:
+        - { name: 'left', className: 'text-left' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-right' }
+        - { name: 'justify', className: 'text-justify' }
 
-        removePlugins:
-            - image
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
+        - toggleTableCaption
+
+    wordCount:
+      displayWords: true
+      displayCharacters: true
+
+    # List entries are merged with the imported TYPO3 Plugins.yaml modules.
+    importModules:
+      - { module: '@ckeditor/ckeditor5-word-count', exports: ['WordCount'] }

@@ -1,0 +1,3 @@
+# Bestehende LIEPS-TypoScript-Konstanten weiterverwenden.
+# Site Settings werden von TYPO3 nach Set-Konstanten angewendet.
+@import 'EXT:liepstypo3defaults/Configuration/TypoScript/constants.typoscript'

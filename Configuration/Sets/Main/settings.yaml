@@ -1,0 +1,11 @@
+# Die bisher angepassten Fluid-Styled-Content-Konstanten als Site Settings
+# uebernehmen; Core-Defaults wuerden sonst die Konstanten uebersteuern.
+styles.templates.layoutRootPath: 'EXT:liepstypo3defaults/Resources/Private/Layouts/ContentElements/'
+styles.templates.partialRootPath: 'EXT:liepstypo3defaults/Resources/Private/Partials/ContentElements/'
+styles.templates.templateRootPath: 'EXT:liepstypo3defaults/Resources/Private/Templates/ContentElements/'
+styles.content.textmedia.maxW: 1920
+styles.content.textmedia.maxWInText: 1200
+styles.content.textmedia.linkWrap.width: '1920m'
+styles.content.textmedia.linkWrap.height: '1200m'
+styles.content.textmedia.linkWrap.lightboxEnabled: true
+styles.content.textmedia.linkWrap.lightboxCssClass: 'image-link'

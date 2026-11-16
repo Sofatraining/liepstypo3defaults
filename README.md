@@ -1,11 +1,12 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 13.4 LTS
-Description: This TYPO3-LTS13-Sitepackage will install flux, vhs and content_blocks. Install mask, image_autoresize, powermail and news as you needed. It contains section-, container- and flux- and conten-blocks-templates for a bootstrap5 site, various menu-types and many more. 
+## TYPO3 14.3 LTS – v5.0.0 (development)
 
-Demo: https://v13.lieps.de/
+This sitepackage provides Bootstrap 5 page templates, content elements and navigation variants based on Flux, VHS and Content Blocks. Optional extensions such as News, Powermail, Mask and image_autoresize require separate TYPO3-14.3 compatibility checks.
 
-=======
-  
+**Release status:** The TYPO3 14.3 migration is taking place in `v14-dev` and has not yet been fully tested. `v14-main` is reserved for the later stable v5.0.0 release and currently still reflects the TYPO3-13 codebase. Do not use `v14-main` as a TYPO3-14.3-compatible release yet.
+
+**Requirements for v5.0.0 / v14-dev:** PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` and VHS `^8.0.0`. See `composer.json` for the authoritative constraints.
+
 ## MANUAL
 ### Installation / Settings
 To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
@@ -14,45 +15,40 @@ To avoid timeouts during extension installation, the dependent extensions should
 * content_blocks (needed)
 
 #### Installation via git clone
-Stable
-* Under /typo3conf/ext/ -> git clone https://github.com/Sofatraining/liepstypo3defaults.git
+Stable (planned; v14-main is not yet ready for TYPO3 14.3)
+* Under /typo3conf/ext/ -> git clone --branch v14-main https://github.com/Sofatraining/liepstypo3defaults.git
 
-Development
-* Under /typo3conf/ext/ -> git clone --branch v13-dev https://github.com/Sofatraining/liepstypo3defaults.git
+Development (TYPO3 14.3 migration; not yet production-ready)
+* Under /typo3conf/ext/ -> git clone --branch v14-dev https://github.com/Sofatraining/liepstypo3defaults.git
 
-#### Settings
+#### TYPO3 14.3: Site Set aktivieren
 
-```ini
-[Template -> Enthält -> LIEPS TYPO3 Defaults (lieps_typo3_defaults) muss das letzte statische Template sein!!]
-```   
-![Extentions - statische Templates](https://user-images.githubusercontent.com/47626641/155408223-9910a40c-0790-4871-a944-ac08f29c6adb.png)
-  
-* Add static templates like in the screenshot (should be the last entry)
+Nach der Installation unter **Sites → Setup → Site-Konfiguration** das Set **LIEPS TYPO3 Defaults** (`liepsgmbh/liepstypo3defaults`) zur Site hinzufügen. Das Set lädt die vorhandenen `Configuration/TypoScript/setup.typoscript` und `constants.typoscript` automatisch. **Fluid Styled Content** wird durch die Set-Abhängigkeit eingebunden; das CSS-Set ist bei Bedarf zusätzlich auswählbar.
+
+Die bisher angepassten Fluid-Styled-Content-Werte (Bildbreiten, Lightbox und Template-Pfade) werden in `Configuration/Sets/Main/settings.yaml` als Set-Defaults bereitgestellt. Eine Site kann diese über eigene Site Settings überschreiben.
+
+**Kein statisches LIEPS-TypoScript-Template parallel einbinden.** Falls ein älterer `sys_template`-Datensatz übernommen wurde, dessen bisherige LIEPS-Einbindung entfernen und auf die Root-Template-Flags `Clear constants`/`Clear setup` achten. Diese können Site-Set-TypoScript löschen.
+
 * Update the language files after installation: Wartung -> Manage Languages -> Update all  
-* Disable JS and CSS compression during development -> Setup
-```diff
-config {  
-	compressJs = 0  
-	compressCss = 0  
-	concatenateJs = 0  
-	concatenateCss = 0  
-}  
-```
+* TYPO3 14 has removed frontend CSS/JavaScript compression and concatenation. Do **not** configure `config.compressJs`, `config.compressCss`, `config.concatenateJs` or `config.concatenateCss` (not even with `0` during development).
+* The existing minified CSS and JavaScript resources are still included through `page.includeCSS*` and `page.includeJS*`. Asset optimization belongs to the build process (see `Build/package.json`), not to TypoScript runtime configuration.
+* Obsolete configuration such as `config.absRefPrefix` and `config.linkVars = L`, as well as the `TSFE:id` fallback in `lib.dynamicContent`, has also been removed/replaced for TYPO3 14.
 
-#### Change menu type
-The type of menu can be selected in the template using the constant editor. Necessary JS and CSS files are automatically integrated via v:assets.
+#### Menüvariante auswählen (Site Settings)
+Unter **Sites → Setup → Einstellungen (Site Settings)** in der Kategorie **LIEPS TYPO3 Defaults** die Menüvariante wählen:
 
-![Template - Konstanteneditor](https://user-images.githubusercontent.com/47626641/253544264-d22e4b3c-a7d0-4996-b61d-698984f7b2f5.jpg)
+- **Classic** (1)
+- **Modal Fullscreen** (2)
+- **OffCanvas von links** (3)
 
-More menu types will be integrated soon
+Die Einstellung `plugin.tx_liepstypo3defaults.settings.headerOption` bleibt als TypoScript-Konstante unter demselben Namen verwendbar. Die entsprechenden CSS- und JavaScript-Dateien werden durch TYPO3s `f:asset.css` und `f:asset.script` eingebunden; `v:asset.*` ist in VHS 8 nicht mehr verfügbar.
+
 ***
 
 ### EXT:Fluid Styled Content
-```ini
-[Template -> Enthält -> "Fluid Content Elements (fluid_styled_content)" als erstes statische Template hinzufügen]  
-[Template -> Enthält -> "Fluid Content Elements CSS (optional) (fluid_styled_content)" als zweites statische Template hinzufügen]
-``` 
-* Überschreibungen werden in den Ordnern 'ContentElements' in Resources/Privat abgelegt 
+- Das Set `typo3/fluid-styled-content` ist als Abhängigkeit des LIEPS-Site-Sets angegeben und wird von TYPO3 automatisch berücksichtigt.
+- Das CSS-Set `Fluid Styled Content CSS` kann zusätzlich aktiviert werden.
+- Template- und Partial-Überschreibungen liegen unter `Resources/Private/*/ContentElements/`.
 ***
 
 ### Flux-Templates
@@ -129,5 +125,7 @@ Falls KESEARCH im Einsatz ist:
 * Dokumentation unter https://github.com/MamounAlsmaiel/flux_kesearch_indexer
 
 ***   
-## ToDo
-* VHS ab Version 8 ohne v:assets style - UMbau der Menü-Partials notwendig
+## ToDo (TYPO3 14.3 migration)
+* Validate Flux 12 / VHS 8 rendering and existing nested content and FlexForm data.
+* Validate Content Blocks 2.x and CKEditor 5 in a running TYPO3 14.3 instance (static migration completed).
+* Review remaining hard-coded asset URLs and test the TYPO3 14.3 installation before releasing `v14-main`.

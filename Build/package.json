@@ -1,6 +1,6 @@
 {
   "name": "liepsgmbh/liepstypo3defaults",
-  "version": "4.0.7",
+  "version": "5.0.0",
   "description": "Build tools for LIEPS-TYPO3-Defaults Extension",
   "private": true,
   "scripts": {

@@ -26,7 +26,7 @@ fields:
     type: File
     useExistingField: true
     label: 'Teaser Bild'
-    required: true
+    minitems: 1
     maxitems: 1
     allowed: common-image-types
   - identifier: header_link

@@ -34,7 +34,7 @@ fields:
       - identifier: bild
         type: File
         label: 'Bilder'
-        maxItems: 3
+        maxitems: 3
         appearance:
           collapseAll: true
       - identifier: bildposition
