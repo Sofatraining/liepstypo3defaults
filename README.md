@@ -1,5 +1,5 @@
 # Sitepackage for CMS TYPO3
-## TYPO3 14.3 LTS – v5.0.0 (development)
+## TYPO3 14.3 LTS – v5
 
 This sitepackage provides Bootstrap 5 page templates, content elements and navigation variants based on Flux, VHS and Content Blocks. Optional extensions such as News, Powermail, Mask and image_autoresize require separate TYPO3-14.3 compatibility checks.
 
