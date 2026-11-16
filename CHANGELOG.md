@@ -2,6 +2,13 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 12: Flux-Seitentemplates im Site-Konfigurator eindeutig beschriften (16.11.2026)
+- Allen 13 Flux-Seitentemplates unter `Resources/Private/Templates/Page/` ein explizites `label`-Attribut am bestehenden `<flux:form id="standard">` zugewiesen. Beispiel: `<flux:form id="standard" label="Seitenlayout 010">`.
+- Eindeutige Namen ohne „LIEPS“ vergeben: `Seitenlayout 010`, `020`, `030`, `110`, `111`, `120`, `121`, `130`, `131`, `Default`, `Default/Default`, `None` und `Standard`.
+- Die bisher identische Anzeige `Default Page` im Reiter **Flux-Provider → Verfügbare Seitenlayouts/-templates** wird durch individuelle Bezeichnungen ersetzt.
+- **Unverändert:** `flux:form`-IDs (`standard`), Dateipfade, Flux-FlexForm-Definitionen, Spalten, Backend-Filter und Frontend-Rendering. Eine leere Auswahl im Flux-Provider-Reiter erlaubt weiterhin alle verfügbaren Typen.
+- **Test ausstehend:** TYPO3-Caches nach Aktualisierung leeren und die eindeutigen Namen im Site-Konfigurator kontrollieren.
+
 ### Schritt 11: Automatisch generierte Content-Blocks-Site-Sets im Backend ausblenden (16.11.2026)
 - `Configuration/user.tsconfig` ergänzt. TYPO3 14.3 lädt diese Datei als globale User-TSconfig automatisch; eine PHP-Registrierung ist nicht notwendig.
 - Mit `options.sites.hideSets := addToList(...)` alle zwölf automatisch erzeugten Site Sets der LIEPS-Content-Blocks und das Set `liepstypo3defaults/content-blocks-bundle` aus der Liste **Verfügbare Objekte** ausgeblendet.
