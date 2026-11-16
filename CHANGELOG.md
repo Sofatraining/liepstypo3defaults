@@ -2,6 +2,13 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 8: Titelgenerierung – TYPO3-14-USER-Callable-Freigabe (16.11.2026)
+- Nach erfolgreichem Frontend-Rendering wurde der Seitentitel als `Oops, an error occurred! Request: … :: Dev v14` ausgegeben.
+- Ursache: `page.headerData.10.10` ruft den eigenen `LiepsGmbH\Liepstypo3defaults\Seo\TitleTagResolver->resolve` als TypoScript-`USER`-Funktion auf. Seit TYPO3 14 verlangt dies ausdrücklich `#[\TYPO3\CMS\Core\Attribute\AsAllowedCallable]` (Breaking Change #108054); bislang fehlte das Attribut.
+- `Classes/Seo/TitleTagResolver.php` um `use TYPO3\CMS\Core\Attribute\AsAllowedCallable;` und `#[AsAllowedCallable]` unmittelbar vor der Methode `resolve()` ergänzt.
+- Sonstige Logik für News-/Event-Detailtitel und den Fallback auf `seo_title` / `title` unverändert; keine TypoScript-/Datenbankänderungen.
+- **Offen:** Nach Update von `v14-dev` und Leeren der TYPO3-Caches die HTML-`<title>`-Ausgabe im Frontend prüfen. Der konkrete Server-Request-Fehler wurde nicht anhand eines zugehörigen Logeintrags verifiziert; der fehlende Attributschutz ist durch den Source-Abgleich mit TYPO3 14.3.11 jedoch nachgewiesen.
+
 ### Schritt 7: Site Sets und erster TYPO3-14.3.11-Laufzeittest (16.11.2026)
 - TYPO3 14.3.11 konnte die Extension laden und einen Flux-Page-Controller aufrufen; beim Rendern trat die `InvalidLayoutException` für Layout `Default` auf.
 - Ein eigenes Site Set `liepsgmbh/liepstypo3defaults` unter `Configuration/Sets/Main/` eingeführt. Es bindet die vorhandenen TypoScript-Dateien ein und deklariert `typo3/fluid-styled-content` als Set-Abhängigkeit, statt dessen TypoScript direkt mehrfach zu importieren.

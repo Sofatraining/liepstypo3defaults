@@ -5,6 +5,7 @@ namespace LiepsGmbH\Liepstypo3defaults\Seo;
 
 use Doctrine\DBAL\ParameterType;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -14,6 +15,7 @@ final class TitleTagResolver
      * TypoScript USER userFunc signature:
      * resolve($content, $conf, $request)
      */
+    #[AsAllowedCallable]
     public function resolve(string $content = '', array $conf = [], ?ServerRequestInterface $request = null): string
     {
         $request ??= ($GLOBALS['TYPO3_REQUEST'] ?? null);
