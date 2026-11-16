@@ -1,8 +1,6 @@
-######################
-#### DEPENDENCIES ####
-######################
-@import "EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript"
-
+# typo3/fluid-styled-content wird als Site-Set-Abhaengigkeit geladen.
+# Die angepassten FSC-Konstanten bleiben zur Abwaertskompatibilitaet erhalten;
+# im Site-Set werden ihre Werte zusaetzlich ueber settings.yaml bereitgestellt.
 
 ##############################
 #### FLUID STYLED CONTENT ####

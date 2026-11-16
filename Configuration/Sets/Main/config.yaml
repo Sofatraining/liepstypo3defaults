@@ -1,0 +1,4 @@
+name: liepsgmbh/liepstypo3defaults
+label: 'LIEPS TYPO3 Defaults'
+dependencies:
+  - typo3/fluid-styled-content

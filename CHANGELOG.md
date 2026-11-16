@@ -2,6 +2,16 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 7: Site Sets und erster TYPO3-14.3.11-Laufzeittest (16.11.2026)
+- TYPO3 14.3.11 konnte die Extension laden und einen Flux-Page-Controller aufrufen; beim Rendern trat die `InvalidLayoutException` für Layout `Default` auf.
+- Ein eigenes Site Set `liepsgmbh/liepstypo3defaults` unter `Configuration/Sets/Main/` eingeführt. Es bindet die vorhandenen TypoScript-Dateien ein und deklariert `typo3/fluid-styled-content` als Set-Abhängigkeit, statt dessen TypoScript direkt mehrfach zu importieren.
+- Die bisherige Menüauswahl unter `plugin.tx_liepstypo3defaults.settings.headerOption` als Site Setting mit drei Varianten (Classic, Modal Fullscreen, OffCanvas von links) bereitgestellt; der bisherige TypoScript-Konstantenname bleibt erhalten.
+- Die bestehenden Fluid-Styled-Content-Anpassungen (Template-Pfade, Bildgrößen und Lightbox-Konfiguration) als vererbbare Set-Defaults in `Configuration/Sets/Main/settings.yaml` übernommen.
+- Die Flux-View-Pfade für die Page- und Content-Verzeichnisse ergänzt, damit die Page-Layouts (`Default`) und Header-/Footer-Partials beim Rendern über den Flux-Controller aufgelöst werden können.
+- Selbstreferenzierende `<f:layout>`-Deklarationen in `Layouts/Page/Default.html`, `Layouts/Content/Content.html` und `Layouts/Content/Page.html` entfernt; die `Main`-Sektionen bleiben erhalten.
+- `README.md` auf die Site-Set-Einbindung und die Menüauswahl über Site Settings aktualisiert. Das bisherige statische Template darf nicht zusätzlich eingebunden sein.
+- **Offen:** TYPO3-14.3.11-Frontend nach Aktivierung des Sets, Cache-Leerung und Kontrolle der Root-Template-Clear-Flags erneut aufrufen. Erfolgreiches Rendering ist erst nach diesem Integrationstest bestätigt.
+
 ### Schritt 6: CKEditor 5 / RTE-Konfiguration für TYPO3 14.3
 - `Configuration/RTE/Default.yaml` auf die CKEditor-5-Struktur migriert: `toolbar.items`, `style.definitions` (Lead), `heading.options` (Absatz, H1–H5, Pre) und `alignment.options` statt der alten CKEditor-4-Einstellungen.
 - TYPO3-Core-Konfigurationen `Processing.yaml`, `Editor/Base.yaml` und `Editor/Plugins.yaml` importiert; die obsolete eigene `Configuration/RTE/Editor/Base.yaml` entfernt.

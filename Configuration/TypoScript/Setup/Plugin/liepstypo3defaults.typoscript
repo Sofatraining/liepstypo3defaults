@@ -1,14 +1,26 @@
 ##########################
 ### LIEPSTYPO3DEFAULTS ###
 ##########################
+# Flux 12 rendert Page- und Content-Templates ueber den Extbase-ViewBuilder.
+# Darum muessen beide Verzeichnisgruppen in plugin.tx_liepstypo3defaults.view verfuegbar sein.
 plugin.tx_liepstypo3defaults {
-	view {
-		templateRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.templateRootPaths.0}
-		partialRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.partialRootPaths.0}
-		layoutRootPaths.0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
-	}
+    view {
+        templateRootPaths {
+            0 = {$plugin.tx_liepstypo3defaults.view.templateRootPaths.0}
+            10 = EXT:liepstypo3defaults/Resources/Private/Templates/Page/
+        }
+        partialRootPaths {
+            0 = {$plugin.tx_liepstypo3defaults.view.partialRootPaths.0}
+            10 = EXT:liepstypo3defaults/Resources/Private/Partials/Page/
+        }
+        layoutRootPaths {
+            0 = {$plugin.tx_liepstypo3defaults.view.layoutRootPaths.0}
+            10 = EXT:liepstypo3defaults/Resources/Private/Layouts/Page/
+        }
+    }
 }
 
-### Menü-Switch (Über Konstanten -> LIEPSTYPO3DEFAULTS)
+# Die Menüvariante wird in TYPO3 14 über die Site Settings gesetzt.
+# Derselbe Konstantenname bleibt für bestehende TypoScript-Verwendungen erhalten.
 menu.type = TEXT
 menu.type.value = {$plugin.tx_liepstypo3defaults.settings.headerOption}
