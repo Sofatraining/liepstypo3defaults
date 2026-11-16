@@ -6,7 +6,6 @@ page {
 	meta {
 		viewport = {$page.meta.viewport}
 		robots = {$page.meta.robots}
-		apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
 		description = {$page.meta.description}
 		description {
 			override.field = description
@@ -19,11 +18,6 @@ page {
 		keywords {
 			override.field = keywords
 		}
-		X-UA-Compatible = {$page.meta.compatible}
-		X-UA-Compatible {
-			attribute = http-equiv
-		}
-
 		# OpenGraph Tags
 		og:title {
 			attribute = property

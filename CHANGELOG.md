@@ -2,6 +2,13 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 9: Nicht auflösbare Meta-Konstanten im Frontend entfernt (16.11.2026)
+- Nach erfolgreicher Korrektur des Seitentitels erzeugte `meta.typoscript` den HTML-Tag `<meta name="apple-mobile-web-app-capable" content="{$page.meta.apple-mobile-web-app-capable}">`, da die verwendete Konstante nicht definiert war.
+- `page.meta.apple-mobile-web-app-capable` aus `Configuration/TypoScript/Setup/Page/meta.typoscript` entfernt. Ohne aktivierte iOS-Standalone-Web-App ist dieses Meta-Tag nicht erforderlich; es kann bei einem späteren PWA-Bedarf gezielt konfiguriert werden.
+- Gleichzeitig die ebenfalls undefinierte Konstante `{$page.meta.compatible}` und den dazugehörigen veralteten `X-UA-Compatible`-Meta-Tag für Internet Explorer entfernt.
+- Vorhandene SEO-, OpenGraph-, Robots-, Viewport-, Description-, Author- und Keywords-Einstellungen unverändert belassen.
+- **Offen:** Nach Update von `v14-dev` und Cache-Leerung die HTML-Ausgabe im Frontend erneut prüfen; keine Änderungen an bestehenden Site Settings oder Datenbankdaten.
+
 ### Schritt 8: Titelgenerierung – TYPO3-14-USER-Callable-Freigabe (16.11.2026)
 - Nach erfolgreichem Frontend-Rendering wurde der Seitentitel als `Oops, an error occurred! Request: … :: Dev v14` ausgegeben.
 - Ursache: `page.headerData.10.10` ruft den eigenen `LiepsGmbH\Liepstypo3defaults\Seo\TitleTagResolver->resolve` als TypoScript-`USER`-Funktion auf. Seit TYPO3 14 verlangt dies ausdrücklich `#[\TYPO3\CMS\Core\Attribute\AsAllowedCallable]` (Breaking Change #108054); bislang fehlte das Attribut.
