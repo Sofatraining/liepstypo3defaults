@@ -2,6 +2,14 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 13: Eigene Bezeichnungen für Flux-Inhaltselemente im Site-Konfigurator (16.11.2026)
+- Im Site-Konfigurator unter **Flux-Provider → Verfügbare Inhaltselemente** werden die neun bestehenden Flux-Inhaltstypen künftig mit sprechenden Anzeigenamen dargestellt.
+- Neue Bezeichnungen: `Sektion`, `2 Spalten-Element`, `3 Spalten-Element`, `4 Spalten-Element`, `Bootstrap Accordion`, `Bootstrap Carousel`, `Beispiel-Inhalt`, `Bootstrap Offcanvas` und `Bootstrap Tabs`.
+- `Classes/Backend/FluxContentTypeItems.php` als gezielten Adapter für Flux 12 angelegt. Er verwendet weiterhin `SiteConfigurationProviderItems::processContentTypeItems()` und tauscht ausschließlich die Anzeigelabels der neun bekannten CType-Kennungen aus.
+- Unter `Configuration/SiteConfiguration/Overrides/site.php` die `itemsProcFunc` für `flux_content_types` auf den Adapter umgestellt, ohne andere Flux-Site-Felder zu überschreiben.
+- **Unverändert:** CType-Werte und ihre Schreibweise, bestehende Datensätze, Flux-Templates, FlexForms und die Funktion der optionalen Site-Filter.
+- **Prüfung:** PHP-Syntax lokal geprüft; der Adapter wurde mit numerischen und assoziativen Auswahleinträgen sowie unbekannten CTypes getestet. Backend-Anzeige nach Extension-Update und Cache-Leerung noch zu prüfen.
+
 ### Schritt 12: Flux-Seitentemplates im Site-Konfigurator eindeutig beschriften (16.11.2026)
 - Allen 13 Flux-Seitentemplates unter `Resources/Private/Templates/Page/` ein explizites `label`-Attribut am bestehenden `<flux:form id="standard">` zugewiesen. Beispiel: `<flux:form id="standard" label="Seitenlayout 010">`.
 - Eindeutige Namen ohne „LIEPS“ vergeben: `Seitenlayout 010`, `020`, `030`, `110`, `111`, `120`, `121`, `130`, `131`, `Default`, `Default/Default`, `None` und `Standard`.
