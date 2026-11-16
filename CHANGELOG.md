@@ -2,6 +2,12 @@
 
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
+### Schritt 10: Fehlende Beschriftung des Buttons-Content-Blocks (16.11.2026)
+- Im TYPO3-14.3-Assistenten für neue Inhaltselemente wurden Titel und Beschreibung des Content Blocks `liepsgmbh/button` nicht angezeigt.
+- In `ContentBlocks/ContentElements/button/language/labels.xlf` das widersprüchliche Attribut `target-language="de"` entfernt. Die Datei enthält ausschließlich englisch deklarierte `<source>`-Einträge und keine `<target>`-Übersetzungen; TYPO3 behandelt sie nun als Ausgangssprachdatei.
+- Der Text `Button` und die Beschreibung sowie die Content-Block-Identität und die Feldkonfiguration bleiben unverändert.
+- **Offen:** Nach Aktualisierung von `v14-dev` und Cache-Leerung Beschriftung und Beschreibung im Backend-Assistenten kontrollieren.
+
 ### Schritt 9: Nicht auflösbare Meta-Konstanten im Frontend entfernt (16.11.2026)
 - Nach erfolgreicher Korrektur des Seitentitels erzeugte `meta.typoscript` den HTML-Tag `<meta name="apple-mobile-web-app-capable" content="{$page.meta.apple-mobile-web-app-capable}">`, da die verwendete Konstante nicht definiert war.
 - `page.meta.apple-mobile-web-app-capable` aus `Configuration/TypoScript/Setup/Page/meta.typoscript` entfernt. Ohne aktivierte iOS-Standalone-Web-App ist dieses Meta-Tag nicht erforderlich; es kann bei einem späteren PWA-Bedarf gezielt konfiguriert werden.
