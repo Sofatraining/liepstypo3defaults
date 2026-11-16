@@ -1,25 +1,35 @@
-# Sitepackage for CMS TYPO3
-## TYPO3 14.3 LTS – v5
+# LIEPS TYPO3 Defaults
+## Sitepackage für TYPO3 14.3 – Version 5
 
-This sitepackage provides Bootstrap 5 page templates, content elements and navigation variants based on Flux, VHS and Content Blocks. Optional extensions such as News, Powermail, Mask and image_autoresize require separate TYPO3-14.3 compatibility checks.
+Diese Extension stellt auf Bootstrap 5 basierende Seitentemplates, Inhaltselemente und Menüvarianten bereit. Sie verwendet Flux, VHS und Content Blocks. Optionale Erweiterungen wie News, Powermail, Mask und image_autoresize müssen gesondert auf Kompatibilität mit TYPO3 14.3 geprüft werden.
 
-**Release status:** The TYPO3 14.3 migration is taking place in `v14-dev` and has not yet been fully tested. `v14-main` is reserved for the later stable v5.0.0 release and currently still reflects the TYPO3-13 codebase. Do not use `v14-main` as a TYPO3-14.3-compatible release yet.
+**Branches und Versionen:**
+- `v14-main`: Release-Zweig für TYPO3 14.3, Version **5.0.0**.
+- `v14-dev`: Entwicklungszweig für TYPO3 14.3, aktuelle Version **5.1.0**. Änderungen dieses Zweigs sind nicht automatisch als produktionsreif einzustufen.
 
-**Requirements for v5.0.0 / v14-dev:** PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` and VHS `^8.0.0`. See `composer.json` for the authoritative constraints.
+**Systemvoraussetzungen für `v14-dev` (5.1.0):** PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`. Maßgeblich sind die Abhängigkeiten in `composer.json`.
 
-## MANUAL
-### Installation / Settings
-To avoid timeouts during extension installation, the dependent extensions should be installed beforehand. These are:
-* vhs (needed)
-* flux (needed)
-* content_blocks (needed)
+## Anleitung
+### Installation und Konfiguration
+Um Zeitüberschreitungen bei der Installation zu vermeiden, sollten die benötigten Erweiterungen vorab installiert werden:
+- `vhs`
+- `flux`
+- `content_blocks`
 
-#### Installation via git clone
-Stable (planned; v14-main is not yet ready for TYPO3 14.3)
-* Under /typo3conf/ext/ -> git clone --branch v14-main https://github.com/Sofatraining/liepstypo3defaults.git
+#### Installation per Git
+Bei einer klassischen Installation kann die Extension im Extension-Verzeichnis des TYPO3-Projekts ausgecheckt werden (Verzeichnisstruktur abhängig von der Installationsart).
 
-Development (TYPO3 14.3 migration; not yet production-ready)
-* Under /typo3conf/ext/ -> git clone --branch v14-dev https://github.com/Sofatraining/liepstypo3defaults.git
+**Release-Zweig `v14-main` (5.0.0):**
+```bash
+git clone --branch v14-main https://github.com/Sofatraining/liepstypo3defaults.git
+```
+
+**Entwicklungszweig `v14-dev` (5.1.0):**
+```bash
+git clone --branch v14-dev https://github.com/Sofatraining/liepstypo3defaults.git
+```
+
+Für Composer-basierte Installationen gelten die Vorgaben des jeweiligen TYPO3-Projekts. Ein Git-Checkout ersetzt nicht die Installation der Abhängigkeiten.
 
 #### TYPO3 14.3: Site Set aktivieren
 
@@ -29,10 +39,10 @@ Die bisher angepassten Fluid-Styled-Content-Werte (Bildbreiten, Lightbox und Tem
 
 **Kein statisches LIEPS-TypoScript-Template parallel einbinden.** Falls ein älterer `sys_template`-Datensatz übernommen wurde, dessen bisherige LIEPS-Einbindung entfernen und auf die Root-Template-Flags `Clear constants`/`Clear setup` achten. Diese können Site-Set-TypoScript löschen.
 
-* Update the language files after installation: Wartung -> Manage Languages -> Update all  
-* TYPO3 14 has removed frontend CSS/JavaScript compression and concatenation. Do **not** configure `config.compressJs`, `config.compressCss`, `config.concatenateJs` or `config.concatenateCss` (not even with `0` during development).
-* The existing minified CSS and JavaScript resources are still included through `page.includeCSS*` and `page.includeJS*`. Asset optimization belongs to the build process (see `Build/package.json`), not to TypoScript runtime configuration.
-* Obsolete configuration such as `config.absRefPrefix` and `config.linkVars = L`, as well as the `TSFE:id` fallback in `lib.dynamicContent`, has also been removed/replaced for TYPO3 14.
+* Sprachdateien nach der Installation unter **Wartung → Sprachen verwalten → Alle aktualisieren** aktualisieren.  
+* TYPO3 14 unterstützt die bisherige CSS-/JavaScript-Komprimierung und -Konkatenation im Frontend nicht mehr. `config.compressJs`, `config.compressCss`, `config.concatenateJs` und `config.concatenateCss` dürfen nicht mehr gesetzt werden (auch nicht auf `0`).
+* Vorhandene minimierte CSS- und JavaScript-Dateien werden weiterhin über `page.includeCSS*` und `page.includeJS*` eingebunden. Die Optimierung erfolgt im Build-Prozess (siehe `Build/package.json`), nicht über TypoScript.
+* Veraltete Konfigurationen wie `config.absRefPrefix`, `config.linkVars = L` und der `TSFE:id`-Fallback in `lib.dynamicContent` wurden für TYPO3 14 entfernt oder ersetzt.
 
 #### Menüvariante auswählen (Site Settings)
 Unter **Sites → Setup → Einstellungen (Site Settings)** in der Kategorie **LIEPS TYPO3 Defaults** die Menüvariante wählen:
@@ -52,12 +62,12 @@ Die Einstellung `plugin.tx_liepstypo3defaults.settings.headerOption` bleibt als 
 ***
 
 ### Flux-Templates
-* Templates werden in den Ordnern 'Content' in Resources/Privat abgelegt
-* Provider-Extension wurde vollständig integriert
-* Dokumentation unter https://fluidtypo3.org/documentation/templating-manual/introduction.html
+* Die Flux-Inhaltstemplates liegen unter `Resources/Private/Templates/Content/`; Seitentemplates unter `Resources/Private/Templates/Page/`.
+* Der Flux-Provider für Seiten- und Inhaltstemplates wird durch die Extension registriert.
+* Flux-Dokumentation: https://fluidtypo3.org/documentation/templating-manual/introduction.html
 ***
 
-### EXT:News (If in use)
+### EXT:News (optional)
 ```ini
 [Template -> Enthält -> "News (news)" hinzufügen]   
 ``` 
@@ -67,7 +77,7 @@ Die Einstellung `plugin.tx_liepstypo3defaults.settings.headerOption` bleibt als 
 * News-CSS liegt unter EXT:liepstypo3defaults/Resources/Public/Css/news-basic.css
 ***
   
-### EXT:Powermail (If in use)
+### EXT:Powermail (optional)
 * Anpassungen für "Add classes and CSS based on bootstrap (powermail)" vorgenommen 
 ```ini
 [Template -> Enthält -> "Main Template (powermail)" hinzufügen]
@@ -75,7 +85,7 @@ Die Einstellung `plugin.tx_liepstypo3defaults.settings.headerOption` bleibt als 
 ```  
 ***
   
-### EXT:Mask (If in use)
+### EXT:Mask (optional)
 ```ini
 [Template -> Enthält -> "Mask (mask)" hinzufügen]
 ``` 
@@ -125,7 +135,7 @@ Falls KESEARCH im Einsatz ist:
 * Dokumentation unter https://github.com/MamounAlsmaiel/flux_kesearch_indexer
 
 ***   
-## ToDo (TYPO3 14.3 migration)
-* Validate Flux 12 / VHS 8 rendering and existing nested content and FlexForm data.
-* Validate Content Blocks 2.x and CKEditor 5 in a running TYPO3 14.3 instance (static migration completed).
-* Review remaining hard-coded asset URLs and test the TYPO3 14.3 installation before releasing `v14-main`.
+## Offene Prüfungen für die Weiterentwicklung (5.1.0)
+- Flux 12 und VHS 8 einschließlich verschachtelter Inhalte und bestehender FlexForm-Daten in einer laufenden TYPO3-14.3-Installation prüfen.
+- Content Blocks 2.x und CKEditor 5 praktisch testen.
+- Verbliebene fest codierte Asset-URLs prüfen und Installation sowie Darstellung vor dem nächsten Release testen.
