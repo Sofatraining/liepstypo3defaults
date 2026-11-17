@@ -1,6 +1,6 @@
 # Changelog – LIEPS TYPO3 Defaults
 
-## v5.1.0 – TYPO3 14.3
+## v5.1.0 – TYPO3 14.3 LTS
 
 ### Flux-Provider-Auswahl auf TYPO3-Backend-Layouts anwenden
 - Neues `Classes/Backend/FluxBackendLayoutItems.php` filtert nach der bestehenden TYPO3-Backend-Layout-Ermittlung die eigenen PageTS-Layouts anhand der Site-Konfiguration `flux_page_templates`.
