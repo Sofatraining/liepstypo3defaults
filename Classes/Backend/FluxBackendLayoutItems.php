@@ -82,8 +82,18 @@ final class FluxBackendLayoutItems
         $ourLayouts = array_fill_keys(array_values(self::TEMPLATE_TO_LAYOUT), true);
         $parameters['items'] = array_values(array_filter(
             (array)($parameters['items'] ?? []),
-            static function (array $item) use ($ourLayouts, $permittedLayouts): bool {
-                $value = (string)($item['value'] ?? $item[1] ?? '');
+            static function (mixed $item) use ($ourLayouts, $permittedLayouts): bool {
+                // TYPO3 14 uses SelectItem objects; keep them intact for the FormEngine.
+                if ($item instanceof \\TYPO3\\CMS\\Core\\Schema\\Struct\\SelectItem) {
+                    $value = $item->getValue();
+                } elseif (is_array($item)) {
+                    // Compatibility with entries that are still plain TCA arrays.
+                    $value = $item['value'] ?? $item[1] ?? null;
+                } else {
+                    return true;
+                }
+
+                $value = (string)$value;
                 return !isset($ourLayouts[$value]) || isset($permittedLayouts[$value]);
             }
         ));
