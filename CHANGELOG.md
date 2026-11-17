@@ -1,15 +1,15 @@
 # Changelog – LIEPS TYPO3 Defaults
 
-## v5.1.0 – Entwicklung auf v14-dev (17.11.2026)
+## v5.1.0 – TYPO3 14.3
 
 ### Flux-Provider-Auswahl auf TYPO3-Backend-Layouts anwenden
 - Neues `Classes/Backend/FluxBackendLayoutItems.php` filtert nach der bestehenden TYPO3-Backend-Layout-Ermittlung die eigenen PageTS-Layouts anhand der Site-Konfiguration `flux_page_templates`.
 - Beide Felder in den Seiteneigenschaften (`backend_layout` und `backend_layout_next_level`) verwenden den Filter über `Configuration/TCA/Overrides/pages.php`.
 - Leere Flux-Template-Auswahl bedeutet unverändert: alle Backend-Layouts zulassen. Layouts anderer Erweiterungen und die TYPO3-Standardoptionen werden nicht entfernt.
 - Die bestehenden Layout-IDs, Grid-/Spaltendefinitionen und die Frontend-Template-Zuordnung über `data = pagelayout` bleiben unverändert. Es werden keine bestehenden Seitendatensätze geändert.
-- **Integrationstest offen:** Nach Update auf `v14-dev` und Cache-Leerung in TYPO3 14.3 prüfen, ob die Auswahl 010/020 in der Site-Konfiguration in beiden Appearance-Feldern nur die dazugehörigen eigenen Backend-Layouts anbietet und die Frontend-Layouts weiterhin wechseln. Bereits gespeicherte, danach nicht mehr erlaubte IDs bleiben in der Datenbank erhalten, sind aber nicht mehr als auswählbare Optionen sichtbar.
+- **Prüfhinweis:** Nach dem Extension-Update die TYPO3-Caches leeren und in TYPO3 14.3 prüfen, ob die Auswahl 010/020 in der Site-Konfiguration in beiden Feldern unter »Erscheinungsbild« nur die dazugehörigen eigenen Backend-Layouts anbietet und die Frontend-Layouts weiterhin wechseln. Bereits gespeicherte, danach nicht mehr erlaubte IDs bleiben in der Datenbank erhalten, sind aber nicht mehr als auswählbare Optionen sichtbar.
 
-## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
+## v5.0.0 – TYPO3 14.3 LTS
 
 ### Schritt 14: Doppelte Flux-Page `Default/Default` entfernt (16.11.2026)
 - Die beiden Dateien `Resources/Private/Templates/Page/Default.html` und `Resources/Private/Templates/Page/Default/Default.html` geprüft: Der Fluid-Code ist identisch; nur das explizite Anzeigelabel unterscheidet sich.
@@ -44,21 +44,21 @@
 - Im TYPO3-14.3-Assistenten für neue Inhaltselemente wurden Titel und Beschreibung des Content Blocks `liepsgmbh/button` nicht angezeigt.
 - In `ContentBlocks/ContentElements/button/language/labels.xlf` das widersprüchliche Attribut `target-language="de"` entfernt. Die Datei enthält ausschließlich englisch deklarierte `<source>`-Einträge und keine `<target>`-Übersetzungen; TYPO3 behandelt sie nun als Ausgangssprachdatei.
 - Der Text `Button` und die Beschreibung sowie die Content-Block-Identität und die Feldkonfiguration bleiben unverändert.
-- **Offen:** Nach Aktualisierung von `v14-dev` und Cache-Leerung Beschriftung und Beschreibung im Backend-Assistenten kontrollieren.
+- **Prüfhinweis:** Nach dem Extension-Update und der Cache-Leerung Beschriftung und Beschreibung im Backend-Assistenten kontrollieren.
 
 ### Schritt 9: Nicht auflösbare Meta-Konstanten im Frontend entfernt (16.11.2026)
 - Nach erfolgreicher Korrektur des Seitentitels erzeugte `meta.typoscript` den HTML-Tag `<meta name="apple-mobile-web-app-capable" content="{$page.meta.apple-mobile-web-app-capable}">`, da die verwendete Konstante nicht definiert war.
 - `page.meta.apple-mobile-web-app-capable` aus `Configuration/TypoScript/Setup/Page/meta.typoscript` entfernt. Ohne aktivierte iOS-Standalone-Web-App ist dieses Meta-Tag nicht erforderlich; es kann bei einem späteren PWA-Bedarf gezielt konfiguriert werden.
 - Gleichzeitig die ebenfalls undefinierte Konstante `{$page.meta.compatible}` und den dazugehörigen veralteten `X-UA-Compatible`-Meta-Tag für Internet Explorer entfernt.
 - Vorhandene SEO-, OpenGraph-, Robots-, Viewport-, Description-, Author- und Keywords-Einstellungen unverändert belassen.
-- **Offen:** Nach Update von `v14-dev` und Cache-Leerung die HTML-Ausgabe im Frontend erneut prüfen; keine Änderungen an bestehenden Site Settings oder Datenbankdaten.
+- **Prüfhinweis:** Nach dem Extension-Update und der Cache-Leerung die HTML-Ausgabe im Frontend erneut prüfen; keine Änderungen an bestehenden Site Settings oder Datenbankdaten.
 
 ### Schritt 8: Titelgenerierung – TYPO3-14-USER-Callable-Freigabe (16.11.2026)
 - Nach erfolgreichem Frontend-Rendering wurde der Seitentitel als `Oops, an error occurred! Request: … :: Dev v14` ausgegeben.
 - Ursache: `page.headerData.10.10` ruft den eigenen `LiepsGmbH\Liepstypo3defaults\Seo\TitleTagResolver->resolve` als TypoScript-`USER`-Funktion auf. Seit TYPO3 14 verlangt dies ausdrücklich `#[\TYPO3\CMS\Core\Attribute\AsAllowedCallable]` (Breaking Change #108054); bislang fehlte das Attribut.
 - `Classes/Seo/TitleTagResolver.php` um `use TYPO3\CMS\Core\Attribute\AsAllowedCallable;` und `#[AsAllowedCallable]` unmittelbar vor der Methode `resolve()` ergänzt.
 - Sonstige Logik für News-/Event-Detailtitel und den Fallback auf `seo_title` / `title` unverändert; keine TypoScript-/Datenbankänderungen.
-- **Offen:** Nach Update von `v14-dev` und Leeren der TYPO3-Caches die HTML-`<title>`-Ausgabe im Frontend prüfen. Der konkrete Server-Request-Fehler wurde nicht anhand eines zugehörigen Logeintrags verifiziert; der fehlende Attributschutz ist durch den Source-Abgleich mit TYPO3 14.3.11 jedoch nachgewiesen.
+- **Prüfhinweis:** Nach dem Extension-Update und Leeren der TYPO3-Caches die HTML-`<title>`-Ausgabe im Frontend prüfen. Der konkrete Server-Request-Fehler wurde nicht anhand eines zugehörigen Logeintrags verifiziert; der fehlende Attributschutz ist durch den Source-Abgleich mit TYPO3 14.3.11 jedoch nachgewiesen.
 
 ### Schritt 7: Site Sets und erster TYPO3-14.3.11-Laufzeittest (16.11.2026)
 - TYPO3 14.3.11 konnte die Extension laden und einen Flux-Page-Controller aufrufen; beim Rendern trat die `InvalidLayoutException` für Layout `Default` auf.
@@ -110,7 +110,7 @@
 - Composer-Mindestanforderungen: PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`.
 - Abhängigkeiten in `ext_emconf.php` entsprechend abgeglichen. Die historische Version 4.x bleibt dem TYPO3-13-Zweig zugeordnet.
 
-**Status:** Noch keine vollständige TYPO3-14.3-Kompatibilitätsfreigabe oder Laufzeitprüfung. Die weiteren Entwicklungsschritte erfolgen ausschließlich auf `v14-dev`; `v14-main` wird erst nach Freigabe zur stabilen Version.
+**Hinweis zu den Prüfungen:** Die in den Schritten genannten Prüfstände und offenen Tests dokumentieren den Kenntnisstand zum Zeitpunkt der jeweiligen Änderung. Sie beschreiben keinen aktuellen Freigabestatus und gelten unabhängig vom verwendeten Git-Branch.
 
 ---
 
