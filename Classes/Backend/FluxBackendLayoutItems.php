@@ -84,7 +84,7 @@ final class FluxBackendLayoutItems
             (array)($parameters['items'] ?? []),
             static function (mixed $item) use ($ourLayouts, $permittedLayouts): bool {
                 // TYPO3 14 uses SelectItem objects; keep them intact for the FormEngine.
-                if ($item instanceof \\TYPO3\\CMS\\Core\\Schema\\Struct\\SelectItem) {
+                if ($item instanceof \TYPO3\CMS\Core\Schema\Struct\SelectItem) {
                     $value = $item->getValue();
                 } elseif (is_array($item)) {
                     // Compatibility with entries that are still plain TCA arrays.
