@@ -2,7 +2,7 @@
   "name": "liepsgmbh/liepstypo3defaults",
   "type": "typo3-cms-extension",
   "description": "LIEPS TYPO3 Defaults – Bootstrap 5 Extension + Various Content Elements",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "license": "GPL-2.0-or-later",
   "keywords": [
     "typo3",
