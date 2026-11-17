@@ -1,5 +1,14 @@
 # Changelog – LIEPS TYPO3 Defaults
 
+## v5.1.0 – Entwicklung auf v14-dev (17.11.2026)
+
+### Flux-Provider-Auswahl auf TYPO3-Backend-Layouts anwenden
+- Neues `Classes/Backend/FluxBackendLayoutItems.php` filtert nach der bestehenden TYPO3-Backend-Layout-Ermittlung die eigenen PageTS-Layouts anhand der Site-Konfiguration `flux_page_templates`.
+- Beide Felder in den Seiteneigenschaften (`backend_layout` und `backend_layout_next_level`) verwenden den Filter über `Configuration/TCA/Overrides/pages.php`.
+- Leere Flux-Template-Auswahl bedeutet unverändert: alle Backend-Layouts zulassen. Layouts anderer Erweiterungen und die TYPO3-Standardoptionen werden nicht entfernt.
+- Die bestehenden Layout-IDs, Grid-/Spaltendefinitionen und die Frontend-Template-Zuordnung über `data = pagelayout` bleiben unverändert. Es werden keine bestehenden Seitendatensätze geändert.
+- **Integrationstest offen:** Nach Update auf `v14-dev` und Cache-Leerung in TYPO3 14.3 prüfen, ob die Auswahl 010/020 in der Site-Konfiguration in beiden Appearance-Feldern nur die dazugehörigen eigenen Backend-Layouts anbietet und die Frontend-Layouts weiterhin wechseln. Bereits gespeicherte, danach nicht mehr erlaubte IDs bleiben in der Datenbank erhalten, sind aber nicht mehr als auswählbare Optionen sichtbar.
+
 ## v5.0.0 – TYPO3 14.3 LTS (in Entwicklung auf v14-dev, 2026-11-12)
 
 ### Schritt 14: Doppelte Flux-Page `Default/Default` entfernt (16.11.2026)
