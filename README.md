@@ -3,11 +3,9 @@
 
 Diese Extension stellt auf Bootstrap 5 basierende Seitentemplates, Inhaltselemente und Menüvarianten bereit. Sie verwendet Flux, VHS und Content Blocks. Optionale Erweiterungen wie News, Powermail, Mask und image_autoresize müssen gesondert auf Kompatibilität mit TYPO3 14.3 geprüft werden.
 
-**Branches und Versionen:**
-- `v14-main`: Release-Zweig für TYPO3 14.3, Version **5.0.0**.
-- `v14-dev`: Entwicklungszweig für TYPO3 14.3, aktuelle Version **5.1.0**. Änderungen dieses Zweigs sind nicht automatisch als produktionsreif einzustufen.
+**Versionierung und Branches:** Die Dokumentation gilt für die TYPO3-14-Version der Extension unabhängig vom gewählten Branch. `v14-main` enthält die veröffentlichten Stände, `v14-dev` dient der Weiterentwicklung. Die tatsächlich enthaltene Extension-Version steht in `ext_emconf.php` und `composer.json`; die Änderungshistorie in `CHANGELOG.md`.
 
-**Systemvoraussetzungen für `v14-dev` (5.1.0):** PHP `^8.3`, TYPO3 `^14.3.7`, Content Blocks `^2.4.10`, Flux `^12.0.2` und VHS `^8.0.0`. Maßgeblich sind die Abhängigkeiten in `composer.json`.
+**Systemvoraussetzungen:** Benötigt werden TYPO3, PHP sowie die Erweiterungen Content Blocks, Flux und VHS. Die für den jeweiligen Stand gültigen Versionsanforderungen sind in `composer.json` und `ext_emconf.php` definiert.
 
 ## Anleitung
 ### Installation und Konfiguration
@@ -19,12 +17,12 @@ Um Zeitüberschreitungen bei der Installation zu vermeiden, sollten die benötig
 #### Installation per Git
 Bei einer klassischen Installation kann die Extension im Extension-Verzeichnis des TYPO3-Projekts ausgecheckt werden (Verzeichnisstruktur abhängig von der Installationsart).
 
-**Release-Zweig `v14-main` (5.0.0):**
+**Release-Zweig `v14-main`:**
 ```bash
 git clone --branch v14-main https://github.com/Sofatraining/liepstypo3defaults.git
 ```
 
-**Entwicklungszweig `v14-dev` (5.1.0):**
+**Entwicklungszweig `v14-dev`:**
 ```bash
 git clone --branch v14-dev https://github.com/Sofatraining/liepstypo3defaults.git
 ```
@@ -135,7 +133,7 @@ Falls KESEARCH im Einsatz ist:
 * Dokumentation unter https://github.com/MamounAlsmaiel/flux_kesearch_indexer
 
 ***   
-## Offene Prüfungen für die Weiterentwicklung (5.1.0)
+## Prüfpunkte für Integrationstests
 - Flux 12 und VHS 8 einschließlich verschachtelter Inhalte und bestehender FlexForm-Daten in einer laufenden TYPO3-14.3-Installation prüfen.
 - Content Blocks 2.x und CKEditor 5 praktisch testen.
-- Verbliebene fest codierte Asset-URLs prüfen und Installation sowie Darstellung vor dem nächsten Release testen.
+- Fest codierte Asset-URLs, Installation und Darstellung vor einer Veröffentlichung testen.
