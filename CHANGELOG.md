@@ -2,6 +2,11 @@
 
 ## v5.1.0 – TYPO3 14.3 LTS
 
+### Korrektur: TYPO3-14-SelectItem im Backend-Layout-Filter
+- In `FluxBackendLayoutItems` berücksichtigt der Auswahlfilter die von TYPO3 14 übergebenen `TYPO3\CMS\Core\Schema\Struct\SelectItem`-Objekte und liest deren Kennung über `getValue()` aus. Auch TCA-Einträge im Arrayformat werden weiterhin unterstützt.
+- Dadurch wird der `TypeError` beim Öffnen der Seiteneigenschaften behoben, ohne die Layout-IDs, die Filterregeln oder die Kopplung von Backend- und Frontend-Layouts zu ändern.
+- **Prüfhinweis:** Die TYPO3-14.3-Laufzeit und die tatsächliche Auswahl müssen nach dem Extension-Update und der Cache-Leerung im Backend geprüft werden.
+
 ### Flux-Provider-Auswahl auf TYPO3-Backend-Layouts anwenden
 - Neues `Classes/Backend/FluxBackendLayoutItems.php` filtert nach der bestehenden TYPO3-Backend-Layout-Ermittlung die eigenen PageTS-Layouts anhand der Site-Konfiguration `flux_page_templates`.
 - Beide Felder in den Seiteneigenschaften (`backend_layout` und `backend_layout_next_level`) verwenden den Filter über `Configuration/TCA/Overrides/pages.php`.
